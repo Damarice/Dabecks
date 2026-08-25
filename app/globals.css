@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --brand-dark: #1a3a8f;   /* deep royal blue — "DABECKS" text */
+  --brand-cyan: #00b4d8;   /* bright cyan — "LAUNDRY & KITCHEN" text */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-cyan: var(--brand-cyan);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a, button {
+  transition: all 0.2s ease-in-out;
+}
