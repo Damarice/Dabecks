@@ -20,24 +20,32 @@ export default function Contact() {
       <Breadcrumb items={[{ label: 'Contact' }]} />
 
       {/* Header */}
-      <section className="bg-[#1a3a8f] text-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        className="relative text-white py-24 md:py-32 overflow-hidden"
+        style={{
+          backgroundImage: 'url("/hero-contact.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-[#1a3a8f]/75" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
           <span className="text-[#00b4d8] text-sm font-bold uppercase tracking-widest">Reach Out</span>
-          <h1 className="text-white font-black text-5xl mt-3 mb-4 leading-tight">Contact Us</h1>
-          <p className="text-white/75 text-lg max-w-xl leading-relaxed">Get in touch with our team for inquiries and support</p>
+          <h1 className="text-white font-black text-4xl md:text-5xl mt-3 mb-4 leading-tight">Contact Us</h1>
+          <p className="text-white/80 text-lg max-w-xl leading-relaxed">Get in touch with our team for inquiries and support</p>
         </div>
       </section>
 
       {/* Form + Info */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
 
             {/* Form */}
             <div>
               <span className="text-[#00b4d8] text-sm font-bold uppercase tracking-widest">Send a Message</span>
-              <h2 className="text-[#1a3a8f] font-black text-5xl mt-3 mb-8 leading-tight">Send Us A Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mt-3 mb-6 md:mb-8 leading-tight">Send Us A Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
                 {[
                   { id: 'name', label: 'Full Name *', type: 'text', placeholder: 'John Doe', required: true },
                   { id: 'email', label: 'Email Address *', type: 'email', placeholder: 'john@example.com', required: true },
@@ -45,22 +53,22 @@ export default function Contact() {
                   { id: 'company', label: 'Company/Organization', type: 'text', placeholder: 'Your Company Name', required: false },
                 ].map(({ id, label, type, placeholder, required }) => (
                   <div key={id}>
-                    <label htmlFor={id} className="block text-sm font-bold text-gray-700 mb-2">{label}</label>
+                    <label htmlFor={id} className="block text-sm md:text-base font-bold text-gray-700 mb-2">{label}</label>
                     <input
                       type={type} id={id} name={id} required={required}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleChange}
                       placeholder={placeholder}
-                      className="w-full px-4 py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-lg bg-white"
+                      className="w-full px-4 py-3 md:py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-base md:text-lg bg-white"
                     />
                   </div>
                 ))}
                 <div>
-                  <label htmlFor="service" className="block text-sm font-bold text-gray-700 mb-2">Service Interested In *</label>
+                  <label htmlFor="service" className="block text-sm md:text-base font-bold text-gray-700 mb-2">Service Interested In *</label>
                   <select
                     id="service" name="service" required
                     value={formData.service} onChange={handleChange}
-                    className="w-full px-4 py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-lg bg-white"
+                    className="w-full px-4 py-3 md:py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-base md:text-lg bg-white"
                   >
                     <option value="">Select a service</option>
                     <option value="laundry">Laundry Equipment</option>
@@ -72,25 +80,25 @@ export default function Contact() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">Message *</label>
+                  <label htmlFor="message" className="block text-sm md:text-base font-bold text-gray-700 mb-2">Message *</label>
                   <textarea
                     id="message" name="message" required rows={5}
                     value={formData.message} onChange={handleChange}
                     placeholder="Tell us about your project or inquiry..."
-                    className="w-full px-4 py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-lg resize-none bg-white"
+                    className="w-full px-4 py-3 md:py-3.5 border border-gray-300 focus:outline-none focus:border-[#1a3a8f] text-base md:text-lg resize-none bg-white"
                   />
                 </div>
-                <button type="submit" className="bg-[#1a3a8f] text-white py-4 px-10 font-bold hover:bg-[#00b4d8] transition-colors uppercase tracking-wide text-sm">
+                <button type="submit" className="bg-[#1a3a8f] text-white py-3.5 md:py-4 px-8 md:px-10 font-bold hover:bg-[#00b4d8] transition-colors uppercase tracking-wide text-base w-full md:w-auto">
                   Send Message
                 </button>
               </form>
             </div>
 
             {/* Info */}
-            <div className="bg-gray-50 border border-gray-200 p-8 flex flex-col">
+            <div className="bg-gray-50 border border-gray-200 p-6 md:p-8 flex flex-col">
               <span className="text-[#00b4d8] text-sm font-bold uppercase tracking-widest mb-3">Find Us</span>
-              <h2 className="text-[#1a3a8f] font-black text-5xl mb-8 leading-tight">Contact Information</h2>
-              <div className="space-y-6 flex-1">
+              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mt-3 mb-6 md:mb-8 leading-tight">Contact Information</h2>
+              <div className="space-y-5 md:space-y-6 flex-1">
                 {[
                   {
                     icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />,
@@ -114,21 +122,21 @@ export default function Contact() {
                   },
                 ].map(({ icon, title, content }) => (
                   <div key={title} className="flex items-start gap-4">
-                    <div className="bg-[#1a3a8f] w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-[#1a3a8f] w-11 h-11 md:w-12 md:h-12 flex items-center justify-center flex-shrink-0">
                       <svg className="w-5 h-5 text-[#00b4d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">{icon}</svg>
                     </div>
                     <div>
-                      <h3 className="font-black text-[#1a3a8f] text-lg mb-1">{title}</h3>
-                      <p className="text-gray-600 text-lg whitespace-pre-line leading-relaxed">{content}</p>
+                      <h3 className="font-black text-[#1a3a8f] text-base md:text-lg mb-1">{title}</h3>
+                      <p className="text-gray-600 text-base md:text-lg whitespace-pre-line leading-relaxed">{content}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
         </div>
       </section>
     </div>
   );
 }
-

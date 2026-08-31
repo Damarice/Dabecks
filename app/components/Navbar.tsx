@@ -100,7 +100,7 @@ export default function Navbar() {
         'Tumble Dryers',
         'Flatwork Ironers',
       ],
-      image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=800&h=400&fit=crop',
+      image: '/hero-laundry.jpg',
       href: '/solutions/laundry',
     },
     kitchen: {
@@ -115,7 +115,7 @@ export default function Navbar() {
         'Grills & Griddles',
         'Kitchen Accessories',
       ],
-      image: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&h=400&fit=crop',
+      image: '/hero-kitchen.jpg',
       href: '/solutions/kitchen',
     },
     ac: {
@@ -128,7 +128,7 @@ export default function Navbar() {
         'Installation Services',
         'Maintenance & Repair',
       ],
-      image: 'https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=800&h=400&fit=crop',
+      image: '/hero-ac.jpg',
       href: '/solutions/air-conditioning',
     },
   };
@@ -151,142 +151,93 @@ export default function Navbar() {
     <nav className="bg-white w-full">
 
       {/* ── TOP BAR ── */}
-      <div className="bg-gray-100 border-b border-gray-300">
+      <div className="bg-white border-b border-gray-300">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-10 text-sm">
-            {/* Left: email + phone */}
-            <div className="hidden sm:flex items-center gap-4 text-gray-600">
-              <a href="mailto:info@dabeckslaundry.com" className="hover:text-[#1a3a8f] transition-colors flex items-center gap-1">
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                info@dabeckslaundry.com
-              </a>
-              <span className="text-gray-300">|</span>
-              <a href="tel:+254729212254" className="hover:text-[#1a3a8f] transition-colors flex items-center gap-1">
-                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +254 729 212 254
-              </a>
-            </div>
-            {/* Mobile: phone only */}
-            <a href="tel:+254729212254" className="sm:hidden text-gray-600 hover:text-[#1a3a8f] flex items-center gap-1">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              +254 729 212 254
-            </a>
-            {/* Right: CTA button */}
-            <Link
-              href="/contact"
-              className="bg-[#1a3a8f] text-white px-4 py-1.5 rounded-full hover:bg-[#00b4d8] transition-colors font-medium uppercase tracking-wide text-sm"
-            >
-              Message Us
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* ── MAIN HEADER ── */}
-      <div className="border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex items-center gap-4 py-4">
-
-            {/* Logo */}
+          <div className="flex justify-between items-center h-20 text-sm">
+            {/* Left: Logo */}
             <Link href="/" className="flex-shrink-0">
               <img
                 src="/logo.png"
                 alt="Dabecks"
-                className="h-20 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </Link>
 
-            {/* Middle section: takes remaining space */}
-            <div className="hidden md:flex flex-col flex-1 min-w-0 gap-2">
-
-              {/* Row 1: Expert text + search bar */}
-              <div className="flex items-center gap-4">
-                <div className="flex-shrink-0">
-                  <span className="font-bold text-gray-900 text-lg">Laundry & Kitchen</span>{' '}
-                  <span className="font-normal text-gray-700 text-lg">Experts</span>
-                </div>
-
-                {/* Search bar — fills available space */}
-                <div className="flex flex-1 items-stretch border border-[#1a3a8f] overflow-hidden h-9 min-w-0 mt-1">
-                  <input
-                    type="text"
-                    placeholder="Search products, equipment, spare parts..."
-                    className="flex-1 min-w-0 px-3 text-sm text-gray-700 outline-none bg-white"
-                  />
-                  <button className="bg-[#1a3a8f] hover:bg-[#00b4d8] transition-colors px-4 text-white flex items-center gap-1.5 flex-shrink-0 text-sm font-medium">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                    <span className="hidden lg:inline">Search</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Row 2: 5 badge + "reasons" text */}
-              <div className="flex items-center gap-2">
-                {/* 5 badge with dropdown */}
-                <div
-                  className="relative flex-shrink-0"
-                  ref={badgeRef}
-                  onMouseEnter={openReasons}
-                  onMouseLeave={closeReasons}
-                >
-                  <button className="bg-[#1a3a8f] text-white w-6 h-6 flex items-center justify-center text-sm font-bold hover:bg-[#00b4d8] transition-colors rounded-sm">
-                    5
-                  </button>
-                  {/* Full-width reasons dropdown */}
-                  {showReasons && (
-                    <div
-                      className="fixed left-0 right-0 z-[100]"
-                      style={{ top: `${reasonsTop}px` }}
-                      onMouseEnter={openReasons}
-                      onMouseLeave={closeReasons}
-                    >
-                      <div className="bg-[#1a3a8f] text-white shadow-2xl w-full">
-                        <div className="max-w-7xl mx-auto">
-                          <div className="grid grid-cols-5 divide-x divide-white/20">
-                            {reasons.map((r, i) => (
-                              <div
-                                key={i}
-                                className="flex flex-col items-center justify-start py-6 px-4 text-center hover:bg-[#00b4d8] transition-colors cursor-default group"
-                              >
-                                <div className="text-[#00b4d8] group-hover:text-white transition-colors mb-3">
-                                  {r.icon}
-                                </div>
-                                {r.number && (
-                                  <div className="font-bold text-3xl text-white leading-tight">
-                                    {r.number}
-                                    {r.unit && <span className="block text-sm font-normal text-white/70">{r.unit}</span>}
-                                  </div>
-                                )}
-                                <p className="text-sm text-white/80 group-hover:text-white leading-snug mt-1 max-w-[100px]">
-                                  {r.label}
-                                </p>
+            {/* Middle: 5 reasons badge */}
+            <div className="hidden md:flex items-center gap-2">
+              {/* 5 badge with dropdown */}
+              <div
+                className="relative flex-shrink-0"
+                ref={badgeRef}
+                onMouseEnter={openReasons}
+                onMouseLeave={closeReasons}
+              >
+                <button className="bg-[#1a3a8f] text-white w-6 h-6 flex items-center justify-center text-sm font-bold hover:bg-[#00b4d8] transition-colors rounded-sm">
+                  5
+                </button>
+                {/* Full-width reasons dropdown */}
+                {showReasons && (
+                  <div
+                    className="fixed left-0 right-0 z-[100]"
+                    style={{ top: `${reasonsTop}px` }}
+                    onMouseEnter={openReasons}
+                    onMouseLeave={closeReasons}
+                  >
+                    <div className="bg-[#1a3a8f] text-white shadow-2xl w-full">
+                      <div className="max-w-7xl mx-auto">
+                        <div className="grid grid-cols-5 divide-x divide-white/20">
+                          {reasons.map((r, i) => (
+                            <div
+                              key={i}
+                              className="flex flex-col items-center justify-start py-6 px-4 text-center hover:bg-[#00b4d8] transition-colors cursor-default group"
+                            >
+                              <div className="text-[#00b4d8] group-hover:text-white transition-colors mb-3">
+                                {r.icon}
                               </div>
-                            ))}
-                          </div>
+                              {r.number && (
+                                <div className="font-bold text-3xl text-white leading-tight">
+                                  {r.number}
+                                  {r.unit && <span className="block text-sm font-normal text-white/70">{r.unit}</span>}
+                                </div>
+                              )}
+                              <p className="text-sm text-white/80 group-hover:text-white leading-snug mt-1 max-w-[100px]">
+                                {r.label}
+                              </p>
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
-                  )}
-                </div>
-                <span className="text-sm text-gray-500">reasons to work with us</span>
+                  </div>
+                )}
               </div>
+              <span className="text-sm text-gray-500">reasons to work with us</span>
             </div>
 
-            {/* Mobile: search icon + hamburger */}
-            <div className="md:hidden flex items-center gap-3 ml-auto">
-              <button className="text-[#1a3a8f]">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            {/* Right: email + phone + CTA */}
+            <div className="flex items-center gap-4">
+              <div className="hidden sm:flex items-center gap-4 text-gray-600">
+                <a href="mailto:info@dabeckslaundry.com" className="hover:text-[#1a3a8f] transition-colors flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  info@dabeckslaundry.com
+                </a>
+                <span className="text-gray-300">|</span>
+                <a href="tel:+254729212254" className="hover:text-[#1a3a8f] transition-colors flex items-center gap-1">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  +254 729 212 254
+                </a>
+              </div>
+            {/* Mobile: phone + hamburger */}
+            <div className="md:hidden flex items-center gap-3">
+              <a href="tel:+254729212254" className="text-gray-600 hover:text-[#1a3a8f] flex items-center gap-1">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-              </button>
+              </a>
               <button onClick={() => setIsOpen(!isOpen)} className="text-[#1a3a8f]">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   {isOpen ? (
@@ -296,6 +247,14 @@ export default function Navbar() {
                   )}
                 </svg>
               </button>
+            </div>
+              {/* CTA button - desktop only */}
+              <Link
+                href="/contact"
+                className="hidden sm:inline-block bg-[#1a3a8f] text-white px-4 py-1.5 rounded-full hover:bg-[#00b4d8] transition-colors font-medium uppercase tracking-wide text-xs"
+              >
+                Message Us
+              </Link>
             </div>
           </div>
         </div>
@@ -392,23 +351,8 @@ export default function Navbar() {
       {/* ── MOBILE MENU ── */}
       {isOpen && (
         <div className="md:hidden bg-white border-t-4 border-[#00b4d8] shadow-lg">
-          {/* Mobile search */}
-          <div className="px-4 pt-4 pb-2">
-            <div className="flex border-2 border-[#1a3a8f] overflow-hidden">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="flex-1 px-3 py-2 text-sm outline-none"
-              />
-              <button className="bg-[#1a3a8f] px-4 text-white hover:bg-[#00b4d8] transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-            </div>
-          </div>
           {/* Mobile nav links */}
-          <div className="px-4 pb-4 space-y-0.5">
+          <div className="px-4 py-4 space-y-0.5">
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
