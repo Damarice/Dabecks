@@ -15,10 +15,19 @@ export default function InstallationServices() {
         </div>
       </div>
 
-      <section className="bg-gradient-to-r from-[#1a3a8f] to-[#00b4d8] text-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section 
+        className="relative text-white py-32 flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/hero-ac.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '400px'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
           <h1 className="font-bold mb-4">Installation Services</h1>
-          <p className="opacity-90">Professional installation and setup</p>
+          <p className="text-xl opacity-90">Professional installation and setup</p>
         </div>
       </section>
 

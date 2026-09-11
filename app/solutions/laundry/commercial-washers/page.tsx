@@ -17,10 +17,22 @@ export default function CommercialWashers() {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#1a3a8f] to-[#00b4d8] text-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
+      <section 
+        className="relative text-white py-32 flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/hero-laundry.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '400px'
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+        
+        {/* Content */}
+        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
           <h1 className="font-bold mb-4">Commercial Washers</h1>
-          <p className="opacity-90">Professional laundry solutions for your business</p>
+          <p className="text-xl opacity-90">Professional laundry solutions for your business</p>
         </div>
       </section>
 

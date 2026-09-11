@@ -7,45 +7,41 @@
   --brand-cyan: #00b4d8;
 }
 
-/* Base - consistent paragraph/body text */
+/* Base - Professional standard sizing */
 * {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 html, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 20px !important;
-  line-height: 1.6 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
   color: #333 !important;
   font-weight: 400 !important;
 }
 
-/* Regular body text - CONSISTENT 20px */
-p, span, div, li, a, button, label, input, textarea, select {
+/* Standard body text - readable baseline */
+p, span, div, li, label, input, textarea, select {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
-  line-height: 1.6 !important;
+  line-height: 1.5 !important;
 }
 
-/* HEADINGS - BIG BIG BIG */
+/* Breadcrumb - small */
+.breadcrumb {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+/* Top bar - small readable */
+.topbar {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+}
+
+/* Page Headings - Professional hierarchy */
 h1 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 60px !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  color: inherit !important;
-}
-
-h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 50px !important;
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  color: inherit !important;
-}
-
-h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 42px !important;
   font-weight: 600 !important;
@@ -53,15 +49,23 @@ h3 {
   color: inherit !important;
 }
 
-h4 {
+h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  font-size: 24px !important;
+  font-size: 36px !important;
   font-weight: 600 !important;
   line-height: 1.2 !important;
   color: inherit !important;
 }
 
-h5 {
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h4 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 22px !important;
   font-weight: 600 !important;
@@ -69,7 +73,7 @@ h5 {
   color: inherit !important;
 }
 
-h6 {
+h5 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 20px !important;
   font-weight: 600 !important;
@@ -77,11 +81,37 @@ h6 {
   color: inherit !important;
 }
 
-/* Override Tailwind sizing - force 20px for body text */
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+/* Links */
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #337ab7 !important;
+  line-height: 1.5 !important;
+}
+
+/* Buttons */
+button {
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+  color: inherit !important;
+}
+
+/* Override Tailwind sizing */
 .text-xs, .text-sm, .text-base, .text-lg, .text-xl, 
 .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl,
 .text-7xl, .text-8xl, .text-9xl {
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: 400 !important;
 }
 

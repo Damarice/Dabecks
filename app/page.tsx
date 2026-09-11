@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Breadcrumb from '@/app/components/Breadcrumb';
-import HeroSlider from '@/app/components/HeroSlider';
+import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 
 // ── Shared style tokens ───────────────────────────────────────────────────────
 // eyebrow:   cyan, 12px, bold, uppercase, wide tracking
@@ -13,87 +12,49 @@ import HeroSlider from '@/app/components/HeroSlider';
 export default function Home() {
   return (
     <div className="bg-white" style={{ fontFamily: "'Nunito', Arial, sans-serif" }}>
-      <Breadcrumb items={[]} />
-
       {/* ── HERO ── */}
-      <HeroSlider />
+      <HomepageHeroSlider />
 
-      {/* ── PRODUCT CARDS ── bg-white ── */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-
-          <div className="text-center mb-8 md:mb-12">
-            <span className="text-[#00b4d8] font-bold uppercase tracking-widest block mb-2">Our Solutions</span>
-            <h2 className="text-[#1a3a8f] font-bold leading-tight">Featured Equipment</h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+      {/* ── SOLUTIONS OVERVIEW ── bg-white ── */}
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 pt-6 md:pt-8 pb-16 md:pb-28">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
+                img: '/hero-laundry.jpg',
+                title: 'Commercial Laundry\nSolutions',
+                href: '/solutions/laundry',
+              },
+              {
                 img: '/hero-kitchen.jpg',
-                badge: '> 10 000', badgeSub: 'installations',
-                eyebrow: 'Kitchen Solutions',
-                title: 'Electrolux Professional:\nCooling',
-                body: 'Reliable and sustainable refrigeration systems for professional kitchens. From reach-in units to custom cold rooms.',
+                title: 'Commercial Kitchen\nSolutions',
                 href: '/solutions/kitchen',
               },
               {
-                img: '/hero-laundry.jpg',
-                badge: '> 1 000', badgeSub: 'machines sold',
-                eyebrow: 'Laundry Equipment',
-                title: 'Alliance Laundry\nSystems',
-                body: 'Heavy-duty washers, dryers, ironers, and extractors built for hotels, hospitals, and commercial laundries.',
-                href: '/solutions/laundry',
+                img: '/hero-ac.jpg',
+                title: 'Commercial\nBeverage Solutions',
+                href: '/solutions/air-conditioning',
               },
-            ].map(({ img, badge, badgeSub, eyebrow, title, body, href }) => (
-              <div key={href} className="group overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
-                <div className="relative overflow-hidden h-48 md:h-64">
-                  <img src={img} alt={eyebrow} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-3 md:top-4 right-3 md:right-4 bg-[#00b4d8] text-white px-3 md:px-4 py-2 md:py-3 text-center leading-none shadow-xl">
-                    <div className="font-black text-lg md:text-xl">{badge}</div>
-                    <div className="text-xs md:text-sm font-semibold mt-1 uppercase tracking-wide">{badgeSub}</div>
-                  </div>
-                </div>
-                <div className="p-5 md:p-7">
-                  <p className="text-[#00b4d8] font-bold uppercase tracking-widest mb-2">{eyebrow}</p>
-                  <h3 className="text-gray-900 font-bold mb-3 leading-snug whitespace-pre-line">{title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-5">{body}</p>
-                  <Link href={href} className="inline-flex items-center gap-2 text-[#1a3a8f] font-bold hover:text-[#00b4d8] transition-colors">
-                    Discover the range
-                    <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
+            ].map(({ img, title, href }) => (
+              <div key={href} className="group relative overflow-hidden h-96 md:h-[420px] shadow-lg hover:shadow-2xl transition-shadow">
+                {/* Background image */}
+                <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition-all duration-300" />
+                
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-8">
+                  <h2 className="text-white font-black text-4xl md:text-5xl mb-10 leading-tight whitespace-pre-line" style={{ fontSize: 'clamp(2.2rem, 6vw, 3.2rem)' }}>{title}</h2>
+                  <Link
+                    href={href}
+                    className="inline-block bg-[#00b4d8] text-white font-bold px-10 py-3 hover:bg-[#0099bb] transition-all duration-300 text-base md:text-lg"
+                  >
+                    Discover more
                   </Link>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PROMO BANNER ── bg-image + overlay ── */}
-      <section
-        className="relative py-12 md:py-20 overflow-hidden"
-        style={{ backgroundImage: "url('/promo-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-[#1a3a8f]/85" />
-        <div className="relative z-10 max-w-2xl mx-auto text-center px-4 md:px-6">
-          <span className="text-[#00b4d8] font-bold uppercase tracking-widest block mb-2">Service Excellence</span>
-          <h2 className="text-white font-bold mb-3 md:mb-4 leading-tight">
-            As new as delivered:<br />professional repairs
-          </h2>
-          <p className="text-white/70 mb-6 md:mb-8 leading-relaxed">
-            Genuine parts, certified technicians, and fast turnaround. Keep your equipment at peak performance.
-          </p>
-          <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 md:px-5 py-3 md:py-3.5 bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[#00b4d8] font-medium"
-            />
-            <button className="bg-[#00b4d8] hover:bg-[#0099bb] transition-colors text-white font-bold px-6 py-3 md:py-3.5 uppercase tracking-wide flex-shrink-0">
-              Subscribe
-            </button>
           </div>
         </div>
       </section>
