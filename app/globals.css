@@ -2,24 +2,106 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1a1a1a;
-  --brand-dark: #1a3a8f;   /* deep royal blue — "DABECKS" text */
-  --brand-cyan: #00b4d8;   /* bright cyan — "LAUNDRY & KITCHEN" text */
+  --foreground: #333333;
+  --brand-dark: #1a3a8f;
+  --brand-cyan: #00b4d8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-brand-dark: var(--brand-dark);
-  --color-brand-cyan: var(--brand-cyan);
+/* Base - consistent paragraph/body text */
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Nunito', Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  font-weight: 400 !important;
+}
+
+/* Regular body text - CONSISTENT 20px */
+p, span, div, li, a, button, label, input, textarea, select {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+/* HEADINGS - BIG BIG BIG */
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 60px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 50px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 42px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h5 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  color: inherit !important;
+}
+
+/* Override Tailwind sizing - force 20px for body text */
+.text-xs, .text-sm, .text-base, .text-lg, .text-xl, 
+.text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl,
+.text-7xl, .text-8xl, .text-9xl {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+/* Ensure white text on dark backgrounds */
+.text-white {
+  color: white !important;
+}
+
+.bg-\[\#1a3a8f\] {
+  color: white !important;
+}
+
+.bg-\[\#1a3a8f\] * {
+  color: white !important;
+}
+
+/* Font smoothing */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *:focus:not(:focus-visible) {

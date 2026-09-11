@@ -9,10 +9,10 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <img src="/logo.png" alt="Dabecks" className="h-16 w-auto object-contain mb-5" />
-            <p className="text-white/70 text-sm leading-relaxed mb-2">
+            <p className="text-white/70 leading-relaxed mb-2">
               Laundry & Kitchen Solutions Limited
             </p>
-            <p className="text-white/70 text-sm leading-relaxed">
+            <p className="text-white/70 leading-relaxed">
               Trusted mechanical partner in East Africa since 2011.
             </p>
             <div className="flex gap-3 mt-5">
@@ -27,7 +27,7 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase text-sm tracking-widest">Solutions</h4>
+            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase tracking-widest">Solutions</h4>
             <ul className="space-y-3">
               {[
                 { href: '/solutions/laundry', label: 'Laundry Equipment' },
@@ -36,7 +36,7 @@ export default function Footer() {
                 { href: '/solutions/consultancy', label: 'Consultancy' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-white/70 hover:text-[#00b4d8] transition-colors flex items-center gap-2">
+                  <Link href={href} className="text-white/70 hover:text-[#00b4d8] transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#00b4d8] flex-shrink-0" />
                     {label}
                   </Link>
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase text-sm tracking-widest">Company</h4>
+            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase tracking-widest">Company</h4>
             <ul className="space-y-3">
               {[
                 { href: '/about', label: 'About Us' },
@@ -56,7 +56,7 @@ export default function Footer() {
                 { href: '/contact', label: 'Contact' },
               ].map(({ href, label }) => (
                 <li key={href}>
-                  <Link href={href} className="text-sm text-white/70 hover:text-[#00b4d8] transition-colors flex items-center gap-2">
+                  <Link href={href} className="text-white/70 hover:text-[#00b4d8] transition-colors flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#00b4d8] flex-shrink-0" />
                     {label}
                   </Link>
@@ -67,8 +67,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase text-sm tracking-widest">Contact</h4>
-            <div className="space-y-4 text-sm text-white/70">
+            <h4 className="text-[#00b4d8] font-bold mb-5 uppercase tracking-widest">Contact</h4>
+            <div className="space-y-4 text-white/70">
               <div className="flex items-start gap-2">
                 <svg className="w-4 h-4 text-[#00b4d8] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-white/50">
+        <div className="border-t border-white/20 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center gap-2 text-white/50">
           <p>© {new Date().getFullYear()} Dabecks Laundry & Kitchen Solutions Limited. All rights reserved.</p>
           <p className="text-[#00b4d8]">Nairobi, Kenya</p>
         </div>

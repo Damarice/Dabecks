@@ -23,8 +23,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 md:px-6">
 
           <div className="text-center mb-8 md:mb-12">
-            <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-2">Our Solutions</span>
-            <h2 className="text-[#1a3a8f] font-black text-4xl md:text-5xl leading-tight">Featured Equipment</h2>
+            <span className="text-[#00b4d8] font-bold uppercase tracking-widest block mb-2">Our Solutions</span>
+            <h2 className="text-[#1a3a8f] font-bold leading-tight">Featured Equipment</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
@@ -55,10 +55,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-5 md:p-7">
-                  <p className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest mb-2">{eyebrow}</p>
-                  <h3 className="text-gray-900 font-black text-2xl md:text-3xl mb-3 leading-snug whitespace-pre-line">{title}</h3>
-                  <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-4 md:mb-5">{body}</p>
-                  <Link href={href} className="inline-flex items-center gap-2 text-[#1a3a8f] font-bold text-xs md:text-sm hover:text-[#00b4d8] transition-colors">
+                  <p className="text-[#00b4d8] font-bold uppercase tracking-widest mb-2">{eyebrow}</p>
+                  <h3 className="text-gray-900 font-bold mb-3 leading-snug whitespace-pre-line">{title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-4 md:mb-5">{body}</p>
+                  <Link href={href} className="inline-flex items-center gap-2 text-[#1a3a8f] font-bold hover:text-[#00b4d8] transition-colors">
                     Discover the range
                     <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -78,20 +78,20 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-[#1a3a8f]/85" />
         <div className="relative z-10 max-w-2xl mx-auto text-center px-4 md:px-6">
-          <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-2">Service Excellence</span>
-          <h2 className="text-white font-black text-3xl md:text-5xl mb-3 md:mb-4 leading-tight">
+          <span className="text-[#00b4d8] font-bold uppercase tracking-widest block mb-2">Service Excellence</span>
+          <h2 className="text-white font-bold mb-3 md:mb-4 leading-tight">
             As new as delivered:<br />professional repairs
           </h2>
-          <p className="text-white/70 text-sm md:text-lg mb-6 md:mb-8 leading-relaxed">
+          <p className="text-white/70 mb-6 md:mb-8 leading-relaxed">
             Genuine parts, certified technicians, and fast turnaround. Keep your equipment at peak performance.
           </p>
           <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-2">
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-4 md:px-5 py-3 md:py-3.5 bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[#00b4d8] text-xs md:text-sm font-medium"
+              className="flex-1 px-4 md:px-5 py-3 md:py-3.5 bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[#00b4d8] font-medium"
             />
-            <button className="bg-[#00b4d8] hover:bg-[#0099bb] transition-colors text-white font-bold px-6 py-3 md:py-3.5 text-xs md:text-sm uppercase tracking-wide flex-shrink-0">
+            <button className="bg-[#00b4d8] hover:bg-[#0099bb] transition-colors text-white font-bold px-6 py-3 md:py-3.5 uppercase tracking-wide flex-shrink-0">
               Subscribe
             </button>
           </div>
