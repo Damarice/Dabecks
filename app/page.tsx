@@ -45,7 +45,7 @@ export default function Home() {
                 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-8">
-                  <h2 className="text-white font-black text-4xl md:text-5xl mb-10 leading-tight whitespace-pre-line" style={{ fontSize: 'clamp(2.2rem, 6vw, 3.2rem)' }}>{title}</h2>
+                  <h2 className="text-white font-bold mb-10 leading-tight whitespace-pre-line" style={{ fontSize: '36px', fontWeight: '600' }}>{title}</h2>
                   <Link
                     href={href}
                     className="inline-block bg-[#00b4d8] text-white font-bold px-10 py-3 hover:bg-[#0099bb] transition-all duration-300 text-base md:text-lg"
