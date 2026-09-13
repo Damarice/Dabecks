@@ -6,8 +6,9 @@ export default function AllianceL18ProductDetail() {
     <div className="min-h-screen bg-white font-sans">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
+        { label: 'Laundry Equipment', href: '/solutions/laundry' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
-        { label: 'Alliance L18' }
+        { label: 'Alliance L18' },
       ]} />
 
       <section className="bg-white pt-10 pb-0">

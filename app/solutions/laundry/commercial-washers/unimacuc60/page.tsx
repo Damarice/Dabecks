@@ -6,8 +6,9 @@ export default function UnimacUC60ProductDetail() {
     <div className="min-h-screen bg-white font-sans">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
+        { label: 'Laundry Equipment', href: '/solutions/laundry' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
-        { label: 'UniMac UC60' }
+        { label: 'UniMac UC60' },
       ]} />
 
       <section className="bg-white pt-10 pb-0">

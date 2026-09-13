@@ -6,8 +6,9 @@ export default function PrimusFX55ProductDetail() {
     <div className="min-h-screen bg-white font-sans">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
+        { label: 'Laundry Equipment', href: '/solutions/laundry' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
-        { label: 'Primus FX55' }
+        { label: 'Primus FX55' },
       ]} />
 
       <section className="bg-white pt-10 pb-0">

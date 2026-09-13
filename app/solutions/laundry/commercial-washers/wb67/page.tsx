@@ -6,8 +6,9 @@ export default function WB67ProductDetail() {
     <div className="min-h-screen bg-white font-sans">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
+        { label: 'Laundry Equipment', href: '/solutions/laundry' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
-        { label: 'WB6-7' }
+        { label: 'WB6-7' },
       ]} />
 
       {/* ── TOP PRODUCT SECTION ── */}
