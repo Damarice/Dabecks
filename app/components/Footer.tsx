@@ -14,7 +14,7 @@ export default function Footer() {
               src="/logo.png"
               alt="Dabecks"
               className="object-contain mb-6"
-              style={{ height: '44px', width: 'auto' }}
+              style={{ height: '60px', width: 'auto' }}
             />
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9375rem', lineHeight: '1.65' }}>
               Dabecks Laundry & Kitchen Solutions Limited

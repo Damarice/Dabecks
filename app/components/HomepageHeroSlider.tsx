@@ -88,13 +88,13 @@ export default function HomepageHeroSlider() {
           />
         ))}
 
-        {/* Overlay — dark gradient from bottom-left */}
+        {/* Overlay — dark left, fades right */}
         <div
           aria-hidden="true"
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(105deg, rgba(10,18,50,0.82) 0%, rgba(10,18,50,0.55) 55%, rgba(10,18,50,0.25) 100%)',
+            background: 'linear-gradient(to right, rgba(10,18,50,0.90) 0%, rgba(10,18,50,0.70) 35%, rgba(10,18,50,0.30) 65%, rgba(10,18,50,0.05) 100%)',
           }}
         />
 
