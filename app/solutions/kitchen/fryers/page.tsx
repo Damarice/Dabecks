@@ -1,89 +1,33 @@
-import Link from 'next/link';
+import SubpageListingPage from '@/app/components/SubpageListingPage';
 
 export default function Fryers() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 font-bold">
-            <Link href="/" className="hover:text-[#1a3a8f]">Home</Link>
-            <span>/</span>
-            <Link href="/solutions/kitchen" className="hover:text-[#1a3a8f]">Kitchen Systems</Link>
-            <span>/</span>
-            <span className="text-[#1a3a8f] font-semibold">Fryers</span>
-          </div>
-        </div>
-      </div>
-
-      <section 
-        className="relative text-white py-32 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-kitchen.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '400px'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-          <h1 className="font-bold mb-4">Fryers</h1>
-          <p className="text-xl opacity-90">Professional frying equipment for kitchens</p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="font-bold text-[#1a3a8f] mb-4">Fryer Solutions</h2>
-            <p className="text-gray-600 mb-6">Commercial frying equipment designed for consistent quality and high-volume production.</p>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Deep Fryers</h3>
-                <p className="text-gray-600">Standard deep frying units for chicken, fish, and snacks.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Tilt Fryers</h3>
-                <p className="text-gray-600">Large capacity fryers with tilt mechanisms for easy oil management.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Ventless Fryers</h3>
-                <p className="text-gray-600">Indoor-safe fryers with integrated filtration systems.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-1">
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-[#1a3a8f] mb-4">Benefits</h3>
-              <ul className="space-y-3 font-bold text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Consistent frying quality</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Oil filtration systems</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Energy efficient heating</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Easy cleaning</span>
-                </li>
-              </ul>
-              
-              <button className="w-full mt-6 bg-[#1a3a8f] text-white py-2 rounded font-bold hover:bg-[#00b4d8] hover:text-[#1a3a8f] transition-colors">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <SubpageListingPage
+      breadcrumbs={[
+        { label: 'Solutions', href: '/solutions' },
+        { label: 'Kitchen Systems', href: '/solutions/kitchen' },
+        { label: 'Fryers' },
+      ]}
+      heroImage="/hero-kitchen.jpg"
+      category="Kitchen Systems"
+      title="Fryers"
+      heroSubtitle="Commercial deep fryers and pressure fryers for high-volume food production — fast recovery, consistent results, built for continuous use."
+      introTitle="Crispy results. Every time."
+      introText="From compact single-tank fryers for small operations to high-volume pressure fryers for large food service — our range delivers fast oil recovery, precise temperature control, and reliable performance in the busiest commercial kitchens."
+      benefits={[
+        { icon: '🔥', title: 'Fast Recovery', desc: 'High-powered heating elements restore oil temperature quickly between batches for maximum throughput.' },
+        { icon: '🛡️', title: 'Safety Systems', desc: 'Automatic cut-off, cool-zone design, and oil filtration systems for safe, efficient operation.' },
+        { icon: '⚡', title: 'Energy Efficient', desc: 'Insulated tanks and efficient burners minimise energy use without compromising performance.' },
+      ]}
+      products={[
+        { model: 'FT-8L', desc: 'Single tank fryer · 8 L', slug: 'ft8l', placeholder: 'FT-8L' },
+        { model: 'FT-15L', desc: 'Twin tank fryer · 2×8 L', slug: 'ft15l', placeholder: 'FT-15L' },
+        { model: 'FT-25L', desc: 'High-volume fryer · 25 L', slug: 'ft25l', placeholder: 'FT-25L' },
+        { model: 'Pitco SG14', desc: 'Gas fryer · 14 L tank', slug: 'pitcoSG14', placeholder: 'Pitco+SG14' },
+        { model: 'Henny Penny F5', desc: 'Pressure fryer · 5 heads', slug: 'hennyF5', placeholder: 'Henny+Penny+F5' },
+        { model: 'Vulcan 1ER50DF', desc: 'Electric fryer · 50 lb oil capacity', slug: 'vulcan1ER50DF', placeholder: 'Vulcan+1ER50DF' },
+      ]}
+      basePath="/solutions/kitchen/fryers"
+    />
   );
 }

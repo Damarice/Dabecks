@@ -1,89 +1,29 @@
-import Link from 'next/link';
+import SubpageListingPage from '@/app/components/SubpageListingPage';
 
 export default function CassetteUnits() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 font-bold">
-            <Link href="/" className="hover:text-[#1a3a8f]">Home</Link>
-            <span>/</span>
-            <Link href="/solutions/air-conditioning" className="hover:text-[#1a3a8f]">Air Conditioning</Link>
-            <span>/</span>
-            <span className="text-[#1a3a8f] font-semibold">Cassette Units</span>
-          </div>
-        </div>
-      </div>
-
-      <section 
-        className="relative text-white py-32 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-ac.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '400px'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-          <h1 className="font-bold mb-4">Cassette Units</h1>
-          <p className="text-xl opacity-90">Ceiling-mounted air conditioning solutions</p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="font-bold text-[#1a3a8f] mb-4">Cassette Unit Solutions</h2>
-            <p className="text-gray-600 mb-6">Ceiling-mounted air conditioning units that blend seamlessly with modern commercial interiors.</p>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Square Cassettes</h3>
-                <p className="text-gray-600">Standard square-shaped units that fit into ceiling grids.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Ultra-Thin Cassettes</h3>
-                <p className="text-gray-600">Low-profile units for spaces with limited ceiling height.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Four-Way Cassettes</h3>
-                <p className="text-gray-600">Multi-directional air distribution for optimal comfort coverage.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-1">
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-[#1a3a8f] mb-4">Benefits</h3>
-              <ul className="space-y-3 font-bold text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Aesthetic design</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Space-saving</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Even air distribution</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Easy maintenance</span>
-                </li>
-              </ul>
-              
-              <button className="w-full mt-6 bg-[#1a3a8f] text-white py-2 rounded font-bold hover:bg-[#00b4d8] hover:text-[#1a3a8f] transition-colors">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <SubpageListingPage
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Air Conditioning', href: '/solutions/air-conditioning' }, { label: 'Cassette Units' }]}
+      heroImage="/hero-ac.jpg"
+      category="Air Conditioning"
+      title="Cassette Units"
+      heroSubtitle="Ceiling cassette AC units for even 360° air distribution in open-plan commercial spaces — offices, restaurants, retail, and hotel lobbies."
+      introTitle="360° comfort. Clean aesthetics."
+      introText="Ceiling cassette units install flush with the ceiling, distributing conditioned air in four directions simultaneously. Ideal for open-plan offices, restaurants, and retail spaces where wall space is limited and even coverage is essential."
+      benefits={[
+        { icon: '🔄', title: '360° Airflow', desc: 'Four-way air distribution ensures even coverage across the entire floor area.' },
+        { icon: '🏢', title: 'Clean Aesthetic', desc: 'Flush ceiling installation with only a slim grille visible — suits any commercial interior.' },
+        { icon: '⚡', title: 'Inverter Efficient', desc: 'Inverter compressors reduce energy use significantly versus older fixed-speed systems.' },
+      ]}
+      products={[
+        { model: 'CU-12K', desc: 'Cassette unit · 12,000 BTU / 1 ton', slug: 'cu12k', placeholder: 'CU-12K' },
+        { model: 'CU-18K', desc: 'Cassette unit · 18,000 BTU / 1.5 ton', slug: 'cu18k', placeholder: 'CU-18K' },
+        { model: 'CU-24K', desc: 'Cassette unit · 24,000 BTU / 2 ton', slug: 'cu24k', placeholder: 'CU-24K' },
+        { model: 'CU-36K', desc: 'Cassette unit · 36,000 BTU / 3 ton', slug: 'cu36k', placeholder: 'CU-36K' },
+        { model: 'Daikin FCAG71', desc: 'Ceiling cassette · 2.5 ton', slug: 'daikinFCAG71', placeholder: 'Daikin+FCAG71' },
+        { model: 'Mitsubishi PLA-M', desc: 'Ceiling cassette · 2 ton', slug: 'mitsubishiPLAM', placeholder: 'Mitsubishi+PLA-M' },
+      ]}
+      basePath="/solutions/air-conditioning/cassette-units"
+    />
   );
 }

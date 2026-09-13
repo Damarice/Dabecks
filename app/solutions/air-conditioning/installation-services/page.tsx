@@ -1,87 +1,61 @@
 import Link from 'next/link';
+import Breadcrumb from '@/app/components/Breadcrumb';
 
 export default function InstallationServices() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 font-bold">
-            <Link href="/" className="hover:text-[#1a3a8f]">Home</Link>
-            <span>/</span>
-            <Link href="/solutions/air-conditioning" className="hover:text-[#1a3a8f]">Air Conditioning</Link>
-            <span>/</span>
-            <span className="text-[#1a3a8f] font-semibold">Installation Services</span>
-          </div>
-        </div>
-      </div>
+      <Breadcrumb items={[{ label: 'Solutions', href: '/solutions' }, { label: 'Air Conditioning', href: '/solutions/air-conditioning' }, { label: 'Installation Services' }]} />
 
-      <section 
-        className="relative text-white py-32 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-ac.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '400px'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-          <h1 className="font-bold mb-4">Installation Services</h1>
-          <p className="text-xl opacity-90">Professional installation and setup</p>
+      <section className="relative text-white flex items-center justify-center" style={{ backgroundImage: "url('/hero-ac.jpg')", backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '520px' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a3a8f]/50 via-[#1a3a8f]/60 to-[#1a3a8f]/75" />
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-24">
+          <p className="text-sm uppercase tracking-widest text-[#00b4d8] font-bold mb-4">Air Conditioning</p>
+          <h1 className="text-6xl md:text-8xl font-black leading-none mb-6">Installation Services</h1>
+          <p className="text-xl md:text-2xl font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">Professional HVAC installation, commissioning, and handover by certified engineers across East Africa.</p>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="font-bold text-[#1a3a8f] mb-4">Installation Services</h2>
-            <p className="text-gray-600 mb-6">Expert installation services for all air conditioning systems with full project management and compliance.</p>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">System Design & Planning</h3>
-                <p className="text-gray-600">Custom system design tailored to your facility requirements.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Installation & Configuration</h3>
-                <p className="text-gray-600">Professional installation by certified technicians with full warranty.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Testing & Commissioning</h3>
-                <p className="text-gray-600">Complete system testing and performance verification before handover.</p>
-              </div>
-            </div>
+      <section className="bg-white py-16 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mb-14">
+            <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-3">Expert installation. Every time.</h2>
+            <div className="w-12 h-1 bg-[#00b4d8] mb-8" />
+            <p className="text-lg text-gray-700 leading-relaxed">Our certified HVAC engineers handle every aspect of your air conditioning installation — from site survey and design through to commissioning, testing, and staff handover. We work with all major brands and all system types.</p>
           </div>
-
-          <div className="md:col-span-1">
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-[#1a3a8f] mb-4">Service Features</h3>
-              <ul className="space-y-3 font-bold text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Licensed technicians</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Minimal disruption</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Full warranty coverage</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Training provided</span>
-                </li>
-              </ul>
-              
-              <button className="w-full mt-6 bg-[#1a3a8f] text-white py-2 rounded font-bold hover:bg-[#00b4d8] hover:text-[#1a3a8f] transition-colors">
-                Request Quote
-              </button>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {[{ icon: '📐', title: 'Site Survey & Design', desc: 'Detailed site assessment and system design to ensure optimal performance and efficiency for your specific building.' }, { icon: '🔧', title: 'Professional Installation', desc: 'Our certified engineers install all equipment to manufacturer standards, ensuring warranty compliance and safe operation.' }, { icon: '✅', title: 'Commissioning & Handover', desc: 'Full system testing, performance verification, and operator training before handover — so your team is fully prepared.' }].map((s, i) => (
+              <div key={i}>
+                <div className="text-4xl mb-4">{s.icon}</div>
+                <h3 className="text-2xl font-black text-[#1a3a8f] mb-3">{s.title}</h3>
+                <p className="text-base text-gray-700 leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f7f7] py-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">What We Install</h2>
+          <div className="w-10 h-1 bg-[#00b4d8] mb-10" />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {['Split Units', 'VRF/VRV Systems', 'Ducted Systems', 'Cassette Units', 'Chiller Systems', 'Air Handling Units'].map((item, i) => (
+              <div key={i} className="bg-white p-6 border border-gray-200">
+                <div className="w-8 h-1 bg-[#00b4d8] mb-4" />
+                <p className="text-xl font-black text-[#1a3a8f]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1a3a8f] py-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Ready to plan your installation?</h2>
+            <p className="text-[#00b4d8] text-lg font-medium">Get a free site survey and installation quote.</p>
+          </div>
+          <Link href="/contact" className="flex-shrink-0 bg-[#00b4d8] text-white font-black py-4 px-10 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors">Request a Survey</Link>
         </div>
       </section>
     </div>

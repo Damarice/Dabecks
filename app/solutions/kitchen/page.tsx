@@ -1,65 +1,43 @@
-import Link from 'next/link';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import CategoryLandingPage from '@/app/components/CategoryLandingPage';
 
 export default function KitchenPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Breadcrumb items={[
-        { label: 'Solutions', href: '/solutions' },
-        { label: 'Kitchen Systems' },
-      ]} />
-
-      {/* ── HERO ── */}
-      <section
-        className="relative text-white flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-kitchen.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '500px',
-        }}
-      >
-        <div className="absolute inset-0 bg-[#1a3a8f]/65" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-24">
-          <p className="text-sm uppercase tracking-widest text-[#00b4d8] font-bold mb-4">Solutions</p>
-          <h1 className="text-6xl md:text-8xl font-black leading-none mb-6">Kitchen Systems</h1>
-          <p className="text-xl md:text-2xl font-medium opacity-90 max-w-2xl mx-auto">
-            Professional kitchen equipment for commercial food service operations.
-          </p>
-        </div>
-      </section>
-
-      {/* ── SUBPAGES GRID ── */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-20">
-        <div className="mb-14">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-3">Our Kitchen Range</h2>
-          <div className="w-12 h-1 bg-[#00b4d8]" />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', desc: 'High-performance ovens for professional kitchens.' },
-            { label: 'Fryers', href: '/solutions/kitchen/fryers', desc: 'Commercial deep fryers for high-volume food production.' },
-            { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', desc: 'Industrial dishwashers for fast, hygienic cleaning.' },
-            { label: 'Steamers', href: '/solutions/kitchen/steamers', desc: 'Combi steamers and convection equipment.' },
-            { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', desc: 'Professional cooking ranges and hobs.' },
-            { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', desc: 'Commercial grills and griddles for food service.' },
-          ].map((item, i) => (
-            <Link
-              key={i}
-              href={item.href}
-              className="group block border border-gray-200 p-8 hover:border-[#1a3a8f] hover:shadow-lg transition-all"
-            >
-              <div className="w-8 h-1 bg-[#00b4d8] mb-6 group-hover:w-12 transition-all duration-300" />
-              <h3 className="text-2xl font-black text-[#1a3a8f] mb-3 group-hover:text-[#00b4d8] transition-colors">{item.label}</h3>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">{item.desc}</p>
-              <span className="text-sm font-bold uppercase tracking-widest text-[#1a3a8f] group-hover:text-[#00b4d8] transition-colors">
-                View Products →
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </div>
+    <CategoryLandingPage
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems' }]}
+      heroImage="/hero-kitchen.jpg"
+      heroTitle="Kitchen Systems"
+      heroSubtitle="Professional commercial kitchen equipment for restaurants, hotels, hospitals, and institutional food service operations across East Africa."
+      introTitle="Built for professional kitchens"
+      introText="Our commercial kitchen range brings together the best global brands — from high-volume combi ovens and fryers to industrial dishwashers and cooking ranges. Every product is selected for reliability, energy efficiency, and performance under pressure."
+      featured={[
+        { title: 'Commercial Ovens', desc: 'Convection, combi, and deck ovens for professional baking and cooking at volume.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/commercial-ovens' },
+        { title: 'Dishwashers', desc: 'Undercounter to rack conveyor dishwashers for hygienic, fast cleaning in commercial kitchens.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/dishwashers' },
+        { title: 'Cooking Ranges', desc: 'Professional gas and electric ranges built for the demands of high-volume kitchen service.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/cooking-ranges' },
+      ]}
+      categories={[
+        { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/hero-kitchen.jpg' },
+        { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/hero-kitchen.jpg' },
+        { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/hero-kitchen.jpg' },
+        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/hero-kitchen.jpg' },
+        { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/hero-kitchen.jpg' },
+        { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/hero-kitchen.jpg' },
+      ]}
+      standards={[
+        { icon: '🌡️', title: 'Precision Cooking', desc: 'Every product delivers precise temperature control for consistent results across all menu items.' },
+        { icon: '🧼', title: 'Hygiene First', desc: 'NSF-certified equipment meeting international food safety and sanitation standards.' },
+        { icon: '⚡', title: 'Energy Efficient', desc: 'ENERGY STAR and CE certified equipment reduces energy consumption and operating costs.' },
+        { icon: '🛠️', title: 'Full Service Support', desc: 'Installation, training, maintenance, and repair coverage across East Africa.' },
+      ]}
+      customers={[
+        { name: 'Nairobi Serena Hotel', type: 'Hospitality', quote: 'Dabecks equipped our entire kitchen with professional-grade equipment. The installation was seamless and the after-sales support has been outstanding.', image: '/about-team.jpg' },
+        { name: 'Aga Khan Hospital', type: 'Healthcare', quote: 'Our high-volume patient catering kitchen runs on Dabecks equipment. NSF-certified and reliable — exactly what a hospital environment demands.', image: '/about-journey.jpg' },
+        { name: 'Kenya School of Government', type: 'Institution', quote: 'The full kitchen refit was delivered on time and within budget. Staff training was included and the equipment has been excellent.', image: '/hero-clients.jpg' },
+      ]}
+      news={[
+        { date: 'April 2026', title: 'Rational iCombi Pro Now Available in East Africa', desc: 'Dabecks is now the authorised distributor for Rational combi ovens in East Africa — the world\'s leading combi oven brand.', image: '/hero-kitchen.jpg' },
+        { date: 'February 2026', title: 'Commercial Kitchen Fit-Out: 5-Star Hotel Nairobi', desc: 'A complete kitchen refit for a 5-star Nairobi hotel — from cooking equipment to dishwashing and ventilation.', image: '/hero-clients.jpg' },
+        { date: 'December 2025', title: 'Energy Saving in Commercial Kitchens: A Guide', desc: 'Our team shares practical tips for reducing energy costs in commercial kitchens without compromising performance.', image: '/about-journey.jpg' },
+      ]}
+    />
   );
 }

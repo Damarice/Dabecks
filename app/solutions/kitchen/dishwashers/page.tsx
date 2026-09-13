@@ -1,89 +1,33 @@
-import Link from 'next/link';
+import SubpageListingPage from '@/app/components/SubpageListingPage';
 
 export default function Dishwashers() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 font-bold">
-            <Link href="/" className="hover:text-[#1a3a8f]">Home</Link>
-            <span>/</span>
-            <Link href="/solutions/kitchen" className="hover:text-[#1a3a8f]">Kitchen Systems</Link>
-            <span>/</span>
-            <span className="text-[#1a3a8f] font-semibold">Dishwashers</span>
-          </div>
-        </div>
-      </div>
-
-      <section 
-        className="relative text-white py-32 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-kitchen.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '400px'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-          <h1 className="font-bold mb-4">Dishwashers</h1>
-          <p className="text-xl opacity-90">Commercial dishwashing systems</p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="font-bold text-[#1a3a8f] mb-4">Dishwasher Solutions</h2>
-            <p className="text-gray-600 mb-6">Professional dishwashing equipment for hotels, restaurants, and catering operations.</p>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Undercounter Dishwashers</h3>
-                <p className="text-gray-600">Compact models for limited kitchen space with high capacity output.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Conveyor Dishwashers</h3>
-                <p className="text-gray-600">High-volume continuous washing systems for large operations.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Door-Type Dishwashers</h3>
-                <p className="text-gray-600">Flexible single or double rack door machines for various operations.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-1">
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-[#1a3a8f] mb-4">Features</h3>
-              <ul className="space-y-3 font-bold text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Hot water sanitizing</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Quick cycle times</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Water efficient</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Multiple wash programs</span>
-                </li>
-              </ul>
-              
-              <button className="w-full mt-6 bg-[#1a3a8f] text-white py-2 rounded font-bold hover:bg-[#00b4d8] hover:text-[#1a3a8f] transition-colors">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <SubpageListingPage
+      breadcrumbs={[
+        { label: 'Solutions', href: '/solutions' },
+        { label: 'Kitchen Systems', href: '/solutions/kitchen' },
+        { label: 'Dishwashers' },
+      ]}
+      heroImage="/hero-kitchen.jpg"
+      category="Kitchen Systems"
+      title="Dishwashers"
+      heroSubtitle="Industrial dishwashers for fast, hygienic cleaning — from undercounter units to high-volume rack conveyors for large-scale operations."
+      introTitle="Clean. Fast. Hygienic."
+      introText="Our commercial dishwasher range handles everything from small café operations to large hotel banqueting. Every machine delivers hygienically clean results in minimal time, with low water and chemical consumption. NSF and WRAS certified."
+      benefits={[
+        { icon: '🧼', title: 'Hygienic Results', desc: 'High-temperature sanitising cycles meet international food safety and hygiene standards.' },
+        { icon: '💧', title: 'Low Water Use', desc: 'Efficient wash systems use less than 2 litres per rack, reducing utility costs significantly.' },
+        { icon: '⚡', title: 'Fast Cycles', desc: 'Cycle times from 60 seconds mean continuous throughput for busy operations.' },
+      ]}
+      products={[
+        { model: 'DW-Under', desc: 'Undercounter dishwasher', slug: 'dwUnder', placeholder: 'DW-Under' },
+        { model: 'DW-Hood', desc: 'Hood-type dishwasher', slug: 'dwHood', placeholder: 'DW-Hood' },
+        { model: 'DW-Rack', desc: 'Rack conveyor dishwasher', slug: 'dwRack', placeholder: 'DW-Rack' },
+        { model: 'Electrolux WT4', desc: 'Pass-through dishwasher', slug: 'electroluxWT4', placeholder: 'Electrolux+WT4' },
+        { model: 'Winterhalter UC-M', desc: 'Undercounter commercial', slug: 'winterhalterUCM', placeholder: 'Winterhalter+UC-M' },
+        { model: 'Hobart AM16', desc: 'High-temp door-type dishwasher', slug: 'hobartAM16', placeholder: 'Hobart+AM16' },
+      ]}
+      basePath="/solutions/kitchen/dishwashers"
+    />
   );
 }

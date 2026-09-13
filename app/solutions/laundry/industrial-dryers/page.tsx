@@ -1,92 +1,33 @@
-import Link from 'next/link';
+import SubpageListingPage from '@/app/components/SubpageListingPage';
 
 export default function IndustrialDryers() {
   return (
-    <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center gap-2 font-bold">
-            <Link href="/" className="hover:text-[#1a3a8f]">Home</Link>
-            <span>/</span>
-            <Link href="/solutions/laundry" className="hover:text-[#1a3a8f]">Laundry Equipment</Link>
-            <span>/</span>
-            <span className="text-[#1a3a8f] font-semibold">Industrial Dryers</span>
-          </div>
-        </div>
-      </div>
-
-      <section 
-        className="relative text-white py-32 flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/hero-laundry.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          minHeight: '400px'
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
-          <h1 className="font-bold mb-4">Industrial Dryers</h1>
-          <p className="text-xl opacity-90">Fast and reliable drying solutions</p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <h2 className="font-bold text-[#1a3a8f] mb-4">Industrial Dryer Options</h2>
-            <p className="text-gray-600 mb-6">
-              Our industrial dryers are engineered for heavy-duty laundry operations. 
-              Choose from gas, electric, or steam-powered solutions.
-            </p>
-            
-            <div className="space-y-6">
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Gas Dryers</h3>
-                <p className="text-gray-600">Cost-effective drying with superior heat control and energy efficiency.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Electric Dryers</h3>
-                <p className="text-gray-600">Reliable electric heating systems for consistent drying performance.</p>
-              </div>
-
-              <div className="border-l-4 border-[#00b4d8] pl-4">
-                <h3 className="font-bold text-gray-800 mb-2">Steam Dryers</h3>
-                <p className="text-gray-600">Gentle steam drying for delicate fabrics with quick turnaround times.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-1">
-            <div className="bg-gray-50 rounded-lg p-6 sticky top-24">
-              <h3 className="font-bold text-[#1a3a8f] mb-4">Key Features</h3>
-              <ul className="space-y-3 font-bold text-gray-600">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Variable heat settings</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Large capacity tumble drums</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Quick cool down cycles</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#00b4d8] mt-1">→</span>
-                  <span>Reduced operating costs</span>
-                </li>
-              </ul>
-              
-              <button className="w-full mt-6 bg-[#1a3a8f] text-white py-2 rounded font-bold hover:bg-[#00b4d8] hover:text-[#1a3a8f] transition-colors">
-                Request Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    <SubpageListingPage
+      breadcrumbs={[
+        { label: 'Solutions', href: '/solutions' },
+        { label: 'Laundry Equipment', href: '/solutions/laundry' },
+        { label: 'Industrial Dryers' },
+      ]}
+      heroImage="/hero-laundry.jpg"
+      category="Laundry Equipment"
+      title="Industrial Dryers"
+      heroSubtitle="High-capacity tumble dryers engineered for fast, energy-efficient drying in hotels, hospitals, and large-scale laundry operations."
+      introTitle="Dry faster. Spend less."
+      introText="Our industrial dryer range delivers superior moisture extraction and faster cycle times — reducing labour costs and energy consumption without compromising on fabric care. Every model is built for continuous commercial use with minimal downtime."
+      benefits={[
+        { icon: '⚡', title: 'Energy Efficient', desc: 'Heat pump and gas options available, reducing energy costs by up to 60% compared to conventional electric dryers.' },
+        { icon: '⏱️', title: 'Fast Cycles', desc: 'High-capacity drums and optimised airflow cut drying times significantly, increasing throughput.' },
+        { icon: '🛠️', title: 'Easy Maintenance', desc: 'Front-accessible lint filters and service panels keep downtime to a minimum.' },
+      ]}
+      products={[
+        { model: 'TD6-8', desc: 'Tumble dryer · 8 kg', slug: 'td68', placeholder: 'TD6-8' },
+        { model: 'TD6-11', desc: 'Tumble dryer · 11 kg', slug: 'td611', placeholder: 'TD6-11' },
+        { model: 'TD6-14', desc: 'Tumble dryer · 14 kg', slug: 'td614', placeholder: 'TD6-14' },
+        { model: 'UniMac UT050', desc: 'Industrial dryer · 50 lbs', slug: 'unimacUT050', placeholder: 'UniMac+UT050' },
+        { model: 'Primus T13', desc: 'Industrial dryer · 13 kg', slug: 'primusT13', placeholder: 'Primus+T13' },
+        { model: 'Alliance H160', desc: 'High-capacity dryer · 160 lbs', slug: 'allianceH160', placeholder: 'Alliance+H160' },
+      ]}
+      basePath="/solutions/laundry/industrial-dryers"
+    />
   );
 }
