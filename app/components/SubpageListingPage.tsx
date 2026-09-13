@@ -4,7 +4,6 @@ import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
-/* ─── Types ─────────────────────────────────────────────────── */
 interface BreadcrumbItem { label: string; href?: string; }
 interface Product { model: string; desc: string; slug: string; placeholder: string; image?: string; }
 interface Benefit { icon: string; title: string; desc: string; }
@@ -22,41 +21,37 @@ interface SubpageListingPageProps {
   basePath: string;
 }
 
-/* ─── Component ─────────────────────────────────────────────── */
 export default function SubpageListingPage({
   breadcrumbs, heroImage, category, title, heroSubtitle,
   introTitle, introText, benefits, products, basePath,
 }: SubpageListingPageProps) {
   return (
     <div>
-      <PageHero
-        image={heroImage}
-        eyebrow={category}
-        heading={title}
-        subtext={heroSubtitle}
-        breadcrumbs={breadcrumbs}
-      />
+      <PageHero image={heroImage} eyebrow={category} heading={title} subtext={heroSubtitle} breadcrumbs={breadcrumbs} />
 
-      {/* ══ INTRO ════════════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      {/* ── INTRO ────────────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
-            {/* Heading + text — 2 cols */}
+            {/* Text — 2 cols */}
             <div className="lg:col-span-2">
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Overview</span>
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem' }}>{introTitle}</h2>
               <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', lineHeight: '1.65' }}>{introText}</p>
             </div>
-            {/* Benefits — 1 col, stacked with left cyan bar */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', paddingTop: '0.25rem' }}>
+            {/* Benefits — 1 col */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {benefits.map((b, i) => (
-                <div key={i} className="cyan-bar">
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', marginBottom: '0.375rem' }}>
-                    <span style={{ fontSize: '1.125rem' }}>{b.icon}</span>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{b.title}</h3>
+                <div
+                  key={i}
+                  style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.375rem' }}>
+                    <span style={{ fontSize: '1.125rem', lineHeight: 1 }}>{b.icon}</span>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', margin: 0 }}>{b.title}</h3>
                   </div>
-                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{b.desc}</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.55', margin: 0 }}>{b.desc}</p>
                 </div>
               ))}
             </div>
@@ -64,8 +59,8 @@ export default function SubpageListingPage({
         </div>
       </section>
 
-      {/* ══ PRODUCT GRID ════════════════════════════════════ */}
-      <section id="products" className="stripe-surface py-section">
+      {/* ── PRODUCT GRID ─────────────────────────────────────── */}
+      <section id="products" style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Browse the Range</span>
@@ -75,20 +70,52 @@ export default function SubpageListingPage({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product, i) => (
-              <article key={i} className="product-showcase">
-                {/* Image */}
-                <div className="product-showcase__image">
+              <article
+                key={i}
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid var(--color-border)',
+                  overflow: 'hidden',
+                  transition: 'box-shadow 200ms ease',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
+              >
+                {/* Product image */}
+                <div
+                  style={{
+                    height: '220px',
+                    background: 'var(--color-surface)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    padding: '1.5rem',
+                  }}
+                >
                   <img
-                    src={product.image || `https://via.placeholder.com/400x300/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`}
+                    src={product.image || `https://placehold.co/400x280/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`}
                     alt={product.model}
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://via.placeholder.com/400x300/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`;
+                      (e.target as HTMLImageElement).src = `https://placehold.co/400x280/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`;
+                    }}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                      display: 'block',
                     }}
                   />
                 </div>
+
                 {/* Content */}
-                <div className="product-showcase__content">
-                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)', marginBottom: '0.25rem', fontWeight: 500 }}>
+                <div
+                  style={{
+                    padding: '1.25rem 1.5rem',
+                    borderTop: '3px solid var(--color-brand-cyan)',
+                  }}
+                >
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-text-muted)', fontWeight: 500, marginBottom: '0.25rem' }}>
                     {product.desc}
                   </p>
                   <h3
@@ -105,13 +132,25 @@ export default function SubpageListingPage({
                     {product.model}
                   </h3>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}>
-                    <Link href={`${basePath}/${product.slug}`} className="text-link" style={{ fontSize: '0.8125rem', fontWeight: 700 }}>
+                    <Link
+                      href={`${basePath}/${product.slug}`}
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.875rem',
+                        fontWeight: 700,
+                        color: 'var(--color-brand-navy)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.25rem',
+                        transition: 'color 200ms ease',
+                        textDecoration: 'none',
+                      }}
+                      onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
+                      onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-navy)'; }}
+                    >
                       View product →
                     </Link>
-                    <Link
-                      href="/contact"
-                      className="ds-btn ds-btn-outline ds-btn-sm"
-                    >
+                    <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-sm">
                       Enquire
                     </Link>
                   </div>

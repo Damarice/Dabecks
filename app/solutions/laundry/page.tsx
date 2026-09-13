@@ -47,7 +47,7 @@ export default function LaundryPage() {
       />
 
       {/* ══ INTRO ═══════════════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -98,91 +98,60 @@ export default function LaundryPage() {
         </div>
       </section>
 
-      {/* ══ FULL-BLEED VISUAL FEATURE ═══════════════════════════
-          Large image left (60%), category nav right (40%)
-      ══════════════════════════════════════════════════════════ */}
-      <section className="stripe-surface" style={{ overflow: 'hidden' }}>
-        <div className="split-feature split-feature--wide">
-          <div className="split-feature__media" style={{ minHeight: '560px' }}>
-            <img src="/hero-laundry.jpg" alt="Commercial laundry operations" />
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(to top, rgba(10,20,60,0.6) 0%, transparent 60%)',
-              }}
-            />
-            <div style={{ position: 'absolute', bottom: '2rem', left: '2.5rem' }}>
-              <p
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)',
-                  fontWeight: 800,
-                  color: '#ffffff',
-                  letterSpacing: '-0.025em',
-                  lineHeight: 1.1,
-                }}
-              >
-                Equipment for every<br />scale of operation
-              </p>
+      {/* ══ CATEGORIES NAV — full-bleed with image/nav split ═══ */}
+      <section style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0" style={{ minHeight: '560px' }}>
+            {/* Image — 60% (3 cols) */}
+            <div className="lg:col-span-3" style={{ position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
+              <img
+                src="/hero-laundry.jpg"
+                alt="Commercial laundry operations"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,20,60,0.6) 0%, transparent 60%)' }} />
+              <div style={{ position: 'absolute', bottom: '2rem', left: '2.5rem' }}>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.025em', lineHeight: 1.1 }}>
+                  Equipment for every<br />scale of operation
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="split-feature__content" style={{ background: 'var(--color-brand-navy)' }}>
-            <span
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.75rem',
-                fontWeight: 700,
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                color: 'var(--color-brand-cyan)',
-                display: 'block',
-                marginBottom: '1.5rem',
-              }}
-            >
-              Product Categories
-            </span>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-              {categories.map((cat, i) => (
-                <Link
-                  key={i}
-                  href={cat.href}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    padding: '1.125rem 0',
-                    borderBottom: '1px solid rgba(255,255,255,0.1)',
-                    color: '#ffffff',
-                    transition: 'color var(--transition-base)',
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
-                >
-                  <span
+            {/* Nav — 40% (2 cols) */}
+            <div className="lg:col-span-2" style={{ background: 'var(--color-brand-navy)', padding: '3rem 2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1.5rem' }}>
+                Product Categories
+              </span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+                {categories.map((cat, i) => (
+                  <Link
+                    key={i}
+                    href={cat.href}
                     style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '1rem',
-                      fontWeight: 700,
-                      lineHeight: 1,
+                      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '1.125rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)',
+                      color: '#ffffff', textDecoration: 'none', transition: 'color 200ms ease',
                     }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
                   >
-                    {cat.label}
-                  </span>
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              ))}
+                    <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, lineHeight: 1 }}>
+                      {cat.label}
+                    </span>
+                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ══ CUSTOMERS ═══════════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
-          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+          <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Social Proof</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
               Real stories. Real results.
@@ -191,25 +160,10 @@ export default function LaundryPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {customers.map((c, i) => (
-              <div
-                key={i}
-                style={{
-                  border: '1px solid var(--color-border)',
-                  overflow: 'hidden',
-                }}
-              >
-                <div className="hover-zoom-wrap" style={{ height: '200px' }}>
-                  <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
-                  <div
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      background: 'linear-gradient(to top, rgba(26,58,143,0.85) 0%, transparent 60%)',
-                      display: 'flex',
-                      alignItems: 'flex-end',
-                      padding: '1.25rem',
-                    }}
-                  >
+              <div key={i} style={{ border: '1px solid var(--color-border)', overflow: 'hidden', background: '#ffffff' }}>
+                <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={c.img} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(26,58,143,0.85) 0%, transparent 60%)', display: 'flex', alignItems: 'flex-end', padding: '1.25rem' }}>
                     <div>
                       <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '0.25rem' }}>{c.type}</span>
                       <p style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: '#ffffff', lineHeight: 1.2 }}>{c.name}</p>
@@ -218,7 +172,7 @@ export default function LaundryPage() {
                 </div>
                 <div style={{ padding: '1.25rem 1.5rem' }}>
                   <div style={{ color: 'var(--color-brand-cyan)', fontSize: '2rem', lineHeight: 1, fontFamily: 'Georgia, serif', marginBottom: '0.5rem' }}>&ldquo;</div>
-                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.6' }}>{c.quote}</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.6' }}>{c.quote}</p>
                 </div>
               </div>
             ))}
@@ -227,7 +181,7 @@ export default function LaundryPage() {
       </section>
 
       {/* ══ NEWS ════════════════════════════════════════════════ */}
-      <section className="stripe-surface py-section">
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '1rem', flexWrap: 'wrap' }}>
             <div>
@@ -237,29 +191,20 @@ export default function LaundryPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {news.map((n, i) => (
-              <article
-                key={i}
-                className="news-card"
-                style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden' }}
+              <article key={i} style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden', cursor: 'pointer', transition: 'box-shadow 200ms ease' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
               >
-                <div className="hover-zoom-wrap" style={{ height: '180px' }}>
-                  <img src={n.img} alt={n.title} className="w-full h-full object-cover" />
+                <div style={{ height: '180px', overflow: 'hidden' }}>
+                  <img src={n.img} alt={n.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
                 </div>
                 <div style={{ padding: '1.25rem 1.5rem' }}>
                   <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>{n.date}</span>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '0.9375rem',
-                      fontWeight: 700,
-                      color: 'var(--color-brand-navy)',
-                      lineHeight: 1.3,
-                      marginBottom: '0.5rem',
-                    }}
-                  >
-                    {n.title}
-                  </h3>
-                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)' }}>{n.desc}</p>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1.3, marginBottom: '0.5rem' }}>{n.title}</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{n.desc}</p>
                 </div>
               </article>
             ))}
@@ -268,7 +213,7 @@ export default function LaundryPage() {
       </section>
 
       {/* ══ CONTACT FORM ════════════════════════════════════════ */}
-      <section className="stripe-white py-section" style={{ borderTop: '1px solid var(--color-border)' }}>
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem', borderTop: '1px solid var(--color-border)' }}>
         <div className="ds-container" style={{ maxWidth: '680px' }}>
           <div className="text-center" style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Free Consultation</span>

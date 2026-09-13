@@ -1,140 +1,85 @@
+'use client';
+
 import Link from 'next/link';
 import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 import CTASection from '@/app/components/CTASection';
 
-/* ─────────────────────────────────────────────────────────────
-   Homepage — editorial rhythm
-   Hero → Value proposition → Solutions showcase →
-   Partner/stat band → Capabilities split → News → Contact
-   ───────────────────────────────────────────────────────────── */
-
 export default function Home() {
   return (
     <div>
-
-      {/* ══ 1. HERO ════════════════════════════════════════════ */}
       <HomepageHeroSlider />
 
-      {/* ══ 2. VALUE PROPOSITION — short, punchy ═══════════════
-          Full-width white band. One sentence + three pillars.
-      ══════════════════════════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      {/* ══ VALUE PROPOSITION ═══════════════════════════════════ */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-end">
             <div>
-              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>
-                East Africa&rsquo;s Commercial Equipment Partner
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-                  fontWeight: 800,
-                  letterSpacing: '-0.035em',
-                  lineHeight: 1.08,
-                  color: 'var(--color-brand-navy)',
-                }}
-              >
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>East Africa&rsquo;s Commercial Equipment Partner</span>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800, letterSpacing: '-0.035em', lineHeight: 1.08, color: 'var(--color-brand-navy)' }}>
                 The right equipment.<br />Installed correctly.<br />Supported for life.
               </h2>
             </div>
-            <div style={{ paddingBottom: '0.25rem' }}>
+            <div>
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Since 2011, Dabecks has been the trusted mechanical partner for hotels, hospitals, universities, and government institutions across East Africa — supplying, installing, and maintaining commercial laundry, kitchen, and HVAC systems.
               </p>
-              <Link href="/about" className="text-link">
-                Learn about Dabecks
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <Link href="/about" className="ds-btn ds-btn-outline">Learn About Dabecks</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══ 3. SOLUTIONS SHOWCASE — full-height image cards ════
-          Three tall image cards. Text pinned to bottom.
-          Typography-led hierarchy inside each card.
-      ══════════════════════════════════════════════════════════ */}
-      <section className="stripe-surface py-section">
+      {/* ══ SOLUTIONS SHOWCASE ══════════════════════════════════ */}
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: '2.5rem',
-              gap: '1rem',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '1rem', flexWrap: 'wrap' }}>
             <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>What We Offer</span>
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Our Solutions</h2>
             </div>
-            <Link href="/solutions" className="text-link">
-              View all solutions
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
+            <Link href="/solutions" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', display: 'inline-flex', alignItems: 'center', gap: '0.375rem', textDecoration: 'none' }}>
+              View all
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {[
-              { img: '/hero-laundry.jpg',  title: 'Commercial\nLaundry',      sub: 'Washers · Dryers · Ironers · Accessories',   href: '/solutions/laundry' },
-              { img: '/hero-kitchen.jpg',  title: 'Commercial\nKitchen',      sub: 'Ovens · Fryers · Dishwashers · Ranges',      href: '/solutions/kitchen' },
-              { img: '/hero-ac.jpg',       title: 'Air\nConditioning',        sub: 'Split Units · VRF/VRV · Ducted · Cassette',  href: '/solutions/air-conditioning' },
+              { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',    sub: 'Washers · Dryers · Ironers · Accessories',   href: '/solutions/laundry' },
+              { img: '/hero-kitchen.jpg', title: 'Commercial\nKitchen',    sub: 'Ovens · Fryers · Dishwashers · Ranges',      href: '/solutions/kitchen' },
+              { img: '/hero-ac.jpg',      title: 'Air\nConditioning',      sub: 'Split Units · VRF/VRV · Ducted · Cassette',  href: '/solutions/air-conditioning' },
             ].map(({ img, title, sub, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="solution-card group relative overflow-hidden block"
-                style={{ height: 'clamp(380px, 45vw, 560px)' }}
+                style={{
+                  display: 'block',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  height: 'clamp(360px, 42vw, 520px)',
+                  textDecoration: 'none',
+                }}
               >
                 <img
                   src={img}
                   alt={title.replace('\n', ' ')}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                {/* Gradient: transparent top → dark bottom */}
-                <div
-                  className="absolute inset-0"
                   style={{
+                    position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',
+                    transition: 'transform 600ms ease',
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                />
+                <div
+                  style={{
+                    position: 'absolute', inset: 0,
                     background: 'linear-gradient(to top, rgba(10,20,60,0.92) 0%, rgba(10,20,60,0.45) 45%, rgba(10,20,60,0.1) 100%)',
                   }}
                 />
-                {/* Content pinned bottom */}
-                <div className="absolute inset-x-0 bottom-0 p-7">
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)',
-                      fontWeight: 800,
-                      lineHeight: 1.05,
-                      letterSpacing: '-0.03em',
-                      color: '#ffffff',
-                      whiteSpace: 'pre-line',
-                      marginBottom: '0.5rem',
-                    }}
-                  >
-                    {title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.8125rem',
-                      color: 'rgba(255,255,255,0.65)',
-                      letterSpacing: '0.04em',
-                      marginBottom: '1.25rem',
-                    }}
-                  >
-                    {sub}
-                  </p>
-                  <span className="text-link text-link--white" style={{ fontSize: '0.8125rem' }}>
-                    Explore range →
-                  </span>
+                <div style={{ position: 'absolute', inset: 'auto 0 0 0', padding: '1.75rem' }}>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#ffffff', whiteSpace: 'pre-line', marginBottom: '0.5rem' }}>{title}</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.65)', letterSpacing: '0.04em', marginBottom: '1rem' }}>{sub}</p>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore range →</span>
                 </div>
               </Link>
             ))}
@@ -142,10 +87,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ 4. METRICS BAND — navy, full width ═════════════════
-          Bold statistics. No cards. Just numbers + labels.
-      ══════════════════════════════════════════════════════════ */}
-      <section className="dark-band">
+      {/* ══ METRICS BAND ════════════════════════════════════════ */}
+      <section style={{ background: 'var(--color-brand-navy)', paddingTop: '4rem', paddingBottom: '4rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
@@ -154,213 +97,155 @@ export default function Home() {
               { value: '3',      label: 'Global Brand Dealerships' },
               { value: '100%',   label: 'Kenyan Owned' },
             ].map(({ value, label }) => (
-              <div key={label} className="metric-block">
-                <div className="metric-block__value">{value}</div>
-                <div className="metric-block__label">{label}</div>
+              <div key={label}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, letterSpacing: '-0.045em', lineHeight: 1, color: 'var(--color-brand-cyan)', marginBottom: '0.375rem' }}>{value}</div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.65)' }}>{label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ══ 5. PARTNER SPLIT — editorial 55/45 layout ══════════
-          Large image left, authorised partner statement right.
-      ══════════════════════════════════════════════════════════ */}
-      <section className="stripe-white" style={{ overflow: 'hidden' }}>
-        <div className="split-feature split-feature--wide">
-          {/* Image */}
-          <div className="split-feature__media" style={{ minHeight: '560px' }}>
-            <img src="/home-partner.jpg" alt="Dabecks professional team" />
-          </div>
-          {/* Content */}
-          <div className="split-feature__content">
-            <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>Authorised Partner</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.875rem, 2.8vw, 2.75rem)',
-                fontWeight: 800,
-                letterSpacing: '-0.03em',
-                lineHeight: 1.1,
-                color: 'var(--color-brand-navy)',
-                marginBottom: '1.25rem',
-              }}
-            >
-              Long-term authorised partner &amp; mechanical experts
-            </h2>
-            <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
-            <p className="ds-body-lg" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-              Authorised dealer for Alliance Laundry Systems, Electrolux Professional, and Pellerin Milnor — backed by certified technicians and a dedicated after-sales team across East Africa.
-            </p>
-            <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-              Every installation comes with expert commissioning, staff training, and ongoing maintenance support.
-            </p>
-            <div className="flex flex-col gap-3" style={{ maxWidth: '280px' }}>
-              {[
-                'Authorised dealerships with genuine parts',
-                'Certified installation and commissioning',
-                'Preventive maintenance contracts',
-                'Rapid response repair service',
-              ].map((item) => (
-                <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <div
-                    style={{
-                      width: '6px',
-                      height: '6px',
-                      borderRadius: '50%',
-                      background: 'var(--color-brand-cyan)',
-                      flexShrink: 0,
-                      marginTop: '0.5rem',
-                    }}
-                  />
-                  <span className="ds-body-sm" style={{ color: 'var(--color-text)', fontWeight: 500 }}>{item}</span>
-                </div>
-              ))}
-            </div>
-            <div style={{ marginTop: '2.5rem' }}>
-              <Link href="/about" className="ds-btn ds-btn-primary">More About Dabecks</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 6. WHY DABECKS — reversed split ════════════════════ */}
-      <section className="stripe-surface" style={{ overflow: 'hidden' }}>
-        <div className="split-feature split-feature--wide-reverse">
-          {/* Content — left on desktop */}
-          <div className="split-feature__content" style={{ order: 1 }}>
-            <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>Why Choose Dabecks</span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.875rem, 2.8vw, 2.75rem)',
-                fontWeight: 800,
-                letterSpacing: '-0.03em',
-                lineHeight: 1.1,
-                color: 'var(--color-brand-navy)',
-                marginBottom: '1.25rem',
-              }}
-            >
-              Professional solution for professional results
-            </h2>
-            <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
-            <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-              When your kitchen or laundry systems fail, operations stop. Dabecks partners with world-class brands to ensure your facility runs without interruption.
-            </p>
-            <div style={{ marginTop: '2rem', marginBottom: '2.5rem' }}>
-              {[
-                { icon: '⚡', title: 'Energy Efficient', desc: 'Up to 40% reduction in energy and water costs across our laundry range.' },
-                { icon: '🛠️', title: 'Full Service Support', desc: 'Certified installation, preventive maintenance, and rapid repairs.' },
-                { icon: '✅', title: 'Certified Quality', desc: 'International standards compliance across all product categories.' },
-              ].map((f) => (
-                <div key={f.title} className="feature-row">
-                  <div className="feature-row__icon">{f.icon}</div>
-                  <div>
-                    <div className="feature-row__title">{f.title}</div>
-                    <div className="feature-row__desc">{f.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <Link href="/solutions/consultancy" className="text-link">
-              Learn about our consultancy
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
-          {/* Image — right on desktop */}
-          <div className="split-feature__media" style={{ order: 2, minHeight: '500px' }}>
-            <img src="/home-chef.jpg" alt="Professional kitchen chef" />
-          </div>
-        </div>
-      </section>
-
-      {/* ══ 7. LATEST NEWS ══════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      {/* ══ AUTHORISED PARTNER — editorial split ════════════════ */}
+      <section style={{ background: '#ffffff', overflow: 'hidden' }}>
         <div className="ds-container">
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'flex-end',
-              justifyContent: 'space-between',
-              marginBottom: '2.5rem',
-              gap: '1rem',
-              flexWrap: 'wrap',
-            }}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0" style={{ minHeight: '560px', alignItems: 'stretch' }}>
+            {/* Image */}
+            <div style={{ position: 'relative', minHeight: '400px', overflow: 'hidden' }}>
+              <img
+                src="/home-partner.jpg"
+                alt="Dabecks professional team"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+            {/* Content */}
+            <div style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>Authorised Partner</span>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.875rem, 2.8vw, 2.75rem)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: 'var(--color-brand-navy)', marginBottom: '1.25rem' }}>
+                Long-term authorised partner &amp; mechanical experts
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-body-lg" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                Authorised dealer for Alliance Laundry Systems, Electrolux Professional, and Pellerin Milnor — backed by certified technicians and a dedicated after-sales team across East Africa.
+              </p>
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
+                Every installation comes with expert commissioning, staff training, and ongoing maintenance support.
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem', marginBottom: '2rem' }}>
+                {[
+                  'Authorised dealerships with genuine parts',
+                  'Certified installation and commissioning',
+                  'Preventive maintenance contracts',
+                  'Rapid response repair service',
+                ].map((item) => (
+                  <div key={item} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--color-brand-cyan)', flexShrink: 0, marginTop: '0.5rem' }} />
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', fontWeight: 500, color: 'var(--color-text)' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div><Link href="/about" className="ds-btn ds-btn-primary">More About Dabecks</Link></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ WHY CHOOSE US ════════════════════════════════════════ */}
+      <section style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0" style={{ minHeight: '520px', alignItems: 'stretch' }}>
+            {/* Content — left */}
+            <div style={{ padding: '4rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', order: 1 }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>Why Choose Dabecks</span>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.875rem, 2.8vw, 2.75rem)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: 'var(--color-brand-navy)', marginBottom: '1.25rem' }}>
+                Professional solution for professional results
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                When your kitchen or laundry systems fail, operations stop. Dabecks ensures your facility runs without interruption.
+              </p>
+              <div style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
+                {[
+                  { icon: '⚡', title: 'Energy Efficient', desc: 'Up to 40% reduction in energy and water costs across our laundry range.' },
+                  { icon: '🛠️', title: 'Full Service Support', desc: 'Certified installation, preventive maintenance, and rapid repairs.' },
+                  { icon: '✅', title: 'Certified Quality', desc: 'International standards compliance across all product categories.' },
+                ].map((f) => (
+                  <div key={f.title} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', padding: '1rem 0', borderBottom: '1px solid var(--color-border)' }}>
+                    <div style={{ width: '40px', height: '40px', background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1.25rem' }}>{f.icon}</div>
+                    <div>
+                      <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.25rem' }}>{f.title}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{f.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <Link href="/solutions/consultancy" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
+                Learn about consultancy
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+            {/* Image — right */}
+            <div style={{ position: 'relative', minHeight: '400px', overflow: 'hidden', order: 2 }}>
+              <img src="/home-chef.jpg" alt="Professional kitchen chef" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ LATEST NEWS ══════════════════════════════════════════ */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+        <div className="ds-container">
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '1rem', flexWrap: 'wrap' }}>
             <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Latest Updates</span>
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Our News</h2>
             </div>
-            <Link href="/about" className="text-link">
+            <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
               View all
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
             </Link>
           </div>
 
-          {/* Editorial news layout: 1 large + 2 small */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Large featured article */}
-            <article
-              className="news-card md:col-span-2 overflow-hidden"
-              style={{ background: '#ffffff', border: '1px solid var(--color-border)', cursor: 'pointer' }}
+            {/* Large article */}
+            <article className="md:col-span-2" style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden', cursor: 'pointer', transition: 'box-shadow 200ms ease' }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
+              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
             >
-              <div className="hover-zoom-wrap" style={{ height: '280px' }}>
-                <img src="/hero-about.jpg" alt="Dabecks expands service coverage" className="w-full h-full object-cover" />
+              <div style={{ height: '260px', overflow: 'hidden' }}>
+                <img src="/hero-about.jpg" alt="Dabecks expands service coverage" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.03)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                />
               </div>
               <div style={{ padding: '1.75rem' }}>
                 <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.625rem' }}>March 2026</span>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-display)',
-                    fontSize: 'clamp(1.125rem, 2vw, 1.5rem)',
-                    fontWeight: 700,
-                    color: 'var(--color-brand-navy)',
-                    lineHeight: 1.25,
-                    marginBottom: '0.75rem',
-                  }}
-                >
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.125rem, 2vw, 1.5rem)', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1.25, marginBottom: '0.75rem' }}>
                   Dabecks expands service coverage across East Africa
                 </h3>
                 <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '1.25rem' }}>
-                  With new certified technicians now based in Uganda and Tanzania, our service network covers a wider regional footprint than ever before.
+                  With new certified technicians now based in Uganda and Tanzania, our service network covers a wider regional footprint.
                 </p>
-                <Link href="/about" className="text-link" style={{ fontSize: '0.8125rem' }}>
-                  Read more →
-                </Link>
+                <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textDecoration: 'none' }}>Read more →</Link>
               </div>
             </article>
 
-            {/* Two smaller articles stacked */}
-            <div className="flex flex-col gap-6">
+            {/* Two small articles */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {[
                 { month: 'Feb 2026', title: 'New Milnor dealership strengthens industrial laundry offering', img: '/hero-laundry.jpg' },
                 { month: 'Jan 2026', title: 'Electrolux Professional training completed by our technicians', img: '/hero-kitchen.jpg' },
               ].map(({ month, title, img }) => (
-                <article
-                  key={title}
-                  className="news-card overflow-hidden flex gap-0"
-                  style={{ background: '#ffffff', border: '1px solid var(--color-border)', cursor: 'pointer' }}
+                <article key={title} style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden', display: 'flex', cursor: 'pointer', transition: 'box-shadow 200ms ease' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
                 >
-                  <div className="hover-zoom-wrap flex-shrink-0" style={{ width: '110px', height: '110px' }}>
-                    <img src={img} alt={title} className="w-full h-full object-cover" />
+                  <div style={{ width: '110px', height: '110px', flexShrink: 0, overflow: 'hidden' }}>
+                    <img src={img} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </div>
-                  <div style={{ padding: '1rem 1.25rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ padding: '0.875rem 1.125rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.375rem' }}>{month}</span>
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: '0.9375rem',
-                        fontWeight: 700,
-                        color: 'var(--color-brand-navy)',
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {title}
-                    </p>
+                    <p style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1.3 }}>{title}</p>
                   </div>
                 </article>
               ))}
@@ -369,23 +254,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ 8. CONTACT ══════════════════════════════════════════ */}
-      <section className="stripe-surface py-section">
+      {/* ══ CONTACT ══════════════════════════════════════════════ */}
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-
             {/* Form */}
             <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Get in Touch</span>
-              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>
-                Send Us a Message
-              </h2>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Send Us a Message</h2>
               <span className="ds-accent-line" style={{ marginBottom: '1.75rem' }} />
-              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-                Have a project? Get a free consultation from our team.
-              </p>
-
-              <form className="space-y-4">
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Have a project? Get a free consultation from our team.</p>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="John Doe" /></div>
                   <div><label className="ds-label-form">Company</label><input className="ds-input" type="text" placeholder="Your Company" /></div>
@@ -405,74 +284,33 @@ export default function Home() {
                   </select>
                 </div>
                 <div><label className="ds-label-form">Message *</label><textarea className="ds-input" rows={4} placeholder="Tell us about your project…" style={{ resize: 'none' }} /></div>
-                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center', width: '100%' }}>
-                  Send Message
-                </button>
+                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Message</button>
               </form>
             </div>
 
-            {/* Contact info — clean, no excess boxes */}
-            <div style={{ paddingTop: '0.5rem' }}>
+            {/* Contact info */}
+            <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Contact Info</span>
-              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>
-                Reach Our Team
-              </h2>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Reach Our Team</h2>
               <span className="ds-accent-line" style={{ marginBottom: '2rem' }} />
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2.5rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
                 {[
                   { label: 'Phone', value: '+254 729 212 254\n+254 733 788 357' },
                   { label: 'Email', value: 'info@dabeckslaundry.com' },
                   { label: 'Location', value: 'Baraka Estate, Airport North Road\nNairobi, Kenya' },
                   { label: 'Business Hours', value: 'Mon – Fri: 8:00 AM – 5:00 PM\nSaturday: 9:00 AM – 1:00 PM' },
                 ].map(({ label, value }) => (
-                  <div key={label} className="cyan-bar">
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.6875rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.1em',
-                        color: 'var(--color-brand-navy)',
-                        marginBottom: '0.25rem',
-                      }}
-                    >
-                      {label}
-                    </p>
-                    <p
-                      className="ds-body"
-                      style={{ color: 'var(--color-text-muted)', whiteSpace: 'pre-line', lineHeight: '1.55' }}
-                    >
-                      {value}
-                    </p>
+                  <div key={label} style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-navy)', marginBottom: '0.25rem' }}>{label}</p>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'var(--color-text-muted)', whiteSpace: 'pre-line', lineHeight: '1.55' }}>{value}</p>
                   </div>
                 ))}
-              </div>
-
-              {/* Map placeholder */}
-              <div
-                style={{
-                  background: 'var(--color-brand-navy)',
-                  height: '200px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: 'rgba(255,255,255,0.4)',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.8125rem',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                }}
-              >
-                Nairobi, Kenya
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══ 9. CTA STRIP ════════════════════════════════════════ */}
       <CTASection
         heading="Ready to upgrade your facility?"
         subtext="Talk to our team — free consultation, genuine parts, certified installation."
@@ -480,7 +318,6 @@ export default function Home() {
         primaryHref="/contact"
         phone={true}
       />
-
     </div>
   );
 }

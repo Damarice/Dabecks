@@ -5,7 +5,6 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 import { useState } from 'react';
 
-/* ─── Types ─────────────────────────────────────────────────── */
 interface BreadcrumbItem { label: string; href?: string; }
 interface FeaturedProduct { title: string; desc: string; image: string; href: string; }
 interface Category        { label: string; href: string; image: string; }
@@ -27,7 +26,6 @@ interface CategoryLandingPageProps {
   news: NewsItem[];
 }
 
-/* ─── Component ─────────────────────────────────────────────── */
 export default function CategoryLandingPage({
   breadcrumbs, heroImage, heroTitle, heroSubtitle,
   introTitle, introText, featured, categories, standards, customers, news,
@@ -38,8 +36,8 @@ export default function CategoryLandingPage({
     <div>
       <PageHero image={heroImage} heading={heroTitle} subtext={heroSubtitle} breadcrumbs={breadcrumbs} />
 
-      {/* ══ INTRO — split layout ══════════════════════════════ */}
-      <section className="stripe-white py-section">
+      {/* ── INTRO ────────────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
@@ -48,16 +46,13 @@ export default function CategoryLandingPage({
               <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', lineHeight: '1.65' }}>{introText}</p>
             </div>
-            {/* Standards mini-grid */}
+            {/* Standards tiles */}
             <div className="grid grid-cols-2 gap-4">
               {standards.map((s, i) => (
-                <div
-                  key={i}
-                  style={{ background: 'var(--color-surface)', padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}
-                >
-                  <div style={{ fontSize: '1.75rem', marginBottom: '0.625rem' }}>{s.icon}</div>
+                <div key={i} style={{ background: 'var(--color-surface)', padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}>
+                  <div style={{ fontSize: '1.75rem', marginBottom: '0.625rem', lineHeight: 1 }}>{s.icon}</div>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.375rem' }}>{s.title}</h3>
-                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{s.desc}</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -65,8 +60,8 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ══ FEATURED PRODUCTS ════════════════════════════════ */}
-      <section className="stripe-surface py-section">
+      {/* ── FEATURED PRODUCTS ─────────────────────────────────── */}
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Featured</span>
@@ -78,20 +73,33 @@ export default function CategoryLandingPage({
               <Link
                 key={i}
                 href={p.href}
-                className="hover-lift block overflow-hidden"
-                style={{ background: '#ffffff', border: '1px solid var(--color-border)' }}
+                style={{
+                  display: 'block',
+                  background: '#ffffff',
+                  border: '1px solid var(--color-border)',
+                  overflow: 'hidden',
+                  textDecoration: 'none',
+                  transition: 'box-shadow 200ms ease, transform 200ms ease',
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = '0 8px 24px rgba(0,0,0,0.10)';
+                  (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-3px)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'none';
+                  (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+                }}
               >
-                <div className="hover-zoom-wrap" style={{ height: '220px' }}>
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                <div style={{ height: '220px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={p.image} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
                 </div>
                 <div style={{ padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}>
-                  <h3
-                    style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.5rem', lineHeight: 1.25 }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem', lineHeight: '1.55' }}>{p.desc}</p>
-                  <span className="text-link" style={{ fontSize: '0.8125rem' }}>Explore Range →</span>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.5rem', lineHeight: 1.25 }}>{p.title}</h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1rem', lineHeight: '1.55' }}>{p.desc}</p>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore Range →</span>
                 </div>
               </Link>
             ))}
@@ -99,78 +107,64 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ══ FULL-BLEED SPLIT — image + category nav ══════════ */}
-      <section className="stripe-white" style={{ overflow: 'hidden' }}>
-        <div className="split-feature split-feature--wide">
-          <div className="split-feature__media" style={{ minHeight: '500px' }}>
-            <img src={heroImage} alt={heroTitle} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,20,60,0.7) 0%, transparent 55%)' }} />
-            <div style={{ position: 'absolute', bottom: '2.5rem', left: '2.5rem', maxWidth: '380px' }}>
-              <p style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.25rem, 2.2vw, 1.875rem)', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.025em', lineHeight: 1.1 }}>
-                {heroTitle}
-              </p>
-            </div>
+      {/* ── CATEGORIES GRID ────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Browse by category</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Product Categories</h2>
+            <span className="ds-accent-line" />
           </div>
           <div
-            className="split-feature__content"
-            style={{ background: 'var(--color-brand-navy)' }}
+            className={categories.length <= 4 ? 'grid grid-cols-2 md:grid-cols-4 gap-4' : 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3'}
           >
-            <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1.5rem' }}>
-              Product Categories
-            </span>
-            <div>
-              {categories.map((cat, i) => (
-                <Link
-                  key={i}
-                  href={cat.href}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    padding: '1rem 0',
-                    borderBottom: '1px solid rgba(255,255,255,0.1)',
-                    color: '#ffffff',
-                    transition: 'color var(--transition-base)',
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
-                >
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700 }}>{cat.label}</span>
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              ))}
-            </div>
+            {categories.map((cat, i) => (
+              <Link key={i} href={cat.href} style={{ display: 'block', overflow: 'hidden', textDecoration: 'none', position: 'relative' }}>
+                <div style={{ height: '160px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={cat.image} alt={cat.label} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.08)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
+                  <div
+                    style={{
+                      position: 'absolute', inset: 0, display: 'flex', alignItems: 'flex-end', padding: '0.75rem',
+                      background: 'linear-gradient(to top, rgba(10,20,60,0.82) 0%, rgba(10,20,60,0.2) 60%, transparent 100%)',
+                    }}
+                  >
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#ffffff', lineHeight: 1.3 }}>
+                      {cat.label}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ══ CUSTOMERS ════════════════════════════════════════ */}
-      <section className="stripe-surface py-section">
+      {/* ── CUSTOMERS ──────────────────────────────────────────── */}
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Social Proof</span>
-            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
-              Real stories. Real results.
-            </h2>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Real stories. Real results.</h2>
             <span className="ds-accent-line" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {customers.map((c, i) => (
               <div key={i} style={{ border: '1px solid var(--color-border)', overflow: 'hidden', background: '#ffffff' }}>
-                <div className="hover-zoom-wrap" style={{ height: '200px', position: 'relative' }}>
-                  <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
+                <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={c.image} alt={c.name} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(26,58,143,0.85) 0%, transparent 60%)', display: 'flex', alignItems: 'flex-end', padding: '1.25rem' }}>
                     <div>
-                      <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '0.25rem' }}>{c.type}</span>
+                      <span className="ds-eyebrow" style={{ display: 'block', color: 'var(--color-brand-cyan)', marginBottom: '0.25rem' }}>{c.type}</span>
                       <p style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: '#ffffff', lineHeight: 1.2 }}>{c.name}</p>
                     </div>
                   </div>
                 </div>
                 <div style={{ padding: '1.25rem 1.5rem' }}>
                   <div style={{ color: 'var(--color-brand-cyan)', fontSize: '1.75rem', lineHeight: 1, fontFamily: 'Georgia, serif', marginBottom: '0.375rem' }}>&ldquo;</div>
-                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.6' }}>{c.quote}</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.6' }}>{c.quote}</p>
                 </div>
               </div>
             ))}
@@ -178,8 +172,8 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ══ NEWS ═════════════════════════════════════════════ */}
-      <section className="stripe-white py-section">
+      {/* ── NEWS ────────────────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Stay Informed</span>
@@ -188,14 +182,20 @@ export default function CategoryLandingPage({
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {news.map((n, i) => (
-              <article key={i} className="news-card" style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', overflow: 'hidden' }}>
-                <div className="hover-zoom-wrap" style={{ height: '180px' }}>
-                  <img src={n.image} alt={n.title} className="w-full h-full object-cover" />
+              <article key={i} style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', overflow: 'hidden', transition: 'box-shadow 200ms ease', cursor: 'pointer' }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
+              >
+                <div style={{ height: '180px', overflow: 'hidden' }}>
+                  <img src={n.image} alt={n.title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
                 </div>
                 <div style={{ padding: '1.25rem 1.5rem' }}>
                   <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>{n.date}</span>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1.3, marginBottom: '0.5rem' }}>{n.title}</h3>
-                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)' }}>{n.desc}</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{n.desc}</p>
                 </div>
               </article>
             ))}
@@ -203,10 +203,10 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ══ CONTACT FORM ═════════════════════════════════════ */}
-      <section className="stripe-surface py-section" style={{ borderTop: '1px solid var(--color-border)' }}>
+      {/* ── CONTACT FORM ────────────────────────────────────────── */}
+      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem', borderTop: '1px solid var(--color-border)' }}>
         <div className="ds-container" style={{ maxWidth: '680px' }}>
-          <div className="text-center" style={{ marginBottom: '2.5rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Free Consultation</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Tell us your needs</h2>
             <span className="ds-accent-line-center" />
