@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import ProductImage from '@/app/components/ProductImage';
 
 export default function CommercialWashers() {
   return (
@@ -137,12 +138,10 @@ export default function CommercialWashers() {
               <div key={i} className="bg-white border border-gray-200 group hover:shadow-xl transition-shadow">
                 {/* Image */}
                 <div className="bg-[#f7f7f7] h-72 flex items-center justify-center overflow-hidden p-6">
-                  <img
+                  <ProductImage
                     src={product.image}
                     alt={product.model}
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://via.placeholder.com/320x280?text=${product.placeholder}`;
-                    }}
+                    placeholder={product.placeholder}
                     className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

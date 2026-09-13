@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import ProductImage from '@/app/components/ProductImage';
 
 export default function WB66ProductDetail() {
   return (
@@ -15,10 +16,10 @@ export default function WB66ProductDetail() {
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start">
             <div className="flex items-center justify-center bg-[#f7f7f7] p-12 min-h-[520px]">
-              <img
+              <ProductImage
                 src="/products/washers/wb66.jpg"
                 alt="WB6-6 Front Load Washer"
-                onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/480x420?text=WB6-6'; }}
+                placeholder="WB6-6"
                 className="max-h-[420px] w-auto object-contain"
               />
             </div>
