@@ -3,20 +3,20 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 
-/* ─── Slide data ─────────────────────────────────────────────── */
-
 const slides = [
   {
     image: '/slide1.jpg',
     eyebrow: '15 Years of Excellence',
     title: "East Africa's\nTrusted Partner",
+    sub: 'Commercial laundry, kitchen, and air conditioning solutions — supplied, installed, and supported.',
     btnLabel: 'About Dabecks',
     btnHref: '/about',
   },
   {
     image: '/slide2.jpg',
     eyebrow: 'Kitchen Systems',
-    title: 'Professional Kitchen\nSolutions that Work',
+    title: 'Professional Kitchen\nSolutions That Work',
+    sub: 'From commercial ovens and fryers to dishwashers and cooking ranges — complete kitchen setups.',
     btnLabel: 'Explore Kitchen',
     btnHref: '/solutions/kitchen',
   },
@@ -24,50 +24,49 @@ const slides = [
     image: '/slide3.jpg',
     eyebrow: 'Laundry Equipment',
     title: 'High-Performance\nLaundry at Any Scale',
+    sub: 'Sprint cleaning with the lowest water, energy and detergent consumption in the industry.',
     btnLabel: 'Explore Laundry',
     btnHref: '/solutions/laundry',
   },
 ];
 
-/* ─── Component ─────────────────────────────────────────────── */
-
 export default function HomepageHeroSlider() {
   const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
+  const [fading, setFading] = useState(false);
 
   const goTo = useCallback((idx: number) => {
-    setAnimating(true);
+    setFading(true);
     setTimeout(() => {
       setCurrent((idx + slides.length) % slides.length);
-      setAnimating(false);
-    }, 180);
+      setFading(false);
+    }, 200);
   }, []);
 
-  const prev = () => !animating && goTo(current - 1);
-  const next = () => !animating && goTo(current + 1);
+  const prev = () => goTo(current - 1);
+  const next = () => goTo(current + 1);
 
   useEffect(() => {
-    const t = setInterval(() => setCurrent((c) => (c + 1) % slides.length), 6000);
+    const t = setInterval(() => goTo(current + 1), 6500);
     return () => clearInterval(t);
-  }, []);
+  }, [current, goTo]);
 
   const slide = slides[current];
 
   return (
     <>
-      {/* ── HERO SLIDER ──────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────── */}
       <section
         aria-label="Homepage hero"
         style={{
           position: 'relative',
           width: '100%',
-          minHeight: 'clamp(480px, 70vh, 720px)',
+          minHeight: 'clamp(560px, 75vh, 800px)',
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
         }}
       >
-        {/* Background images — crossfade */}
+        {/* Slides — crossfade */}
         {slides.map((s, i) => (
           <img
             key={i}
@@ -75,141 +74,128 @@ export default function HomepageHeroSlider() {
             alt=""
             aria-hidden="true"
             style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              objectPosition: 'center',
+              position: 'absolute', inset: 0, width: '100%', height: '100%',
+              objectFit: 'cover', objectPosition: 'center',
               opacity: i === current ? 1 : 0,
-              transition: 'opacity 800ms ease',
+              transition: 'opacity 900ms ease',
               pointerEvents: 'none',
             }}
           />
         ))}
 
-        {/* Overlay — dark left, fades right */}
+        {/* Left-to-right gradient overlay — dark left, image visible right */}
         <div
           aria-hidden="true"
           style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to right, rgba(10,18,50,0.90) 0%, rgba(10,18,50,0.70) 35%, rgba(10,18,50,0.30) 65%, rgba(10,18,50,0.05) 100%)',
+            position: 'absolute', inset: 0,
+            background: 'linear-gradient(to right, rgba(8,14,44,0.92) 0%, rgba(8,14,44,0.72) 38%, rgba(8,14,44,0.32) 68%, rgba(8,14,44,0.08) 100%)',
           }}
         />
 
-        {/* Content */}
+        {/* Content — left-aligned */}
         <div
           className="ds-container"
           style={{
-            position: 'relative',
-            zIndex: 10,
-            width: '100%',
-            paddingTop: '5rem',
-            paddingBottom: '7rem',
+            position: 'relative', zIndex: 10, width: '100%',
+            paddingTop: '6rem', paddingBottom: '8rem',
           }}
         >
-          <div style={{ maxWidth: '640px' }}>
+          <div
+            style={{
+              maxWidth: '640px',
+              opacity: fading ? 0 : 1,
+              transform: fading ? 'translateY(8px)' : 'translateY(0)',
+              transition: 'opacity 300ms ease, transform 300ms ease',
+            }}
+          >
             {/* Eyebrow */}
             <span
               className="ds-eyebrow"
-              style={{
-                display: 'block',
-                color: 'var(--color-brand-cyan)',
-                marginBottom: '1rem',
-                opacity: animating ? 0 : 1,
-                transform: animating ? 'translateY(6px)' : 'translateY(0)',
-                transition: 'opacity 300ms ease, transform 300ms ease',
-              }}
+              style={{ display: 'block', color: 'var(--color-brand-cyan)', marginBottom: '1.25rem' }}
             >
               {slide.eyebrow}
             </span>
 
-            {/* Main headline — display size, Manrope 800 */}
+            {/* Display headline */}
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2.75rem, 6vw, 5.5rem)',
+                fontSize: 'clamp(3rem, 7vw, 6rem)',
                 fontWeight: 800,
-                lineHeight: 0.97,
+                lineHeight: 0.96,
                 letterSpacing: '-0.045em',
                 color: '#ffffff',
                 whiteSpace: 'pre-line',
-                marginBottom: '2.25rem',
-                opacity: animating ? 0 : 1,
-                transform: animating ? 'translateY(10px)' : 'translateY(0)',
-                transition: 'opacity 350ms ease 60ms, transform 350ms ease 60ms',
+                marginBottom: '1.5rem',
               }}
             >
               {slide.title}
             </h1>
 
-            {/* CTA */}
-            <div
+            {/* Sub */}
+            <p
               style={{
-                opacity: animating ? 0 : 1,
-                transform: animating ? 'translateY(8px)' : 'translateY(0)',
-                transition: 'opacity 300ms ease 120ms, transform 300ms ease 120ms',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(1rem, 1.4vw, 1.125rem)',
+                fontWeight: 400,
+                lineHeight: 1.6,
+                color: 'rgba(255,255,255,0.78)',
+                maxWidth: '480px',
+                marginBottom: '2.5rem',
               }}
             >
+              {slide.sub}
+            </p>
+
+            {/* CTA */}
+            <div style={{ display: 'flex', gap: '0.875rem', flexWrap: 'wrap' }}>
               <Link href={slide.btnHref} className="ds-btn ds-btn-cyan ds-btn-lg">
                 {slide.btnLabel}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
+              </Link>
+              <Link href="/contact" className="ds-btn ds-btn-ghost-white ds-btn-lg">
+                Get a Quote
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Slide controls — prev / next */}
+        {/* Nav arrows */}
         {(['prev', 'next'] as const).map((dir) => (
           <button
             key={dir}
             onClick={dir === 'prev' ? prev : next}
             aria-label={dir === 'prev' ? 'Previous slide' : 'Next slide'}
             style={{
-              position: 'absolute',
-              zIndex: 20,
-              top: '50%',
+              position: 'absolute', zIndex: 20, top: '50%',
               transform: 'translateY(-50%)',
-              [dir === 'prev' ? 'left' : 'right']: '1.25rem',
-              width: '44px',
-              height: '44px',
-              borderRadius: '50%',
-              background: 'rgba(255,255,255,0.12)',
-              backdropFilter: 'blur(6px)',
-              border: '1px solid rgba(255,255,255,0.2)',
+              [dir === 'prev' ? 'left' : 'right']: '1.5rem',
+              width: '46px', height: '46px', borderRadius: '50%',
+              background: 'rgba(255,255,255,0.10)',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(255,255,255,0.18)',
               color: '#ffffff',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
               cursor: 'pointer',
               transition: 'background var(--transition-base)',
             }}
             onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'var(--color-brand-cyan)'; }}
-            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.12)'; }}
+            onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.10)'; }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
-                d={dir === 'prev' ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7'}
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d={dir === 'prev' ? 'M15 19l-7-7 7-7' : 'M9 5l7 7-7 7'} />
             </svg>
           </button>
         ))}
 
-        {/* Dot indicators */}
+        {/* Dot indicators — bottom left */}
         <div
           style={{
-            position: 'absolute',
-            bottom: '2rem',
-            left: '50%',
+            position: 'absolute', bottom: '2.5rem', left: '50%',
             transform: 'translateX(-50%)',
-            zIndex: 20,
-            display: 'flex',
-            gap: '8px',
-            alignItems: 'center',
+            zIndex: 20, display: 'flex', gap: '8px', alignItems: 'center',
           }}
         >
           {slides.map((_, i) => (
@@ -219,12 +205,9 @@ export default function HomepageHeroSlider() {
               aria-label={`Go to slide ${i + 1}`}
               style={{
                 width: i === current ? '28px' : '8px',
-                height: '8px',
-                borderRadius: '9999px',
-                background: i === current ? 'var(--color-brand-cyan)' : 'rgba(255,255,255,0.35)',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 0,
+                height: '8px', borderRadius: '9999px',
+                background: i === current ? 'var(--color-brand-cyan)' : 'rgba(255,255,255,0.3)',
+                border: 'none', cursor: 'pointer', padding: 0,
                 transition: 'width 300ms ease, background 300ms ease',
               }}
             />
@@ -232,20 +215,11 @@ export default function HomepageHeroSlider() {
         </div>
       </section>
 
-      {/* ── CLIENT TRUST BAR ─────────────────────────────────── */}
-      <div
-        style={{
-          background: 'var(--color-brand-navy)',
-          borderTop: '1px solid rgba(255,255,255,0.08)',
-        }}
-      >
+      {/* ── CLIENT TRUST BAR ─────────────────────────────── */}
+      <div style={{ background: 'var(--color-brand-navy)', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div
           className="ds-container"
-          style={{
-            display: 'flex',
-            alignItems: 'stretch',
-            minHeight: '64px',
-          }}
+          style={{ display: 'flex', alignItems: 'stretch', minHeight: '60px' }}
         >
           {/* Label */}
           <div
@@ -253,10 +227,9 @@ export default function HomepageHeroSlider() {
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
-              paddingRight: '2.5rem',
-              paddingLeft: '0',
-              borderRight: '1px solid rgba(255,255,255,0.12)',
-              marginRight: '2.5rem',
+              paddingRight: '2rem',
+              borderRight: '1px solid rgba(255,255,255,0.1)',
+              marginRight: '2rem',
             }}
           >
             <span
@@ -288,7 +261,7 @@ export default function HomepageHeroSlider() {
                   fontWeight: 600,
                   letterSpacing: '0.06em',
                   textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.5)',
+                  color: 'rgba(255,255,255,0.45)',
                   whiteSpace: 'nowrap',
                   flexShrink: 0,
                 }}
@@ -298,13 +271,9 @@ export default function HomepageHeroSlider() {
             ))}
           </div>
 
-          {/* All Clients CTA */}
+          {/* CTA */}
           <div className="flex items-center flex-shrink-0 pl-4">
-            <Link
-              href="/clients"
-              className="ds-btn ds-btn-cyan ds-btn-sm"
-              style={{ whiteSpace: 'nowrap' }}
-            >
+            <Link href="/clients" className="ds-btn ds-btn-cyan ds-btn-sm" style={{ whiteSpace: 'nowrap' }}>
               All Clients
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />

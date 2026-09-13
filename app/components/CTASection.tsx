@@ -2,14 +2,8 @@ import Link from 'next/link';
 
 /* ─────────────────────────────────────────────────────────────
    CTASection — reusable call-to-action banner
-   Used at the bottom of every page.
-
-   Props:
-   - heading     Primary headline (default: "Ready to get started?")
-   - subtext     Supporting line (default: generic)
-   - primaryLabel / primaryHref   — main button (default: Get in Touch → /contact)
-   - secondaryLabel / secondaryHref — optional ghost button
-   - phone       Show phone number as tertiary CTA (default true)
+   Clean, confident, generous spacing.
+   Sits at the bottom of every page.
    ───────────────────────────────────────────────────────────── */
 
 interface CTASectionProps {
@@ -23,10 +17,10 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  heading = 'Ready to get started?',
-  subtext = 'Contact us for pricing, availability, and expert installation support.',
+  heading  = 'Ready to get started?',
+  subtext  = 'Contact us for pricing, availability, and expert installation support.',
   primaryLabel = 'Get in Touch',
-  primaryHref = '/contact',
+  primaryHref  = '/contact',
   secondaryLabel,
   secondaryHref,
   phone = true,
@@ -34,26 +28,23 @@ export default function CTASection({
   return (
     <section
       aria-label="Call to action"
-      style={{
-        background: 'var(--color-brand-navy)',
-        paddingTop: '4rem',
-        paddingBottom: '4rem',
-      }}
+      className="dark-band"
+      style={{ paddingBlock: '4.5rem' }}
     >
       <div className="ds-container">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
           {/* Text */}
-          <div style={{ maxWidth: '520px' }}>
+          <div>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
+                fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
                 fontWeight: 800,
-                letterSpacing: '-0.03em',
-                lineHeight: 1.1,
+                letterSpacing: '-0.035em',
+                lineHeight: 1.08,
                 color: '#ffffff',
-                marginBottom: '0.625rem',
+                marginBottom: '0.75rem',
               }}
             >
               {heading}
@@ -71,7 +62,16 @@ export default function CTASection({
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '0.875rem',
+              flexWrap: 'wrap',
+              justifyContent: 'flex-start',
+            }}
+            className="lg:justify-end"
+          >
             <Link href={primaryHref} className="ds-btn ds-btn-cyan ds-btn-lg">
               {primaryLabel}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -80,9 +80,7 @@ export default function CTASection({
             </Link>
 
             {secondaryLabel && secondaryHref && (
-              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg">
-                {secondaryLabel}
-              </Link>
+              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg">{secondaryLabel}</Link>
             )}
 
             {phone && (
@@ -94,7 +92,6 @@ export default function CTASection({
               </a>
             )}
           </div>
-
         </div>
       </div>
     </section>

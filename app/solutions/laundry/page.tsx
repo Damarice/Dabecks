@@ -1,16 +1,43 @@
 'use client';
 
 import Link from 'next/link';
-import Breadcrumb from '@/app/components/Breadcrumb';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 import { useState } from 'react';
+
+const categories = [
+  { label: 'Commercial Washers',  href: '/solutions/laundry/commercial-washers',  img: '/hero-laundry.jpg' },
+  { label: 'Industrial Dryers',   href: '/solutions/laundry/industrial-dryers',   img: '/hero-laundry.jpg' },
+  { label: 'Ironers & Presses',   href: '/solutions/laundry/ironers-presses',     img: '/hero-laundry.jpg' },
+  { label: 'Washer Extractors',   href: '/solutions/laundry/washer-extractors',   img: '/hero-laundry.jpg' },
+  { label: 'Folding Equipment',   href: '/solutions/laundry/folding-equipment',   img: '/hero-laundry.jpg' },
+  { label: 'Accessories',         href: '/solutions/laundry/accessories',         img: '/hero-laundry.jpg' },
+];
+
+const standards = [
+  { icon: '⚡', title: 'Energy Efficiency', desc: 'Up to 40% reduction in water and energy consumption across our entire range.' },
+  { icon: '🔒', title: 'Reliability', desc: 'Every product tested for continuous commercial use before leaving the factory.' },
+  { icon: '🛠️', title: 'Service Support', desc: 'Full installation, maintenance, and repair across East Africa.' },
+  { icon: '✅', title: 'Certified Quality', desc: 'International certification including energy and hygiene compliance standards.' },
+];
+
+const customers = [
+  { name: 'Nairobi Serena Hotel',      type: 'Hospitality', quote: 'The new washers cut our energy bill by 35% in the first quarter. Reliability and after-sales support has been outstanding.', img: '/about-team.jpg' },
+  { name: 'Aga Khan Hospital',         type: 'Healthcare',  quote: 'Hygiene compliance is non-negotiable. Dabecks delivered certified equipment and handles all maintenance — completely stress-free.', img: '/about-journey.jpg' },
+  { name: 'Kenya School of Government',type: 'Institution', quote: 'Excellent service from consultation right through to installation. The equipment has performed exactly as specified.', img: '/hero-clients.jpg' },
+];
+
+const news = [
+  { date: 'March 2026',    title: 'New Heat Pump Dryer Range Now Available in East Africa', desc: 'Up to 60% energy savings compared to conventional dryers.', img: '/hero-laundry.jpg' },
+  { date: 'January 2026',  title: 'Dabecks Equips Largest Hotel Laundry in Nairobi',         desc: '24 washers, 18 dryers, and flatwork ironers for a 5-star property.', img: '/hero-clients.jpg' },
+  { date: 'November 2025', title: 'Commercial Laundry Maintenance: What You Need to Know',   desc: 'Top tips to extend equipment life and avoid costly downtime.', img: '/about-journey.jpg' },
+];
 
 export default function LaundryPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <PageHero
         image="/hero-laundry.jpg"
         eyebrow="Solutions"
@@ -19,290 +46,260 @@ export default function LaundryPage() {
         breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Laundry Equipment' }]}
       />
 
-      {/* ── INTRO: A NEW GENERATION ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-4">A New Generation Begins</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-6" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Our latest range of professional laundry equipment sets a new benchmark in energy efficiency, ergonomics, and reliability — built for the demands of modern commercial operations.
-          </p>
-        </div>
-      </section>
-
-      {/* ── FEATURED PRODUCTS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Featured Products</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'High-Efficiency Commercial Washers',
-                desc: 'Front-load washers with up to 40% energy savings, designed for hotels, hospitals, and large-scale laundry operations.',
-                image: '/hero-laundry.jpg',
-                href: '/solutions/laundry/commercial-washers',
-              },
-              {
-                title: 'Heat Pump Dryers',
-                desc: 'Next-generation tumble dryers with heat pump technology — dramatically lower energy use without compromising on drying performance.',
-                image: '/hero-laundry.jpg',
-                href: '/solutions/laundry/industrial-dryers',
-              },
-              {
-                title: 'Flatwork Ironers',
-                desc: 'Professional ironers for high-volume flatwork finishing. Fast, consistent results for linen, tablecloths, and uniforms.',
-                image: '/hero-laundry.jpg',
-                href: '/solutions/laundry/ironers-presses',
-              },
-            ].map((p, i) => (
-              <div key={i} className="bg-white border border-gray-200 overflow-hidden group hover:shadow-xl transition-shadow">
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/30 group-hover:bg-[#1a3a8f]/10 transition-colors" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-black text-[#1a3a8f] mb-3 leading-snug">{p.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">{p.desc}</p>
-                  <Link
-                    href={p.href}
-                    className="inline-block bg-[#1a3a8f] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#00b4d8] transition-colors"
-                  >
-                    Explore Range
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CATEGORY PRODUCTS ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Category Products</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers', image: '/hero-laundry.jpg' },
-              { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers', image: '/hero-laundry.jpg' },
-              { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses', image: '/hero-laundry.jpg' },
-              { label: 'Washer Extractors', href: '/solutions/laundry/washer-extractors', image: '/hero-laundry.jpg' },
-              { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment', image: '/hero-laundry.jpg' },
-              { label: 'Accessories', href: '/solutions/laundry/accessories', image: '/hero-laundry.jpg' },
-            ].map((cat, i) => (
-              <Link key={i} href={cat.href} className="group relative overflow-hidden block">
-                <div className="relative h-40 overflow-hidden">
-                  <img
-                    src={cat.image}
-                    alt={cat.label}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/50 group-hover:bg-[#1a3a8f]/70 transition-colors" />
-                  <div className="absolute inset-0 flex items-end p-3">
-                    <p className="text-white text-xs font-black uppercase leading-tight">{cat.label}</p>
-                  </div>
-                </div>
+      {/* ══ INTRO ═══════════════════════════════════════════════ */}
+      <section className="stripe-white py-section">
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>A New Generation Begins</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem' }}>
+                Built for the demands of modern commercial operations
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                Our latest range of professional laundry equipment sets a new benchmark in energy efficiency, ergonomics, and reliability.
+              </p>
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
+                From compact front-load washers for boutique hotels to industrial washer-extractors for hospital linen services — every product is selected for performance, longevity, and low cost of ownership.
+              </p>
+              <Link href="/solutions/laundry/commercial-washers" className="ds-btn ds-btn-primary">
+                View Commercial Washers
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── OUR STANDARDS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Our Standards</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { icon: '⚡', title: 'Energy Efficiency', desc: 'Up to 40% reduction in water and energy consumption across our entire range.' },
-              { icon: '🔒', title: 'Reliability', desc: 'Every product is tested for continuous commercial use before leaving the factory.' },
-              { icon: '🛠️', title: 'Service Support', desc: 'Full installation, maintenance, and repair services across East Africa.' },
-              { icon: '✅', title: 'Certified Quality', desc: 'International certifications including energy and hygiene compliance standards.' },
-            ].map((s, i) => (
-              <div key={i} className="text-center">
-                <div className="text-5xl mb-4">{s.icon}</div>
-                <h3 className="text-lg font-black text-[#1a3a8f] mb-3">{s.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── OUR CUSTOMERS ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-1 text-center">Our Customers</h2>
-          <p className="text-center text-gray-500 text-sm mb-2">Real stories. Real results.</p>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Nairobi Serena Hotel',
-                type: 'Hospitality',
-                quote: 'The new washers cut our energy bill by 35% in the first quarter. The reliability and after-sales support has been outstanding.',
-                image: '/about-team.jpg',
-              },
-              {
-                name: 'Aga Khan Hospital',
-                type: 'Healthcare',
-                quote: 'Hygiene compliance is non-negotiable for us. Dabecks delivered certified equipment and handles all our maintenance — completely stress-free.',
-                image: '/about-journey.jpg',
-              },
-              {
-                name: 'Kenya School of Government',
-                type: 'Institution',
-                quote: 'We equipped our entire laundry facility with Dabecks equipment. Excellent service from consultation right through to installation.',
-                image: '/hero-clients.jpg',
-              },
-            ].map((c, i) => (
-              <div key={i} className="border border-gray-200 overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/50" />
-                  <div className="absolute bottom-4 left-4">
-                    <p className="text-[#00b4d8] text-xs font-bold uppercase tracking-widest">{c.type}</p>
-                    <p className="text-white text-lg font-black">{c.name}</p>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-600 leading-relaxed italic">&ldquo;{c.quote}&rdquo;</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── OUR LATEST NEWS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Our Latest News</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                date: 'March 2026',
-                title: 'New Heat Pump Dryer Range Now Available in East Africa',
-                desc: 'Dabecks introduces the latest heat pump tumble dryer technology — offering up to 60% energy savings compared to conventional dryers.',
-                image: '/hero-laundry.jpg',
-              },
-              {
-                date: 'January 2026',
-                title: 'Dabecks Equips Largest Hotel Laundry in Nairobi',
-                desc: 'A major 5-star hotel in Nairobi completed a full laundry refit with Dabecks — 24 washers, 18 dryers, and flatwork ironers.',
-                image: '/hero-clients.jpg',
-              },
-              {
-                date: 'November 2025',
-                title: 'Commercial Laundry Maintenance: What You Need to Know',
-                desc: 'Our technical team shares the top maintenance tips to extend equipment life and avoid costly downtime in commercial laundry facilities.',
-                image: '/about-journey.jpg',
-              },
-            ].map((n, i) => (
-              <div key={i} className="bg-white border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
-                <div className="relative h-44 overflow-hidden">
-                  <img
-                    src={n.image}
-                    alt={n.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-[#00b4d8] text-xs font-bold uppercase tracking-widest mb-2">{n.date}</p>
-                  <h3 className="text-base font-black text-[#1a3a8f] mb-3 leading-snug">{n.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{n.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CONTACT FORM ── */}
-      <section className="bg-white py-16 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Tell us your needs</h2>
-          <p className="text-center text-gray-500 text-base mb-2">We&apos;ll design the right solution for you.</p>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-10" />
-
-          <form className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
-                <input
-                  type="text"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Your full name"
-                  className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder="your@email.com"
-                  className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Phone Number</label>
-                <input
-                  type="tel"
-                  value={form.phone}
-                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  placeholder="+254 000 000 000"
-                  className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Company / Organisation</label>
-                <input
-                  type="text"
-                  value={form.company}
-                  onChange={(e) => setForm({ ...form, company: e.target.value })}
-                  placeholder="Your company name"
-                  className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors"
-                />
-              </div>
             </div>
             <div>
-              <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Requirements</label>
-              <textarea
-                rows={5}
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="Describe your laundry needs — number of machines, daily volume, facility type..."
-                className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors resize-none"
-              />
+              <div className="grid grid-cols-2 gap-4">
+                {standards.map((s, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      background: 'var(--color-surface)',
+                      padding: '1.5rem',
+                      borderTop: '3px solid var(--color-brand-cyan)',
+                    }}
+                  >
+                    <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{s.icon}</div>
+                    <h3
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '0.9375rem',
+                        fontWeight: 700,
+                        color: 'var(--color-brand-navy)',
+                        marginBottom: '0.375rem',
+                      }}
+                    >
+                      {s.title}
+                    </h3>
+                    <p className="ds-caption" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{s.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="pt-2">
-              <button
-                type="submit"
-                className="bg-[#1a3a8f] text-white font-black text-sm uppercase tracking-widest px-10 py-4 hover:bg-[#00b4d8] transition-colors"
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FULL-BLEED VISUAL FEATURE ═══════════════════════════
+          Large image left (60%), category nav right (40%)
+      ══════════════════════════════════════════════════════════ */}
+      <section className="stripe-surface" style={{ overflow: 'hidden' }}>
+        <div className="split-feature split-feature--wide">
+          <div className="split-feature__media" style={{ minHeight: '560px' }}>
+            <img src="/hero-laundry.jpg" alt="Commercial laundry operations" />
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(10,20,60,0.6) 0%, transparent 60%)',
+              }}
+            />
+            <div style={{ position: 'absolute', bottom: '2rem', left: '2.5rem' }}>
+              <p
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)',
+                  fontWeight: 800,
+                  color: '#ffffff',
+                  letterSpacing: '-0.025em',
+                  lineHeight: 1.1,
+                }}
               >
-                Send Enquiry
-              </button>
+                Equipment for every<br />scale of operation
+              </p>
             </div>
+          </div>
+          <div className="split-feature__content" style={{ background: 'var(--color-brand-navy)' }}>
+            <span
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.75rem',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: 'var(--color-brand-cyan)',
+                display: 'block',
+                marginBottom: '1.5rem',
+              }}
+            >
+              Product Categories
+            </span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+              {categories.map((cat, i) => (
+                <Link
+                  key={i}
+                  href={cat.href}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    padding: '1.125rem 0',
+                    borderBottom: '1px solid rgba(255,255,255,0.1)',
+                    color: '#ffffff',
+                    transition: 'color var(--transition-base)',
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#ffffff'; }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '1rem',
+                      fontWeight: 700,
+                      lineHeight: 1,
+                    }}
+                  >
+                    {cat.label}
+                  </span>
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ CUSTOMERS ═══════════════════════════════════════════ */}
+      <section className="stripe-white py-section">
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Social Proof</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Real stories. Real results.
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {customers.map((c, i) => (
+              <div
+                key={i}
+                style={{
+                  border: '1px solid var(--color-border)',
+                  overflow: 'hidden',
+                }}
+              >
+                <div className="hover-zoom-wrap" style={{ height: '200px' }}>
+                  <img src={c.img} alt={c.name} className="w-full h-full object-cover" />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      background: 'linear-gradient(to top, rgba(26,58,143,0.85) 0%, transparent 60%)',
+                      display: 'flex',
+                      alignItems: 'flex-end',
+                      padding: '1.25rem',
+                    }}
+                  >
+                    <div>
+                      <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '0.25rem' }}>{c.type}</span>
+                      <p style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: '#ffffff', lineHeight: 1.2 }}>{c.name}</p>
+                    </div>
+                  </div>
+                </div>
+                <div style={{ padding: '1.25rem 1.5rem' }}>
+                  <div style={{ color: 'var(--color-brand-cyan)', fontSize: '2rem', lineHeight: 1, fontFamily: 'Georgia, serif', marginBottom: '0.5rem' }}>&ldquo;</div>
+                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', lineHeight: '1.6' }}>{c.quote}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ NEWS ════════════════════════════════════════════════ */}
+      <section className="stripe-surface py-section">
+        <div className="ds-container">
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '1rem', flexWrap: 'wrap' }}>
+            <div>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Stay Informed</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Latest News</h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {news.map((n, i) => (
+              <article
+                key={i}
+                className="news-card"
+                style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden' }}
+              >
+                <div className="hover-zoom-wrap" style={{ height: '180px' }}>
+                  <img src={n.img} alt={n.title} className="w-full h-full object-cover" />
+                </div>
+                <div style={{ padding: '1.25rem 1.5rem' }}>
+                  <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>{n.date}</span>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '0.9375rem',
+                      fontWeight: 700,
+                      color: 'var(--color-brand-navy)',
+                      lineHeight: 1.3,
+                      marginBottom: '0.5rem',
+                    }}
+                  >
+                    {n.title}
+                  </h3>
+                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)' }}>{n.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ CONTACT FORM ════════════════════════════════════════ */}
+      <section className="stripe-white py-section" style={{ borderTop: '1px solid var(--color-border)' }}>
+        <div className="ds-container" style={{ maxWidth: '680px' }}>
+          <div className="text-center" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Free Consultation</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Tell us your needs</h2>
+            <span className="ds-accent-line-center" />
+            <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginTop: '1rem' }}>
+              We&apos;ll design the right laundry solution for your facility.
+            </p>
+          </div>
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div><label className="ds-label-form">Full Name</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
+              <div><label className="ds-label-form">Email Address</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div><label className="ds-label-form">Phone Number</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></div>
+              <div><label className="ds-label-form">Company / Organisation</label><input className="ds-input" type="text" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
+            </div>
+            <div><label className="ds-label-form">Your Requirements</label><textarea className="ds-input" rows={4} style={{ resize: 'none' }} placeholder="Describe your laundry needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} /></div>
+            <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Enquiry</button>
           </form>
         </div>
       </section>
+
+      <CTASection
+        heading="Not sure where to start?"
+        subtext="Our team will assess your laundry needs and recommend the best equipment."
+        primaryLabel="Talk to an Expert"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

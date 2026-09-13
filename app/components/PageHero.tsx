@@ -1,21 +1,6 @@
-/* ─────────────────────────────────────────────────────────────
-   PageHero — single reusable hero component for ALL pages
-   except the homepage.
-
-   Design decisions:
-   - Fixed height 420px on desktop, 320px on mobile
-   - Solid dark overlay (no transparency tricks) — clear, readable
-   - Eyebrow label above the heading
-   - Max content width 640px, left-aligned
-   - Consistent on every page it's used on
-   ───────────────────────────────────────────────────────────── */
-
 import Breadcrumb from '@/app/components/Breadcrumb';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+interface BreadcrumbItem { label: string; href?: string; }
 
 interface PageHeroProps {
   image: string;
@@ -25,13 +10,14 @@ interface PageHeroProps {
   breadcrumbs?: BreadcrumbItem[];
 }
 
-export default function PageHero({
-  image,
-  eyebrow,
-  heading,
-  subtext,
-  breadcrumbs,
-}: PageHeroProps) {
+/* ─────────────────────────────────────────────────────────────
+   PageHero — consistent inner page hero
+   Height: clamp(340px, 38vw, 440px) — compact, not homepage-tall
+   Overlay: solid dark with slight blue tint — clean, readable
+   Typography: large but restrained — not competing with the homepage
+   ───────────────────────────────────────────────────────────── */
+
+export default function PageHero({ image, eyebrow, heading, subtext, breadcrumbs }: PageHeroProps) {
   return (
     <>
       {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
@@ -41,57 +27,36 @@ export default function PageHero({
         style={{
           position: 'relative',
           width: '100%',
-          height: 'clamp(320px, 35vw, 420px)',
+          height: 'clamp(340px, 38vw, 440px)',
           overflow: 'hidden',
           display: 'flex',
           alignItems: 'center',
         }}
       >
-        {/* Background image */}
+        {/* Background */}
         <img
           src={image}
           alt=""
           aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
         />
 
-        {/* Solid dark overlay — no transparency gradient, clean and readable */}
+        {/* Overlay — solid dark blue, no gradient tricks */}
         <div
           aria-hidden="true"
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'rgba(15, 23, 60, 0.78)',
-          }}
+          style={{ position: 'absolute', inset: 0, background: 'rgba(12, 20, 55, 0.80)' }}
         />
 
         {/* Content */}
         <div
           className="ds-container"
-          style={{
-            position: 'relative',
-            zIndex: 10,
-            width: '100%',
-            paddingTop: '2.5rem',
-            paddingBottom: '2.5rem',
-          }}
+          style={{ position: 'relative', zIndex: 10, width: '100%', paddingTop: '2rem', paddingBottom: '2rem' }}
         >
-          <div style={{ maxWidth: '640px' }}>
+          <div style={{ maxWidth: '700px' }}>
             {eyebrow && (
               <span
                 className="ds-eyebrow"
-                style={{
-                  display: 'block',
-                  color: 'var(--color-brand-cyan)',
-                  marginBottom: '0.75rem',
-                }}
+                style={{ display: 'block', color: 'var(--color-brand-cyan)', marginBottom: '0.875rem' }}
               >
                 {eyebrow}
               </span>
@@ -100,10 +65,10 @@ export default function PageHero({
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontSize: 'clamp(2rem, 4.5vw, 3.25rem)',
                 fontWeight: 800,
-                letterSpacing: '-0.035em',
-                lineHeight: 1.08,
+                letterSpacing: '-0.038em',
+                lineHeight: 1.06,
                 color: '#ffffff',
                 marginBottom: subtext ? '1rem' : 0,
               }}
@@ -115,11 +80,11 @@ export default function PageHero({
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: 'clamp(1rem, 1.5vw, 1.125rem)',
+                  fontSize: 'clamp(0.9375rem, 1.4vw, 1.0625rem)',
                   fontWeight: 400,
                   lineHeight: 1.6,
-                  color: 'rgba(255,255,255,0.82)',
-                  maxWidth: '520px',
+                  color: 'rgba(255,255,255,0.80)',
+                  maxWidth: '560px',
                 }}
               >
                 {subtext}

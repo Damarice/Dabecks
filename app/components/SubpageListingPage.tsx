@@ -1,27 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import Breadcrumb from '@/app/components/Breadcrumb';
-import CTASection from '@/app/components/CTASection';
 import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 
 /* ─── Types ─────────────────────────────────────────────────── */
-
 interface BreadcrumbItem { label: string; href?: string; }
-
-interface Product {
-  model: string;
-  desc: string;
-  slug: string;
-  placeholder: string;
-  image?: string;
-}
-
-interface Benefit {
-  icon: string;
-  title: string;
-  desc: string;
-}
+interface Product { model: string; desc: string; slug: string; placeholder: string; image?: string; }
+interface Benefit { icon: string; title: string; desc: string; }
 
 interface SubpageListingPageProps {
   breadcrumbs: BreadcrumbItem[];
@@ -37,18 +23,9 @@ interface SubpageListingPageProps {
 }
 
 /* ─── Component ─────────────────────────────────────────────── */
-
 export default function SubpageListingPage({
-  breadcrumbs,
-  heroImage,
-  category,
-  title,
-  heroSubtitle,
-  introTitle,
-  introText,
-  benefits,
-  products,
-  basePath,
+  breadcrumbs, heroImage, category, title, heroSubtitle,
+  introTitle, introText, benefits, products, basePath,
 }: SubpageListingPageProps) {
   return (
     <div>
@@ -60,134 +37,80 @@ export default function SubpageListingPage({
         breadcrumbs={breadcrumbs}
       />
 
-      {/* ══ INTRO ══════════════════════════════════════════════ */}
-      <section className="ds-section" style={{ background: '#ffffff' }}>
+      {/* ══ INTRO ════════════════════════════════════════════ */}
+      <section className="stripe-white py-section">
         <div className="ds-container">
-          {/* Heading */}
-          <div style={{ maxWidth: '640px', marginBottom: '3rem' }}>
-            <span className="ds-eyebrow">Overview</span>
-            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.625rem', marginBottom: '1rem' }}>
-              {introTitle}
-            </h2>
-            <span className="ds-accent-line" />
-            <p
-              className="ds-lead"
-              style={{ color: 'var(--color-text-muted)', marginTop: '1.25rem', lineHeight: '1.65' }}
-            >
-              {introText}
-            </p>
-          </div>
-
-          {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((b, i) => (
-              <div
-                key={i}
-                style={{
-                  borderLeft: '3px solid var(--color-brand-cyan)',
-                  paddingLeft: '1.25rem',
-                }}
-              >
-                <div style={{ fontSize: '2rem', lineHeight: 1, marginBottom: '0.75rem' }}>
-                  {b.icon}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
+            {/* Heading + text — 2 cols */}
+            <div className="lg:col-span-2">
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Overview</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem' }}>{introTitle}</h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)', lineHeight: '1.65' }}>{introText}</p>
+            </div>
+            {/* Benefits — 1 col, stacked with left cyan bar */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', paddingTop: '0.25rem' }}>
+              {benefits.map((b, i) => (
+                <div key={i} className="cyan-bar">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', marginBottom: '0.375rem' }}>
+                    <span style={{ fontSize: '1.125rem' }}>{b.icon}</span>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{b.title}</h3>
+                  </div>
+                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{b.desc}</p>
                 </div>
-                <h3
-                  className="ds-h4"
-                  style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}
-                >
-                  {b.title}
-                </h3>
-                <p className="ds-body" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-                  {b.desc}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ══ PRODUCT GRID ═══════════════════════════════════════ */}
-      <section id="products" className="ds-section" style={{ background: 'var(--color-surface)' }}>
+      {/* ══ PRODUCT GRID ════════════════════════════════════ */}
+      <section id="products" className="stripe-surface py-section">
         <div className="ds-container">
-          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
-            <span className="ds-eyebrow">Browse the range</span>
-            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
-              Our Range
-            </h2>
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Browse the Range</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Our Range</h2>
             <span className="ds-accent-line" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product, i) => (
-              <article
-                key={i}
-                className="group overflow-hidden"
-                style={{
-                  background: '#ffffff',
-                  border: '1px solid var(--color-border)',
-                  transition: 'box-shadow var(--transition-base), transform var(--transition-base)',
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow-lg)';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-                  (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
-                }}
-              >
-                {/* Product image */}
-                <div
-                  className="flex items-center justify-center overflow-hidden"
-                  style={{
-                    height: '240px',
-                    background: 'var(--color-surface)',
-                    padding: '1.5rem',
-                  }}
-                >
+              <article key={i} className="product-showcase">
+                {/* Image */}
+                <div className="product-showcase__image">
                   <img
-                    src={product.image || `https://via.placeholder.com/320x240/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`}
+                    src={product.image || `https://via.placeholder.com/400x300/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`}
                     alt={product.model}
-                    className="max-h-full max-w-full object-contain"
-                    style={{ transition: 'transform var(--transition-slow)' }}
                     onError={(e) => {
-                      (e.target as HTMLImageElement).src = `https://via.placeholder.com/320x240/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`;
+                      (e.target as HTMLImageElement).src = `https://via.placeholder.com/400x300/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`;
                     }}
                   />
                 </div>
-
-                {/* Product info */}
-                <div style={{ padding: '1.25rem 1.5rem', borderTop: '1px solid var(--color-border)' }}>
-                  <p
-                    className="ds-caption"
-                    style={{ color: 'var(--color-text-muted)', marginBottom: '0.375rem', fontWeight: 500 }}
-                  >
+                {/* Content */}
+                <div className="product-showcase__content">
+                  <p className="ds-caption" style={{ color: 'var(--color-text-muted)', marginBottom: '0.25rem', fontWeight: 500 }}>
                     {product.desc}
                   </p>
                   <h3
-                    className="ds-h4"
                     style={{
-                      color: 'var(--color-brand-navy)',
-                      marginBottom: '1.25rem',
                       fontFamily: 'var(--font-display)',
+                      fontSize: 'clamp(1.125rem, 1.8vw, 1.375rem)',
+                      fontWeight: 800,
+                      color: 'var(--color-brand-navy)',
+                      letterSpacing: '-0.02em',
+                      marginBottom: '1.25rem',
+                      lineHeight: 1.15,
                     }}
                   >
                     {product.model}
                   </h3>
-
-                  {/* Actions */}
-                  <div className="flex gap-2">
-                    <Link
-                      href={`${basePath}/${product.slug}`}
-                      className="ds-btn ds-btn-primary ds-btn-sm"
-                      style={{ flex: 1, justifyContent: 'center' }}
-                    >
-                      View More
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}>
+                    <Link href={`${basePath}/${product.slug}`} className="text-link" style={{ fontSize: '0.8125rem', fontWeight: 700 }}>
+                      View product →
                     </Link>
                     <Link
                       href="/contact"
                       className="ds-btn ds-btn-outline ds-btn-sm"
-                      style={{ flex: 1, justifyContent: 'center' }}
                     >
                       Enquire
                     </Link>
@@ -199,7 +122,6 @@ export default function SubpageListingPage({
         </div>
       </section>
 
-      {/* ══ CTA BANNER ═════════════════════════════════════════ */}
       <CTASection
         heading="Not sure which model is right for you?"
         subtext="Our team will assess your needs and recommend the best solution."
