@@ -297,7 +297,7 @@ export default function Home() {
                 {[
                   { label: 'Phone', value: '+254 729 212 254\n+254 733 788 357' },
                   { label: 'Email', value: 'info@dabeckslaundry.com' },
-                  { label: 'Location', value: 'Baraka Estate, Airport North Road\nNairobi, Kenya' },
+                  { label: 'Location', value: 'Lunga Lunga Square, 1st Floor, A7\nNairobi, Kenya' },
                   { label: 'Business Hours', value: 'Mon – Fri: 8:00 AM – 5:00 PM\nSaturday: 9:00 AM – 1:00 PM' },
                 ].map(({ label, value }) => (
                   <div key={label} style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}>
