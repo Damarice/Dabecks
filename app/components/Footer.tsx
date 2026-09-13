@@ -39,21 +39,13 @@ export default function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="flex items-center justify-center transition-colors"
+                  className="social-icon flex items-center justify-center"
                   style={{
                     width: '34px',
                     height: '34px',
                     borderRadius: '50%',
                     background: 'rgba(255,255,255,0.1)',
                     color: 'rgba(255,255,255,0.7)',
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = 'var(--color-brand-cyan)';
-                    (e.currentTarget as HTMLAnchorElement).style.color = '#fff';
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.1)';
-                    (e.currentTarget as HTMLAnchorElement).style.color = 'rgba(255,255,255,0.7)';
                   }}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">{icon}</svg>
@@ -77,18 +69,16 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                { href: '/solutions/laundry',           label: 'Laundry Equipment' },
-                { href: '/solutions/kitchen',           label: 'Kitchen Systems' },
-                { href: '/solutions/air-conditioning',  label: 'Air Conditioning' },
-                { href: '/solutions/consultancy',       label: 'Consultancy' },
+                { href: '/solutions/laundry',          label: 'Laundry Equipment' },
+                { href: '/solutions/kitchen',          label: 'Kitchen Systems' },
+                { href: '/solutions/air-conditioning', label: 'Air Conditioning' },
+                { href: '/solutions/consultancy',      label: 'Consultancy' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="flex items-center gap-2 transition-colors"
+                    className="footer-link flex items-center gap-2"
                     style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9375rem' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-brand-cyan)')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
                   >
                     <span
                       className="flex-shrink-0"
@@ -124,10 +114,8 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="flex items-center gap-2 transition-colors"
+                    className="footer-link flex items-center gap-2"
                     style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9375rem' }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--color-brand-cyan)')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
                   >
                     <span
                       className="flex-shrink-0"
@@ -158,6 +146,7 @@ export default function Footer() {
                 {
                   icon: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></>,
                   text: 'Baraka Estate, Airport North Road\nNairobi, Kenya',
+                  href: undefined,
                 },
                 {
                   icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
@@ -179,10 +168,8 @@ export default function Footer() {
                   {href ? (
                     <a
                       href={href}
-                      className="transition-colors whitespace-pre-line"
+                      className="footer-link whitespace-pre-line"
                       style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9375rem', lineHeight: '1.5' }}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.6)')}
                     >
                       {text}
                     </a>
