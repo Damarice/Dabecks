@@ -27,77 +27,120 @@ export default function CommercialWashers() {
         </div>
       </section>
 
-      {/* ── FEATURED PRODUCTS ── */}
+      {/* ── PRODUCTS ── */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
-        <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a3a8f] mb-4">Electrolux Professional Washers</h2>
-          <p className="text-lg text-gray-600">Industry-leading commercial washers engineered for reliability and performance</p>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black text-[#1a3a8f] mb-4">Our Washer Range</h2>
+          <p className="text-lg text-gray-600">Professional commercial washers from leading global brands</p>
         </div>
 
-        {/* Electrolux Featured Products */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              name: 'Electrolux Professional WB6160H',
-              desc: 'Front-Load Washer with advanced water management',
-              image: 'https://via.placeholder.com/400x300?text=Electrolux+WB6160H'
-            },
-            {
-              name: 'Electrolux Professional WB6180H',
-              desc: 'High-capacity washer for maximum throughput',
-              image: 'https://via.placeholder.com/400x300?text=Electrolux+WB6180H'
-            },
-            {
-              name: 'Electrolux Professional WB6260H',
-              desc: 'Premium washer with intelligent controls',
-              image: 'https://via.placeholder.com/400x300?text=Electrolux+WB6260H'
-            },
-          ].map((product, i) => (
-            <div key={i} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <div className="h-64 bg-gray-100 overflow-hidden">
-                <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#1a3a8f] mb-2">{product.name}</h3>
-                <p className="text-gray-600">{product.desc}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Other Partner Products */}
-        <div className="mb-12">
-          <h3 className="text-3xl font-black text-[#1a3a8f] mb-8">Other Premium Partners</h3>
+        {/* Product Grid - Electrolux */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-[#1a3a8f] mb-12">Electrolux Professional</h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                model: 'WB6-7',
+                fullName: 'Front load washer 7 kg - WH6-7',
+                image: 'https://via.placeholder.com/300x350?text=WB6-7'
+              },
+              {
+                model: 'WB6-8',
+                fullName: 'Front load washer 8 kg - WH6-8',
+                image: 'https://via.placeholder.com/300x350?text=WB6-8'
+              },
+              {
+                model: 'WB6-6',
+                fullName: 'Front load washer 6 kg - WH6-6',
+                image: 'https://via.placeholder.com/300x350?text=WB6-6'
+              },
+              {
+                model: 'WB6-6LAC',
+                fullName: 'Front load washer 6 kg - WH6-6LAC',
+                image: 'https://via.placeholder.com/300x350?text=WB6-6LAC'
+              },
+            ].map((product, i) => (
+              <div key={i} className="text-center">
+                {/* Product Image */}
+                <div className="bg-white h-80 flex items-center justify-center mb-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <img src={product.image} alt={product.model} className="max-h-full max-w-full object-contain" />
+                </div>
+                
+                {/* Product Info */}
+                <p className="text-gray-600 text-sm mb-2">{product.fullName}</p>
+                <h3 className="text-2xl font-black text-[#1a3a8f] mb-6">{product.model}</h3>
+                
+                {/* Buttons */}
+                <div className="flex flex-col gap-3">
+                  <Link 
+                    href={`/solutions/laundry/commercial-washers/${product.model.toLowerCase().replace('-', '')}`}
+                    className="bg-[#1a3a8f] text-white font-bold py-2.5 px-6 rounded-full text-sm uppercase tracking-wide hover:bg-[#00b4d8] transition-colors"
+                  >
+                    View More
+                  </Link>
+                  <button className="bg-gray-100 text-[#1a3a8f] font-bold py-2.5 px-6 rounded-full text-sm uppercase tracking-wide hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    <span>+</span> Compare
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Product Grid - Partners */}
+        <div>
+          <h3 className="text-3xl font-bold text-[#1a3a8f] mb-12">Other Premium Brands</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 brand: 'Alliance Laundry Systems',
-                name: 'Alliance L Series Washer',
-                desc: 'Commercial washer for every budget',
-                image: 'https://via.placeholder.com/400x300?text=Alliance+L+Series'
+                model: 'Alliance L18',
+                fullName: 'Commercial washer 18kg capacity',
+                image: 'https://via.placeholder.com/300x350?text=Alliance+L18'
               },
               {
                 brand: 'UniMac',
-                name: 'UniMac Unimac Plus',
-                desc: 'Reliable and cost-effective washing',
-                image: 'https://via.placeholder.com/400x300?text=UniMac+Plus'
+                model: 'UniMac UC60',
+                fullName: 'Universal commercial washer',
+                image: 'https://via.placeholder.com/300x350?text=UniMac+UC60'
               },
               {
                 brand: 'Primus',
-                name: 'Primus Professional Washer',
-                desc: 'Durable industrial-grade equipment',
-                image: 'https://via.placeholder.com/400x300?text=Primus+Professional'
+                model: 'Primus FX55',
+                fullName: 'Front load industrial washer',
+                image: 'https://via.placeholder.com/300x350?text=Primus+FX55'
+              },
+              {
+                brand: 'Huebsch',
+                model: 'Huebsch HC40',
+                fullName: 'Heavy duty commercial washer',
+                image: 'https://via.placeholder.com/300x350?text=Huebsch+HC40'
               },
             ].map((product, i) => (
-              <div key={i} className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-[#00b4d8]/20 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <div className="h-64 bg-gray-100 overflow-hidden">
-                  <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+              <div key={i} className="text-center">
+                {/* Product Image */}
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 h-80 flex items-center justify-center mb-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-[#00b4d8]/20">
+                  <img src={product.image} alt={product.model} className="max-h-full max-w-full object-contain" />
                 </div>
-                <div className="p-6">
-                  <p className="text-[#00b4d8] font-bold text-sm uppercase tracking-wide mb-1">{product.brand}</p>
-                  <h3 className="text-lg font-bold text-[#1a3a8f] mb-2">{product.name}</h3>
-                  <p className="text-gray-600 text-sm">{product.desc}</p>
+                
+                {/* Product Info */}
+                <p className="text-[#00b4d8] font-bold text-xs uppercase tracking-wide mb-1">{product.brand}</p>
+                <p className="text-gray-600 text-sm mb-2">{product.fullName}</p>
+                <h3 className="text-2xl font-black text-[#1a3a8f] mb-6">{product.model}</h3>
+                
+                {/* Buttons */}
+                <div className="flex flex-col gap-3">
+                  <Link 
+                    href={`/solutions/laundry/commercial-washers/${product.model.toLowerCase().replace(/\s/g, '')}`}
+                    className="bg-[#1a3a8f] text-white font-bold py-2.5 px-6 rounded-full text-sm uppercase tracking-wide hover:bg-[#00b4d8] transition-colors"
+                  >
+                    View More
+                  </Link>
+                  <button className="bg-gray-100 text-[#1a3a8f] font-bold py-2.5 px-6 rounded-full text-sm uppercase tracking-wide hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    <span>+</span> Compare
+                  </button>
                 </div>
               </div>
             ))}
