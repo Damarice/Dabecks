@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+/* ─── Types ─────────────────────────────────────────────────── */
+
+interface BreadcrumbItem { label: string; href?: string; }
 
 interface Product {
   model: string;
@@ -33,6 +32,8 @@ interface SubpageListingPageProps {
   basePath: string;
 }
 
+/* ─── Component ─────────────────────────────────────────────── */
+
 export default function SubpageListingPage({
   breadcrumbs,
   heroImage,
@@ -46,111 +47,211 @@ export default function SubpageListingPage({
   basePath,
 }: SubpageListingPageProps) {
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <Breadcrumb items={breadcrumbs} />
 
-      {/* ── HERO ── */}
+      {/* ══ HERO ═══════════════════════════════════════════════ */}
       <section
-        className="relative text-white flex items-center justify-center"
+        className="ds-hero ds-hero-tall"
         style={{
           backgroundImage: `url('${heroImage}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '560px',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1a3a8f]/50 via-[#1a3a8f]/60 to-[#1a3a8f]/75" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-24">
-          <p className="text-sm uppercase tracking-widest text-[#00b4d8] font-bold mb-4">{category}</p>
-          <h1 className="text-6xl md:text-8xl font-black leading-none mb-6">{title}</h1>
-          <p className="text-xl md:text-2xl font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">
-            {heroSubtitle}
-          </p>
-          <a
-            href="#products"
-            className="inline-block mt-10 bg-[#00b4d8] text-white font-black text-sm uppercase tracking-widest px-10 py-4 hover:bg-white hover:text-[#1a3a8f] transition-colors"
-          >
-            View Products
-          </a>
+        <div className="ds-hero-overlay" />
+        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div style={{ maxWidth: '640px' }}>
+            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>
+              {category}
+            </span>
+            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1.25rem' }}>
+              {title}
+            </h1>
+            <p
+              className="ds-lead"
+              style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '520px' }}
+            >
+              {heroSubtitle}
+            </p>
+            <a href="#products" className="ds-btn ds-btn-cyan ds-btn-lg">
+              View Products
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* ── INTRO ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="max-w-3xl mb-14">
-            <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-3">{introTitle}</h2>
-            <div className="w-12 h-1 bg-[#00b4d8] mb-8" />
-            <p className="text-lg text-gray-700 leading-relaxed">{introText}</p>
+      {/* ══ INTRO ══════════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          {/* Heading */}
+          <div style={{ maxWidth: '640px', marginBottom: '3rem' }}>
+            <span className="ds-eyebrow">Overview</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.625rem', marginBottom: '1rem' }}>
+              {introTitle}
+            </h2>
+            <span className="ds-accent-line" />
+            <p
+              className="ds-lead"
+              style={{ color: 'var(--color-text-muted)', marginTop: '1.25rem', lineHeight: '1.65' }}
+            >
+              {introText}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {/* Benefits */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((b, i) => (
-              <div key={i}>
-                <div className="text-4xl mb-4">{b.icon}</div>
-                <h3 className="text-2xl font-black text-[#1a3a8f] mb-3">{b.title}</h3>
-                <p className="text-base text-gray-700 leading-relaxed">{b.desc}</p>
+              <div
+                key={i}
+                style={{
+                  borderLeft: '3px solid var(--color-brand-cyan)',
+                  paddingLeft: '1.25rem',
+                }}
+              >
+                <div style={{ fontSize: '2rem', lineHeight: 1, marginBottom: '0.75rem' }}>
+                  {b.icon}
+                </div>
+                <h3
+                  className="ds-h4"
+                  style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}
+                >
+                  {b.title}
+                </h3>
+                <p className="ds-body" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
+                  {b.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PRODUCT GRID ── */}
-      <section id="products" className="bg-[#f7f7f7] py-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="mb-14">
-            <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-3">Our Range</h2>
-            <div className="w-12 h-1 bg-[#00b4d8]" />
+      {/* ══ PRODUCT GRID ═══════════════════════════════════════ */}
+      <section id="products" className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Browse the range</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Our Range
+            </h2>
+            <span className="ds-accent-line" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map((product, i) => (
-              <div key={i} className="bg-white border border-gray-200 group hover:shadow-xl transition-shadow">
-                <div className="bg-[#f0f0f0] h-64 flex items-center justify-center overflow-hidden p-6">
+              <article
+                key={i}
+                className="group overflow-hidden"
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid var(--color-border)',
+                  transition: 'box-shadow var(--transition-base), transform var(--transition-base)',
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow-lg)';
+                  (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                  (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
+                }}
+              >
+                {/* Product image */}
+                <div
+                  className="flex items-center justify-center overflow-hidden"
+                  style={{
+                    height: '240px',
+                    background: 'var(--color-surface)',
+                    padding: '1.5rem',
+                  }}
+                >
                   <img
-                    src={product.image || `https://via.placeholder.com/320x260?text=${encodeURIComponent(product.placeholder)}`}
+                    src={product.image || `https://via.placeholder.com/320x240/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`}
                     alt={product.model}
-                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="max-h-full max-w-full object-contain"
+                    style={{ transition: 'transform var(--transition-slow)' }}
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = `https://via.placeholder.com/320x240/f2f2f2/9a9a9a?text=${encodeURIComponent(product.placeholder)}`;
+                    }}
                   />
                 </div>
-                <div className="p-6 border-t border-gray-100">
-                  <p className="text-sm text-gray-500 font-medium mb-1">{product.desc}</p>
-                  <h3 className="text-2xl font-black text-[#1a3a8f] mb-6">{product.model}</h3>
-                  <div className="flex gap-3">
+
+                {/* Product info */}
+                <div style={{ padding: '1.25rem 1.5rem', borderTop: '1px solid var(--color-border)' }}>
+                  <p
+                    className="ds-caption"
+                    style={{ color: 'var(--color-text-muted)', marginBottom: '0.375rem', fontWeight: 500 }}
+                  >
+                    {product.desc}
+                  </p>
+                  <h3
+                    className="ds-h4"
+                    style={{
+                      color: 'var(--color-brand-navy)',
+                      marginBottom: '1.25rem',
+                      fontFamily: 'var(--font-display)',
+                    }}
+                  >
+                    {product.model}
+                  </h3>
+
+                  {/* Actions */}
+                  <div className="flex gap-2">
                     <Link
                       href={`${basePath}/${product.slug}`}
-                      className="flex-1 text-center bg-[#1a3a8f] text-white font-bold py-3 text-sm uppercase tracking-widest hover:bg-[#00b4d8] transition-colors"
+                      className="ds-btn ds-btn-primary ds-btn-sm"
+                      style={{ flex: 1, justifyContent: 'center' }}
                     >
                       View More
                     </Link>
                     <Link
                       href="/contact"
-                      className="flex-1 text-center border-2 border-[#1a3a8f] text-[#1a3a8f] font-bold py-3 text-sm uppercase tracking-widest hover:bg-[#1a3a8f] hover:text-white transition-colors"
+                      className="ds-btn ds-btn-outline ds-btn-sm"
+                      style={{ flex: 1, justifyContent: 'center' }}
                     >
                       Enquire
                     </Link>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA BANNER ── */}
-      <section className="bg-[#1a3a8f] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Not sure which model is right for you?</h2>
-            <p className="text-[#00b4d8] text-lg font-medium">Our team will assess your needs and recommend the best solution.</p>
+      {/* ══ CTA BANNER ═════════════════════════════════════════ */}
+      <section
+        style={{
+          background: 'var(--color-brand-navy)',
+          paddingTop: '3.5rem',
+          paddingBottom: '3.5rem',
+        }}
+      >
+        <div className="ds-container">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <h2
+                className="ds-h3"
+                style={{
+                  color: '#ffffff',
+                  marginBottom: '0.5rem',
+                  fontFamily: 'var(--font-display)',
+                }}
+              >
+                Not sure which model is right for you?
+              </h2>
+              <p className="ds-body" style={{ color: 'var(--color-brand-cyan)' }}>
+                Our team will assess your needs and recommend the best solution.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="ds-btn ds-btn-cyan ds-btn-lg flex-shrink-0"
+            >
+              Talk to an Expert
+            </Link>
           </div>
-          <Link
-            href="/contact"
-            className="flex-shrink-0 bg-[#00b4d8] text-white font-black py-4 px-10 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors"
-          >
-            Talk to an Expert
-          </Link>
         </div>
       </section>
     </div>

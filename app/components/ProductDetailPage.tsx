@@ -3,20 +3,11 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+/* ─── Types ─────────────────────────────────────────────────── */
 
-interface Spec {
-  label: string;
-  value: string;
-}
-
-interface Feature {
-  title: string;
-  desc: string;
-}
+interface BreadcrumbItem { label: string; href?: string; }
+interface Spec          { label: string; value: string; }
+interface Feature       { title: string; desc: string; }
 
 interface FeatureStrip {
   icon: string;
@@ -40,6 +31,8 @@ interface ProductDetailPageProps {
   backLabel: string;
 }
 
+/* ─── Component ─────────────────────────────────────────────── */
+
 export default function ProductDetailPage({
   breadcrumbs,
   category,
@@ -56,169 +49,413 @@ export default function ProductDetailPage({
   backLabel,
 }: ProductDetailPageProps) {
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div>
       <Breadcrumb items={breadcrumbs} />
 
-      {/* ── PRODUCT HERO ── */}
-      <section className="bg-white pt-10 pb-0 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start">
-            {/* Image */}
-            <div className="flex items-center justify-center bg-[#f7f7f7] p-12 min-h-[480px]">
+      {/* ══ PRODUCT HERO ═══════════════════════════════════════ */}
+      <section
+        style={{
+          background: '#ffffff',
+          borderBottom: '1px solid var(--color-border)',
+          paddingTop: '3rem',
+          paddingBottom: '3rem',
+        }}
+      >
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-12 items-start">
+
+            {/* Image panel */}
+            <div
+              className="flex items-center justify-center"
+              style={{
+                background: 'var(--color-surface)',
+                minHeight: '460px',
+                padding: '3rem',
+              }}
+            >
               <img
                 src={image}
                 alt={model}
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://via.placeholder.com/480x400?text=${encodeURIComponent(placeholder)}`;
+                  (e.target as HTMLImageElement).src =
+                    `https://via.placeholder.com/480x400/f2f2f2/9a9a9a?text=${encodeURIComponent(placeholder)}`;
                 }}
-                className="max-h-[400px] w-auto object-contain"
+                style={{
+                  maxHeight: '380px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  transition: 'transform var(--transition-slow)',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.03)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
               />
             </div>
 
-            {/* Info */}
-            <div className="bg-white px-8 md:px-12 py-10 flex flex-col justify-start">
-              <p className="text-sm uppercase tracking-widest text-[#00b4d8] font-bold mb-3">{category}</p>
-              <h1 className="text-6xl md:text-7xl font-black text-[#1a1a1a] leading-none mb-4">{model}</h1>
-              <p className="text-2xl text-gray-600 font-medium mb-6 leading-snug">{subtitle}</p>
-              <div className="w-12 h-1 bg-[#00b4d8] mb-8" />
+            {/* Info panel */}
+            <div
+              style={{
+                paddingTop: '1.5rem',
+                paddingBottom: '1.5rem',
+              }}
+            >
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>
+                {category}
+              </span>
 
-              <div className="grid grid-cols-3 gap-4 mb-10">
+              <h1
+                className="ds-h1"
+                style={{ color: 'var(--color-neutral-950)', marginBottom: '0.5rem' }}
+              >
+                {model}
+              </h1>
+
+              <p
+                className="ds-body-lg"
+                style={{ color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}
+              >
+                {subtitle}
+              </p>
+
+              <span className="ds-accent-line" style={{ marginBottom: '2rem' }} />
+
+              {/* Key specs */}
+              <div
+                className="grid grid-cols-3 gap-4"
+                style={{ marginBottom: '2.5rem', marginTop: '1.5rem' }}
+              >
                 {keySpecs.map((s, i) => (
-                  <div key={i} className="border-l-2 border-[#00b4d8] pl-3">
-                    <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{s.label}</p>
-                    <p className="text-xl font-black text-[#1a3a8f]">{s.value}</p>
+                  <div
+                    key={i}
+                    style={{
+                      borderLeft: '2px solid var(--color-brand-cyan)',
+                      paddingLeft: '0.875rem',
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.6875rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                        color: 'var(--color-text-muted)',
+                        marginBottom: '0.25rem',
+                      }}
+                    >
+                      {s.label}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: 'clamp(1rem, 1.5vw, 1.375rem)',
+                        fontWeight: 800,
+                        color: 'var(--color-brand-navy)',
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {s.value}
+                    </p>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-[#1a3a8f] text-white font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-[#00b4d8] transition-colors text-center"
-                >
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: 1, justifyContent: 'center' }}>
                   Request a Quote
                 </Link>
-                <Link
-                  href="/contact"
-                  className="border-2 border-[#1a3a8f] text-[#1a3a8f] font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-[#1a3a8f] hover:text-white transition-colors text-center"
-                >
+                <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-lg" style={{ flex: 1, justifyContent: 'center' }}>
                   Download Specs
                 </Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── FEATURE STRIP ── */}
-      <section className="bg-[#1a3a8f] py-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* ══ FEATURE STRIP ══════════════════════════════════════ */}
+      <section style={{ background: 'var(--color-brand-navy)', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {featureStrip.map((f, i) => (
-              <div key={i} className="text-white">
-                <div className="text-3xl mb-2">{f.icon}</div>
-                <p className="text-[#00b4d8] text-xs uppercase tracking-widest font-bold mb-1">{f.label}</p>
-                <p className="text-base font-medium leading-snug">{f.value}</p>
+              <div key={i}>
+                <div style={{ fontSize: '1.75rem', lineHeight: 1, marginBottom: '0.625rem' }}>
+                  {f.icon}
+                </div>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.6875rem',
+                    fontWeight: 700,
+                    letterSpacing: '0.1em',
+                    textTransform: 'uppercase',
+                    color: 'var(--color-brand-cyan)',
+                    marginBottom: '0.25rem',
+                  }}
+                >
+                  {f.label}
+                </p>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9375rem',
+                    fontWeight: 500,
+                    color: '#ffffff',
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {f.value}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── DESCRIPTION + SIDEBAR ── */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      {/* ══ DESCRIPTION + SIDEBAR ══════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+            {/* Description */}
             <div className="lg:col-span-2">
-              <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">About this Product</h2>
-              <div className="w-10 h-1 bg-[#00b4d8] mb-8" />
-              <div className="space-y-5">
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.625rem' }}>Product Overview</span>
+              <h2
+                className="ds-h3"
+                style={{ color: 'var(--color-brand-navy)', marginBottom: '0.75rem', fontFamily: 'var(--font-display)' }}
+              >
+                About this Product
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 {description.map((para, i) => (
-                  <p key={i} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+                  <p
+                    key={i}
+                    className="ds-body-lg"
+                    style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}
+                  >
+                    {para}
+                  </p>
                 ))}
               </div>
             </div>
-            <div className="bg-gray-50 p-8 border border-gray-200">
-              <h3 className="text-xl font-black text-[#1a3a8f] mb-6">Product Info</h3>
-              <div className="space-y-5">
-                <div>
-                  <p className="text-gray-500 text-xs uppercase font-bold mb-1">Model</p>
-                  <p className="text-lg font-semibold text-[#1a3a8f]">{model}</p>
+
+            {/* Sidebar */}
+            <div
+              style={{
+                background: 'var(--color-surface)',
+                border: '1px solid var(--color-border)',
+                padding: '1.75rem',
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.0625rem',
+                  fontWeight: 700,
+                  color: 'var(--color-brand-navy)',
+                  marginBottom: '1.5rem',
+                  paddingBottom: '1rem',
+                  borderBottom: '1px solid var(--color-border)',
+                }}
+              >
+                Product Info
+              </h3>
+
+              {[
+                { label: 'Model', value: model },
+                { label: 'Category', value: category },
+                { label: 'Warranty', value: '2 Years' },
+                { label: 'Service', value: 'East Africa Coverage' },
+              ].map(({ label, value }, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.125rem',
+                    marginBottom: '1rem',
+                  }}
+                >
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.6875rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      color: 'var(--color-text-muted)',
+                    }}
+                  >
+                    {label}
+                  </p>
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.9375rem',
+                      fontWeight: 600,
+                      color: 'var(--color-brand-navy)',
+                    }}
+                  >
+                    {value}
+                  </p>
                 </div>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase font-bold mb-1">Category</p>
-                  <p className="text-lg font-semibold text-[#1a3a8f]">{category}</p>
-                </div>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase font-bold mb-1">Warranty</p>
-                  <p className="text-lg font-semibold text-[#1a3a8f]">2 Years</p>
-                </div>
-                <div>
-                  <p className="text-gray-500 text-xs uppercase font-bold mb-1">Service</p>
-                  <p className="text-lg font-semibold text-[#1a3a8f]">Full East Africa Coverage</p>
-                </div>
-              </div>
+              ))}
+
               <Link
                 href="/contact"
-                className="block text-center mt-8 bg-[#1a3a8f] text-white font-bold py-3 text-sm uppercase tracking-widest hover:bg-[#00b4d8] transition-colors"
+                className="ds-btn ds-btn-primary"
+                style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}
               >
                 Get a Quote
               </Link>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── TECHNICAL SPECIFICATIONS ── */}
-      <section className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">Technical Specifications</h2>
-          <div className="w-10 h-1 bg-[#00b4d8] mb-10" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200">
-            {specs.map((spec, i) => (
+      {/* ══ TECHNICAL SPECIFICATIONS ═══════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2rem' }}>
+            <span className="ds-eyebrow">Data sheet</span>
+            <h2
+              className="ds-h3"
+              style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem', fontFamily: 'var(--font-display)' }}
+            >
+              Technical Specifications
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+
+          {/* Alternating rows table */}
+          <div
+            style={{
+              border: '1px solid var(--color-border)',
+              overflow: 'hidden',
+            }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              {specs.map((spec, i) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between gap-4"
+                  style={{
+                    padding: '0.875rem 1.25rem',
+                    borderBottom: '1px solid var(--color-border)',
+                    background: i % 2 === 0 ? '#ffffff' : 'var(--color-surface)',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.8125rem',
+                      fontWeight: 600,
+                      letterSpacing: '0.04em',
+                      textTransform: 'uppercase',
+                      color: 'var(--color-text-muted)',
+                      flexShrink: 0,
+                    }}
+                  >
+                    {spec.label}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '1rem',
+                      fontWeight: 700,
+                      color: 'var(--color-brand-navy)',
+                      textAlign: 'right',
+                    }}
+                  >
+                    {spec.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ KEY FEATURES ═══════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2rem' }}>
+            <span className="ds-eyebrow">What makes it great</span>
+            <h2
+              className="ds-h3"
+              style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem', fontFamily: 'var(--font-display)' }}
+            >
+              Key Features
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {features.map((f, i) => (
               <div
                 key={i}
-                className={`flex justify-between items-center px-6 py-4 border-b border-gray-200 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                style={{
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  padding: '1.5rem',
+                }}
               >
-                <span className="text-sm uppercase tracking-wide font-bold text-gray-500">{spec.label}</span>
-                <span className="text-lg font-black text-[#1a3a8f] text-right">{spec.value}</span>
+                <span
+                  className="ds-accent-line"
+                  style={{ marginBottom: '1rem', width: '2.5rem' }}
+                />
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '1.0625rem',
+                    fontWeight: 700,
+                    color: 'var(--color-brand-navy)',
+                    marginBottom: '0.5rem',
+                  }}
+                >
+                  {f.title}
+                </h3>
+                <p className="ds-body" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
+                  {f.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── KEY FEATURES ── */}
-      <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">Key Features</h2>
-          <div className="w-10 h-1 bg-[#00b4d8] mb-10" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((f, i) => (
-              <div key={i} className="bg-gray-50 p-6 border border-gray-200">
-                <div className="w-8 h-1 bg-[#00b4d8] mb-4" />
-                <h3 className="text-xl font-black text-[#1a3a8f] mb-3">{f.title}</h3>
-                <p className="text-base text-gray-700 leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ── */}
-      <section className="bg-[#1a3a8f] py-14">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Ready to get started?</h2>
-            <p className="text-[#00b4d8] text-lg font-medium">Contact us for pricing, availability, and installation support.</p>
-          </div>
-          <div className="flex gap-4 flex-shrink-0">
-            <Link href="/contact" className="bg-[#00b4d8] text-white font-black py-4 px-10 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors">
-              Get in Touch
-            </Link>
-            <Link href={backHref} className="border-2 border-white text-white font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors">
-              {backLabel}
-            </Link>
+      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
+      <section
+        style={{
+          background: 'var(--color-brand-navy)',
+          paddingTop: '3.5rem',
+          paddingBottom: '3.5rem',
+        }}
+      >
+        <div className="ds-container">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <h2
+                className="ds-h3"
+                style={{ color: '#ffffff', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}
+              >
+                Ready to get started?
+              </h2>
+              <p className="ds-body" style={{ color: 'var(--color-brand-cyan)' }}>
+                Contact us for pricing, availability, and installation support.
+              </p>
+            </div>
+            <div className="flex gap-3 flex-shrink-0 flex-wrap">
+              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">
+                Get in Touch
+              </Link>
+              <Link href={backHref} className="ds-btn ds-btn-ghost-white ds-btn-lg">
+                {backLabel}
+              </Link>
+            </div>
           </div>
         </div>
       </section>

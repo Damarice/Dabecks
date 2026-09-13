@@ -4,10 +4,9 @@ import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import { useState } from 'react';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+/* ─── Types ─────────────────────────────────────────────────── */
+
+interface BreadcrumbItem { label: string; href?: string; }
 
 interface FeaturedProduct {
   title: string;
@@ -56,6 +55,8 @@ interface CategoryLandingPageProps {
   news: NewsItem[];
 }
 
+/* ─── Component ─────────────────────────────────────────────── */
+
 export default function CategoryLandingPage({
   breadcrumbs,
   heroImage,
@@ -69,76 +70,185 @@ export default function CategoryLandingPage({
   customers,
   news,
 }: CategoryLandingPageProps) {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [form, setForm] = useState({
+    name: '', email: '', phone: '', company: '', message: '',
+  });
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       <Breadcrumb items={breadcrumbs} />
 
-      {/* ── HERO ── */}
+      {/* ══ HERO ═══════════════════════════════════════════════ */}
       <section
-        className="relative text-white flex items-end justify-center"
+        className="ds-hero ds-hero-tall"
         style={{
           backgroundImage: `url('${heroImage}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          minHeight: '520px',
+          backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pb-16 pt-32">
-          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-4">{heroTitle}</h1>
-          <p className="text-lg md:text-xl font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">{heroSubtitle}</p>
+        <div className="ds-hero-overlay" />
+        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div style={{ maxWidth: '680px' }}>
+            <h1
+              className="ds-h1"
+              style={{ color: '#ffffff', marginBottom: '1.25rem' }}
+            >
+              {heroTitle}
+            </h1>
+            <p
+              className="ds-lead"
+              style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '540px' }}
+            >
+              {heroSubtitle}
+            </p>
+            <a href="#featured" className="ds-btn ds-btn-cyan ds-btn-lg">
+              Explore Products
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* ── INTRO ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a1a1a] mb-4">{introTitle}</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-6" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">{introText}</p>
+      {/* ══ INTRO ══════════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="ds-section-header-centered" style={{ maxWidth: '680px', margin: '0 auto 3.5rem' }}>
+            <span className="ds-eyebrow">About This Range</span>
+            <h2
+              className="ds-h2"
+              style={{ color: 'var(--color-brand-navy)', marginTop: '0.75rem' }}
+            >
+              {introTitle}
+            </h2>
+            <span className="ds-accent-line-center" />
+            <p
+              className="ds-lead"
+              style={{ color: 'var(--color-text-muted)', marginTop: '1.5rem' }}
+            >
+              {introText}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ── FEATURED PRODUCTS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Featured Products</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
+      {/* ══ FEATURED PRODUCTS ══════════════════════════════════ */}
+      <section id="featured" className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Featured</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Featured Products
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featured.map((p, i) => (
-              <div key={i} className="bg-white border border-gray-200 overflow-hidden group hover:shadow-xl transition-shadow">
-                <div className="relative h-52 overflow-hidden">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/30 group-hover:bg-[#1a3a8f]/10 transition-colors" />
+              <Link
+                key={i}
+                href={p.href}
+                className="group block overflow-hidden"
+                style={{
+                  background: '#ffffff',
+                  boxShadow: 'var(--shadow-sm)',
+                  transition: 'box-shadow var(--transition-base), transform var(--transition-base)',
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'var(--shadow-lg)';
+                  (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(-3px)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = 'var(--shadow-sm)';
+                  (e.currentTarget as HTMLAnchorElement).style.transform = 'translateY(0)';
+                }}
+              >
+                {/* Image */}
+                <div className="overflow-hidden" style={{ height: '220px' }}>
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover"
+                    style={{ transition: 'transform var(--transition-slow)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.05)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-black text-[#1a3a8f] mb-3 leading-snug">{p.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">{p.desc}</p>
-                  <Link href={p.href} className="inline-block bg-[#1a3a8f] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#00b4d8] transition-colors">
-                    Explore Range
-                  </Link>
+                {/* Content */}
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 className="ds-h4" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.625rem' }}>
+                    {p.title}
+                  </h3>
+                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', marginBottom: '1.25rem', lineHeight: '1.55' }}>
+                    {p.desc}
+                  </p>
+                  <span
+                    className="ds-label"
+                    style={{ color: 'var(--color-brand-cyan)', fontSize: '0.75rem' }}
+                  >
+                    Explore Range →
+                  </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CATEGORIES ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Product Categories</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-          <div className={`grid gap-4 ${categories.length <= 4 ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'}`}>
+      {/* ══ CATEGORIES ═════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Browse by category</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Product Categories
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+
+          <div
+            className={`grid gap-3 ${
+              categories.length <= 4
+                ? 'grid-cols-2 md:grid-cols-4'
+                : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6'
+            }`}
+          >
             {categories.map((cat, i) => (
-              <Link key={i} href={cat.href} className="group relative overflow-hidden block">
-                <div className="relative h-40 overflow-hidden">
-                  <img src={cat.image} alt={cat.label} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/50 group-hover:bg-[#1a3a8f]/70 transition-colors" />
-                  <div className="absolute inset-0 flex items-end p-3">
-                    <p className="text-white text-xs font-black uppercase leading-tight">{cat.label}</p>
+              <Link
+                key={i}
+                href={cat.href}
+                className="group relative overflow-hidden block"
+                style={{ borderRadius: 'var(--radius-sm)' }}
+              >
+                <div className="relative overflow-hidden" style={{ height: '160px' }}>
+                  <img
+                    src={cat.image}
+                    alt={cat.label}
+                    className="w-full h-full object-cover"
+                    style={{ transition: 'transform var(--transition-slow)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.08)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
+                  {/* Dark overlay */}
+                  <div
+                    className="absolute inset-0 flex items-end p-3"
+                    style={{
+                      background: 'linear-gradient(to top, rgba(10,20,60,0.8) 0%, rgba(10,20,60,0.2) 60%, transparent 100%)',
+                      transition: 'background var(--transition-base)',
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.75rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.06em',
+                        textTransform: 'uppercase',
+                        color: '#ffffff',
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {cat.label}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -147,42 +257,112 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── STANDARDS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Our Standards</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
+      {/* ══ STANDARDS ══════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-brand-navy)' }}>
+        <div className="ds-container">
+          <div className="ds-section-header-centered" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)' }}>Why choose Dabecks</span>
+            <h2 className="ds-h2" style={{ color: '#ffffff', marginTop: '0.5rem' }}>
+              Our Standards
+            </h2>
+          </div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {standards.map((s, i) => (
               <div key={i} className="text-center">
-                <div className="text-5xl mb-4">{s.icon}</div>
-                <h3 className="text-lg font-black text-[#1a3a8f] mb-3">{s.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p>
+                <div style={{ fontSize: '2.5rem', marginBottom: '1rem', lineHeight: 1 }}>
+                  {s.icon}
+                </div>
+                <h3
+                  className="ds-h5"
+                  style={{ color: '#ffffff', marginBottom: '0.625rem', fontFamily: 'var(--font-display)' }}
+                >
+                  {s.title}
+                </h3>
+                <p className="ds-body-sm" style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.55' }}>
+                  {s.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CUSTOMERS ── */}
-      <section className="bg-white py-16 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-1 text-center">Our Customers</h2>
-          <p className="text-center text-gray-500 text-sm mb-2">Real stories. Real results.</p>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ══ CUSTOMERS ══════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Social proof</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Our Customers
+            </h2>
+            <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
+              Real stories. Real results.
+            </p>
+            <span className="ds-accent-line" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {customers.map((c, i) => (
-              <div key={i} className="border border-gray-200 overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
+              <div
+                key={i}
+                className="overflow-hidden"
+                style={{
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius-sm)',
+                }}
+              >
+                {/* Image with overlay */}
+                <div className="relative overflow-hidden" style={{ height: '200px' }}>
                   <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-[#1a3a8f]/50" />
-                  <div className="absolute bottom-4 left-4">
-                    <p className="text-[#00b4d8] text-xs font-bold uppercase tracking-widest">{c.type}</p>
-                    <p className="text-white text-lg font-black">{c.name}</p>
+                  <div
+                    className="absolute inset-0 flex flex-col justify-end p-5"
+                    style={{
+                      background: 'linear-gradient(to top, rgba(26,58,143,0.85) 0%, rgba(26,58,143,0.3) 70%, transparent 100%)',
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.6875rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                        color: 'var(--color-brand-cyan)',
+                        marginBottom: '0.25rem',
+                      }}
+                    >
+                      {c.type}
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '1.0625rem',
+                        fontWeight: 700,
+                        color: '#ffffff',
+                        lineHeight: 1.2,
+                      }}
+                    >
+                      {c.name}
+                    </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-600 leading-relaxed italic">&ldquo;{c.quote}&rdquo;</p>
+                {/* Quote */}
+                <div style={{ padding: '1.25rem 1.5rem' }}>
+                  {/* Quote mark */}
+                  <div style={{ color: 'var(--color-brand-cyan)', fontSize: '2rem', lineHeight: 1, marginBottom: '0.5rem', fontFamily: 'Georgia, serif' }}>
+                    &ldquo;
+                  </div>
+                  <p
+                    className="ds-body-sm"
+                    style={{
+                      color: 'var(--color-text-muted)',
+                      fontStyle: 'italic',
+                      lineHeight: '1.6',
+                    }}
+                  >
+                    {c.quote}
+                  </p>
                 </div>
               </div>
             ))}
@@ -190,65 +370,143 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── NEWS ── */}
-      <section className="bg-[#f7f7f7] py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Our Latest News</h2>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-12" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* ══ NEWS ═══════════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="ds-section-header" style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Stay informed</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>
+              Latest News
+            </h2>
+            <span className="ds-accent-line" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {news.map((n, i) => (
-              <div key={i} className="bg-white border border-gray-200 overflow-hidden group hover:shadow-lg transition-shadow">
-                <div className="relative h-44 overflow-hidden">
-                  <img src={n.image} alt={n.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <article
+                key={i}
+                className="group overflow-hidden"
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid var(--color-border)',
+                  transition: 'box-shadow var(--transition-base)',
+                  cursor: 'pointer',
+                }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'var(--shadow-md)'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
+              >
+                <div className="overflow-hidden" style={{ height: '180px' }}>
+                  <img
+                    src={n.image}
+                    alt={n.title}
+                    className="w-full h-full object-cover"
+                    style={{ transition: 'transform var(--transition-slow)' }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  />
                 </div>
-                <div className="p-6">
-                  <p className="text-[#00b4d8] text-xs font-bold uppercase tracking-widest mb-2">{n.date}</p>
-                  <h3 className="text-base font-black text-[#1a3a8f] mb-3 leading-snug">{n.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{n.desc}</p>
+                <div style={{ padding: '1.25rem 1.5rem' }}>
+                  <p
+                    className="ds-eyebrow"
+                    style={{ marginBottom: '0.625rem' }}
+                  >
+                    {n.date}
+                  </p>
+                  <h3
+                    className="ds-h5"
+                    style={{
+                      color: 'var(--color-brand-navy)',
+                      marginBottom: '0.625rem',
+                      lineHeight: 1.3,
+                      fontFamily: 'var(--font-display)',
+                    }}
+                  >
+                    {n.title}
+                  </h3>
+                  <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>
+                    {n.desc}
+                  </p>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CONTACT FORM ── */}
-      <section className="bg-white py-16 border-t border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 md:px-10">
-          <h2 className="text-3xl font-black text-[#1a1a1a] mb-2 text-center">Tell us your needs</h2>
-          <p className="text-center text-gray-500 text-base mb-2">We&apos;ll design the right solution for you.</p>
-          <div className="w-12 h-1 bg-[#00b4d8] mx-auto mb-10" />
-          <form className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
-                <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Your full name" className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors" />
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
-                <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="your@email.com" className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors" />
-              </div>
+      {/* ══ CONTACT FORM ═══════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff', borderTop: '1px solid var(--color-border)' }}>
+        <div className="ds-container">
+          <div style={{ maxWidth: '680px', margin: '0 auto' }}>
+            {/* Header */}
+            <div className="text-center" style={{ marginBottom: '2.5rem' }}>
+              <span className="ds-eyebrow">Free consultation</span>
+              <h2
+                className="ds-h2"
+                style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem', marginBottom: '0.5rem' }}
+              >
+                Tell us your needs
+              </h2>
+              <span className="ds-accent-line-center" />
+              <p
+                className="ds-body"
+                style={{ color: 'var(--color-text-muted)', marginTop: '1rem' }}
+              >
+                We&apos;ll design the right solution for you.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Phone Number</label>
-                <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="+254 000 000 000" className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors" />
+
+            {/* Form */}
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { key: 'name', label: 'Full Name', placeholder: 'Your full name', type: 'text' },
+                  { key: 'email', label: 'Email Address', placeholder: 'your@email.com', type: 'email' },
+                ].map(({ key, label, placeholder, type }) => (
+                  <div key={key}>
+                    <label className="ds-label-form">{label}</label>
+                    <input
+                      type={type}
+                      className="ds-input"
+                      placeholder={placeholder}
+                      value={form[key as keyof typeof form]}
+                      onChange={(e) => setForm({ ...form, [key]: e.target.value })}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { key: 'phone', label: 'Phone Number', placeholder: '+254 000 000 000', type: 'tel' },
+                  { key: 'company', label: 'Company / Organisation', placeholder: 'Your company name', type: 'text' },
+                ].map(({ key, label, placeholder, type }) => (
+                  <div key={key}>
+                    <label className="ds-label-form">{label}</label>
+                    <input
+                      type={type}
+                      className="ds-input"
+                      placeholder={placeholder}
+                      value={form[key as keyof typeof form]}
+                      onChange={(e) => setForm({ ...form, [key]: e.target.value })}
+                    />
+                  </div>
+                ))}
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Company / Organisation</label>
-                <input type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} placeholder="Your company name" className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors" />
+                <label className="ds-label-form">Your Requirements</label>
+                <textarea
+                  rows={5}
+                  className="ds-input"
+                  style={{ resize: 'none' }}
+                  placeholder="Describe your needs — capacity, facility type, daily volume…"
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                />
               </div>
-            </div>
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Requirements</label>
-              <textarea rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Describe your needs..." className="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-[#1a3a8f] transition-colors resize-none" />
-            </div>
-            <div className="pt-2">
-              <button type="submit" className="bg-[#1a3a8f] text-white font-black text-sm uppercase tracking-widest px-10 py-4 hover:bg-[#00b4d8] transition-colors">
+              <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg w-full">
                 Send Enquiry
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </section>
     </div>

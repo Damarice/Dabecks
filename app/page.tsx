@@ -1,208 +1,235 @@
 import Link from 'next/link';
 import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 
-// ── Shared style tokens ───────────────────────────────────────────────────────
-// eyebrow:   cyan, 12px, bold, uppercase, wide tracking
-// h2:        navy, font-black, text-5xl, tight leading
-// body:      gray-600, text-lg (16px), relaxed
-// section-white:   bg-white  py-20
-// section-gray:    bg-gray-50 py-20
-// ─────────────────────────────────────────────────────────────────────────────
-
 export default function Home() {
   return (
-    <div className="bg-white" style={{ fontFamily: "'Nunito', Arial, sans-serif" }}>
-      {/* ── HERO ── */}
+    <div>
       <HomepageHeroSlider />
 
-      {/* ── SOLUTIONS OVERVIEW ── bg-white ── */}
-      <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 pt-6 md:pt-8 pb-16 md:pb-28">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+      {/* ══ SOLUTIONS OVERVIEW ═════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">What We Offer</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Our Solutions</h2>
+            <span className="ds-accent-line" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              {
-                img: '/hero-laundry.jpg',
-                title: 'Commercial Laundry\nSolutions',
-                href: '/solutions/laundry',
-              },
-              {
-                img: '/hero-kitchen.jpg',
-                title: 'Commercial Kitchen\nSolutions',
-                href: '/solutions/kitchen',
-              },
-              {
-                img: '/hero-ac.jpg',
-                title: 'Commercial\nBeverage Solutions',
-                href: '/solutions/air-conditioning',
-              },
+              { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',      href: '/solutions/laundry' },
+              { img: '/hero-kitchen.jpg', title: 'Commercial\nKitchen',      href: '/solutions/kitchen' },
+              { img: '/hero-ac.jpg',      title: 'Air\nConditioning',        href: '/solutions/air-conditioning' },
             ].map(({ img, title, href }) => (
-              <div key={href} className="group relative overflow-hidden h-96 md:h-[420px] shadow-lg hover:shadow-2xl transition-shadow">
-                {/* Background image */}
-                <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/45 group-hover:bg-black/55 transition-all duration-300" />
-                
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-8">
-                  <h2 className="text-white font-bold mb-10 leading-tight whitespace-pre-line" style={{ fontSize: '36px', fontWeight: '600' }}>{title}</h2>
-                  <Link
-                    href={href}
-                    className="inline-block bg-[#00b4d8] text-white font-bold px-10 py-3 hover:bg-[#0099bb] transition-all duration-300 text-base md:text-lg"
+              <Link
+                key={href}
+                href={href}
+                className="solution-card group relative overflow-hidden block"
+                style={{ height: 'clamp(320px, 40vw, 460px)' }}
+              >
+                <img
+                  src={img}
+                  alt={title.replace('\n', ' ')}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: 'linear-gradient(to top, rgba(10,20,60,0.82) 0%, rgba(10,20,60,0.38) 50%, rgba(10,20,60,0.15) 100%)',
+                  }}
+                />
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8" style={{ zIndex: 2 }}>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)',
+                      fontWeight: 800,
+                      lineHeight: 1.08,
+                      letterSpacing: '-0.025em',
+                      color: '#ffffff',
+                      whiteSpace: 'pre-line',
+                      marginBottom: '1.25rem',
+                    }}
                   >
-                    Discover more
-                  </Link>
+                    {title}
+                  </h3>
+                  <span className="ds-btn ds-btn-cyan ds-btn-sm">Discover More</span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── AUTHORISED PARTNER ── bg-gray-50 ── */}
-      <section className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+      {/* ══ AUTHORISED PARTNER ═════════════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-2">About Dabecks</span>
-              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mb-4 md:mb-6 leading-tight">
-                We are long-term<br />Authorised Partner &<br />mechanical experts
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>About Dabecks</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1.25rem' }}>
+                Long-term authorised partner &amp; mechanical experts
               </h2>
-              <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-3 md:mb-4">
-                Since 2011, Dabecks has been East Africa's trusted commercial equipment partner. We serve hotels, hospitals, universities, and government institutions.
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                Since 2011, Dabecks has been East Africa's trusted commercial equipment partner — serving hotels, hospitals, universities, and government institutions.
               </p>
-              <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2.5rem' }}>
                 Authorised dealer for Alliance Laundry Systems, Electrolux Professional, and Milnor — backed by certified technicians and a dedicated after-sales team.
               </p>
-              <div className="flex items-center gap-6 md:gap-10 mb-6 md:mb-8 flex-wrap">
+
+              <div
+                className="flex items-center gap-8 flex-wrap"
+                style={{ marginBottom: '2.5rem', paddingBottom: '2.5rem', borderBottom: '1px solid var(--color-border)' }}
+              >
                 {[
-                  { num: '15+', label: 'Years Experience' },
-                  { num: '100+', label: 'Clients Served' },
-                  { num: '3', label: 'Brand Dealerships' },
+                  { num: '15+',    label: 'Years Experience' },
+                  { num: '1,500+', label: 'Clients Served' },
+                  { num: '3',      label: 'Brand Dealerships' },
                 ].map(({ num, label }) => (
-                  <div key={label} className="text-center">
-                    <div className="text-[#00b4d8] font-black text-4xl md:text-5xl leading-none">{num}</div>
-                    <div className="text-gray-500 text-xs md:text-lg mt-1 font-semibold">{label}</div>
+                  <div key={label}>
+                    <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1, color: 'var(--color-brand-cyan)' }}>
+                      {num}
+                    </div>
+                    <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>
+                      {label}
+                    </div>
                   </div>
                 ))}
               </div>
-              <Link href="/about" className="inline-block bg-[#1a3a8f] text-white font-bold px-6 md:px-7 py-3 md:py-3.5 text-xs md:text-sm uppercase tracking-wide hover:bg-[#00b4d8] transition-colors">
-                More About Dabecks
-              </Link>
+
+              <Link href="/about" className="ds-btn ds-btn-primary">More About Dabecks</Link>
             </div>
-            <div className="relative">
+
+            <div style={{ position: 'relative' }}>
               <img
                 src="/home-partner.jpg"
-                alt="Professional team"
-                className="w-full h-auto md:h-[480px] object-cover"
+                alt="Dabecks professional team"
+                style={{ width: '100%', height: 'clamp(340px, 45vw, 520px)', objectFit: 'cover' }}
               />
-              <div className="absolute -top-4 md:-top-8 -left-4 md:-left-8 w-24 md:w-36 h-24 md:h-36 rounded-full bg-[#1a3a8f] flex flex-col items-center justify-center shadow-2xl border-4 border-white">
-                <span className="text-[#00b4d8] font-black text-3xl md:text-5xl leading-none">25</span>
-                <span className="text-white text-xs md:text-sm font-semibold text-center mt-1 leading-tight px-2 md:px-3">years in<br />the business</span>
+              <div
+                style={{
+                  position: 'absolute', top: '-1.5rem', left: '-1.5rem',
+                  width: '120px', height: '120px', borderRadius: '50%',
+                  background: 'var(--color-brand-navy)',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                  boxShadow: 'var(--shadow-xl)', border: '4px solid #ffffff',
+                }}
+              >
+                <span style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 800, color: 'var(--color-brand-cyan)', lineHeight: 1 }}>25</span>
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 600, color: 'rgba(255,255,255,0.8)', textAlign: 'center', lineHeight: 1.3, marginTop: '0.25rem', paddingInline: '0.5rem' }}>
+                  years in<br />business
+                </span>
               </div>
-              <div className="absolute -bottom-4 md:-bottom-8 -right-4 md:-right-8 bg-[#00b4d8] text-white p-4 md:p-7 shadow-2xl">
-                <div className="font-black text-3xl md:text-5xl leading-none mb-1 md:mb-2">1500+</div>
-                <div className="text-xs md:text-sm font-semibold leading-tight">Clients in<br />East Africa</div>
+              <div style={{ position: 'absolute', bottom: '-1rem', right: '-1rem', background: 'var(--color-brand-cyan)', color: '#ffffff', padding: '1.25rem 1.75rem', boxShadow: 'var(--shadow-lg)' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.25rem', fontWeight: 800, letterSpacing: '-0.04em', lineHeight: 1 }}>1,500+</div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 600, lineHeight: 1.3, marginTop: '0.25rem', opacity: 0.9 }}>
+                  Clients in<br />East Africa
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── OUR NEWS ── bg-white ── */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 md:mb-12 gap-4">
+      {/* ══ LATEST NEWS ════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4" style={{ marginBottom: '2.5rem' }}>
             <div>
-              <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-1">Latest Updates</span>
-              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl">Our News</h2>
+              <span className="ds-eyebrow">Latest Updates</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Our News</h2>
+              <span className="ds-accent-line" />
             </div>
-            <Link href="/about" className="text-[#1a3a8f] text-xs md:text-sm font-bold hover:text-[#00b4d8] transition-colors inline-flex items-center gap-1 flex-shrink-0">
+            <Link href="/about" className="hover-text-cyan" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-brand-navy)', display: 'inline-flex', alignItems: 'center', gap: '0.375rem', flexShrink: 0 }}>
               View all
-              <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-7">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
-              { day: '27', month: 'Mar', title: 'Dabecks expands service coverage across East Africa', img: '/hero-about.jpg' },
-              { day: '28', month: 'Feb', title: 'New Milnor dealership strengthens industrial laundry offering', img: '/hero-laundry.jpg' },
-              { day: '27', month: 'Jan', title: 'Electrolux Professional training completed by our technicians', img: '/hero-kitchen.jpg' },
+              { day: '27', month: 'Mar', title: 'Dabecks expands service coverage across East Africa',            img: '/hero-about.jpg' },
+              { day: '28', month: 'Feb', title: 'New Milnor dealership strengthens industrial laundry offering',  img: '/hero-laundry.jpg' },
+              { day: '27', month: 'Jan', title: 'Electrolux Professional training completed by our technicians',  img: '/hero-kitchen.jpg' },
             ].map(({ day, month, title, img }) => (
-              <div key={day + month} className="bg-white border border-gray-100 group cursor-pointer hover:shadow-md transition-shadow overflow-hidden">
-                <div className="overflow-hidden h-40 md:h-48">
-                  <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <article key={day + month} className="news-card overflow-hidden" style={{ background: '#ffffff', border: '1px solid var(--color-border)', cursor: 'pointer' }}>
+                <div className="hover-zoom-wrap" style={{ height: '200px' }}>
+                  <img src={img} alt={title} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-4 md:p-6">
-                  <div className="flex items-center gap-3 mb-3 md:mb-4">
-                    <div className="bg-[#00b4d8] text-white text-center px-2 md:px-3 py-1 md:py-2 leading-none flex-shrink-0">
-                      <div className="font-black text-base md:text-xl">{day}</div>
-                      <div className="text-xs md:text-sm font-bold uppercase mt-0.5">{month}</div>
+                <div style={{ padding: '1.25rem 1.5rem' }}>
+                  <div className="flex items-center gap-3" style={{ marginBottom: '0.875rem' }}>
+                    <div style={{ background: 'var(--color-brand-cyan)', color: '#ffffff', padding: '0.375rem 0.625rem', textAlign: 'center', flexShrink: 0 }}>
+                      <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 800, lineHeight: 1 }}>{day}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginTop: '0.125rem' }}>{month}</div>
                     </div>
-                    <span className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wide">News</span>
+                    <span className="ds-eyebrow">News</span>
                   </div>
-                  <h4 className="text-[#1a3a8f] font-bold text-sm md:text-lg leading-snug group-hover:text-[#00b4d8] transition-colors">{title}</h4>
+                  <h3 className="hover-text-cyan" style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1.3 }}>
+                    {title}
+                  </h3>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PROFESSIONAL SOLUTION ── bg-gray-50 ── */}
-      <section className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+      {/* ══ WHY CHOOSE US ══════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative order-2 lg:order-1">
-              <img
-                src="/home-chef.jpg"
-                alt="Professional chef"
-                className="w-full h-auto md:h-[460px] object-cover"
-              />
-              <div className="absolute bottom-3 md:bottom-6 left-3 md:left-6 bg-white px-3 md:px-4 py-2 md:py-3 shadow-xl flex items-center gap-2 md:gap-3">
-                <div className="w-7 md:w-9 h-7 md:h-9 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-3 md:w-4 h-3 md:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <img src="/home-chef.jpg" alt="Professional kitchen chef" style={{ width: '100%', height: 'clamp(320px, 42vw, 500px)', objectFit: 'cover' }} />
+              <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', background: '#ffffff', padding: '0.875rem 1.25rem', boxShadow: 'var(--shadow-lg)', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#22c55e', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                  <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-[#1a3a8f] font-bold text-xs md:text-sm">ISO Certified</div>
-                  <div className="text-gray-400 text-xs md:text-sm">Quality Guaranteed</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', lineHeight: 1 }}>ISO Certified</div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.125rem' }}>Quality Guaranteed</div>
                 </div>
               </div>
             </div>
+
             <div className="order-1 lg:order-2">
-              <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-2">Why Choose Us</span>
-              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mb-4 md:mb-6 leading-tight">
-                Professional Solution<br />for Professional<br />Results
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Why Choose Us</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1.25rem' }}>
+                Professional solution for professional results
               </h2>
-              <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-3 md:mb-4">
-                Reliable equipment is the backbone of every hotel, hospital, and institution. When your kitchen or laundry systems fail, operations stop.
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+                Reliable equipment is the backbone of every hotel, hospital, and institution.
               </p>
-              <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-6 md:mb-8">
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
                 Dabecks partners with world-class brands and backs every installation with expert commissioning, staff training, and ongoing maintenance.
               </p>
-              <div className="space-y-2 md:space-y-3 mb-6 md:mb-8">
+
+              <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem', listStyle: 'none', padding: 0 }}>
                 {[
                   'Authorised dealerships with genuine parts',
                   'Certified installation and commissioning',
                   'Preventive maintenance contracts',
                   'Rapid response repair service',
-                ].map(item => (
-                  <div key={item} className="flex items-center gap-3">
-                    <div className="w-4 md:w-5 h-4 md:h-5 rounded-full bg-[#00b4d8] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-2 md:w-3 h-2 md:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                ].map((item) => (
+                  <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'var(--color-brand-cyan)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <svg className="w-3 h-3" fill="none" stroke="white" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 text-sm md:text-lg font-medium">{item}</span>
-                  </div>
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--text-body-lg)', fontWeight: 500, color: 'var(--color-text)' }}>{item}</span>
+                  </li>
                 ))}
-              </div>
-              <Link href="/solutions/consultancy" className="inline-flex items-center gap-2 text-[#1a3a8f] font-bold text-xs md:text-sm hover:text-[#00b4d8] transition-colors">
-                Learn about our consultancy
-                <svg className="w-4 md:w-5 h-4 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              </ul>
+
+              <Link href="/solutions/consultancy" className="hover-text-cyan" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                Learn about consultancy
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
@@ -211,74 +238,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CONTACT ── bg-white ── */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-
-            {/* Form */}
+      {/* ══ CONTACT ════════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div>
-              <span className="text-[#00b4d8] text-xs md:text-sm font-bold uppercase tracking-widest block mb-2">Get in Touch</span>
-              <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mb-2 md:mb-3 leading-tight">Send Us a Message</h2>
-              <p className="text-gray-600 text-sm md:text-lg mb-6 md:mb-8">Have a project? Get a free consultation from our team.</p>
-              <form className="space-y-3 md:space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                  <input type="text" placeholder="Full Name *" className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium bg-white" />
-                  <input type="text" placeholder="Company / Organisation" className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium bg-white" />
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Get in Touch</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Send Us a Message</h2>
+              <span className="ds-accent-line" style={{ marginBottom: '0.75rem' }} />
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Have a project? Get a free consultation from our team.</p>
+
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="John Doe" /></div>
+                  <div><label className="ds-label-form">Company / Organisation</label><input className="ds-input" type="text" placeholder="Your Company" /></div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-                  <input type="email" placeholder="Email Address *" className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium bg-white" />
-                  <input type="tel" placeholder="Phone Number *" className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium bg-white" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div><label className="ds-label-form">Email Address *</label><input className="ds-input" type="email" placeholder="you@email.com" /></div>
+                  <div><label className="ds-label-form">Phone Number *</label><input className="ds-input" type="tel" placeholder="+254 700 000 000" /></div>
                 </div>
-                <select className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-600 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium bg-white">
-                  <option value="">Select a Service</option>
-                  <option value="laundry">Laundry Equipment</option>
-                  <option value="kitchen">Kitchen Systems</option>
-                  <option value="ac">Air Conditioning</option>
-                  <option value="consultancy">Consultancy</option>
-                </select>
-                <textarea rows={4} placeholder="Your Message *" className="w-full px-3 md:px-4 py-3 md:py-3.5 border border-gray-300 text-gray-800 placeholder-gray-400 focus:outline-none focus:border-[#1a3a8f] text-xs md:text-sm font-medium resize-none bg-white" />
-                <button type="submit" className="bg-[#1a3a8f] text-white font-bold px-8 md:px-10 py-3 md:py-4 text-xs md:text-sm uppercase tracking-widest hover:bg-[#00b4d8] transition-colors w-full">
-                  Send Message
-                </button>
+                <div>
+                  <label className="ds-label-form">Service</label>
+                  <select className="ds-input">
+                    <option value="">Select a Service</option>
+                    <option value="laundry">Laundry Equipment</option>
+                    <option value="kitchen">Kitchen Systems</option>
+                    <option value="ac">Air Conditioning</option>
+                    <option value="consultancy">Consultancy</option>
+                  </select>
+                </div>
+                <div><label className="ds-label-form">Message *</label><textarea className="ds-input" rows={5} placeholder="Tell us about your project…" style={{ resize: 'none' }} /></div>
+                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg w-full" style={{ justifyContent: 'center' }}>Send Message</button>
               </form>
             </div>
 
-            {/* Info card */}
-            <div className="bg-gray-50 border border-gray-200 p-5 md:p-8 flex flex-col">
-              <img src="/logo.png" alt="Dabecks" className="h-10 md:h-14 mb-4 md:mb-5 object-contain object-left" />
-              <p className="text-gray-600 text-sm md:text-lg leading-relaxed mb-6 md:mb-8 border-b border-gray-200 pb-6 md:pb-8">
+            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', padding: '2.5rem', display: 'flex', flexDirection: 'column' }}>
+              <img src="/logo.png" alt="Dabecks" style={{ height: '44px', width: 'auto', objectFit: 'contain', objectPosition: 'left', marginBottom: '1.5rem' }} />
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', paddingBottom: '1.5rem', borderBottom: '1px solid var(--color-border)', marginBottom: '1.5rem' }}>
                 Your trusted partner for commercial laundry, kitchen, and air conditioning solutions across East Africa since 2011.
               </p>
-              <div className="space-y-4 md:space-y-6 flex-1">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', flex: 1 }}>
                 {[
-                  { icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />, label: 'Phone', value: '+254 729 212 254\n+254 733 788 357' },
-                  { icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />, label: 'Email', value: 'info@dabeckslaundry.com' },
-                  { icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />, label: 'Location', value: 'Baraka Estate, Airport North Road\nNairobi, Kenya' },
+                  { icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />, label: 'Phone',    value: '+254 729 212 254\n+254 733 788 357' },
+                  { icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />, label: 'Email',    value: 'info@dabeckslaundry.com' },
+                  { icon: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></>, label: 'Location', value: 'Baraka Estate, Airport North Road\nNairobi, Kenya' },
                 ].map(({ icon, label, value }) => (
-                  <div key={label} className="flex items-start gap-3">
-                    <div className="w-9 md:w-10 h-9 md:h-10 rounded-full bg-[#1a3a8f] flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 md:w-4 h-3 md:h-4 text-[#00b4d8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">{icon}</svg>
+                  <div key={label} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.875rem' }}>
+                    <div style={{ width: '36px', height: '36px', background: 'var(--color-brand-navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                      <svg className="w-4 h-4" fill="none" stroke="var(--color-brand-cyan)" viewBox="0 0 24 24">{icon}</svg>
                     </div>
                     <div>
-                      <div className="text-[#1a3a8f] font-bold text-xs md:text-sm uppercase tracking-wide mb-1">{label}</div>
-                      <div className="text-gray-600 text-sm md:text-lg leading-relaxed whitespace-pre-line">{value}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-brand-navy)', marginBottom: '0.25rem' }}>{label}</div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: 'var(--text-body)', color: 'var(--color-text-muted)', lineHeight: 1.55, whiteSpace: 'pre-line' }}>{value}</div>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-gray-200">
-                <div className="text-gray-400 text-xs md:text-sm font-bold uppercase tracking-wide mb-2">Business Hours</div>
-                <div className="text-gray-600 text-sm md:text-lg">Mon – Fri: 8:00 AM – 5:00 PM</div>
-                <div className="text-gray-600 text-sm md:text-lg">Saturday: 9:00 AM – 1:00 PM</div>
+              <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid var(--color-border)' }}>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--color-text-muted)', marginBottom: '0.5rem' }}>Business Hours</div>
+                <div className="ds-body" style={{ color: 'var(--color-text-muted)' }}>Mon – Fri: 8:00 AM – 5:00 PM</div>
+                <div className="ds-body" style={{ color: 'var(--color-text-muted)' }}>Saturday: 9:00 AM – 1:00 PM</div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
-
     </div>
   );
 }
-

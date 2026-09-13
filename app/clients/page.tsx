@@ -2,61 +2,79 @@ import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 
 const clients = [
-  { name: 'NAS Servair', sector: 'Aviation Catering' },
-  { name: 'Radisson Blu Hotel', sector: 'Hospitality' },
-  { name: 'Kenya Utalii College', sector: 'Education' },
-  { name: 'Jomo Kenyatta University', sector: 'Education' },
-  { name: 'Multimedia University', sector: 'Education' },
-  { name: 'Catholic University of Eastern Africa', sector: 'Education' },
-  { name: 'Nairobi Safari Club', sector: 'Hospitality' },
-  { name: 'Safari Park Hotel & Casino', sector: 'Hospitality' },
-  { name: 'Golf Hotel Kakamega', sector: 'Hospitality' },
-  { name: 'Kenya Defence Forces', sector: 'Government' },
-  { name: 'Valley Hospital', sector: 'Healthcare' },
+  { name: 'NAS Servair',                        sector: 'Aviation Catering' },
+  { name: 'Radisson Blu Hotel',                 sector: 'Hospitality' },
+  { name: 'Kenya Utalii College',               sector: 'Education' },
+  { name: 'Jomo Kenyatta University',           sector: 'Education' },
+  { name: 'Multimedia University',              sector: 'Education' },
+  { name: 'Catholic University of East Africa', sector: 'Education' },
+  { name: 'Nairobi Safari Club',                sector: 'Hospitality' },
+  { name: 'Safari Park Hotel & Casino',         sector: 'Hospitality' },
+  { name: 'Golf Hotel Kakamega',                sector: 'Hospitality' },
+  { name: 'Kenya Defence Forces',               sector: 'Government' },
+  { name: 'Valley Hospital',                    sector: 'Healthcare' },
 ];
 
 export default function Clients() {
   return (
-    <div className="bg-white">
+    <div>
       <Breadcrumb items={[{ label: 'Clients' }]} />
 
-      {/* ── HERO ── */}
+      {/* ══ HERO ═══════════════════════════════════════════════ */}
       <section
-        className="relative text-white py-24 md:py-32 overflow-hidden"
-        style={{
-          backgroundImage: 'url("/hero-clients.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="ds-hero ds-hero-tall"
+        style={{ backgroundImage: 'url("/hero-clients.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
       >
-        <div className="absolute inset-0 bg-[#1a3a8f]/75" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
-          <span className="text-[#00b4d8] text-sm font-bold uppercase tracking-widest">Who We Serve</span>
-          <h1 className="text-white font-black text-4xl md:text-5xl mt-3 mb-4 leading-tight">Our Clients</h1>
-          <p className="text-white/80 text-base md:text-lg max-w-xl leading-relaxed">
-            Trusted by leading organisations across East Africa since 2011.
-          </p>
+        <div className="ds-hero-overlay-strong" />
+        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div style={{ maxWidth: '580px' }}>
+            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>Who We Serve</span>
+            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1rem' }}>Our Clients</h1>
+            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
+              Trusted by leading organisations across East Africa since 2011.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ── CLIENT LIST ── */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="mb-8 md:mb-12">
-            <span className="text-[#00b4d8] text-sm font-bold uppercase tracking-widest">Portfolio</span>
-            <h2 className="text-[#1a3a8f] font-black text-3xl md:text-5xl mt-3 leading-tight">Featured Clients</h2>
+      {/* ══ STATS BAR ══════════════════════════════════════════ */}
+      <section style={{ background: 'var(--color-brand-navy)', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { value: '1,500+', label: 'Clients Served' },
+              { value: '13+',    label: 'Years Operating' },
+              { value: '5+',     label: 'Sectors Served' },
+              { value: '100%',   label: 'Kenyan Owned' },
+            ].map(({ value, label }) => (
+              <div key={label} className="text-center">
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 800, color: 'var(--color-brand-cyan)', letterSpacing: '-0.04em', lineHeight: 1, marginBottom: '0.375rem' }}>{value}</div>
+                <p className="ds-caption" style={{ color: 'rgba(255,255,255,0.7)', fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase' }}>{label}</p>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
+      {/* ══ CLIENT LIST ════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: '#ffffff' }}>
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Portfolio</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Featured Clients</h2>
+            <span className="ds-accent-line" />
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '1px', background: 'var(--color-border)' }}>
             {clients.map((client, i) => (
               <div
                 key={i}
-                className="bg-white flex items-center justify-between px-6 py-5 hover:bg-[#1a3a8f] transition-colors group"
+                className="client-row"
+                style={{ background: '#ffffff', padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}
               >
-                <span className="font-black text-[#1a3a8f] text-base md:text-lg group-hover:text-white transition-colors">
+                <span data-name="1" style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>
                   {client.name}
                 </span>
-                <span className="text-[#00b4d8] text-xs font-bold uppercase tracking-wide ml-4 flex-shrink-0 group-hover:text-white/70 transition-colors">
+                <span className="ds-eyebrow" style={{ flexShrink: 0, color: 'var(--color-brand-cyan)' }}>
                   {client.sector}
                 </span>
               </div>
@@ -65,33 +83,43 @@ export default function Clients() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section
-        className="relative py-16 md:py-24 overflow-hidden"
-        style={{ backgroundImage: 'url("/hero-clients.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-gray-900/80" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+      {/* ══ SECTORS ════════════════════════════════════════════ */}
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Industries Served</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Sectors We Work In</h2>
+            <span className="ds-accent-line" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              { sector: 'Hospitality', icon: '🏨', desc: 'Hotels, lodges, safari camps, and resort facilities.' },
+              { sector: 'Healthcare',  icon: '🏥', desc: 'Hospitals, clinics, and medical centres.' },
+              { sector: 'Education',   icon: '🎓', desc: 'Universities, colleges, and boarding schools.' },
+              { sector: 'Government',  icon: '🏛️', desc: 'Defence forces, public sector, and state corporations.' },
+            ].map(({ sector, icon, desc }) => (
+              <div key={sector} className="sector-card" style={{ background: '#ffffff', border: '1px solid var(--color-border)', padding: '1.75rem 1.5rem' }}>
+                <div style={{ fontSize: '2rem', marginBottom: '0.75rem', lineHeight: 1 }}>{icon}</div>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>{sector}</h3>
+                <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
+      <section style={{ position: 'relative', backgroundImage: 'url("/hero-clients.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', paddingTop: '5rem', paddingBottom: '5rem', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,10,30,0.82)' }} />
+        <div className="ds-container relative" style={{ zIndex: 10 }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-white font-black text-3xl md:text-5xl mb-4 leading-tight">Ready to Work With Us?</h2>
-              <p className="text-white/85 text-base md:text-lg leading-relaxed">
-                Join our growing list of clients across East Africa.
-              </p>
+              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.75rem' }}>Ready to Work With Us?</h2>
+              <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.8)' }}>Join our growing list of clients across East Africa.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-[#1a3a8f] text-white font-bold px-8 py-4 text-base uppercase tracking-wide hover:bg-white hover:text-[#1a3a8f] transition-colors">
-                Get in Touch
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <a href="tel:+254729212254" className="inline-flex items-center justify-center gap-2 bg-white text-[#1a3a8f] font-bold px-8 py-4 text-base uppercase tracking-wide hover:bg-[#1a3a8f] hover:text-white transition-colors">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +254 729 212 254
-              </a>
+              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">Get in Touch</Link>
+              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">+254 729 212 254</a>
             </div>
           </div>
         </div>
