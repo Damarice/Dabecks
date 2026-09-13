@@ -3,155 +3,134 @@ import Breadcrumb from '@/app/components/Breadcrumb';
 
 export default function PrimusFX55ProductDetail() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-sans">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
         { label: 'Primus FX55' }
       ]} />
 
-      {/* ── HERO / PRODUCT INFO ── */}
-      <section className="bg-white py-16 md:py-24 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          {/* Small info at top */}
-          <div className="mb-12">
-            <p className="text-gray-500 text-lg mb-2">Commercial Washers</p>
-            <h1 className="text-5xl md:text-7xl font-black text-[#1a3a8f] mb-6">Primus FX55</h1>
-            <p className="text-2xl md:text-3xl text-gray-700 font-medium max-w-2xl">
-              Front load industrial washer with 55 lbs (25kg) capacity. Built for heavy daily use in demanding commercial environments.
-            </p>
-          </div>
-
-          {/* Two-column: image left, specs right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="flex items-center justify-center bg-gray-50 rounded-lg p-8 min-h-96">
+      <section className="bg-white pt-10 pb-0">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-start">
+            <div className="flex items-center justify-center bg-[#f7f7f7] p-12 min-h-[520px]">
               <img
-                src="https://via.placeholder.com/400x350?text=Primus+FX55"
-                alt="Primus FX55"
-                className="max-h-full max-w-full object-contain"
+                src="/products/washers/primus-fx55.jpg"
+                alt="Primus FX55 Industrial Washer"
+                onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/480x420?text=Primus+FX55'; }}
+                className="max-h-[420px] w-auto object-contain"
               />
             </div>
 
-            <div className="flex flex-col justify-center space-y-8">
-              <div>
-                <p className="text-[#00b4d8] font-bold text-xl uppercase tracking-wider mb-2">Load Capacity</p>
-                <p className="text-4xl md:text-5xl font-black text-[#1a3a8f]">55 lbs (25 kg)</p>
+            <div className="bg-white px-8 md:px-12 py-10 flex flex-col justify-start">
+              <p className="text-sm uppercase tracking-widest text-[#00b4d8] font-bold mb-3">Commercial Washers</p>
+              <h1 className="text-6xl md:text-7xl font-black text-[#1a1a1a] leading-none mb-4">Primus FX55</h1>
+              <p className="text-2xl text-gray-600 font-medium mb-8 leading-snug">Front-load industrial washer · 55 lbs / 25 kg</p>
+              <div className="w-12 h-1 bg-[#00b4d8] mb-8" />
+              <p className="text-lg text-gray-700 leading-relaxed mb-10">
+                Industrial-grade front-load washer engineered for the most demanding commercial environments. Built to deliver reliable, consistent washing performance day after day with minimal downtime and easy maintenance access.
+              </p>
+              <div className="grid grid-cols-3 gap-4 mb-10">
+                {[
+                  { label: 'Capacity', value: '25 kg' },
+                  { label: 'Spin', value: '1000 RPM' },
+                  { label: 'Energy', value: 'A+' },
+                ].map((s, i) => (
+                  <div key={i} className="border-l-2 border-[#00b4d8] pl-3">
+                    <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{s.label}</p>
+                    <p className="text-2xl font-black text-[#1a3a8f]">{s.value}</p>
+                  </div>
+                ))}
               </div>
-              <div>
-                <p className="text-[#00b4d8] font-bold text-xl uppercase tracking-wider mb-2">Spin Speed</p>
-                <p className="text-4xl md:text-5xl font-black text-[#1a3a8f]">1000 RPM</p>
-              </div>
-              <div>
-                <p className="text-[#00b4d8] font-bold text-xl uppercase tracking-wider mb-2">Energy Rating</p>
-                <p className="text-4xl md:text-5xl font-black text-[#1a3a8f]">A+</p>
-              </div>
-              <div className="pt-4">
-                <Link
-                  href="/contact"
-                  className="bg-[#00b4d8] text-white font-bold py-4 px-10 rounded text-xl uppercase tracking-wide hover:bg-[#00a0b8] transition-colors inline-block"
-                >
-                  Get More Information
-                </Link>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact" className="bg-[#1a3a8f] text-white font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-[#00b4d8] transition-colors text-center">Request a Quote</Link>
+                <Link href="/contact" className="border-2 border-[#1a3a8f] text-[#1a3a8f] font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-[#1a3a8f] hover:text-white transition-colors text-center">Download Specs</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── DESCRIPTION + SIDEBAR ── */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Main description */}
-          <div className="lg:col-span-2">
-            <h2 className="text-4xl md:text-5xl font-black text-[#1a3a8f] mb-8">About this Washer</h2>
-            <div className="space-y-6 text-xl text-gray-700 leading-relaxed">
-              <p>
-                The Primus FX55 is an industrial-grade front-load washer engineered for intensive commercial use. With 55 lbs capacity and robust construction, it is the ideal choice for high-demand laundry environments such as hotels, hospitals, and large-scale commercial laundries.
-              </p>
-              <p>
-                Built for reliability and longevity, this washer delivers consistent performance even under the most demanding conditions, with minimal downtime and easy maintenance.
-              </p>
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-black text-[#1a3a8f] mb-6">Product Info</h3>
-            <div className="space-y-6">
-              <div>
-                <p className="text-gray-500 text-sm uppercase font-bold mb-1">Model</p>
-                <p className="text-xl font-semibold text-[#1a3a8f]">Primus FX55</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm uppercase font-bold mb-1">Category</p>
-                <p className="text-xl font-semibold text-[#1a3a8f]">Commercial Washers</p>
-              </div>
-              <div>
-                <p className="text-gray-500 text-sm uppercase font-bold mb-1">Warranty</p>
-                <p className="text-xl font-semibold text-[#1a3a8f]">2 Years</p>
-              </div>
-              <button className="w-full bg-[#1a3a8f] text-white font-bold py-3 rounded text-lg uppercase tracking-wide hover:bg-[#00b4d8] transition-colors mt-4">
-                Request Specs
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TECHNICAL SPECIFICATIONS ── */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-5xl font-black text-[#1a3a8f] mb-12">Technical Specifications</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="bg-[#1a3a8f] py-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: 'Load Capacity', value: '55 lbs (25 kg)' },
-              { label: 'Spin Speed', value: '1000 RPM' },
-              { label: 'Water Usage', value: '75 L/cycle' },
-              { label: 'Energy Class', value: 'A+' },
-              { label: 'Dimensions (W×H×D)', value: '700 × 950 × 1000 mm' },
-              { label: 'Weight', value: '130 kg' },
-            ].map((spec, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 border border-gray-200">
-                <p className="text-gray-500 text-sm uppercase font-bold mb-2">{spec.label}</p>
-                <p className="text-3xl font-black text-[#1a3a8f]">{spec.value}</p>
+              { icon: '🏭', label: 'Industrial Grade', value: 'Built for heavy daily use' },
+              { icon: '💧', label: 'Water Efficiency', value: 'Optimised per-cycle usage' },
+              { icon: '⚙️', label: 'Spin Speed', value: '1000 RPM extraction' },
+              { icon: '🔧', label: 'Low Downtime', value: 'Easy front-access service' },
+            ].map((f, i) => (
+              <div key={i} className="text-white">
+                <div className="text-3xl mb-2">{f.icon}</div>
+                <p className="text-[#00b4d8] text-xs uppercase tracking-widest font-bold mb-1">{f.label}</p>
+                <p className="text-base font-medium leading-snug">{f.value}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── KEY FEATURES (listed below) ── */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-20">
-        <h2 className="text-4xl md:text-5xl font-black text-[#1a3a8f] mb-12">Key Features</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {[
-            { title: 'Industrial Grade', desc: 'Built tough for heavy daily use in demanding environments' },
-            { title: 'Reliable Performance', desc: 'Consistent results across all wash cycles' },
-            { title: 'Easy Controls', desc: 'Straightforward operation for all staff levels' },
-            { title: 'Robust Construction', desc: 'Heavy-duty materials engineered for longevity' },
-            { title: 'Low Downtime', desc: 'Minimal maintenance requirements keep operations running' },
-            { title: 'Cost Effective', desc: 'Excellent value and efficiency for commercial operations' },
-          ].map((f, i) => (
-            <div key={i} className="flex gap-4">
-              <div className="text-[#00b4d8] font-black text-2xl pt-1 flex-shrink-0">•</div>
-              <div>
-                <h3 className="text-2xl font-bold text-[#1a3a8f] mb-2">{f.title}</h3>
-                <p className="text-xl text-gray-700">{f.desc}</p>
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">Technical Specifications</h2>
+          <div className="w-10 h-1 bg-[#00b4d8] mb-10" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200">
+            {[
+              { label: 'Model', value: 'Primus FX55' },
+              { label: 'Load Capacity', value: '55 lbs (25 kg)' },
+              { label: 'Drum Volume', value: '230 litres' },
+              { label: 'Spin Speed (max)', value: '1000 RPM' },
+              { label: 'Water Usage per Cycle', value: '75 litres' },
+              { label: 'Energy Class', value: 'A+' },
+              { label: 'Heating Element Power', value: '7.5 kW' },
+              { label: 'Motor Power', value: '2.0 kW' },
+              { label: 'Width × Height × Depth', value: '700 × 950 × 1000 mm' },
+              { label: 'Net Weight', value: '130 kg' },
+              { label: 'Supply Voltage', value: '380–415 V / 50 Hz' },
+              { label: 'Noise Level (wash / spin)', value: '54 / 73 dB(A)' },
+            ].map((spec, i) => (
+              <div key={i} className={`flex justify-between items-center px-6 py-4 border-b border-gray-200 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                <span className="text-sm uppercase tracking-wide font-bold text-gray-500">{spec.label}</span>
+                <span className="text-lg font-black text-[#1a3a8f] text-right">{spec.value}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ── BACK BUTTON ── */}
-      <section className="bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <Link
-            href="/solutions/laundry/commercial-washers"
-            className="inline-block bg-[#1a3a8f] text-white font-bold py-3 px-10 rounded text-lg uppercase tracking-wide hover:bg-[#00b4d8] transition-colors"
-          >
-            ← Back to Commercial Washers
-          </Link>
+      <section className="bg-[#f7f7f7] py-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-10">
+          <h2 className="text-4xl font-black text-[#1a1a1a] mb-2">Key Features</h2>
+          <div className="w-10 h-1 bg-[#00b4d8] mb-10" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Industrial Grade Build', desc: 'Heavy-duty materials and construction engineered for non-stop commercial operation.' },
+              { title: 'Consistent Performance', desc: 'Delivers reliable wash results across all programs and load sizes.' },
+              { title: 'Operator Friendly', desc: 'Clear, simple controls designed for all staff skill levels.' },
+              { title: 'Robust Construction', desc: 'Reinforced drum and housing withstand years of intense use.' },
+              { title: 'Minimal Downtime', desc: 'Front-accessible components make servicing fast and cost-effective.' },
+              { title: 'Cost Effective', desc: 'Excellent operational efficiency and low total cost of ownership.' },
+            ].map((f, i) => (
+              <div key={i} className="bg-white p-6 border border-gray-200">
+                <div className="w-8 h-1 bg-[#00b4d8] mb-4" />
+                <h3 className="text-xl font-black text-[#1a3a8f] mb-3">{f.title}</h3>
+                <p className="text-base text-gray-700 leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1a3a8f] py-14">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">Ready to get started?</h2>
+            <p className="text-[#00b4d8] text-lg font-medium">Contact us for pricing, availability, and installation support.</p>
+          </div>
+          <div className="flex gap-4 flex-shrink-0">
+            <Link href="/contact" className="bg-[#00b4d8] text-white font-black py-4 px-10 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors">Get in Touch</Link>
+            <Link href="/solutions/laundry/commercial-washers" className="border-2 border-white text-white font-bold py-4 px-8 text-base uppercase tracking-widest hover:bg-white hover:text-[#1a3a8f] transition-colors">All Washers</Link>
+          </div>
         </div>
       </section>
     </div>
