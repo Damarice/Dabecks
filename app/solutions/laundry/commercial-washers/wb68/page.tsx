@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 
-export default function WB67ProductDetail() {
+export default function WB68ProductDetail() {
   return (
     <div className="min-h-screen bg-white">
       <Breadcrumb items={[
         { label: 'Solutions', href: '/solutions' },
         { label: 'Laundry Equipment', href: '/solutions/laundry' },
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
-        { label: 'WB6-7' }
+        { label: 'WB6-8' }
       ]} />
 
       {/* ── HERO ── */}
@@ -17,18 +17,18 @@ export default function WB67ProductDetail() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Product Image */}
             <div className="flex items-center justify-center bg-white rounded-lg p-8 h-96">
-              <img src="https://via.placeholder.com/400x350?text=WB6-7" alt="WB6-7" className="max-h-full max-w-full object-contain" />
+              <img src="https://via.placeholder.com/400x350?text=WB6-8" alt="WB6-8" className="max-h-full max-w-full object-contain" />
             </div>
 
             {/* Product Info */}
             <div>
-              <h1 className="text-6xl md:text-7xl font-black text-[#1a3a8f] mb-6">WB6-7</h1>
-              <p className="text-3xl md:text-4xl text-gray-700 mb-8 font-medium">Front Load Washer - 7kg Capacity</p>
+              <h1 className="text-6xl md:text-7xl font-black text-[#1a3a8f] mb-6">WB6-8</h1>
+              <p className="text-3xl md:text-4xl text-gray-700 mb-8 font-medium">Front Load Washer - 8kg Capacity</p>
               
               <div className="space-y-6 mb-10">
                 <div>
                   <p className="text-[#00b4d8] font-bold text-2xl uppercase tracking-wide mb-2">Load Capacity</p>
-                  <p className="text-3xl text-gray-800 font-semibold">7 kg</p>
+                  <p className="text-3xl text-gray-800 font-semibold">8 kg</p>
                 </div>
                 
                 <div>
@@ -99,12 +99,12 @@ export default function WB67ProductDetail() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { label: 'Load Capacity', value: '7 kg' },
+              { label: 'Load Capacity', value: '8 kg' },
               { label: 'Spin Speed', value: '1400 RPM' },
-              { label: 'Water Usage', value: '45 L/cycle' },
+              { label: 'Water Usage', value: '50 L/cycle' },
               { label: 'Energy Class', value: 'A+++' },
               { label: 'Dimensions (WxHxD)', value: '600 x 850 x 900 mm' },
-              { label: 'Weight', value: '85 kg' },
+              { label: 'Weight', value: '87 kg' },
             ].map((spec, i) => (
               <div key={i} className="bg-white rounded-lg p-8 shadow-md">
                 <p className="text-[#00b4d8] font-bold text-2xl uppercase tracking-wide mb-3">{spec.label}</p>
