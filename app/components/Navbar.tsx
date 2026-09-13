@@ -135,15 +135,19 @@ export default function Navbar() {
       {/* ── MAIN HEADER ──────────────────────────────────────── */}
       <div className="bg-white border-b border-[var(--color-border)]">
         <div className="ds-container">
-          <div className="flex items-center justify-between" style={{ height: '84px' }}>
+          <div className="flex items-center justify-between" style={{ height: '100px' }}>
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Dabecks home">
-              <img
+              <Image
                 src="/logo.png"
                 alt="Dabecks"
+                height={90}
+                width={220}
                 className="object-contain"
-                style={{ height: '72px', width: 'auto' }}
+                style={{ height: '90px', width: 'auto' }}
+                priority
+                quality={100}
               />
             </Link>
 

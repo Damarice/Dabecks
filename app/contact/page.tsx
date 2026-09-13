@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import PageHero from '@/app/components/PageHero';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
@@ -16,24 +16,12 @@ export default function Contact() {
 
   return (
     <div>
-      <Breadcrumb items={[{ label: 'Contact' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: 'url("/hero-contact.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay-strong" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '560px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>Reach Out</span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1rem' }}>Contact Us</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Get in touch with our team for enquiries, quotes, and support.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-contact.jpg"
+        eyebrow="Reach Out"
+        heading="Contact Us"
+        subtext="Get in touch with our team for enquiries, quotes, and support."
+      />
 
       {/* ══ FORM + INFO ════════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>

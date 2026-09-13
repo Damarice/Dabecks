@@ -1,5 +1,7 @@
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
+import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
   'Alliance Laundry Systems', 'Electrolux Professional', 'Pellerin Milnor Corporation',
@@ -21,24 +23,12 @@ const servicePartners = [
 export default function Partners() {
   return (
     <div>
-      <Breadcrumb items={[{ label: 'Partners' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: 'url("/hero-partners.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay-strong" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '640px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>Our Ecosystem</span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1rem' }}>Our Partners</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)', maxWidth: '520px' }}>
-              We represent some of the world&apos;s most trusted commercial equipment brands, backed by formal dealership agreements, factory training, and genuine parts supply chains.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-partners.jpg"
+        eyebrow="Our Ecosystem"
+        heading="Our Partners"
+        subtext="We represent some of the world's most trusted commercial equipment brands, backed by formal dealership agreements, factory training, and genuine parts supply chains."
+      />
 
       {/* ══ EQUIPMENT BRANDS ═══════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>
@@ -122,23 +112,13 @@ export default function Partners() {
         </div>
       </section>
 
-      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
-      <section style={{ position: 'relative', backgroundImage: 'url("/hero-consultancy.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', paddingTop: '5rem', paddingBottom: '5rem', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,10,30,0.82)' }} />
-        <div className="ds-container relative" style={{ zIndex: 10 }}>
-          <div className="text-center" style={{ maxWidth: '600px', margin: '0 auto' }}>
-            <span className="ds-eyebrow" style={{ color: 'rgba(255,255,255,0.7)', display: 'block', marginBottom: '0.75rem' }}>Work With Us</span>
-            <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.75rem' }}>Interested in a Partnership?</h2>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
-              Whether you are a global brand seeking a trusted East Africa distributor, or a local company looking to collaborate — we&apos;d love to hear from you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">Get in Touch</Link>
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">+254 729 212 254</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Interested in a Partnership?"
+        subtext="Whether you are a global brand seeking a trusted East Africa distributor, or a local company looking to collaborate — we'd love to hear from you."
+        primaryLabel="Get in Touch"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

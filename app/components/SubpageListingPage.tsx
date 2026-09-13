@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import CTASection from '@/app/components/CTASection';
+import PageHero from '@/app/components/PageHero';
 
 /* ─── Types ─────────────────────────────────────────────────── */
 
@@ -50,38 +52,13 @@ export default function SubpageListingPage({
 }: SubpageListingPageProps) {
   return (
     <div>
-      <Breadcrumb items={breadcrumbs} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{
-          backgroundImage: `url('${heroImage}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="ds-hero-overlay" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '640px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>
-              {category}
-            </span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1.25rem' }}>
-              {title}
-            </h1>
-            <p
-              className="ds-lead"
-              style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '520px' }}
-            >
-              {heroSubtitle}
-            </p>
-            <a href="#products" className="ds-btn ds-btn-cyan ds-btn-lg">
-              View Products
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image={heroImage}
+        eyebrow={category}
+        heading={title}
+        subtext={heroSubtitle}
+        breadcrumbs={breadcrumbs}
+      />
 
       {/* ══ INTRO ══════════════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>
@@ -223,39 +200,13 @@ export default function SubpageListingPage({
       </section>
 
       {/* ══ CTA BANNER ═════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--color-brand-navy)',
-          paddingTop: '3.5rem',
-          paddingBottom: '3.5rem',
-        }}
-      >
-        <div className="ds-container">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h2
-                className="ds-h3"
-                style={{
-                  color: '#ffffff',
-                  marginBottom: '0.5rem',
-                  fontFamily: 'var(--font-display)',
-                }}
-              >
-                Not sure which model is right for you?
-              </h2>
-              <p className="ds-body" style={{ color: 'var(--color-brand-cyan)' }}>
-                Our team will assess your needs and recommend the best solution.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="ds-btn ds-btn-cyan ds-btn-lg flex-shrink-0"
-            >
-              Talk to an Expert
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Not sure which model is right for you?"
+        subtext="Our team will assess your needs and recommend the best solution."
+        primaryLabel="Talk to an Expert"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

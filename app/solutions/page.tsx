@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 
 const solutions = [
   {
@@ -35,24 +37,13 @@ const solutions = [
 export default function SolutionsPage() {
   return (
     <div>
-      <Breadcrumb items={[{ label: 'Solutions' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: "url('/hero-laundry.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>What We Offer</span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1.25rem' }}>Our Solutions</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)', maxWidth: '500px' }}>
-              Professional equipment and services for laundry, kitchen, and air conditioning — tailored for commercial and industrial operations.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-laundry.jpg"
+        eyebrow="What We Offer"
+        heading="Our Solutions"
+        subtext="Professional equipment and services for laundry, kitchen, and air conditioning — tailored for commercial and industrial operations."
+        breadcrumbs={[{ label: 'Solutions' }]}
+      />
 
       {/* ══ SOLUTIONS GRID ═════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>
@@ -95,18 +86,13 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* ══ CTA ════════════════════════════════════════════════ */}
-      <section style={{ background: 'var(--color-brand-navy)', paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
-        <div className="ds-container">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h2 className="ds-h3" style={{ color: '#ffffff', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}>Not sure where to start?</h2>
-              <p className="ds-body" style={{ color: 'var(--color-brand-cyan)' }}>Our team will assess your facility and recommend the right solution.</p>
-            </div>
-            <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg flex-shrink-0">Talk to an Expert</Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Not sure where to start?"
+        subtext="Our team will assess your facility and recommend the right solution."
+        primaryLabel="Talk to an Expert"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

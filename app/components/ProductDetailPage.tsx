@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import CTASection from '@/app/components/CTASection';
+import PageHero from '@/app/components/PageHero';
 
 /* ─── Types ─────────────────────────────────────────────────── */
 
@@ -428,37 +430,15 @@ export default function ProductDetailPage({
       </section>
 
       {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--color-brand-navy)',
-          paddingTop: '3.5rem',
-          paddingBottom: '3.5rem',
-        }}
-      >
-        <div className="ds-container">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <h2
-                className="ds-h3"
-                style={{ color: '#ffffff', marginBottom: '0.5rem', fontFamily: 'var(--font-display)' }}
-              >
-                Ready to get started?
-              </h2>
-              <p className="ds-body" style={{ color: 'var(--color-brand-cyan)' }}>
-                Contact us for pricing, availability, and installation support.
-              </p>
-            </div>
-            <div className="flex gap-3 flex-shrink-0 flex-wrap">
-              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">
-                Get in Touch
-              </Link>
-              <Link href={backHref} className="ds-btn ds-btn-ghost-white ds-btn-lg">
-                {backLabel}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Ready to get started?"
+        subtext="Contact us for pricing, availability, and installation support."
+        primaryLabel="Get in Touch"
+        primaryHref="/contact"
+        secondaryLabel={backLabel}
+        secondaryHref={backHref}
+        phone={true}
+      />
     </div>
   );
 }

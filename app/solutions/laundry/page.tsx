@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 import { useState } from 'react';
 
 export default function LaundryPage() {
@@ -9,31 +11,13 @@ export default function LaundryPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Breadcrumb items={[
-        { label: 'Solutions', href: '/solutions' },
-        { label: 'Laundry Equipment' },
-      ]} />
-
-      {/* ── HERO ── */}
-      <section
-        className="relative text-white flex items-end justify-center"
-        style={{
-          backgroundImage: "url('/hero-laundry.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          minHeight: '520px',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/70" />
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6 pb-16 pt-32">
-          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-4">
-            Commercial Laundry Solutions
-          </h1>
-          <p className="text-lg md:text-xl font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">
-            We bring a complete laundry system to your door, designed to meet your professional needs and deliver exceptional results — every cycle.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-laundry.jpg"
+        eyebrow="Solutions"
+        heading="Commercial Laundry Solutions"
+        subtext="We bring a complete laundry system to your door, designed to meet your professional needs and deliver exceptional results — every cycle."
+        breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Laundry Equipment' }]}
+      />
 
       {/* ── INTRO: A NEW GENERATION ── */}
       <section className="bg-white py-16 border-b border-gray-100">

@@ -1,5 +1,7 @@
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
+import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 
 const services = [
   { num: '01', title: 'Equipment Sizing & Selection', desc: 'We assess your throughput, space, and utility constraints to recommend the right equipment capacity and specifications.' },
@@ -20,24 +22,13 @@ const steps = [
 export default function ConsultancySolutions() {
   return (
     <div>
-      <Breadcrumb items={[{ label: 'Solutions', href: '/solutions' }, { label: 'Consultancy' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: 'url("/hero-consultancy.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay-strong" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>Solutions</span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1rem' }}>Engineering Consultancy</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)', maxWidth: '500px' }}>
-              Expert guidance from concept to completion — for kitchens, laundries, and HVAC systems across East Africa.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-consultancy.jpg"
+        eyebrow="Solutions"
+        heading="Engineering Consultancy"
+        subtext="Expert guidance from concept to completion — for kitchens, laundries, and HVAC systems across East Africa."
+        breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Consultancy' }]}
+      />
 
       {/* ══ INTRO ══════════════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>
@@ -120,22 +111,13 @@ export default function ConsultancySolutions() {
         </div>
       </section>
 
-      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
-      <section style={{ position: 'relative', backgroundImage: 'url("/hero-about.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', paddingTop: '5rem', paddingBottom: '5rem', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,10,30,0.82)' }} />
-        <div className="ds-container relative" style={{ zIndex: 10 }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.75rem' }}>Start Your Project Today</h2>
-              <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.8)' }}>Talk to our engineers for a free initial consultation on your facility needs.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">Book a Consultation</Link>
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">+254 729 212 254</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Start Your Project Today"
+        subtext="Talk to our engineers for a free initial consultation on your facility needs."
+        primaryLabel="Book a Consultation"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
+import CTASection from '@/app/components/CTASection';
+import PageHero from '@/app/components/PageHero';
 
 const clients = [
   { name: 'NAS Servair',                        sector: 'Aviation Catering' },
@@ -18,24 +20,12 @@ const clients = [
 export default function Clients() {
   return (
     <div>
-      <Breadcrumb items={[{ label: 'Clients' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: 'url("/hero-clients.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay-strong" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '580px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>Who We Serve</span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1rem' }}>Our Clients</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Trusted by leading organisations across East Africa since 2011.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-clients.jpg"
+        eyebrow="Who We Serve"
+        heading="Our Clients"
+        subtext="Trusted by leading organisations across East Africa since 2011."
+      />
 
       {/* ══ STATS BAR ══════════════════════════════════════════ */}
       <section style={{ background: 'var(--color-brand-navy)', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
@@ -108,22 +98,13 @@ export default function Clients() {
         </div>
       </section>
 
-      {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
-      <section style={{ position: 'relative', backgroundImage: 'url("/hero-clients.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', paddingTop: '5rem', paddingBottom: '5rem', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,10,30,0.82)' }} />
-        <div className="ds-container relative" style={{ zIndex: 10 }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.75rem' }}>Ready to Work With Us?</h2>
-              <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.8)' }}>Join our growing list of clients across East Africa.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-              <Link href="/contact" className="ds-btn ds-btn-cyan ds-btn-lg">Get in Touch</Link>
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">+254 729 212 254</a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Ready to Work With Us?"
+        subtext="Join our growing list of clients across East Africa."
+        primaryLabel="Get in Touch"
+        primaryHref="/contact"
+        phone={true}
+      />
     </div>
   );
 }

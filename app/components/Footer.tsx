@@ -10,12 +10,34 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <img
-              src="/logo.png"
-              alt="Dabecks"
-              className="object-contain mb-6"
-              style={{ height: '60px', width: 'auto' }}
-            />
+            {/* Brand name instead of logo image */}
+            <div style={{ marginBottom: '1.25rem' }}>
+              <p
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.375rem',
+                  fontWeight: 800,
+                  color: '#ffffff',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
+                }}
+              >
+                Dabecks
+              </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.75rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: 'var(--color-brand-cyan)',
+                  marginTop: '0.125rem',
+                }}
+              >
+                Laundry &amp; Kitchen Solutions
+              </p>
+            </div>
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9375rem', lineHeight: '1.65' }}>
               Dabecks Laundry & Kitchen Solutions Limited
             </p>

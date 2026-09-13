@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import CTASection from '@/app/components/CTASection';
+import PageHero from '@/app/components/PageHero';
 import { useState } from 'react';
 
 /* ─── Types ─────────────────────────────────────────────────── */
@@ -76,38 +78,12 @@ export default function CategoryLandingPage({
 
   return (
     <div>
-      <Breadcrumb items={breadcrumbs} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{
-          backgroundImage: `url('${heroImage}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="ds-hero-overlay" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '680px' }}>
-            <h1
-              className="ds-h1"
-              style={{ color: '#ffffff', marginBottom: '1.25rem' }}
-            >
-              {heroTitle}
-            </h1>
-            <p
-              className="ds-lead"
-              style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '2.5rem', maxWidth: '540px' }}
-            >
-              {heroSubtitle}
-            </p>
-            <a href="#featured" className="ds-btn ds-btn-cyan ds-btn-lg">
-              Explore Products
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image={heroImage}
+        heading={heroTitle}
+        subtext={heroSubtitle}
+        breadcrumbs={breadcrumbs}
+      />
 
       {/* ══ INTRO ══════════════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>

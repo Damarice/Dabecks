@@ -3,6 +3,8 @@
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+import PageHero from '@/app/components/PageHero';
+import CTASection from '@/app/components/CTASection';
 
 /* ─── Data ───────────────────────────────────────────────────── */
 
@@ -69,26 +71,12 @@ export default function About() {
 
   return (
     <div>
-      <Breadcrumb items={[{ label: 'About' }]} />
-
-      {/* ══ HERO ═══════════════════════════════════════════════ */}
-      <section
-        className="ds-hero ds-hero-tall"
-        style={{ backgroundImage: 'url("/hero-about.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="ds-hero-overlay-strong" />
-        <div className="ds-container relative z-10 w-full" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          <div style={{ maxWidth: '600px' }}>
-            <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '1rem' }}>
-              Who We Are
-            </span>
-            <h1 className="ds-h1" style={{ color: '#ffffff', marginBottom: '1.25rem' }}>About Dabecks</h1>
-            <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              Delivering world-class commercial solutions across Kenya and East Africa since 2011.
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/hero-about.jpg"
+        eyebrow="Who We Are"
+        heading="About Dabecks"
+        subtext="Delivering world-class commercial solutions across Kenya and East Africa since 2011."
+      />
 
       {/* ══ OUR COMPANY ════════════════════════════════════════ */}
       <section className="ds-section" style={{ background: '#ffffff' }}>
@@ -354,45 +342,13 @@ export default function About() {
       </section>
 
       {/* ══ BOTTOM CTA ═════════════════════════════════════════ */}
-      <section
-        style={{
-          position: 'relative',
-          backgroundImage: 'url("/hero-about.jpg")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          paddingTop: '5rem',
-          paddingBottom: '5rem',
-          overflow: 'hidden',
-        }}
-      >
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(5,10,30,0.82)' }} />
-        <div className="ds-container relative" style={{ zIndex: 10 }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.75rem' }}>
-                Ready to Upgrade Your Facility?
-              </h2>
-              <p className="ds-lead" style={{ color: 'rgba(255,255,255,0.8)' }}>
-                Our Nairobi-based team is ready to help with laundry, kitchen, or HVAC solutions.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 lg:justify-end">
-              <button onClick={() => setModal(true)} className="ds-btn ds-btn-cyan ds-btn-lg">
-                Request Consultation
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                +254 729 212 254
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Ready to Upgrade Your Facility?"
+        subtext="Our Nairobi-based team is ready to help with laundry, kitchen, or HVAC solutions."
+        primaryLabel="Request Consultation"
+        primaryHref="/contact"
+        phone={true}
+      />
 
       {/* ══ MODAL ══════════════════════════════════════════════ */}
       {modal && (
