@@ -34,28 +34,28 @@ export default function CommercialWashers() {
       products={[
         {
           model: 'WH6-7',
-          desc: 'Electrolux Professional · Front-load washer · 7 kg',
+          desc: 'Front-load washer · 7 kg',
           slug: 'wb67',
           placeholder: 'WH6-7',
           image: '/products/washers/wb67.jpg',
         },
         {
           model: 'WH6-8',
-          desc: 'Electrolux Professional · Front-load washer · 8 kg',
+          desc: 'Front-load washer · 8 kg',
           slug: 'wb68',
           placeholder: 'WH6-8',
           image: '/products/washers/wb68.jpg',
         },
         {
           model: 'WH6-6',
-          desc: 'Electrolux Professional · Front-load washer · 6 kg',
+          desc: 'Front-load washer · 6 kg',
           slug: 'wb66',
           placeholder: 'WH6-6',
           image: '/products/washers/wb66.jpg',
         },
         {
           model: 'WH6-6LAC',
-          desc: 'Electrolux Professional · Front-load washer · 6 kg',
+          desc: 'Front-load washer · 6 kg',
           slug: 'wh66lac',
           placeholder: 'WH6-6LAC',
           image: '/products/washers/wh6-6lac.jpg',

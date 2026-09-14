@@ -9,7 +9,7 @@ export default function IB5725() {
         { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses' },
         { label: 'IB5725' },
       ]}
-      category="Electrolux Professional"
+      category="Ironers & Presses"
       model="IB5725"
       subtitle="Flatwork ironer · Rear delivery · No automation"
       image="/products/ironers/ib5725.jpg"

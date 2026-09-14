@@ -9,7 +9,7 @@ export default function FIT5A() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FIT5A' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FIT5A"
       subtitle="Rectangular vacuum ironing table"
       image="/products/folding-equipment/fit5a.jpg"

@@ -9,7 +9,7 @@ export default function TD67LAC() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'TD6-7LAC' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="TD6-7LAC"
       subtitle="Tumble dryer · 7 kg · Left-hand door"
       image="/products/dryers/td6-7lac.jpg"

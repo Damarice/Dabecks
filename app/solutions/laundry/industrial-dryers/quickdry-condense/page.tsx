@@ -9,7 +9,7 @@ export default function QuickdryCondense() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'Quickdry Condense' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="Quickdry Condense"
       subtitle="Quick condenser dryer · Compact commercial drying"
       image="/products/dryers/quickdry-condense.jpg"

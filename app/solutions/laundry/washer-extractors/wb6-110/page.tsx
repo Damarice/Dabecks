@@ -9,7 +9,7 @@ export default function WB6110() {
         { label: 'Washer Extractors', href: '/solutions/laundry/washer-extractors' },
         { label: 'WB6-110' },
       ]}
-      category="Electrolux Professional"
+      category="Washer Extractors"
       model="WB6-110"
       subtitle="Pullman barrier washer · 110 kg · Maximum capacity"
       image="/products/washer-extractors/wb6-110.jpg"

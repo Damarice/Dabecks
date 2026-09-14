@@ -9,7 +9,7 @@ export default function IB5725F() {
         { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses' },
         { label: 'IB5725-F' },
       ]}
-      category="Electrolux Professional"
+      category="Ironers & Presses"
       model="IB5725-F"
       subtitle="Flatwork ironer · Rear delivery · Integrated feeder"
       image="/products/ironers/ib5725-f.jpg"

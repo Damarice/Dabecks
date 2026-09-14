@@ -20,12 +20,12 @@ export default function WasherExtractors() {
         { icon: '⚙️', title: 'Programmable', desc: 'Multiple programmable wash cycles adapt to different load types and soil levels.' },
       ]}
       products={[
-        { model: 'WB6-20', desc: 'Electrolux Professional · Barrier washer · 20 kg', slug: 'wb6-20', placeholder: 'WB6-20', image: '/products/washer-extractors/wb6-20.jpg' },
-        { model: 'WB6-27', desc: 'Electrolux Professional · Barrier washer · 27 kg', slug: 'wb6-27', placeholder: 'WB6-27', image: '/products/washer-extractors/wb6-27.jpg' },
-        { model: 'WB6-35', desc: 'Electrolux Professional · Barrier washer · 35 kg', slug: 'wb6-35', placeholder: 'WB6-35', image: '/products/washer-extractors/wb6-35.jpg' },
-        { model: 'WB6-70', desc: 'Electrolux Professional · Pullman barrier washer · 70 kg', slug: 'wb6-70', placeholder: 'WB6-70', image: '/products/washer-extractors/wb6-70.jpg' },
-        { model: 'WB6-90', desc: 'Electrolux Professional · Pullman barrier washer · 90 kg', slug: 'wb6-90', placeholder: 'WB6-90', image: '/products/washer-extractors/wb6-90.jpg' },
-        { model: 'WB6-110', desc: 'Electrolux Professional · Pullman barrier washer · 110 kg', slug: 'wb6-110', placeholder: 'WB6-110', image: '/products/washer-extractors/wb6-110.jpg' },
+        { model: 'WB6-20', desc: 'Barrier washer · 20 kg', slug: 'wb6-20', placeholder: 'WB6-20', image: '/products/washer-extractors/wb6-20.jpg' },
+        { model: 'WB6-27', desc: 'Barrier washer · 27 kg', slug: 'wb6-27', placeholder: 'WB6-27', image: '/products/washer-extractors/wb6-27.jpg' },
+        { model: 'WB6-35', desc: 'Barrier washer · 35 kg', slug: 'wb6-35', placeholder: 'WB6-35', image: '/products/washer-extractors/wb6-35.jpg' },
+        { model: 'WB6-70', desc: 'Pullman barrier washer · 70 kg', slug: 'wb6-70', placeholder: 'WB6-70', image: '/products/washer-extractors/wb6-70.jpg' },
+        { model: 'WB6-90', desc: 'Pullman barrier washer · 90 kg', slug: 'wb6-90', placeholder: 'WB6-90', image: '/products/washer-extractors/wb6-90.jpg' },
+        { model: 'WB6-110', desc: 'Pullman barrier washer · 110 kg', slug: 'wb6-110', placeholder: 'WB6-110', image: '/products/washer-extractors/wb6-110.jpg' },
       ]}
       basePath="/solutions/laundry/washer-extractors"
     />

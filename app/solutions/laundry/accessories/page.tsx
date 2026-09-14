@@ -11,21 +11,21 @@ export default function LaundryAccessories() {
       heroImage="/hero-laundry.jpg"
       category="Laundry Equipment"
       title="Laundry Accessories"
-      heroSubtitle="Complete your laundry system with professional carts, dosing units, sorting stations, and water recovery systems."
-      introTitle="Complete your laundry system."
-      introText="A well-equipped laundry facility needs more than just washers and dryers. Our accessories range covers everything from transport carts and sorting stations to chemical dosing systems and water recovery units — ensuring your operation runs efficiently from start to finish."
+      heroSubtitle="Electrolux Professional eco-certified laundry detergents formulated for commercial washers — effective, sustainable, and fabric safe."
+      introTitle="The right chemistry for every wash."
+      introText="Our Electrolux Professional eco laundry detergent range is specifically formulated for use with commercial washers. From wash and powder to bleach, softener, booster, and degreaser — every product is eco-certified, biodegradable, and optimised for professional laundry performance."
       benefits={[
-        { icon: '🔧', title: 'System Completeness', desc: 'Every accessory is designed to work seamlessly with our washer and dryer range.' },
-        { icon: '💧', title: 'Water & Chemical Saving', desc: 'Dosing units and water recovery systems reduce chemical and water costs significantly.' },
-        { icon: '📦', title: 'Operational Efficiency', desc: 'Well-designed carts and sorting stations streamline linen handling and reduce manual labour.' },
+        { icon: '🌿', title: 'Eco Certified', desc: 'All detergents are biodegradable and eco-certified, reducing environmental impact without compromising performance.' },
+        { icon: '✨', title: 'Professional Results', desc: 'Formulated specifically for commercial washers to deliver consistent, high-quality wash results every cycle.' },
+        { icon: '💧', title: 'Efficient Dosing', desc: 'Concentrated formulas reduce the amount needed per cycle, lowering chemical costs and consumption.' },
       ]}
       products={[
-        { model: 'Cart-100', desc: 'Laundry transport cart · 100 L', slug: 'cart100', placeholder: 'Cart-100' },
-        { model: 'Cart-200', desc: 'Laundry transport cart · 200 L', slug: 'cart200', placeholder: 'Cart-200' },
-        { model: 'Dosing Unit Pro', desc: 'Automatic chemical dosing system', slug: 'dosingunit', placeholder: 'Dosing+Unit' },
-        { model: 'Sorting Station', desc: '4-bay linen sorting station', slug: 'sortingstation', placeholder: 'Sorting+Station' },
-        { model: 'Water Recovery System', desc: 'Heat & water recovery unit', slug: 'waterrecovery', placeholder: 'Water+Recovery' },
-        { model: 'Shelf Rack Pro', desc: 'Heavy-duty linen storage rack', slug: 'shelf rack', placeholder: 'Shelf+Rack' },
+        { model: 'L02 – Laundry Eco Wash', desc: 'Liquid laundry detergent', slug: 'l02-eco-wash', placeholder: 'L02 Eco Wash', image: '/products/accessories/l02-eco-wash.webp' },
+        { model: 'L01 – Laundry Eco Powder', desc: 'Eco laundry powder', slug: 'l01-eco-powder', placeholder: 'L01 Eco Powder', image: '/products/accessories/l01-eco-powder.webp' },
+        { model: 'L00 – Laundry Eco Degreaser', desc: 'Heavy-duty eco degreaser', slug: 'l00-eco-degreaser', placeholder: 'L00 Eco Degreaser', image: '/products/accessories/l00-eco-degreaser.webp' },
+        { model: 'L05 – Laundry Eco Softener', desc: 'Fabric softener', slug: 'l05-eco-softener', placeholder: 'L05 Eco Softener', image: '/products/accessories/l05-eco-softener.webp' },
+        { model: 'L04 – Laundry Eco Bleach', desc: 'Eco-certified bleach', slug: 'l04-eco-bleach', placeholder: 'L04 Eco Bleach', image: '/products/accessories/l04-eco-bleach.webp' },
+        { model: 'L03 – Laundry Eco Booster', desc: 'Wash performance booster', slug: 'l03-eco-booster', placeholder: 'L03 Eco Booster', image: '/products/accessories/l03-eco-booster.webp' },
       ]}
       basePath="/solutions/laundry/accessories"
     />

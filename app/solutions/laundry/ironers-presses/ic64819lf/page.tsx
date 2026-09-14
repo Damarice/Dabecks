@@ -9,7 +9,7 @@ export default function IC64819LF() {
         { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses' },
         { label: 'IC64819LF' },
       ]}
-      category="Electrolux Professional"
+      category="Ironers & Presses"
       model="IC64819LF"
       subtitle="Cylinder ironer · Ø480mm · Length folding"
       image="/products/ironers/ic64819lf.jpg"

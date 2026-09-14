@@ -9,7 +9,7 @@ export default function TD614LAC() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'TD6-14LAC' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="TD6-14LAC"
       subtitle="Tumble dryer · 14 kg · Left-hand door"
       image="/products/dryers/td6-14lac.jpg"

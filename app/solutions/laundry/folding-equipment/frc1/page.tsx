@@ -9,7 +9,7 @@ export default function FRC1() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FRC1' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FRC1"
       subtitle="Rotary finishing cabinet"
       image="/products/folding-equipment/frc1.jpg"

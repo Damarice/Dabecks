@@ -9,7 +9,7 @@ export default function PD9C() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'PD9C' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="PD9C"
       subtitle="Compact vented dryer · Commercial grade"
       image="/products/dryers/pd9c.jpg"

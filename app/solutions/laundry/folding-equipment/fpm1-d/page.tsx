@@ -9,7 +9,7 @@ export default function FPM1D() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FPM1-D' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FPM1-D"
       subtitle="Dry work press · Manually operated"
       image="/products/folding-equipment/fpm1-d.jpg"

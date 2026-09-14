@@ -9,7 +9,7 @@ export default function TD620LAC() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'TD6-20LAC' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="TD6-20LAC"
       subtitle="Tumble dryer · 20 kg · Left-hand door"
       image="/products/dryers/td6-20lac.jpg"

@@ -9,7 +9,7 @@ export default function WH66LAC() {
         { label: 'Commercial Washers', href: '/solutions/laundry/commercial-washers' },
         { label: 'WH6-6LAC' },
       ]}
-      category="Electrolux Professional"
+      category="Commercial Washers"
       model="WH6-6LAC"
       subtitle="Front-load commercial washer · 6 kg · Left-hand door"
       image="/products/washers/wh6-6lac.jpg"

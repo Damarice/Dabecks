@@ -9,7 +9,7 @@ export default function WB690() {
         { label: 'Washer Extractors', href: '/solutions/laundry/washer-extractors' },
         { label: 'WB6-90' },
       ]}
-      category="Electrolux Professional"
+      category="Washer Extractors"
       model="WB6-90"
       subtitle="Pullman barrier washer · 90 kg · Industrial scale"
       image="/products/washer-extractors/wb6-90.jpg"

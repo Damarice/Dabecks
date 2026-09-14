@@ -9,7 +9,7 @@ export default function TD67() {
         { label: 'Industrial Dryers', href: '/solutions/laundry/industrial-dryers' },
         { label: 'TD6-7' },
       ]}
-      category="Electrolux Professional"
+      category="Industrial Dryers"
       model="TD6-7"
       subtitle="Tumble dryer · 7 kg"
       image="/products/dryers/td6-7.jpg"

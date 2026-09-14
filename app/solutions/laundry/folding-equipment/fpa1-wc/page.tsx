@@ -9,7 +9,7 @@ export default function FPA1WC() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FPA1-WC' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FPA1-WC"
       subtitle="Laundry press · Air operated"
       image="/products/folding-equipment/fpa1-wc.jpg"

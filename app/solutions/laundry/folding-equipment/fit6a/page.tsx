@@ -9,7 +9,7 @@ export default function FIT6A() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FIT6A' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FIT6A"
       subtitle="Vacuum/blowing ironing table"
       image="/products/folding-equipment/fit6a.jpg"

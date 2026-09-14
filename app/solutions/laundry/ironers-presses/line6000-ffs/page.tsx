@@ -9,7 +9,7 @@ export default function Line6000FFS() {
         { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses' },
         { label: 'Line 6000 FFS' },
       ]}
-      category="Electrolux Professional"
+      category="Ironers & Presses"
       model="Line 6000 FFS"
       subtitle="Cylinder ironer · Feeding, folding & stacking"
       image="/products/ironers/ironer-ffs.jpg"

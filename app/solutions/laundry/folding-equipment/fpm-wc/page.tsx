@@ -9,7 +9,7 @@ export default function FPMWC() {
         { label: 'Folding Equipment', href: '/solutions/laundry/folding-equipment' },
         { label: 'FPM-WC' },
       ]}
-      category="Electrolux Professional"
+      category="Folding Equipment"
       model="FPM-WC"
       subtitle="Laundry press · Manually operated"
       image="/products/folding-equipment/fpm-wc.jpg"

@@ -9,7 +9,7 @@ export default function IC64819R() {
         { label: 'Ironers & Presses', href: '/solutions/laundry/ironers-presses' },
         { label: 'IC64819R' },
       ]}
-      category="Electrolux Professional"
+      category="Ironers & Presses"
       model="IC64819R"
       subtitle="Cylinder ironer · Ø480mm · Rear delivery"
       image="/products/ironers/ic64819r.jpg"

@@ -9,7 +9,7 @@ export default function WB635() {
         { label: 'Washer Extractors', href: '/solutions/laundry/washer-extractors' },
         { label: 'WB6-35' },
       ]}
-      category="Electrolux Professional"
+      category="Washer Extractors"
       model="WB6-35"
       subtitle="Barrier washer · 35 kg · Hygienic separation"
       image="/products/washer-extractors/wb6-35.jpg"
