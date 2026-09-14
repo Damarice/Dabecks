@@ -84,13 +84,13 @@ export default function SubpageListingPage({
                 {/* Product image */}
                 <div
                   style={{
-                    height: '220px',
-                    background: 'var(--color-surface)',
+                    height: '260px',
+                    background: '#f8f8f8',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    padding: '1.25rem',
                     overflow: 'hidden',
-                    padding: '1.5rem',
                   }}
                 >
                   <img
