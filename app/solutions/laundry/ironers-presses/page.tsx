@@ -20,12 +20,12 @@ export default function IronersPresses() {
         { icon: '🛡️', title: 'Fabric Safe', desc: 'Adjustable temperature and pressure settings protect even the most delicate fabrics.' },
       ]}
       products={[
-        { model: 'RI6-6', desc: 'Flatwork ironer · 600 mm roller', slug: 'ri66', placeholder: 'RI6-6' },
-        { model: 'RI6-8', desc: 'Flatwork ironer · 800 mm roller', slug: 'ri68', placeholder: 'RI6-8' },
-        { model: 'RI6-10', desc: 'Flatwork ironer · 1000 mm roller', slug: 'ri610', placeholder: 'RI6-10' },
-        { model: 'Primus IB-15', desc: 'Industrial flatwork ironer · 1500 mm', slug: 'primusIB15', placeholder: 'Primus+IB-15' },
-        { model: 'UniMac UCR080', desc: 'Chest press ironer · 800 mm', slug: 'unimacUCR080', placeholder: 'UniMac+UCR080' },
-        { model: 'Alliance FI165', desc: 'Double-roll ironer · 1650 mm', slug: 'allianceFI165', placeholder: 'Alliance+FI165' },
+        { model: 'IB5725', desc: 'Electrolux Professional · Flatwork ironer · Rear delivery', slug: 'ib5725', placeholder: 'IB5725', image: '/products/ironers/ib5725.jpg' },
+        { model: 'IB5725-F', desc: 'Electrolux Professional · Flatwork ironer · Rear delivery with integrated feeder', slug: 'ib5725-f', placeholder: 'IB5725-F', image: '/products/ironers/ib5725-f.jpg' },
+        { model: 'IC64819R', desc: 'Electrolux Professional · Cylinder ironer Ø480mm · Rear delivery', slug: 'ic64819r', placeholder: 'IC64819R', image: '/products/ironers/ic64819r.jpg' },
+        { model: 'IC64819LF', desc: 'Electrolux Professional · Cylinder ironer Ø480mm · Length folding', slug: 'ic64819lf', placeholder: 'IC64819LF', image: '/products/ironers/ic64819lf.jpg' },
+        { model: 'IC64819FLF', desc: 'Electrolux Professional · Cylinder ironer Ø480mm · Feeding & length folding', slug: 'ic64819flf', placeholder: 'IC64819FLF', image: '/products/ironers/ic64819flf.jpg' },
+        { model: 'Line 6000 FFS', desc: 'Electrolux Professional · Cylinder ironer · Feeding, folding & stacking', slug: 'line6000-ffs', placeholder: 'Line 6000 FFS', image: '/products/ironers/ironer-ffs.jpg' },
       ]}
       basePath="/solutions/laundry/ironers-presses"
     />
