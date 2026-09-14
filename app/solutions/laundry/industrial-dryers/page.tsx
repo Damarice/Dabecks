@@ -20,12 +20,12 @@ export default function IndustrialDryers() {
         { icon: '🛠️', title: 'Easy Maintenance', desc: 'Front-accessible lint filters and service panels keep downtime to a minimum.' },
       ]}
       products={[
-        { model: 'TD6-8', desc: 'Tumble dryer · 8 kg', slug: 'td68', placeholder: 'TD6-8' },
-        { model: 'TD6-11', desc: 'Tumble dryer · 11 kg', slug: 'td611', placeholder: 'TD6-11' },
-        { model: 'TD6-14', desc: 'Tumble dryer · 14 kg', slug: 'td614', placeholder: 'TD6-14' },
-        { model: 'UniMac UT050', desc: 'Industrial dryer · 50 lbs', slug: 'unimacUT050', placeholder: 'UniMac+UT050' },
-        { model: 'Primus T13', desc: 'Industrial dryer · 13 kg', slug: 'primusT13', placeholder: 'Primus+T13' },
-        { model: 'Alliance H160', desc: 'High-capacity dryer · 160 lbs', slug: 'allianceH160', placeholder: 'Alliance+H160' },
+        { model: 'Quickdry Condense', desc: 'Electrolux Professional · Quick condenser dryer', slug: 'quickdry-condense', placeholder: 'Quickdry Condense', image: '/products/dryers/quickdry-condense.jpg' },
+        { model: 'PD9C', desc: 'Electrolux Professional · Compact vented dryer', slug: 'pd9c', placeholder: 'PD9C', image: '/products/dryers/pd9c.jpg' },
+        { model: 'TD6-14LAC', desc: 'Electrolux Professional · Tumble dryer · 14 kg', slug: 'td6-14lac', placeholder: 'TD6-14LAC', image: '/products/dryers/td6-14lac.jpg' },
+        { model: 'TD6-20LAC', desc: 'Electrolux Professional · Tumble dryer · 20 kg', slug: 'td6-20lac', placeholder: 'TD6-20LAC', image: '/products/dryers/td6-20lac.jpg' },
+        { model: 'TD6-7', desc: 'Electrolux Professional · Tumble dryer · 7 kg', slug: 'td6-7', placeholder: 'TD6-7', image: '/products/dryers/td6-7.jpg' },
+        { model: 'TD6-7LAC', desc: 'Electrolux Professional · Tumble dryer · 7 kg · Left-hand door', slug: 'td6-7lac', placeholder: 'TD6-7LAC', image: '/products/dryers/td6-7lac.jpg' },
       ]}
       basePath="/solutions/laundry/industrial-dryers"
     />
