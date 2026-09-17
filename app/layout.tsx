@@ -3,6 +3,7 @@ import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 /* ── Font loading ──────────────────────────────────────────
    Both fonts are subset to latin and loaded with display:swap
@@ -44,6 +45,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

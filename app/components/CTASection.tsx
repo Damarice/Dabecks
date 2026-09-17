@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Icon from '@/app/components/Icon';
 
 /* ─────────────────────────────────────────────────────────────
    CTASection — reusable call-to-action banner
@@ -74,9 +75,7 @@ export default function CTASection({
           >
             <Link href={primaryHref} className="ds-btn ds-btn-cyan ds-btn-lg">
               {primaryLabel}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <Icon name="arrowRight" size="sm" />
             </Link>
 
             {secondaryLabel && secondaryHref && (
@@ -85,9 +84,7 @@ export default function CTASection({
 
             {phone && (
               <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">
-                <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+                <Icon name="phone" size="sm" />
                 +254 729 212 254
               </a>
             )}

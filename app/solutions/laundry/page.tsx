@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import Icon from '@/app/components/Icon';
 import { useState } from 'react';
 
 const categories = [
@@ -137,9 +138,7 @@ export default function LaundryPage() {
                     <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, lineHeight: 1 }}>
                       {cat.label}
                     </span>
-                    <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <Icon name="chevronRight" size="sm" />
                   </Link>
                 ))}
               </div>

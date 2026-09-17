@@ -266,43 +266,68 @@ export default function Home() {
       {/* ══ CONTACT ══════════════════════════════════════════════ */}
       <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Form */}
-            <div>
-              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Get in Touch</span>
-              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Send Us a Message</h2>
+            <div className="lg:col-span-3" style={{ background: '#ffffff', padding: '3rem', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Get Started</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Request a Quote / Site Assessment</h2>
               <span className="ds-accent-line" style={{ marginBottom: '1.75rem' }} />
-              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Have a project? Get a free consultation from our team.</p>
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="John Doe" /></div>
-                  <div><label className="ds-label-form">Company</label><input className="ds-input" type="text" placeholder="Your Company" /></div>
+              <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Tell us what you need and our team will prepare a tailored proposal.</p>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="ds-label-form">Full Name *</label>
+                    <input className="ds-input" type="text" placeholder="John Doe" required />
+                  </div>
+                  <div>
+                    <label className="ds-label-form">Company</label>
+                    <input className="ds-input" type="text" placeholder="Your Company" />
+                  </div>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div><label className="ds-label-form">Email *</label><input className="ds-input" type="email" placeholder="you@email.com" /></div>
-                  <div><label className="ds-label-form">Phone *</label><input className="ds-input" type="tel" placeholder="+254 700 000 000" /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="ds-label-form">Email *</label>
+                    <input className="ds-input" type="email" placeholder="you@email.com" required />
+                  </div>
+                  <div>
+                    <label className="ds-label-form">Phone *</label>
+                    <input className="ds-input" type="tel" placeholder="+254 700 000 000" required />
+                  </div>
                 </div>
+                
+                {/* What do you need? - Regular dropdown */}
                 <div>
-                  <label className="ds-label-form">Service</label>
-                  <select className="ds-input">
-                    <option value="">Select a Service</option>
-                    <option>Laundry Equipment</option>
-                    <option>Kitchen Systems</option>
-                    <option>Air Conditioning</option>
-                    <option>Consultancy</option>
+                  <label className="ds-label-form">What do you need? *</label>
+                  <select required className="ds-input" style={{ cursor: 'pointer' }}>
+                    <option value="">Select a service</option>
+                    <option value="laundry">Laundry equipment</option>
+                    <option value="kitchen">Kitchen equipment</option>
+                    <option value="hvac">HVAC</option>
+                    <option value="installation">Installation</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="replacement">Replacement/upgrade</option>
+                    <option value="new-facility">New facility/project</option>
+                    <option value="consultancy">Consultancy</option>
                   </select>
                 </div>
-                <div><label className="ds-label-form">Message *</label><textarea className="ds-input" rows={4} placeholder="Tell us about your project…" style={{ resize: 'none' }} /></div>
-                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Message</button>
+                
+                <div>
+                  <label className="ds-label-form">Tell us about your project *</label>
+                  <textarea className="ds-input" rows={6} placeholder="Describe your project requirements, facility type, timeline..." required style={{ resize: 'vertical' }} />
+                </div>
+                
+                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>
+                  Submit Request
+                </button>
               </form>
             </div>
 
             {/* Contact info */}
-            <div>
-              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Contact Info</span>
-              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Reach Our Team</h2>
-              <span className="ds-accent-line" style={{ marginBottom: '2rem' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="lg:col-span-2" style={{ background: 'var(--color-brand-navy)', padding: '3rem 2.5rem' }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--color-brand-cyan)' }}>Contact Info</span>
+              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.5rem' }}>Reach Our Team</h2>
+              <span className="ds-accent-line" style={{ marginBottom: '2.5rem', background: 'var(--color-brand-cyan)' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 {[
                   { label: 'Phone', value: '+254 729 212 254\n+254 733 788 357' },
                   { label: 'Email', value: 'info@dabeckslaundry.com' },
@@ -310,8 +335,8 @@ export default function Home() {
                   { label: 'Business Hours', value: 'Mon – Fri: 8:00 AM – 5:00 PM\nSaturday: 9:00 AM – 1:00 PM' },
                 ].map(({ label, value }) => (
                   <div key={label} style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}>
-                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-navy)', marginBottom: '0.25rem' }}>{label}</p>
-                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'var(--color-text-muted)', whiteSpace: 'pre-line', lineHeight: '1.55' }}>{value}</p>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', marginBottom: '0.375rem' }}>{label}</p>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'rgba(255,255,255,0.85)', whiteSpace: 'pre-line', lineHeight: '1.65' }}>{value}</p>
                   </div>
                 ))}
               </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Icon from '@/app/components/Icon';
 
 const slides = [
   {
@@ -73,9 +74,7 @@ export default function HeroSlider() {
           className="absolute z-30 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-colors hover:bg-[#1a3a8f]"
           style={{ background: '#00b4d8', left: '12px', top: '50%', transform: 'translateY(-60%)' }}
         >
-          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-          </svg>
+          <Icon name="chevronLeft" style={{ color: '#ffffff', fontSize: '1.25rem' }} />
         </button>
 
         {/* Right arrow */}
@@ -85,9 +84,7 @@ export default function HeroSlider() {
           className="absolute z-30 w-11 h-11 rounded-full flex items-center justify-center shadow-lg transition-colors hover:bg-[#1a3a8f]"
           style={{ background: '#00b4d8', right: '12px', top: '50%', transform: 'translateY(-60%)' }}
         >
-          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-          </svg>
+          <Icon name="chevronRight" style={{ color: '#ffffff', fontSize: '1.25rem' }} />
         </button>
 
         {/* ── FLOATING PANEL ──
@@ -143,9 +140,7 @@ export default function HeroSlider() {
               style={{ background: '#00b4d8', padding: '0.7rem 1.6rem' }}
             >
               {slide.btnLabel}
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7M15 5l7 7-7 7" />
-              </svg>
+              <Icon name="chevronDoubleRight" style={{ fontSize: '1rem' }} />
             </Link>
 
             {/* Dots */}
@@ -205,9 +200,7 @@ export default function HeroSlider() {
           style={{ background: '#00b4d8' }}
         >
           ALL CLIENTS
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7M15 5l7 7-7 7" />
-          </svg>
+          <Icon name="chevronDoubleRight" style={{ fontSize: '1rem' }} />
         </Link>
       </div>
     </div>

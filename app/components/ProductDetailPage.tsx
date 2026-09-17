@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import CTASection from '@/app/components/CTASection';
+import Icon from '@/app/components/Icon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Spec           { label: string; value: string; }
@@ -242,9 +243,7 @@ export default function ProductDetailPage({
             onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-cyan)'; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--color-brand-navy)'; }}
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-            </svg>
+            <Icon name="chevronLeft" size="sm" />
             {backLabel}
           </Link>
         </div>

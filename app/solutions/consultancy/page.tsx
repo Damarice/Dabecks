@@ -2,6 +2,7 @@ import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import Icon from '@/app/components/Icon';
 
 const services = [
   { num: '01', title: 'Equipment Sizing & Selection', desc: 'We assess your throughput, space, and utility constraints to recommend the right equipment capacity and specifications.' },
@@ -48,9 +49,7 @@ export default function ConsultancySolutions() {
               </p>
               <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg">
                 Request a Free Consultation
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                </svg>
+                <Icon name="chevronRight" size="sm" />
               </Link>
             </div>
             <div style={{ position: 'relative' }}>

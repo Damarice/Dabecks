@@ -91,6 +91,17 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href="/Dabecks-Company-Profile.pdf"
+                  download="Dabecks-Company-Profile.pdf"
+                  className="footer-link"
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.9375rem', fontFamily: 'var(--font-body)' }}
+                >
+                  <Icon name="download" style={{ color: 'var(--color-brand-cyan)', fontSize: '0.875rem' }} />
+                  Company Profile
+                </a>
+              </li>
             </ul>
           </div>
 

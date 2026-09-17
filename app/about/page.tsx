@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import Icon from '@/app/components/Icon';
 import { useState, useEffect, useRef } from 'react';
 
 const timeline = [
@@ -81,15 +82,26 @@ export default function About() {
               Who's Dabecks
             </h2>
             <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
-            <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
+            <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>
               Dabecks Laundry & Kitchen Solutions Limited is a Kenyan-owned commercial equipment and technical solutions company serving businesses and institutions across East Africa.
             </p>
             <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
               Since 2011, we have specialised in the supply, installation, commissioning and maintenance of commercial laundry, kitchen and HVAC systems.
             </p>
-            <button onClick={() => setModal(true)} className="ds-btn ds-btn-primary">
-              Request a Consultation
-            </button>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <button onClick={() => setModal(true)} className="ds-btn ds-btn-primary">
+                Request a Consultation
+              </button>
+              <a 
+                href="/Dabecks-Company-Profile.pdf" 
+                download="Dabecks-Company-Profile.pdf"
+                className="ds-btn ds-btn-outline"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              >
+                <Icon name="download" />
+                Download Company Profile
+              </a>
+            </div>
           </div>
           <div className="split-feature__media" style={{ minHeight: '480px' }}>
             <img src="/kitchen-categories/commercial-ovens.webp" alt="Commercial kitchen installation" />
@@ -97,6 +109,153 @@ export default function About() {
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.875rem', fontWeight: 800, lineHeight: 1 }}>13+</div>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 600, marginTop: '0.25rem' }}>Years Excellence</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ MISSION & VISION ════════════════════════════════ */}
+      <section className="stripe-surface py-section">
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Mission */}
+            <div>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Our Mission</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1.5rem' }}>
+                What We Stand For
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)' }}>
+                To deliver high-standard, reliable solutions with lasting value to businesses and institutions across East Africa.
+              </p>
+            </div>
+
+            {/* Vision */}
+            <div>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Our Vision</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1.5rem' }}>
+                Where We're Headed
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <p className="ds-lead" style={{ color: 'var(--color-text-muted)' }}>
+                To become East Africa's preferred mechanical and utility equipment partner, trusted for quality, innovation and comprehensive support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ OUR VALUES ══════════════════════════════════════ */}
+      <section className="stripe-white py-section">
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem', textAlign: 'center' }}>
+            <span className="ds-eyebrow">Our Values</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>What Drives Us</h2>
+            <span className="ds-accent-line" style={{ margin: '0 auto' }} />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { title: 'Innovation', icon: '💡', desc: 'We embrace new technologies and solutions that deliver measurable results for our clients.' },
+              { title: 'Excellence', icon: '⭐', desc: 'We maintain the highest standards in equipment selection, installation and ongoing service.' },
+              { title: 'Trust', icon: '🤝', desc: 'We build long-term partnerships through transparency, honesty and consistent delivery.' },
+              { title: 'Teamwork', icon: '👥', desc: 'We collaborate internally and with clients to achieve shared objectives and successful outcomes.' },
+              { title: 'Professionalism', icon: '🎯', desc: 'We conduct business with integrity, expertise and respect for every stakeholder.' },
+            ].map((val, i) => (
+              <div
+                key={i}
+                style={{
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  padding: '1.75rem 1.5rem',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.75rem',
+                }}
+              >
+                <div style={{ fontSize: '2.5rem', lineHeight: 1 }}>{val.icon}</div>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{val.title}</h3>
+                <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ TECHNICAL CAPABILITY ════════════════════════════ */}
+      <section className="stripe-surface py-section">
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Technical Capability</span>
+              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1.5rem' }}>
+                Built to Deliver
+              </h2>
+              <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                {[
+                  { title: 'Certified Supplier & Installer', desc: 'Authorized dealerships with top-tier global brands including Electrolux Professional, Alliance Laundry Systems, and Pellerin Milnor Corporation.' },
+                  { title: 'Multi-Disciplinary Team', desc: 'Our team includes certified technicians, mechanical engineers and project managers with specialized expertise across laundry, kitchen and HVAC systems.' },
+                  { title: 'Decade+ East Africa Experience', desc: 'Over 13 years serving hotels, hospitals, educational institutions and commercial facilities throughout Kenya and the broader East African region.' },
+                  { title: 'Dedicated Support Infrastructure', desc: 'In-house logistics coordination, spare parts inventory and preventative maintenance programs ensure minimal downtime and long equipment life.' },
+                ].map((cap, i) => (
+                  <div key={i} style={{ display: 'flex', gap: '1rem' }}>
+                    <div style={{ flexShrink: 0, width: '40px', height: '40px', background: 'var(--color-brand-cyan)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ffffff', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1.125rem' }}>
+                      {i + 1}
+                    </div>
+                    <div>
+                      <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.375rem' }}>{cap.title}</h3>
+                      <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{cap.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <img src="/about-team.jpg" alt="Dabecks technical team" style={{ width: '100%', height: 'clamp(380px, 42vw, 520px)', objectFit: 'cover' }} />
+              <div style={{ position: 'absolute', bottom: '1.5rem', right: '1.5rem', background: 'var(--color-brand-navy)', color: '#ffffff', padding: '1.25rem 1.75rem', boxShadow: 'var(--shadow-xl)' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.875rem', fontWeight: 800, lineHeight: 1, color: 'var(--color-brand-cyan)' }}>15+</div>
+                <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 600, marginTop: '0.375rem' }}>Certified Technicians</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ OUR TEAM ════════════════════════════════════════ */}
+      <section className="stripe-white py-section">
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem', textAlign: 'center', maxWidth: '640px', margin: '0 auto 2.5rem' }}>
+            <span className="ds-eyebrow">Our Team</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>The People Behind Our Success</h2>
+            <span className="ds-accent-line" style={{ margin: '0 auto 1rem' }} />
+            <p className="ds-body" style={{ color: 'var(--color-text-muted)' }}>
+              Our multi-disciplinary team brings together mechanical engineers, certified technicians, project managers and customer support specialists—all dedicated to delivering reliable, high-standard solutions across East Africa.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { role: 'Engineering & Design', desc: 'Our engineers assess client requirements, design system layouts and ensure compliance with industry standards and safety regulations.' },
+              { role: 'Installation & Commissioning', desc: 'Certified technicians handle equipment installation, system integration, performance testing and staff training on proper operation.' },
+              { role: 'After-Sales Support', desc: 'Dedicated service team provides preventative maintenance, spare parts supply, troubleshooting and emergency repair services.' },
+            ].map((team, i) => (
+              <div
+                key={i}
+                style={{
+                  background: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  padding: '2rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '1rem',
+                }}
+              >
+                <div style={{ width: '48px', height: '48px', background: 'var(--color-brand-cyan)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-brand-navy)', fontSize: '1.5rem', fontWeight: 800 }}>
+                  {i + 1}
+                </div>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.125rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{team.role}</h3>
+                <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{team.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -153,9 +312,17 @@ export default function About() {
                         <span style={{ background: 'var(--color-brand-navy)', color: 'var(--color-brand-cyan)', fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, padding: '0.25rem 0.625rem', flexShrink: 0 }}>{item.year}</span>
                         <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{item.title}</span>
                       </div>
-                      <svg className="w-4 h-4 flex-shrink-0" style={{ color: 'var(--color-brand-cyan)', transform: expanded === i ? 'rotate(180deg)' : 'none', transition: 'transform var(--transition-base)', marginLeft: '0.5rem' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
-                      </svg>
+                      <Icon
+                        name="chevronDown"
+                        size="sm"
+                        style={{
+                          color: 'var(--color-brand-cyan)',
+                          transform: expanded === i ? 'rotate(180deg)' : 'none',
+                          transition: 'transform var(--transition-base)',
+                          marginLeft: '0.5rem',
+                          flexShrink: 0,
+                        }}
+                      />
                     </button>
                     {expanded === i && (
                       <div style={{ padding: '0.875rem 1.25rem 1rem', borderTop: '1px solid var(--color-border)', background: 'var(--color-surface)' }}>

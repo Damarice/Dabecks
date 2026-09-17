@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageHero from '@/app/components/PageHero';
+import Icon from '@/app/components/Icon';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
@@ -24,138 +25,189 @@ export default function Contact() {
       />
 
       {/* ══ FORM + INFO ════════════════════════════════════════ */}
-      <section className="ds-section" style={{ background: '#ffffff' }}>
+      <section className="ds-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
             {/* Form */}
-            <div>
-              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Send a Message</span>
+            <div className="lg:col-span-3" style={{ background: '#ffffff', padding: '3rem', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Get Started</span>
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>
-                Send Us a Message
+                Request a Quote / Site Assessment
               </h2>
               <span className="ds-accent-line" style={{ marginBottom: '2rem' }} />
 
-              <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '1.125rem' }}>
-                {[
-                  { id: 'name',    label: 'Full Name *',            type: 'text',  placeholder: 'John Doe',              required: true },
-                  { id: 'email',   label: 'Email Address *',        type: 'email', placeholder: 'john@example.com',       required: true },
-                  { id: 'phone',   label: 'Phone Number *',         type: 'tel',   placeholder: '+254 700 000 000',        required: true },
-                  { id: 'company', label: 'Company / Organisation', type: 'text',  placeholder: 'Your Company Name',      required: false },
-                ].map(({ id, label, type, placeholder, required }) => (
-                  <div key={id}>
-                    <label className="ds-label-form">{label}</label>
+              <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="ds-label-form">Full Name *</label>
                     <input
-                      type={type}
-                      id={id}
-                      name={id}
-                      required={required}
+                      type="text"
+                      name="name"
+                      required
                       className="ds-input"
-                      placeholder={placeholder}
-                      value={form[id as keyof typeof form]}
+                      placeholder="John Doe"
+                      value={form.name}
                       onChange={handle}
                     />
                   </div>
-                ))}
+                  <div>
+                    <label className="ds-label-form">Company / Organisation</label>
+                    <input
+                      type="text"
+                      name="company"
+                      className="ds-input"
+                      placeholder="Your Company Name"
+                      value={form.company}
+                      onChange={handle}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="ds-label-form">Email Address *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="ds-input"
+                      placeholder="john@example.com"
+                      value={form.email}
+                      onChange={handle}
+                    />
+                  </div>
+                  <div>
+                    <label className="ds-label-form">Phone Number *</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      className="ds-input"
+                      placeholder="+254 700 000 000"
+                      value={form.phone}
+                      onChange={handle}
+                    />
+                  </div>
+                </div>
+                
+                {/* What do you need? - Regular dropdown */}
                 <div>
-                  <label className="ds-label-form">Service Interested In *</label>
-                  <select name="service" required className="ds-input" value={form.service} onChange={handle}>
+                  <label className="ds-label-form">What do you need? *</label>
+                  <select
+                    name="service"
+                    required
+                    className="ds-input"
+                    value={form.service}
+                    onChange={handle}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <option value="">Select a service</option>
-                    <option value="laundry">Laundry Equipment</option>
-                    <option value="kitchen">Kitchen Systems</option>
-                    <option value="ac">Air Conditioning</option>
-                    <option value="consultancy">Engineering Consultancy</option>
-                    <option value="maintenance">Maintenance &amp; Repair</option>
-                    <option value="other">Other</option>
+                    <option value="laundry">Laundry equipment</option>
+                    <option value="kitchen">Kitchen equipment</option>
+                    <option value="hvac">HVAC</option>
+                    <option value="installation">Installation</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="replacement">Replacement/upgrade</option>
+                    <option value="new-facility">New facility/project</option>
+                    <option value="consultancy">Consultancy</option>
                   </select>
                 </div>
+
                 <div>
-                  <label className="ds-label-form">Message *</label>
+                  <label className="ds-label-form">Tell us about your project *</label>
                   <textarea
                     name="message"
                     required
-                    rows={5}
+                    rows={6}
                     className="ds-input"
-                    style={{ resize: 'none' }}
-                    placeholder="Tell us about your project or inquiry…"
+                    placeholder="Describe your project requirements, facility type, timeline, etc..."
                     value={form.message}
                     onChange={handle}
+                    style={{ resize: 'vertical' }}
                   />
                 </div>
-                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>
-                  Send Message
+                
+                <button 
+                  type="submit" 
+                  className="ds-btn ds-btn-primary ds-btn-lg" 
+                  style={{ justifyContent: 'center' }}
+                >
+                  Submit Request
                 </button>
               </form>
             </div>
 
             {/* Info panel */}
             <div
+              className="lg:col-span-2"
               style={{
-                background: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                padding: '2.5rem',
+                background: 'var(--color-brand-navy)',
+                padding: '3rem 2.5rem',
                 display: 'flex',
                 flexDirection: 'column',
               }}
             >
-              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem' }}>Find Us</span>
-              <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>
+              <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.75rem', color: 'var(--color-brand-cyan)' }}>Find Us</span>
+              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '0.5rem' }}>
                 Contact Information
               </h2>
-              <span className="ds-accent-line" style={{ marginBottom: '2rem' }} />
+              <span className="ds-accent-line" style={{ marginBottom: '2.5rem', background: 'var(--color-brand-cyan)' }} />
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', flex: 1 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', flex: 1 }}>
                 {[
                   {
-                    icon: <><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></>,
+                    iconName: 'location' as const,
                     title: 'Location',
                     content: 'Lunga Lunga Square, 1st Floor, A7\nNairobi, Kenya',
                   },
                   {
-                    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />,
+                    iconName: 'phone' as const,
                     title: 'Phone',
-                    content: '+254 729 212 254 / +254 733 788 357',
+                    content: '+254 729 212 254\n+254 733 788 357',
                   },
                   {
-                    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />,
+                    iconName: 'email' as const,
                     title: 'Email',
                     content: 'info@dabeckslaundry.com',
                   },
                   {
-                    icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />,
+                    iconName: 'clock' as const,
                     title: 'Business Hours',
                     content: 'Mon – Fri: 8:00 AM – 5:00 PM\nSaturday: 9:00 AM – 1:00 PM',
                   },
-                ].map(({ icon, title, content }) => (
+                ].map(({ iconName, title, content }) => (
                   <div key={title} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                     <div
                       style={{
-                        width: '42px',
-                        height: '42px',
-                        background: 'var(--color-brand-navy)',
+                        width: '40px',
+                        height: '40px',
+                        background: 'var(--color-brand-cyan)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         flexShrink: 0,
                       }}
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="var(--color-brand-cyan)" viewBox="0 0 24 24">{icon}</svg>
+                      <Icon name={iconName} style={{ color: 'var(--color-brand-navy)', fontSize: '1.125rem' }} />
                     </div>
                     <div>
                       <h3
                         style={{
                           fontFamily: 'var(--font-display)',
-                          fontSize: '1rem',
+                          fontSize: '0.8125rem',
                           fontWeight: 700,
-                          color: 'var(--color-brand-navy)',
-                          marginBottom: '0.25rem',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.05em',
+                          color: 'var(--color-brand-cyan)',
+                          marginBottom: '0.375rem',
                         }}
                       >
                         {title}
                       </h3>
                       <p
                         className="ds-body"
-                        style={{ color: 'var(--color-text-muted)', whiteSpace: 'pre-line', lineHeight: '1.6' }}
+                        style={{ color: 'rgba(255,255,255,0.85)', whiteSpace: 'pre-line', lineHeight: '1.65', fontSize: '0.9375rem' }}
                       >
                         {content}
                       </p>
