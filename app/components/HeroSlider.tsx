@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Icon from '@/app/components/Icon';
+import LogoMarquee from '@/app/components/LogoMarquee';
 
 const slides = [
   {
@@ -163,46 +164,8 @@ export default function HeroSlider() {
         </div>
       </section>
 
-      {/* ── CLIENTS BAR ── */}
-      <div
-        className="flex items-stretch"
-        style={{ background: '#1a3a8f', minHeight: '66px', lineHeight: 'normal' }}
-      >
-        {/* "Our Clients" — cyan with diagonal right cut */}
-        <div
-          className="flex-shrink-0 flex items-center text-white font-black text-sm leading-tight"
-          style={{
-            background: '#00b4d8',
-            clipPath: 'polygon(0 0, 100% 0, 78% 100%, 0 100%)',
-            padding: '0.75rem 4rem 0.75rem 1.5rem',
-          }}
-        >
-          Our<br />Clients
-        </div>
-
-        {/* Client names */}
-        <div className="flex items-center justify-between flex-1 px-10 gap-2">
-          {['Radisson Blu', 'Holiday Inn', 'HYATT', 'IHG', 'Maersk', 'Marriott'].map(c => (
-            <span
-              key={c}
-              className="text-white font-bold text-sm tracking-wider uppercase"
-              style={{ opacity: 0.85 }}
-            >
-              {c}
-            </span>
-          ))}
-        </div>
-
-        {/* ALL CLIENTS pill */}
-        <Link
-          href="/clients"
-          className="flex-shrink-0 flex items-center gap-2 text-white font-black text-sm uppercase tracking-wide rounded-full my-auto mr-6 px-5 py-2.5 hover:bg-[#1a3a8f] transition-colors"
-          style={{ background: '#00b4d8' }}
-        >
-          ALL CLIENTS
-          <Icon name="chevronDoubleRight" style={{ fontSize: '1rem' }} />
-        </Link>
-      </div>
+      {/* ── CLIENTS MARQUEE ── */}
+      <LogoMarquee />
     </div>
   );
 }

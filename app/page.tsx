@@ -175,12 +175,14 @@ export default function Home() {
               </p>
               <div style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
                 {[
-                  { icon: '⚡', title: 'Energy Efficient', desc: 'Potential savings of up to 40% in energy and water consumption, depending on equipment, usage and facility conditions.' },
-                  { icon: '🛠️', title: 'Full Service Support', desc: 'Certified installation, preventive maintenance, and rapid repairs.' },
-                  { icon: '✅', title: 'Certified Quality', desc: 'International standards compliance across all product categories.' },
+                  { iconName: 'bolt' as const, title: 'Energy Efficient', desc: 'Potential savings of up to 40% in energy and water consumption, depending on equipment, usage and facility conditions.' },
+                  { iconName: 'tools' as const, title: 'Full Service Support', desc: 'Certified installation, preventive maintenance, and rapid repairs.' },
+                  { iconName: 'certificate' as const, title: 'Certified Quality', desc: 'International standards compliance across all product categories.' },
                 ].map((f) => (
                   <div key={f.title} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', padding: '1rem 0', borderBottom: '1px solid var(--color-border)' }}>
-                    <div style={{ width: '40px', height: '40px', background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '1.25rem' }}>{f.icon}</div>
+                    <div style={{ width: '40px', height: '40px', background: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: 'var(--color-brand-navy)', fontSize: '1.125rem' }}>
+                      <Icon name={f.iconName} />
+                    </div>
                     <div>
                       <div style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.25rem' }}>{f.title}</div>
                       <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{f.desc}</div>

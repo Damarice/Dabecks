@@ -3,6 +3,16 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import Icon, { IconName } from '@/app/components/Icon';
+
+const emojiToIcon: Record<string, IconName> = {
+  '⚡': 'bolt', '🛠️': 'tools', '✅': 'check', '🔒': 'shield', '💧': 'leaf',
+  '🏭': 'industry', '⚙️': 'cogs', '✨': 'star', '🛡️': 'shield', '🔧': 'wrench',
+  '♨️': 'bolt', '🎯': 'certificate', '⭐': 'star', '🔥': 'bolt', '🏥': 'hospital',
+  '🏨': 'building', '🤖': 'cogs', '📐': 'clipboard', '📦': 'box', '🔄': 'cogs',
+  '⭕': 'bolt', '⏱️': 'clock', '🚪': 'building', '🚚': 'truck', '🏆': 'award',
+  '👷': 'users', '🚧': 'shield', '🌿': 'leaf', '📊': 'chartLine',
+};
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Product { model: string; desc: string; slug: string; placeholder: string; image?: string; }
@@ -48,7 +58,9 @@ export default function SubpageListingPage({
                   style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.375rem' }}>
-                    <span style={{ fontSize: '1.125rem', lineHeight: 1 }}>{b.icon}</span>
+                    <span style={{ fontSize: '1.125rem', lineHeight: 1, color: 'var(--color-brand-cyan)' }}>
+                      <Icon name={emojiToIcon[b.icon] ?? 'bolt'} />
+                    </span>
                     <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', margin: 0 }}>{b.title}</h3>
                   </div>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.55', margin: 0 }}>{b.desc}</p>

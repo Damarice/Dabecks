@@ -3,7 +3,32 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
+import Icon, { IconName } from '@/app/components/Icon';
+
+// Map emoji used in product featureStrip to Font Awesome icon names
+const emojiToIcon: Record<string, IconName> = {
+  '⚡': 'bolt',
+  '🛠️': 'tools',
+  '✅': 'check',
+  '♨️': 'bolt',
+  '🔌': 'bolt',
+  '🎯': 'certificate',
+  '⭐': 'star',
+  '🔥': 'bolt',
+  '👨‍🍳': 'kitchen',
+  '🏢': 'building',
+  '🔀': 'cogs',
+  '🖥️': 'cogs',
+  '💧': 'leaf',
+  '🌡️': 'bolt',
+  '🍕': 'kitchen',
+  '❄️': 'hvac',
+  '🌿': 'leaf',
+  '📊': 'chartLine',
+  '🔧': 'wrench',
+  '📦': 'box',
+  '🚚': 'truck',
+};
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Spec           { label: string; value: string; }
@@ -129,7 +154,9 @@ export default function ProductDetailPage({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {featureStrip.map((f, i) => (
               <div key={i}>
-                <div style={{ fontSize: '1.75rem', lineHeight: 1, marginBottom: '0.5rem' }}>{f.icon}</div>
+                <div style={{ fontSize: '1.5rem', lineHeight: 1, marginBottom: '0.75rem', color: 'var(--color-brand-cyan)' }}>
+                  <Icon name={emojiToIcon[f.icon] ?? 'bolt'} />
+                </div>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6875rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', marginBottom: '0.25rem' }}>{f.label}</p>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', fontWeight: 500, color: '#ffffff', lineHeight: 1.35 }}>{f.value}</p>
               </div>

@@ -154,11 +154,11 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
-              { title: 'Innovation', icon: '💡', desc: 'We embrace new technologies and solutions that deliver measurable results for our clients.' },
-              { title: 'Excellence', icon: '⭐', desc: 'We maintain the highest standards in equipment selection, installation and ongoing service.' },
-              { title: 'Trust', icon: '🤝', desc: 'We build long-term partnerships through transparency, honesty and consistent delivery.' },
-              { title: 'Teamwork', icon: '👥', desc: 'We collaborate internally and with clients to achieve shared objectives and successful outcomes.' },
-              { title: 'Professionalism', icon: '🎯', desc: 'We conduct business with integrity, expertise and respect for every stakeholder.' },
+              { title: 'Innovation', iconName: 'bolt' as const,       desc: 'We embrace new technologies and solutions that deliver measurable results for our clients.' },
+              { title: 'Excellence', iconName: 'star' as const,       desc: 'We maintain the highest standards in equipment selection, installation and ongoing service.' },
+              { title: 'Trust',      iconName: 'handshake' as const,  desc: 'We build long-term partnerships through transparency, honesty and consistent delivery.' },
+              { title: 'Teamwork',   iconName: 'users' as const,      desc: 'We collaborate internally and with clients to achieve shared objectives and successful outcomes.' },
+              { title: 'Professionalism', iconName: 'certificate' as const, desc: 'We conduct business with integrity, expertise and respect for every stakeholder.' },
             ].map((val, i) => (
               <div
                 key={i}
@@ -172,7 +172,9 @@ export default function About() {
                   gap: '0.75rem',
                 }}
               >
-                <div style={{ fontSize: '2.5rem', lineHeight: 1 }}>{val.icon}</div>
+                <div style={{ fontSize: '1.75rem', lineHeight: 1, color: 'var(--color-brand-cyan)' }}>
+                  <Icon name={val.iconName} />
+                </div>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)' }}>{val.title}</h3>
                 <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>{val.desc}</p>
               </div>

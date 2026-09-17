@@ -16,10 +16,10 @@ const categories = [
 ];
 
 const standards = [
-  { icon: '⚡', title: 'Energy Efficiency', desc: 'Up to 40% reduction in water and energy consumption across our entire range.' },
-  { icon: '🔒', title: 'Reliability', desc: 'Every product tested for continuous commercial use before leaving the factory.' },
-  { icon: '🛠️', title: 'Service Support', desc: 'Full installation, maintenance, and repair across East Africa.' },
-  { icon: '✅', title: 'Certified Quality', desc: 'International certification including energy and hygiene compliance standards.' },
+  { iconName: 'bolt' as const,        title: 'Energy Efficiency', desc: 'Up to 40% reduction in water and energy consumption across our entire range.' },
+  { iconName: 'shield' as const,      title: 'Reliability', desc: 'Every product tested for continuous commercial use before leaving the factory.' },
+  { iconName: 'tools' as const,       title: 'Service Support', desc: 'Full installation, maintenance, and repair across East Africa.' },
+  { iconName: 'certificate' as const, title: 'Certified Quality', desc: 'International certification including energy and hygiene compliance standards.' },
 ];
 
 const customers = [
@@ -78,7 +78,9 @@ export default function LaundryPage() {
                       borderTop: '3px solid var(--color-brand-cyan)',
                     }}
                   >
-                    <div style={{ fontSize: '1.75rem', marginBottom: '0.75rem' }}>{s.icon}</div>
+                    <div style={{ fontSize: '1.5rem', marginBottom: '0.75rem', color: 'var(--color-brand-cyan)' }}>
+                      <Icon name={s.iconName} />
+                    </div>
                     <h3
                       style={{
                         fontFamily: 'var(--font-display)',

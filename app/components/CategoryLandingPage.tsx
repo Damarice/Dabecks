@@ -3,7 +3,17 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import Icon, { IconName } from '@/app/components/Icon';
 import { useState } from 'react';
+
+const emojiToIcon: Record<string, IconName> = {
+  '⚡': 'bolt', '🛠️': 'tools', '✅': 'check', '🔒': 'shield', '💧': 'leaf',
+  '🏭': 'industry', '⚙️': 'cogs', '✨': 'star', '🛡️': 'shield', '🔧': 'wrench',
+  '♨️': 'bolt', '🎯': 'certificate', '⭐': 'star', '🔥': 'bolt', '🏥': 'hospital',
+  '🏨': 'building', '🤖': 'cogs', '📐': 'clipboard', '📦': 'box', '🔄': 'cogs',
+  '⭕': 'bolt', '⏱️': 'clock', '🚪': 'building', '🚚': 'truck', '🏆': 'award',
+  '👷': 'users', '🚧': 'shield', '🌿': 'leaf', '📊': 'chartLine',
+};
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface FeaturedProduct { title: string; desc: string; image: string; href: string; }
@@ -50,7 +60,9 @@ export default function CategoryLandingPage({
             <div className="grid grid-cols-2 gap-4">
               {standards.map((s, i) => (
                 <div key={i} style={{ background: 'var(--color-surface)', padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}>
-                  <div style={{ fontSize: '1.75rem', marginBottom: '0.625rem', lineHeight: 1 }}>{s.icon}</div>
+                  <div style={{ fontSize: '1.5rem', marginBottom: '0.625rem', lineHeight: 1, color: 'var(--color-brand-cyan)' }}>
+                    <Icon name={emojiToIcon[s.icon] ?? 'bolt'} />
+                  </div>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.375rem' }}>{s.title}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{s.desc}</p>
                 </div>
