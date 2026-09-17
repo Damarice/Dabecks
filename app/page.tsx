@@ -92,9 +92,8 @@ export default function Home() {
         <div className="ds-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {[
-              { value: '15+',    label: 'Years in Business' },
-              { value: '1,500+',label: 'Clients Served' },
-              { value: '3',      label: 'Global Brand Dealerships' },
+              { value: '15+',    label: 'Years of Industry Experience' },
+              { value: '1,500+', label: 'Installations Across East Africa' },
               { value: '100%',   label: 'Kenyan Owned' },
             ].map(({ value, label }) => (
               <div key={label}>
@@ -102,6 +101,15 @@ export default function Home() {
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'rgba(255,255,255,0.65)' }}>{label}</div>
               </div>
             ))}
+            {/* Brand dealerships */}
+            <div>
+              <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', marginBottom: '0.625rem' }}>Authorised Dealerships</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '0.9375rem', fontWeight: 700, lineHeight: 1.4, color: 'rgba(255,255,255,0.85)' }}>
+                Electrolux Professional<br />
+                Alliance Laundry Systems<br />
+                Pellerin Milnor
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -166,7 +174,7 @@ export default function Home() {
               </p>
               <div style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
                 {[
-                  { icon: '⚡', title: 'Energy Efficient', desc: 'Up to 40% reduction in energy and water costs across our laundry range.' },
+                  { icon: '⚡', title: 'Energy Efficient', desc: 'Potential savings of up to 40% in energy and water consumption, depending on equipment, usage and facility conditions.' },
                   { icon: '🛠️', title: 'Full Service Support', desc: 'Certified installation, preventive maintenance, and rapid repairs.' },
                   { icon: '✅', title: 'Certified Quality', desc: 'International standards compliance across all product categories.' },
                 ].map((f) => (
