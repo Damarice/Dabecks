@@ -244,28 +244,102 @@ export default function HomepageHeroSlider() {
             </span>
           </div>
 
-          {/* Client names */}
+          {/* Client logos carousel */}
           <div
-            className="flex items-center flex-1 gap-6 md:gap-10 overflow-hidden"
-            style={{ paddingBlock: '1rem' }}
+            style={{
+              flex: 1,
+              overflow: 'hidden',
+              position: 'relative',
+              paddingBlock: '1rem',
+            }}
           >
-            {['Radisson Blu', 'Holiday Inn', 'Hyatt', 'IHG', 'Maersk', 'Marriott'].map((name) => (
-              <span
-                key={name}
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.8125rem',
-                  fontWeight: 600,
-                  letterSpacing: '0.06em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(255,255,255,0.45)',
-                  whiteSpace: 'nowrap',
-                  flexShrink: 0,
-                }}
-              >
-                {name}
-              </span>
-            ))}
+            <div
+              style={{
+                display: 'flex',
+                gap: '3rem',
+                animation: 'scroll-logos 40s linear infinite',
+                width: 'max-content',
+              }}
+            >
+              {/* First set */}
+              {[
+                '/logos/clients/radisson-blu.png',
+                '/logos/clients/holiday-inn.png',
+                '/logos/clients/hyatt.png',
+                '/logos/clients/ihg.png',
+                '/logos/clients/maersk.png',
+                '/logos/clients/marriott.png',
+                '/logos/clients/serena.jpg',
+                '/logos/clients/safari-park-hotel.png',
+                '/logos/clients/kenya-airways.png',
+                '/logos/clients/knh.jpg',
+              ].map((logo, i) => (
+                <div
+                  key={`logo-1-${i}`}
+                  style={{
+                    minWidth: '120px',
+                    height: '50px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={logo}
+                    alt="Client logo"
+                    style={{
+                      maxWidth: '110px',
+                      maxHeight: '45px',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      filter: 'brightness(0) invert(1)',
+                      opacity: 0.6,
+                    }}
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {[
+                '/logos/clients/radisson-blu.png',
+                '/logos/clients/holiday-inn.png',
+                '/logos/clients/hyatt.png',
+                '/logos/clients/ihg.png',
+                '/logos/clients/maersk.png',
+                '/logos/clients/marriott.png',
+                '/logos/clients/serena.jpg',
+                '/logos/clients/safari-park-hotel.png',
+                '/logos/clients/kenya-airways.png',
+                '/logos/clients/knh.jpg',
+              ].map((logo, i) => (
+                <div
+                  key={`logo-2-${i}`}
+                  style={{
+                    minWidth: '120px',
+                    height: '50px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                  }}
+                >
+                  <img
+                    src={logo}
+                    alt="Client logo"
+                    style={{
+                      maxWidth: '110px',
+                      maxHeight: '45px',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      filter: 'brightness(0) invert(1)',
+                      opacity: 0.6,
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* CTA */}
@@ -277,6 +351,18 @@ export default function HomepageHeroSlider() {
           </div>
         </div>
       </div>
+
+      {/* CSS Animation */}
+      <style jsx>{`
+        @keyframes scroll-logos {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </>
   );
 }
