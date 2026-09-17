@@ -142,11 +142,11 @@ export default function Navbar() {
               <Image
                 src="/small logo.jpg"
                 alt="Dabecks"
-                height={110}
-                width={280}
+                height={95}
+                width={240}
                 className="object-contain"
                 style={{ 
-                  height: '110px', 
+                  height: '95px', 
                   width: 'auto',
                   imageRendering: 'crisp-edges',
                   WebkitFontSmoothing: 'antialiased',
