@@ -6,9 +6,9 @@ import Link from 'next/link';
 const slides = [
   {
     image: '/slide1.jpg',
-    eyebrow: '15 Years of Excellence',
-    title: "East Africa's\nTrusted Partner",
-    sub: 'Commercial laundry, kitchen, and air conditioning solutions — supplied, installed, and supported.',
+    eyebrow: 'Serving East Africa Since 2011',
+    title: "Commercial Laundry, Kitchen\n& HVAC Solutions Built for\nEast African Businesses",
+    sub: 'Equipment supply • Professional installation • Commissioning • Training • Maintenance\nServing hotels, hospitals, institutions and commercial facilities.',
     btnLabel: 'About Dabecks',
     btnHref: '/about',
   },
