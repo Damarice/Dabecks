@@ -277,23 +277,23 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-1-${i}`}
                   style={{
-                    minWidth: '140px',
-                    height: '60px',
+                    minWidth: '200px',
+                    height: '100px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    background: 'rgba(255,255,255,0.95)',
-                    padding: '0.75rem',
-                    borderRadius: '6px',
+                    background: '#ffffff',
+                    padding: '1.25rem',
+                    borderRadius: '8px',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '120px',
-                      maxHeight: '50px',
+                      maxWidth: '180px',
+                      maxHeight: '80px',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
@@ -317,23 +317,23 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-2-${i}`}
                   style={{
-                    minWidth: '140px',
-                    height: '60px',
+                    minWidth: '200px',
+                    height: '100px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    background: 'rgba(255,255,255,0.95)',
-                    padding: '0.75rem',
-                    borderRadius: '6px',
+                    background: '#ffffff',
+                    padding: '1.25rem',
+                    borderRadius: '8px',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '120px',
-                      maxHeight: '50px',
+                      maxWidth: '180px',
+                      maxHeight: '80px',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
