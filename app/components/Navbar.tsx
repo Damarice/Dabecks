@@ -140,7 +140,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Dabecks home">
               <Image
-                src="/logo.png"
+                src="/small logo.jpg"
                 alt="Dabecks"
                 height={110}
                 width={280}
