@@ -15,13 +15,14 @@ export default function KitchenPage() {
         { title: 'Cooking Ranges', desc: 'Professional gas and electric ranges built for the demands of high-volume kitchen service.', image: '/kitchen-categories/cooking-ranges.jpg', href: '/solutions/kitchen/cooking-ranges' },
       ]}
       categories={[
-        { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/kitchen-categories/commercial-ovens.webp' },
-        { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/kitchen-categories/fryers.webp' },
-        { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/kitchen-categories/dishwashers.webp' },
-        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/kitchen-categories/steamers.webp' },
-        { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/kitchen-categories/cooking-ranges.jpg' },
-        { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/kitchen-categories/grills-griddles.jpg' },
+        { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/kitchen-categories/commercial-ovens.webp?v=2' },
+        { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/kitchen-categories/fryers.webp?v=2' },
+        { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/kitchen-categories/dishwashers.webp?v=2' },
+        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/kitchen-categories/steamers.webp?v=2' },
+        { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/kitchen-categories/cooking-ranges.jpg?v=2' },
+        { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/kitchen-categories/grills-griddles.jpg?v=2' },
       ]}
+
       standards={[
         { icon: '🌡️', title: 'Precision Cooking', desc: 'Every product delivers precise temperature control for consistent results across all menu items.' },
         { icon: '🧼', title: 'Hygiene First', desc: 'NSF-certified equipment meeting international food safety and sanitation standards.' },
