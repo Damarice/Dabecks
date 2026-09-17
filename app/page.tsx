@@ -4,15 +4,11 @@ import Link from 'next/link';
 import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 import CTASection from '@/app/components/CTASection';
 import Icon from '@/app/components/Icon';
-import ClientLogosCarousel from '@/app/components/ClientLogosCarousel';
 
 export default function Home() {
   return (
     <div>
       <HomepageHeroSlider />
-
-      {/* ══ CLIENT LOGOS CAROUSEL ════════════════════════════ */}
-      <ClientLogosCarousel />
 
       {/* ══ VALUE PROPOSITION ═══════════════════════════════════ */}
       <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>

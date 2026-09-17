@@ -295,7 +295,7 @@ export default function HomepageHeroSlider() {
                       height: 'auto',
                       objectFit: 'contain',
                       filter: 'brightness(0) invert(1)',
-                      opacity: 0.6,
+                      opacity: 0.7,
                     }}
                   />
                 </div>
@@ -334,7 +334,7 @@ export default function HomepageHeroSlider() {
                       height: 'auto',
                       objectFit: 'contain',
                       filter: 'brightness(0) invert(1)',
-                      opacity: 0.6,
+                      opacity: 0.7,
                     }}
                   />
                 </div>
