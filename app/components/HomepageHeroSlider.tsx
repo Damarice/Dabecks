@@ -277,25 +277,26 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-1-${i}`}
                   style={{
-                    minWidth: '120px',
-                    height: '50px',
+                    minWidth: '140px',
+                    height: '60px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
+                    background: 'rgba(255,255,255,0.95)',
+                    padding: '0.75rem',
+                    borderRadius: '6px',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '110px',
-                      maxHeight: '45px',
+                      maxWidth: '120px',
+                      maxHeight: '50px',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
-                      filter: 'brightness(0) invert(1)',
-                      opacity: 0.7,
                     }}
                   />
                 </div>
@@ -316,25 +317,26 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-2-${i}`}
                   style={{
-                    minWidth: '120px',
-                    height: '50px',
+                    minWidth: '140px',
+                    height: '60px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
+                    background: 'rgba(255,255,255,0.95)',
+                    padding: '0.75rem',
+                    borderRadius: '6px',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '110px',
-                      maxHeight: '45px',
+                      maxWidth: '120px',
+                      maxHeight: '50px',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
-                      filter: 'brightness(0) invert(1)',
-                      opacity: 0.7,
                     }}
                   />
                 </div>
