@@ -213,7 +213,7 @@ export default function HomepageHeroSlider() {
       </section>
 
       {/* ── CLIENT TRUST BAR ─────────────────────────────── */}
-      <div style={{ background: 'var(--color-brand-navy)', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+      <div style={{ background: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
         <div
           className="ds-container"
           style={{ display: 'flex', alignItems: 'stretch', minHeight: '60px' }}
@@ -225,7 +225,7 @@ export default function HomepageHeroSlider() {
               display: 'flex',
               alignItems: 'center',
               paddingRight: '2rem',
-              borderRight: '1px solid rgba(255,255,255,0.1)',
+              borderRight: '1px solid rgba(0,0,0,0.1)',
               marginRight: '2rem',
             }}
           >
@@ -236,7 +236,7 @@ export default function HomepageHeroSlider() {
                 fontWeight: 700,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
-                color: 'var(--color-brand-cyan)',
+                color: 'var(--color-brand-navy)',
                 lineHeight: 1.3,
               }}
             >
