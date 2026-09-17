@@ -4,16 +4,16 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
-  { name: 'Electrolux Professional', logo: '/logos/partners/electrolux.svg' },
-  { name: 'Alliance Laundry Systems', logo: '/logos/partners/alliance.png' },
-  { name: 'Pellerin Milnor Corporation', logo: '/logos/partners/milnor.jpg' },
-  { name: 'Chicago Dryer Company', logo: '/logos/partners/chicago-dryer.png' },
-  { name: 'Speed Queen', logo: null },
-  { name: 'IPSO', logo: null },
-  { name: 'SIRAIR', logo: null },
-  { name: 'Fagor Laundry', logo: null },
-  { name: 'Maxi-Company', logo: null },
-  { name: 'Ponny', logo: null },
+  { name: 'Electrolux Professional', logo: '/logos/partners/electrolux.svg',    darkBg: false },
+  { name: 'Alliance Laundry Systems', logo: '/logos/partners/alliance.png',     darkBg: false },
+  { name: 'Pellerin Milnor Corporation', logo: '/logos/partners/milnor.jpg',    darkBg: false },
+  { name: 'Chicago Dryer Company', logo: '/logos/partners/chicago-dryer.png',   darkBg: true  },
+  { name: 'Speed Queen', logo: null,                                            darkBg: false },
+  { name: 'IPSO', logo: null,                                                   darkBg: false },
+  { name: 'SIRAIR', logo: null,                                                 darkBg: false },
+  { name: 'Fagor Laundry', logo: null,                                          darkBg: false },
+  { name: 'Maxi-Company', logo: null,                                           darkBg: false },
+  { name: 'Ponny', logo: null,                                                  darkBg: false },
 ];
 
 const dealerships = [
@@ -57,7 +57,7 @@ export default function Partners() {
               <div
                 key={i}
                 className="brand-cell"
-                style={{ background: '#ffffff', minHeight: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.75rem' }}
+                style={{ background: brand.darkBg ? 'var(--color-brand-navy)' : '#ffffff', minHeight: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.75rem' }}
               >
                 {brand.logo ? (
                   <img
