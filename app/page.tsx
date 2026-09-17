@@ -17,12 +17,12 @@ export default function Home() {
             <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>East Africa&rsquo;s Commercial Equipment Partner</span>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 3.5vw, 3rem)', fontWeight: 800, letterSpacing: '-0.035em', lineHeight: 1.08, color: 'var(--color-brand-navy)' }}>
-                The right equipment.<br />Installed correctly.<br />Supported for life.
+                The right equipment.<br />Installed correctly.<br />Supported completely.
               </h2>
             </div>
             <div>
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-                Since 2011, Dabecks has been the trusted mechanical partner for hotels, hospitals, universities, and government institutions across East Africa — supplying, installing, and maintaining commercial laundry, kitchen, and HVAC systems.
+                From equipment selection to installation, training and after-sales support — Dabecks has been the trusted mechanical partner for hotels, hospitals, universities, and government institutions across East Africa since 2011.
               </p>
               <Link href="/about" className="ds-btn ds-btn-outline">Learn About Dabecks</Link>
             </div>
