@@ -234,7 +234,7 @@ export default function Home() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {[
                 { month: 'Feb 2026', title: 'New Milnor dealership strengthens industrial laundry offering', img: '/hero-laundry.jpg' },
-                { month: 'Jan 2026', title: 'Electrolux Professional training completed by our technicians', img: '/hero-kitchen.jpg' },
+                { month: 'Jan 2026', title: 'Electrolux Professional training completed by our technicians', img: '/kitchen-categories/commercial-ovens.webp' },
               ].map(({ month, title, img }) => (
                 <article key={title} style={{ background: '#ffffff', border: '1px solid var(--color-border)', overflow: 'hidden', display: 'flex', cursor: 'pointer', transition: 'box-shadow 200ms ease' }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}

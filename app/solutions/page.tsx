@@ -15,7 +15,7 @@ const solutions = [
     title: 'Kitchen Systems',
     desc: 'Professional kitchen equipment including ovens, fryers, steamers, and dishwashers for commercial food service.',
     href: '/solutions/kitchen',
-    image: '/hero-kitchen.jpg',
+    image: '/kitchen-categories/commercial-ovens.webp',
     items: ['Commercial Ovens', 'Fryers', 'Dishwashers', 'Cooking Ranges'],
   },
   {

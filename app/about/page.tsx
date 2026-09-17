@@ -92,7 +92,7 @@ export default function About() {
             </button>
           </div>
           <div className="split-feature__media" style={{ minHeight: '480px' }}>
-            <img src="/hero-kitchen.jpg" alt="Commercial kitchen installation" />
+            <img src="/kitchen-categories/commercial-ovens.webp" alt="Commercial kitchen installation" />
             <div style={{ position: 'absolute', bottom: 0, right: 0, background: 'var(--color-brand-cyan)', color: '#ffffff', padding: '1.25rem 1.75rem' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.875rem', fontWeight: 800, lineHeight: 1 }}>13+</div>
               <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 600, marginTop: '0.25rem' }}>Years Excellence</div>

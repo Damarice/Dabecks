@@ -35,7 +35,7 @@ export default function KitchenPage() {
         { name: 'Kenya School of Government', type: 'Institution', quote: 'The full kitchen refit was delivered on time and within budget. Staff training was included and the equipment has been excellent.', image: '/hero-clients.jpg' },
       ]}
       news={[
-        { date: 'April 2026', title: 'Rational iCombi Pro Now Available in East Africa', desc: 'Dabecks is now the authorised distributor for Rational combi ovens in East Africa — the world\'s leading combi oven brand.', image: '/hero-kitchen.jpg' },
+        { date: 'April 2026', title: 'Rational iCombi Pro Now Available in East Africa', desc: 'Dabecks is now the authorised distributor for Rational combi ovens in East Africa — the world\'s leading combi oven brand.', image: '/kitchen-categories/commercial-ovens.webp' },
         { date: 'February 2026', title: 'Commercial Kitchen Fit-Out: 5-Star Hotel Nairobi', desc: 'A complete kitchen refit for a 5-star Nairobi hotel — from cooking equipment to dishwashing and ventilation.', image: '/hero-clients.jpg' },
         { date: 'December 2025', title: 'Energy Saving in Commercial Kitchens: A Guide', desc: 'Our team shares practical tips for reducing energy costs in commercial kitchens without compromising performance.', image: '/about-journey.jpg' },
       ]}
