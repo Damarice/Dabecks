@@ -148,10 +148,12 @@ export default function Navbar() {
                 style={{ 
                   height: '95px', 
                   width: 'auto',
-                  imageRendering: 'crisp-edges',
-                  WebkitFontSmoothing: 'antialiased',
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitFontSmoothing: 'subpixel-antialiased',
                   backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)'
+                  transform: 'translateZ(0)',
+                  filter: 'contrast(1.05) saturate(1.1)',
+                  sharpness: 'crisp-edges'
                 }}
                 priority
                 quality={100}
