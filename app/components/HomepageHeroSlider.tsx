@@ -7,7 +7,7 @@ const slides = [
   {
     image: '/slide1.jpg',
     eyebrow: 'Serving East Africa Since 2011',
-    title: "Commercial Laundry, Kitchen\n& HVAC Solutions Built for\nEast African Businesses",
+    title: "Commercial Laundry,\nKitchen & HVAC Solutions",
     sub: 'Equipment supply • Professional installation • Commissioning • Training • Maintenance\nServing hotels, hospitals, institutions and commercial facilities.',
     btnLabel: 'About Dabecks',
     btnHref: '/about',
@@ -15,7 +15,7 @@ const slides = [
   {
     image: '/slide2.jpg',
     eyebrow: 'Kitchen Systems',
-    title: 'Professional Kitchen\nSolutions That Work',
+    title: 'Professional Kitchen\nEquipment',
     sub: 'From commercial ovens and fryers to dishwashers and cooking ranges — complete kitchen setups.',
     btnLabel: 'Explore Kitchen',
     btnHref: '/solutions/kitchen',
@@ -23,7 +23,7 @@ const slides = [
   {
     image: '/slide3.jpg',
     eyebrow: 'Laundry Equipment',
-    title: 'High-Performance\nLaundry at Any Scale',
+    title: 'High-Performance\nLaundry Systems',
     sub: 'Sprint cleaning with the lowest water, energy and detergent consumption in the industry.',
     btnLabel: 'Explore Laundry',
     btnHref: '/solutions/laundry',
