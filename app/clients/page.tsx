@@ -1,3 +1,5 @@
+'use client';
+
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
