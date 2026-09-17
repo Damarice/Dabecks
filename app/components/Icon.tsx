@@ -42,20 +42,14 @@ import {
   faExternalLinkAlt,
   faQuoteLeft,
   faQuoteRight,
+} from '@fortawesome/free-solid-svg-icons';
+import {
   faFacebook,
   faTwitter,
   faLinkedin,
   faInstagram,
   faYoutube,
   faWhatsapp,
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faFacebook as faFacebookBrand,
-  faTwitter as faTwitterBrand,
-  faLinkedin as faLinkedinBrand,
-  faInstagram as faInstagramBrand,
-  faYoutube as faYoutubeBrand,
-  faWhatsapp as faWhatsappBrand,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Icon mapping for easy access throughout the site
@@ -119,12 +113,12 @@ const iconMap = {
   quoteRight: faQuoteRight,
   
   // Social Media (Brands)
-  facebook: faFacebookBrand,
-  twitter: faTwitterBrand,
-  linkedin: faLinkedinBrand,
-  instagram: faInstagramBrand,
-  youtube: faYoutubeBrand,
-  whatsapp: faWhatsappBrand,
+  facebook: faFacebook,
+  twitter: faTwitter,
+  linkedin: faLinkedin,
+  instagram: faInstagram,
+  youtube: faYoutube,
+  whatsapp: faWhatsapp,
 };
 
 export type IconName = keyof typeof iconMap;
@@ -153,7 +147,7 @@ export default function Icon({ name, className = '', size = '1x', style }: IconP
       icon={icon} 
       className={className}
       size={size}
-      style={style}
+      style={style as any}
     />
   );
 }
