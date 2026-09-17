@@ -142,18 +142,20 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Dabecks"
-                height={90}
-                width={220}
+                height={110}
+                width={280}
                 className="object-contain"
                 style={{ 
-                  height: '90px', 
+                  height: '110px', 
                   width: 'auto',
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitFontSmoothing: 'antialiased'
+                  imageRendering: 'crisp-edges',
+                  WebkitFontSmoothing: 'antialiased',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)'
                 }}
                 priority
                 quality={100}
-                unoptimized={false}
+                unoptimized={true}
               />
             </Link>
 
