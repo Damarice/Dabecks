@@ -5,6 +5,7 @@ import {
   faLocationDot,
   faChevronDown,
   faChevronRight,
+  faChevronLeft,
   faArrowRight,
   faBars,
   faTimes,
@@ -69,6 +70,7 @@ const iconMap = {
   // Navigation
   chevronDown: faChevronDown,
   chevronRight: faChevronRight,
+  chevronLeft: faChevronLeft,
   arrowRight: faArrowRight,
   menu: faBars,
   close: faTimes,

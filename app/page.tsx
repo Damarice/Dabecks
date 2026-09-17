@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 import CTASection from '@/app/components/CTASection';
+import Icon from '@/app/components/Icon';
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
             </div>
             <Link href="/solutions" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', display: 'inline-flex', alignItems: 'center', gap: '0.375rem', textDecoration: 'none' }}>
               View all
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
+              <Icon name="chevronRight" size="sm" />
             </Link>
           </div>
 
@@ -189,7 +190,7 @@ export default function Home() {
               </div>
               <Link href="/solutions/consultancy" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
                 Learn about consultancy
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                <Icon name="arrowRight" />
               </Link>
             </div>
             {/* Image — right */}
@@ -210,7 +211,7 @@ export default function Home() {
             </div>
             <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
               View all
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
+              <Icon name="chevronRight" size="sm" />
             </Link>
           </div>
 
