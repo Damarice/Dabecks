@@ -164,59 +164,30 @@ export default function Clients() {
                 {clients.map((client, i) => (
                   <div
                     key={i}
+                    className="brand-cell"
                     style={{
                       background: '#ffffff',
-                      padding: '1.75rem 1.5rem',
+                      minHeight: '160px',
                       display: 'flex',
-                      flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      minHeight: '140px',
+                      padding: '2rem 1.75rem',
                       border: '1px solid var(--color-border)',
-                      transition: 'border-color 200ms ease, box-shadow 200ms ease',
-                      gap: '0.75rem',
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-brand-cyan)';
-                      (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-border)';
-                      (e.currentTarget as HTMLElement).style.boxShadow = 'none';
                     }}
                   >
                     {client.logo ? (
-                      <>
-                        <img
-                          src={client.logo}
-                          alt={client.name}
-                          style={{
-                            width: '100%',
-                            maxWidth: '180px',
-                            height: '80px',
-                            objectFit: 'contain',
-                          }}
-                        />
-                        <span style={{
-                          fontFamily: 'var(--font-body)',
-                          fontSize: '0.8125rem',
-                          fontWeight: 600,
-                          color: 'var(--color-text-muted)',
-                          textAlign: 'center',
-                          lineHeight: 1.3,
-                        }}>
-                          {client.name}
-                        </span>
-                      </>
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        style={{
+                          width: '100%',
+                          maxWidth: '200px',
+                          height: '90px',
+                          objectFit: 'contain',
+                        }}
+                      />
                     ) : (
-                      <span style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: '0.9375rem',
-                        fontWeight: 700,
-                        color: 'var(--color-brand-navy)',
-                        textAlign: 'center',
-                        lineHeight: 1.4,
-                      }}>
+                      <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>
                         {client.name}
                       </span>
                     )}
