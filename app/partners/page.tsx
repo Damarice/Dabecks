@@ -4,9 +4,16 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
-  'Electrolux Professional', 'Alliance Laundry Systems', 'Pellerin Milnor Corporation',
-  'Chicago Dryer Company', 'Speed Queen', 'IPSO', 'SIRAIR', 'Fagor Laundry',
-  'Maxi-Company', 'Ponny',
+  { name: 'Electrolux Professional', logo: '/logos/partners/electrolux.svg' },
+  { name: 'Alliance Laundry Systems', logo: '/logos/partners/alliance.png' },
+  { name: 'Pellerin Milnor Corporation', logo: '/logos/partners/milnor.jpg' },
+  { name: 'Chicago Dryer Company', logo: '/logos/partners/chicago-dryer.png' },
+  { name: 'Speed Queen', logo: null },
+  { name: 'IPSO', logo: null },
+  { name: 'SIRAIR', logo: null },
+  { name: 'Fagor Laundry', logo: null },
+  { name: 'Maxi-Company', logo: null },
+  { name: 'Ponny', logo: null },
 ];
 
 const dealerships = [
@@ -45,14 +52,22 @@ export default function Partners() {
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Equipment Partner Brands</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '1px', background: 'var(--color-border)' }}>
-            {equipmentBrands.map((name, i) => (
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1px', background: 'var(--color-border)' }}>
+            {equipmentBrands.map((brand, i) => (
               <div
                 key={i}
                 className="brand-cell"
-                style={{ background: '#ffffff', minHeight: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem 1.25rem' }}
+                style={{ background: '#ffffff', minHeight: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.75rem 1.5rem' }}
               >
-                <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>{name}</span>
+                {brand.logo ? (
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    style={{ maxWidth: '140px', maxHeight: '60px', objectFit: 'contain', filter: 'grayscale(20%)' }}
+                  />
+                ) : (
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>{brand.name}</span>
+                )}
               </div>
             ))}
           </div>

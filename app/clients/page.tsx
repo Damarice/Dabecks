@@ -6,38 +6,38 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
 // Client data organized by sector
-const clientsBySector = {
+const clientsBySector: Record<string, { name: string; logo: string | null }[]> = {
   'Hotels & Hospitality': [
-    'Radisson Blu Hotel',
-    'Marriott Hotels',
-    'Hyatt Hotels',
-    'Holiday Inn',
-    'Nairobi Safari Club',
-    'Safari Park Hotel & Casino',
-    'Golf Hotel Kakamega',
-    'Cold Spring Hotels Homabay',
-    'PrideInn Hotels Mombasa',
-    'Sarova White Sands',
+    { name: 'Radisson Blu Hotel',          logo: '/logos/clients/radisson-blu.png' },
+    { name: 'Marriott Hotels',             logo: '/logos/clients/marriott.png' },
+    { name: 'Hyatt Hotels',               logo: '/logos/clients/hyatt.png' },
+    { name: 'Holiday Inn',                logo: '/logos/clients/holiday-inn.png' },
+    { name: 'Nairobi Safari Club',        logo: null },
+    { name: 'Safari Park Hotel & Casino', logo: null },
+    { name: 'Golf Hotel Kakamega',        logo: null },
+    { name: 'Cold Spring Hotels Homabay', logo: null },
+    { name: 'PrideInn Hotels Mombasa',   logo: null },
+    { name: 'Sarova White Sands',        logo: null },
   ],
   'Healthcare': [
-    'Kikuyu Mission Hospital',
-    'KTRH (Kenyatta National Hospital)',
-    'Valley Hospital',
-    'Nairobi Hospital',
+    { name: 'Kikuyu Mission Hospital',             logo: null },
+    { name: 'KTRH (Kenyatta National Hospital)',   logo: null },
+    { name: 'Valley Hospital',                     logo: null },
+    { name: 'Nairobi Hospital',                    logo: null },
   ],
   'Education': [
-    'JKUAT (Jomo Kenyatta University)',
-    'Multimedia University',
-    'Catholic University of East Africa',
-    'Kenya Utalii College',
+    { name: 'JKUAT (Jomo Kenyatta University)', logo: '/logos/clients/jkuat.webp' },
+    { name: 'Multimedia University',            logo: '/logos/clients/multimedia-university.png' },
+    { name: 'Catholic University of East Africa', logo: null },
+    { name: 'Kenya Utalii College',             logo: null },
   ],
   'Government & Institutions': [
-    'Kenya Defence Forces',
-    'Kenya Ports Authority',
+    { name: 'Kenya Defence Forces', logo: null },
+    { name: 'Kenya Ports Authority', logo: null },
   ],
   'Corporate & Industrial': [
-    'NAS Servair (Aviation Catering)',
-    'Maersk East Africa',
+    { name: 'NAS Servair (Aviation Catering)', logo: null },
+    { name: 'Maersk East Africa',             logo: null },
   ],
 };
 
@@ -139,37 +139,47 @@ export default function Clients() {
               </div>
 
               {/* Client grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                 {clients.map((client, i) => (
                   <div
                     key={i}
                     style={{
-                      background: 'var(--color-surface)',
-                      padding: '1.5rem',
+                      background: '#ffffff',
+                      padding: '1.25rem',
                       display: 'flex',
+                      flexDirection: 'column',
                       alignItems: 'center',
-                      gap: '0.75rem',
-                      borderLeft: '2px solid var(--color-border)',
-                      transition: 'border-color 200ms ease',
+                      justifyContent: 'center',
+                      minHeight: '100px',
+                      border: '1px solid var(--color-border)',
+                      transition: 'border-color 200ms ease, box-shadow 200ms ease',
+                      gap: '0.625rem',
                     }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--color-brand-cyan)'; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderLeftColor = 'var(--color-border)'; }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-brand-cyan)';
+                      (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-border)';
+                      (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+                    }}
                   >
-                    <div style={{ 
-                      width: '8px', 
-                      height: '8px', 
-                      borderRadius: '50%', 
-                      background: 'var(--color-brand-cyan)', 
-                      flexShrink: 0 
-                    }} />
-                    <span style={{ 
-                      fontFamily: 'var(--font-body)', 
-                      fontSize: '0.9375rem', 
-                      fontWeight: 600, 
-                      color: 'var(--color-brand-navy)' 
-                    }}>
-                      {client}
-                    </span>
+                    {client.logo ? (
+                      <>
+                        <img
+                          src={client.logo}
+                          alt={client.name}
+                          style={{ maxWidth: '120px', maxHeight: '50px', objectFit: 'contain', filter: 'grayscale(15%)' }}
+                        />
+                        <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text-muted)', textAlign: 'center' }}>
+                          {client.name}
+                        </span>
+                      </>
+                    ) : (
+                      <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>
+                        {client.name}
+                      </span>
+                    )}
                   </div>
                 ))}
               </div>
