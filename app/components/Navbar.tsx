@@ -140,7 +140,7 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Dabecks home">
               <Image
-                src="/small logo.jpg"
+                src="/small-logo.jpg"
                 alt="Dabecks"
                 height={95}
                 width={240}
@@ -152,8 +152,7 @@ export default function Navbar() {
                   WebkitFontSmoothing: 'subpixel-antialiased',
                   backfaceVisibility: 'hidden',
                   transform: 'translateZ(0)',
-                  filter: 'contrast(1.05) saturate(1.1)',
-                  sharpness: 'crisp-edges'
+                  filter: 'contrast(1.05) saturate(1.1)'
                 }}
                 priority
                 quality={100}
