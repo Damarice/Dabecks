@@ -4,7 +4,7 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
-  'Alliance Laundry Systems', 'Electrolux Professional', 'Pellerin Milnor Corporation',
+  'Electrolux Professional', 'Alliance Laundry Systems', 'Pellerin Milnor Corporation',
   'Chicago Dryer Company', 'Speed Queen', 'IPSO', 'SIRAIR', 'Fagor Laundry',
   'Maxi-Company', 'Ponny',
 ];
