@@ -12,32 +12,53 @@ const clientsBySector: Record<string, { name: string; logo: string | null }[]> =
     { name: 'Marriott Hotels',             logo: '/logos/clients/marriott.png' },
     { name: 'Hyatt Hotels',               logo: '/logos/clients/hyatt.png' },
     { name: 'Holiday Inn',                logo: '/logos/clients/holiday-inn.png' },
+    { name: 'IHG Hotels & Resorts',       logo: null },
     { name: 'Nairobi Safari Club',        logo: null },
     { name: 'Safari Park Hotel & Casino', logo: null },
     { name: 'Golf Hotel Kakamega',        logo: null },
     { name: 'Cold Spring Hotels Homabay', logo: null },
     { name: 'PrideInn Hotels Mombasa',   logo: null },
     { name: 'Sarova White Sands',        logo: null },
+    { name: 'Serena Hotels',             logo: null },
+    { name: 'Ole Sereni Hotel',          logo: null },
+    { name: 'Tribe Hotel Nairobi',       logo: null },
+    { name: 'Crowne Plaza Nairobi',      logo: null },
+    { name: 'Best Western Plus',         logo: null },
+    { name: 'Utalii Hotel',             logo: null },
   ],
   'Healthcare': [
-    { name: 'Kikuyu Mission Hospital',             logo: null },
-    { name: 'KTRH (Kenyatta National Hospital)',   logo: null },
-    { name: 'Valley Hospital',                     logo: null },
-    { name: 'Nairobi Hospital',                    logo: null },
+    { name: 'Kikuyu Mission Hospital',               logo: null },
+    { name: 'Kenyatta National Hospital (KNH)',      logo: null },
+    { name: 'Valley Hospital',                       logo: null },
+    { name: 'Nairobi Hospital',                      logo: null },
+    { name: 'Aga Khan University Hospital',          logo: null },
+    { name: 'Mater Hospital',                        logo: null },
+    { name: 'MP Shah Hospital',                      logo: null },
+    { name: 'Karen Hospital',                        logo: null },
   ],
   'Education': [
-    { name: 'JKUAT (Jomo Kenyatta University)', logo: '/logos/clients/jkuat.webp' },
-    { name: 'Multimedia University',            logo: '/logos/clients/multimedia-university.png' },
-    { name: 'Catholic University of East Africa', logo: null },
-    { name: 'Kenya Utalii College',             logo: null },
+    { name: 'JKUAT (Jomo Kenyatta University)',      logo: '/logos/clients/jkuat.webp' },
+    { name: 'Multimedia University of Kenya',        logo: '/logos/clients/multimedia-university.png' },
+    { name: 'Catholic University of East Africa',    logo: null },
+    { name: 'Kenya Utalii College',                  logo: null },
+    { name: 'Strathmore University',                 logo: null },
+    { name: 'United States International University', logo: null },
+    { name: 'Kenya Medical Training College',        logo: null },
   ],
   'Government & Institutions': [
-    { name: 'Kenya Defence Forces', logo: null },
-    { name: 'Kenya Ports Authority', logo: null },
+    { name: 'Kenya Defence Forces (KDF)',            logo: null },
+    { name: 'Kenya Ports Authority',                 logo: null },
+    { name: 'Kenya Revenue Authority',              logo: null },
+    { name: 'Kenya Airways',                         logo: null },
+    { name: 'Kenya Power',                          logo: null },
+    { name: 'Prisons Service of Kenya',             logo: null },
   ],
   'Corporate & Industrial': [
-    { name: 'NAS Servair (Aviation Catering)', logo: null },
-    { name: 'Maersk East Africa',             logo: null },
+    { name: 'NAS Servair (Aviation Catering)',       logo: null },
+    { name: 'Maersk East Africa',                    logo: null },
+    { name: 'Nation Media Group',                   logo: null },
+    { name: 'EABL (East African Breweries)',         logo: null },
+    { name: 'Kenya Commercial Bank (KCB)',           logo: null },
   ],
 };
 
@@ -145,19 +166,19 @@ export default function Clients() {
                     key={i}
                     style={{
                       background: '#ffffff',
-                      padding: '1.25rem',
+                      padding: '1.75rem 1.5rem',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      minHeight: '100px',
+                      minHeight: '140px',
                       border: '1px solid var(--color-border)',
                       transition: 'border-color 200ms ease, box-shadow 200ms ease',
-                      gap: '0.625rem',
+                      gap: '0.75rem',
                     }}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-brand-cyan)';
-                      (e.currentTarget as HTMLElement).style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+                      (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 16px rgba(0,0,0,0.1)';
                     }}
                     onMouseLeave={(e) => {
                       (e.currentTarget as HTMLElement).style.borderColor = 'var(--color-border)';
@@ -169,14 +190,33 @@ export default function Clients() {
                         <img
                           src={client.logo}
                           alt={client.name}
-                          style={{ maxWidth: '120px', maxHeight: '50px', objectFit: 'contain', filter: 'grayscale(15%)' }}
+                          style={{
+                            width: '100%',
+                            maxWidth: '180px',
+                            height: '80px',
+                            objectFit: 'contain',
+                          }}
                         />
-                        <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-text-muted)', textAlign: 'center' }}>
+                        <span style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.8125rem',
+                          fontWeight: 600,
+                          color: 'var(--color-text-muted)',
+                          textAlign: 'center',
+                          lineHeight: 1.3,
+                        }}>
                           {client.name}
                         </span>
                       </>
                     ) : (
-                      <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>
+                      <span style={{
+                        fontFamily: 'var(--font-display)',
+                        fontSize: '0.9375rem',
+                        fontWeight: 700,
+                        color: 'var(--color-brand-navy)',
+                        textAlign: 'center',
+                        lineHeight: 1.4,
+                      }}>
                         {client.name}
                       </span>
                     )}

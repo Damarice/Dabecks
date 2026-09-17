@@ -57,16 +57,21 @@ export default function Partners() {
               <div
                 key={i}
                 className="brand-cell"
-                style={{ background: '#ffffff', minHeight: '120px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.75rem 1.5rem' }}
+                style={{ background: '#ffffff', minHeight: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.75rem' }}
               >
                 {brand.logo ? (
                   <img
                     src={brand.logo}
                     alt={brand.name}
-                    style={{ maxWidth: '140px', maxHeight: '60px', objectFit: 'contain', filter: 'grayscale(20%)' }}
+                    style={{
+                      width: '100%',
+                      maxWidth: '200px',
+                      height: '90px',
+                      objectFit: 'contain',
+                    }}
                   />
                 ) : (
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>{brand.name}</span>
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'center', lineHeight: 1.35 }}>{brand.name}</span>
                 )}
               </div>
             ))}
