@@ -49,7 +49,7 @@ const navLinks = [
   { href: '/',                      label: 'Home' },
   { key: 'laundry',                 label: 'Laundry' },
   { key: 'kitchen',                 label: 'Kitchen' },
-  { key: 'ac',                      label: 'Air Conditioning' },
+  { key: 'ac',                      label: 'HVAC' },
   { href: '/solutions/consultancy', label: 'Consultancy' },
   { href: '/about',                 label: 'About' },
   { href: '/projects',              label: 'Projects' },
@@ -183,6 +183,7 @@ export default function Navbar() {
                           color: activeDropdown === key
                             ? 'var(--color-brand-navy)'
                             : 'var(--color-neutral-700)',
+                          whiteSpace: 'nowrap',
                         }}
                         aria-expanded={activeDropdown === key}
                         aria-haspopup="true"
@@ -257,6 +258,7 @@ export default function Navbar() {
                       fontSize: '0.875rem',
                       fontWeight: 500,
                       color: 'var(--color-neutral-700)',
+                      whiteSpace: 'nowrap',
                     }}
                   >
                     {link.label}
