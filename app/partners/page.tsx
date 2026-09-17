@@ -5,12 +5,13 @@ import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
   'Alliance Laundry Systems', 'Electrolux Professional', 'Pellerin Milnor Corporation',
-  'Chicago Dryer Company', 'Speed Queen', 'Primus', 'UniMac', 'Huebsch', 'IPSO', 'SIRAIR',
+  'Chicago Dryer Company', 'Speed Queen', 'IPSO', 'SIRAIR', 'Fagor Laundry',
+  'Maxi-Company', 'Ponny',
 ];
 
 const dealerships = [
   { year: '2017', brand: 'Electrolux Professional', region: 'Kenya',       desc: 'Formally appointed as the official Kenyan dealer for Electrolux Professional, covering their complete commercial kitchen and laundry equipment range.' },
-  { year: '2021', brand: 'Alliance Laundry Systems', region: 'East Africa', desc: 'Expanded to become the authorised East Africa partner for Alliance Laundry Systems — representing Speed Queen, Primus, UniMac, and Huebsch brands.' },
+  { year: '2021', brand: 'Alliance Laundry Systems', region: 'East Africa', desc: 'Expanded to become the authorised East Africa partner for Alliance Laundry Systems — representing Speed Queen and IPSO brands across the region.' },
   { year: '2024', brand: 'Milnor & Chicago Dryer',  region: 'East Africa', desc: 'Secured dealership rights for both Pellerin Milnor Corporation and Chicago Dryer Company, completing our heavy-duty industrial laundry portfolio.' },
 ];
 
@@ -18,6 +19,12 @@ const servicePartners = [
   { name: 'Printech Media Limited', service: 'Design, Printing & Branding', desc: 'Corporate communications and branded collateral.' },
   { name: 'NEXUS',                  service: 'ICT Solutions',                desc: 'Technology infrastructure and IT support.' },
   { name: 'ICS System Solutions',   service: 'Accounting & Auditing',        desc: 'Financial reporting and tax compliance.' },
+];
+
+const clientPartners = [
+  { name: 'Cold Spring Hotels', location: 'Homabay', desc: 'Complete laundry equipment installation and maintenance for hospitality operations.' },
+  { name: 'PrideInn Hotels', location: 'Mombasa', desc: 'Commercial laundry systems and ongoing service support for coastal hotel operations.' },
+  { name: 'Sarova White Sands', location: 'Mombasa', desc: 'Premium laundry equipment solutions for luxury beachfront resort.' },
 ];
 
 export default function Partners() {
@@ -92,8 +99,33 @@ export default function Partners() {
         </div>
       </section>
 
-      {/* ══ SERVICE ALLIANCES ════════════════════════════════ */}
+      {/* ══ CLIENT PARTNERS ══════════════════════════════════ */}
       <section className="stripe-white py-section">
+        <div className="ds-container">
+          <div style={{ marginBottom: '2.5rem' }}>
+            <span className="ds-eyebrow">Trusted By</span>
+            <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Key Client Partners</h2>
+            <span className="ds-accent-line" style={{ marginBottom: '1rem' }} />
+            <p className="ds-lead" style={{ color: 'var(--color-text-muted)', maxWidth: '540px' }}>Leading hospitality establishments we serve across Kenya.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {clientPartners.map((p, i) => (
+              <div
+                key={i}
+                className="client-card"
+                style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', padding: '1.75rem' }}
+              >
+                <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.625rem' }}>{p.location}</span>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>{p.name}</h3>
+                <p className="ds-body-sm" style={{ color: 'var(--color-text-muted)', lineHeight: '1.55' }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ SERVICE ALLIANCES ════════════════════════════════ */}
+      <section className="stripe-surface py-section">
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Local Alliances</span>
