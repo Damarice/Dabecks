@@ -8,7 +8,7 @@ export default function CookingRanges() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Cooking Ranges' },
       ]}
-      heroImage="/kitchen-categories/cooking-ranges.jpg"
+      heroImage="/kitchen-categories/cooking-ranges.webp"
       category="Kitchen Systems"
       title="Cooking Ranges"
       heroSubtitle="Professional cooking ranges and hobs for commercial kitchens — powerful burners, heavy-duty construction, built for the busiest services."
