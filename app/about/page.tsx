@@ -78,14 +78,14 @@ export default function About() {
           <div className="split-feature__content">
             <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Our Company</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem' }}>
-              Kenya&rsquo;s trusted utility &amp; mechanical partner
+              Who's Dabecks
             </h2>
             <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
             <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-              Founded in 2011 and incorporated in 2014, Dabecks Laundry & Kitchen Solutions Limited specialises in high-performance equipment sourcing, custom layout planning, professional installation, and lifelong technical support.
+              Dabecks Laundry & Kitchen Solutions Limited is a Kenyan-owned commercial equipment and technical solutions company serving businesses and institutions across East Africa.
             </p>
             <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-              From boutique hotels to large hospital linen services, we deliver the right commercial equipment — and stay with you long after installation.
+              Since 2011, we have specialised in the supply, installation, commissioning and maintenance of commercial laundry, kitchen and HVAC systems.
             </p>
             <button onClick={() => setModal(true)} className="ds-btn ds-btn-primary">
               Request a Consultation

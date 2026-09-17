@@ -20,7 +20,7 @@ export default function Footer() {
               </p>
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9375rem', color: 'rgba(255,255,255,0.55)', lineHeight: '1.65', marginBottom: '1.25rem' }}>
-              East Africa&rsquo;s trusted commercial equipment partner since 2011.
+              Kenyan-owned commercial equipment and technical solutions company serving East Africa since 2011.
             </p>
             {/* Social */}
             <div className="flex gap-2">
