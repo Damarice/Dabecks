@@ -52,6 +52,7 @@ const navLinks = [
   { key: 'ac',                      label: 'Air Conditioning' },
   { href: '/solutions/consultancy', label: 'Consultancy' },
   { href: '/about',                 label: 'About' },
+  { href: '/projects',              label: 'Projects' },
   { href: '/clients',               label: 'Clients' },
   { href: '/partners',              label: 'Partners' },
 ];
