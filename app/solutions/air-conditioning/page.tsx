@@ -8,7 +8,7 @@ export default function AirConditioningPage() {
       heroTitle="Air Conditioning"
       heroSubtitle="Complete HVAC solutions for commercial and industrial buildings — from wall-mounted split units to large-scale VRF/VRV systems across East Africa."
       introTitle="Climate control. Done right."
-      introText="Our air conditioning range covers the full spectrum of commercial HVAC needs — from single-room split units to multi-zone VRF systems for large office buildings, hotels, and shopping centres. Supply, installation, and lifetime maintenance, all from one partner."
+      introText="Our air conditioning range covers the full spectrum of commercial HVAC needs — from single-room split units to multi-zone VRF systems for large office buildings, hotels, and shopping centres. Supply, installation, and comprehensive maintenance, all from one partner."
       featured={[
         { title: 'Split Units', desc: 'Wall-mounted and ceiling split AC units for individual rooms and offices — efficient and quiet.', image: '/hero-ac.jpg', href: '/solutions/air-conditioning/split-units' },
         { title: 'VRF/VRV Systems', desc: 'Variable refrigerant flow systems for large multi-zone buildings — maximum efficiency at scale.', image: '/hero-ac.jpg', href: '/solutions/air-conditioning/vrf-vrv-systems' },
