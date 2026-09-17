@@ -4,16 +4,16 @@ import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 
 const equipmentBrands = [
-  { name: 'Electrolux Professional', logo: '/logos/partners/electrolux.svg',    darkBg: false },
-  { name: 'Alliance Laundry Systems', logo: '/logos/partners/alliance.png',     darkBg: false },
-  { name: 'Pellerin Milnor Corporation', logo: '/logos/partners/milnor.jpg',    darkBg: false },
-  { name: 'Chicago Dryer Company', logo: '/logos/partners/chicago-dryer.png',   darkBg: true  },
-  { name: 'Speed Queen', logo: null,                                            darkBg: false },
-  { name: 'IPSO', logo: null,                                                   darkBg: false },
-  { name: 'SIRAIR', logo: null,                                                 darkBg: false },
-  { name: 'Fagor Laundry', logo: null,                                          darkBg: false },
-  { name: 'Maxi-Company', logo: null,                                           darkBg: false },
-  { name: 'Ponny', logo: null,                                                  darkBg: false },
+  { name: 'Electrolux Professional',    logo: '/logos/partners/electrolux.svg',    darkBg: false },
+  { name: 'Alliance Laundry Systems',   logo: '/logos/partners/alliance.png',      darkBg: false },
+  { name: 'Pellerin Milnor Corporation',logo: '/logos/partners/milnor.jpg',        darkBg: false },
+  { name: 'Chicago Dryer Company',      logo: '/logos/partners/chicago-dryer.png', darkBg: true  },
+  { name: 'Speed Queen',                logo: '/logos/partners/speed-queen.png',   darkBg: false },
+  { name: 'IPSO',                       logo: '/logos/partners/ipso.png',          darkBg: false },
+  { name: 'SIRAIR',                     logo: '/logos/partners/sirair.png',        darkBg: false },
+  { name: 'Fagor Laundry',              logo: '/logos/partners/fagor.jpg',         darkBg: false },
+  { name: 'Maxi-Company',               logo: '/logos/partners/maxi-company.jpg',  darkBg: false },
+  { name: 'Ponny',                      logo: '/logos/partners/ponny.png',         darkBg: false },
 ];
 
 const dealerships = [
@@ -57,7 +57,7 @@ export default function Partners() {
               <div
                 key={i}
                 className="brand-cell"
-                style={{ background: brand.darkBg ? 'var(--color-brand-navy)' : '#ffffff', minHeight: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem 1.75rem' }}
+                style={{ background: brand.darkBg ? 'var(--color-brand-navy)' : '#ffffff', minHeight: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2.5rem 2rem' }}
               >
                 {brand.logo ? (
                   <img
@@ -65,8 +65,8 @@ export default function Partners() {
                     alt={brand.name}
                     style={{
                       width: '100%',
-                      maxWidth: '200px',
-                      height: '90px',
+                      maxWidth: '260px',
+                      height: '120px',
                       objectFit: 'contain',
                     }}
                   />

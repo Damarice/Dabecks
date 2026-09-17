@@ -167,11 +167,11 @@ export default function Clients() {
                     className="brand-cell"
                     style={{
                       background: '#ffffff',
-                      minHeight: '160px',
+                      minHeight: '200px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      padding: '2rem 1.75rem',
+                      padding: '2.5rem 2rem',
                       border: '1px solid var(--color-border)',
                     }}
                   >
@@ -181,8 +181,8 @@ export default function Clients() {
                         alt={client.name}
                         style={{
                           width: '100%',
-                          maxWidth: '200px',
-                          height: '90px',
+                          maxWidth: '260px',
+                          height: '120px',
                           objectFit: 'contain',
                         }}
                       />
