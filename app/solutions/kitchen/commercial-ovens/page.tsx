@@ -8,7 +8,7 @@ export default function CommercialOvens() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Commercial Ovens' },
       ]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/commercial-ovens.webp"
       category="Kitchen Systems"
       title="Commercial Ovens"
       heroSubtitle="High-performance convection, combi, and deck ovens built for professional kitchens — delivering precise, consistent cooking results at volume."

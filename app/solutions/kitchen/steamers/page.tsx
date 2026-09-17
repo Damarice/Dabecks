@@ -8,7 +8,7 @@ export default function Steamers() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Steamers' },
       ]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/steamers.webp"
       category="Kitchen Systems"
       title="Steamers"
       heroSubtitle="Combi steamers and convection steamers for professional cooking — preserving nutrients, flavour, and consistency at scale."

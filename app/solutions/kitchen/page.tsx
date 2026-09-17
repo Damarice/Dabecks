@@ -4,7 +4,7 @@ export default function KitchenPage() {
   return (
     <CategoryLandingPage
       breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems' }]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/commercial-ovens.webp"
       heroTitle="Kitchen Systems"
       heroSubtitle="Professional commercial kitchen equipment for restaurants, hotels, hospitals, and institutional food service operations across East Africa."
       introTitle="Built for professional kitchens"

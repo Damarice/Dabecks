@@ -8,7 +8,7 @@ export default function GrillsGriddles() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Grills & Griddles' },
       ]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/grills-griddles.jpg"
       category="Kitchen Systems"
       title="Grills & Griddles"
       heroSubtitle="Commercial grills and griddles for high-volume food service — consistent heat, durable surfaces, and fast recovery for busy kitchens."

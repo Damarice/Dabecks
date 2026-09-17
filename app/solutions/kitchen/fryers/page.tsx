@@ -8,7 +8,7 @@ export default function Fryers() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Fryers' },
       ]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/fryers.webp"
       category="Kitchen Systems"
       title="Fryers"
       heroSubtitle="Commercial deep fryers and pressure fryers for high-volume food production — fast recovery, consistent results, built for continuous use."

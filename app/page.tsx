@@ -46,7 +46,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {[
               { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',    sub: 'Washers · Dryers · Ironers · Accessories',   href: '/solutions/laundry' },
-              { img: '/hero-kitchen.jpg', title: 'Commercial\nKitchen',    sub: 'Ovens · Fryers · Dishwashers · Ranges',      href: '/solutions/kitchen' },
+              { img: '/kitchen-categories/commercial-ovens.webp', title: 'Commercial\nKitchen',    sub: 'Ovens · Fryers · Dishwashers · Ranges',      href: '/solutions/kitchen' },
               { img: '/hero-ac.jpg',      title: 'Air\nConditioning',      sub: 'Split Units · VRF/VRV · Ducted · Cassette',  href: '/solutions/air-conditioning' },
             ].map(({ img, title, sub, href }) => (
               <Link

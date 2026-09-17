@@ -8,7 +8,7 @@ export default function Dishwashers() {
         { label: 'Kitchen Systems', href: '/solutions/kitchen' },
         { label: 'Dishwashers' },
       ]}
-      heroImage="/hero-kitchen.jpg"
+      heroImage="/kitchen-categories/dishwashers.webp"
       category="Kitchen Systems"
       title="Dishwashers"
       heroSubtitle="Industrial dishwashers for fast, hygienic cleaning — from undercounter units to high-volume rack conveyors for large-scale operations."
