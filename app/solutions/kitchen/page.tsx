@@ -10,17 +10,17 @@ export default function KitchenPage() {
       introTitle="Built for professional kitchens"
       introText="Our commercial kitchen range brings together the best global brands — from high-volume combi ovens and fryers to industrial dishwashers and cooking ranges. Every product is selected for reliability, energy efficiency, and performance under pressure."
       featured={[
-        { title: 'Commercial Ovens', desc: 'Convection, combi, and deck ovens for professional baking and cooking at volume.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/commercial-ovens' },
-        { title: 'Dishwashers', desc: 'Undercounter to rack conveyor dishwashers for hygienic, fast cleaning in commercial kitchens.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/dishwashers' },
-        { title: 'Cooking Ranges', desc: 'Professional gas and electric ranges built for the demands of high-volume kitchen service.', image: '/hero-kitchen.jpg', href: '/solutions/kitchen/cooking-ranges' },
+        { title: 'Commercial Ovens', desc: 'Convection, combi, and deck ovens for professional baking and cooking at volume.', image: '/kitchen-categories/commercial-ovens.webp', href: '/solutions/kitchen/commercial-ovens' },
+        { title: 'Dishwashers', desc: 'Undercounter to rack conveyor dishwashers for hygienic, fast cleaning in commercial kitchens.', image: '/kitchen-categories/dishwashers.webp', href: '/solutions/kitchen/dishwashers' },
+        { title: 'Cooking Ranges', desc: 'Professional gas and electric ranges built for the demands of high-volume kitchen service.', image: '/kitchen-categories/cooking-ranges.jpg', href: '/solutions/kitchen/cooking-ranges' },
       ]}
       categories={[
-        { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/hero-kitchen.jpg' },
-        { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/hero-kitchen.jpg' },
-        { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/hero-kitchen.jpg' },
-        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/hero-kitchen.jpg' },
-        { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/hero-kitchen.jpg' },
-        { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/hero-kitchen.jpg' },
+        { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/kitchen-categories/commercial-ovens.webp' },
+        { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/kitchen-categories/fryers.webp' },
+        { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/kitchen-categories/dishwashers.webp' },
+        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/kitchen-categories/steamers.webp' },
+        { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/kitchen-categories/cooking-ranges.jpg' },
+        { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/kitchen-categories/grills-griddles.jpg' },
       ]}
       standards={[
         { icon: '🌡️', title: 'Precision Cooking', desc: 'Every product delivers precise temperature control for consistent results across all menu items.' },
