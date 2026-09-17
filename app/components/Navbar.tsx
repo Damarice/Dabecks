@@ -145,9 +145,15 @@ export default function Navbar() {
                 height={90}
                 width={220}
                 className="object-contain"
-                style={{ height: '90px', width: 'auto' }}
+                style={{ 
+                  height: '90px', 
+                  width: 'auto',
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitFontSmoothing: 'antialiased'
+                }}
                 priority
                 quality={100}
+                unoptimized={false}
               />
             </Link>
 
