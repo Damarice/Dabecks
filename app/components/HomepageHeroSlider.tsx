@@ -61,7 +61,7 @@ export default function HomepageHeroSlider() {
         style={{
           position: 'relative',
           width: '100%',
-          minHeight: 'clamp(560px, 75vh, 800px)',
+          minHeight: 'clamp(450px, 60vh, 600px)',
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
