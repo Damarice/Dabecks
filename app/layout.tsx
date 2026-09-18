@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
       <head />
-      <body className="flex flex-col min-h-screen font-body antialiased">
+      <body className="flex flex-col min-h-screen font-body antialiased" suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
