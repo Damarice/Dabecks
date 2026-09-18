@@ -61,7 +61,7 @@ export default function HomepageHeroSlider() {
         style={{
           position: 'relative',
           width: '100%',
-          minHeight: 'clamp(380px, 50vh, 480px)',
+          minHeight: 'clamp(380px, 80vh, 650px)',
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
@@ -121,10 +121,10 @@ export default function HomepageHeroSlider() {
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(3rem, 7vw, 6rem)',
+                fontSize: 'clamp(2.25rem, 5.5vw, 4.5rem)',
                 fontWeight: 800,
-                lineHeight: 0.96,
-                letterSpacing: '-0.045em',
+                lineHeight: 1.05,
+                letterSpacing: '-0.04em',
                 color: '#ffffff',
                 whiteSpace: 'pre-line',
                 marginBottom: '1.5rem',
