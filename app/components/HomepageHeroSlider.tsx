@@ -216,7 +216,13 @@ export default function HomepageHeroSlider() {
       <div style={{ background: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
         <div
           className="ds-container"
-          style={{ display: 'flex', alignItems: 'stretch', minHeight: '60px' }}
+          style={{ 
+            display: 'flex', 
+            alignItems: 'stretch', 
+            minHeight: '80px',
+            flexDirection: 'row',
+            gap: '1rem',
+          }}
         >
           {/* Label */}
           <div
@@ -224,15 +230,14 @@ export default function HomepageHeroSlider() {
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
-              paddingRight: '2rem',
+              paddingRight: '1.5rem',
               borderRight: '1px solid rgba(0,0,0,0.1)',
-              marginRight: '2rem',
             }}
           >
             <span
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '0.6875rem',
+                fontSize: 'clamp(0.625rem, 1.5vw, 0.6875rem)',
                 fontWeight: 700,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
@@ -256,7 +261,7 @@ export default function HomepageHeroSlider() {
             <div
               style={{
                 display: 'flex',
-                gap: '3rem',
+                gap: 'clamp(1.5rem, 3vw, 3rem)',
                 animation: 'scroll-logos 40s linear infinite',
                 width: 'max-content',
               }}
@@ -277,23 +282,24 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-1-${i}`}
                   style={{
-                    minWidth: '200px',
-                    height: '100px',
+                    minWidth: 'clamp(140px, 18vw, 200px)',
+                    height: 'clamp(70px, 10vw, 100px)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     background: '#ffffff',
-                    padding: '1.25rem',
+                    padding: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                     borderRadius: '8px',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '180px',
-                      maxHeight: '80px',
+                      maxWidth: '100%',
+                      maxHeight: '100%',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
@@ -317,23 +323,24 @@ export default function HomepageHeroSlider() {
                 <div
                   key={`logo-2-${i}`}
                   style={{
-                    minWidth: '200px',
-                    height: '100px',
+                    minWidth: 'clamp(140px, 18vw, 200px)',
+                    height: 'clamp(70px, 10vw, 100px)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     background: '#ffffff',
-                    padding: '1.25rem',
+                    padding: 'clamp(0.75rem, 1.5vw, 1.25rem)',
                     borderRadius: '8px',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                   }}
                 >
                   <img
                     src={logo}
                     alt="Client logo"
                     style={{
-                      maxWidth: '180px',
-                      maxHeight: '80px',
+                      maxWidth: '100%',
+                      maxHeight: '100%',
                       width: 'auto',
                       height: 'auto',
                       objectFit: 'contain',
@@ -345,8 +352,15 @@ export default function HomepageHeroSlider() {
           </div>
 
           {/* CTA */}
-          <div className="flex items-center flex-shrink-0 pl-4">
-            <Link href="/clients" className="ds-btn ds-btn-cyan ds-btn-sm" style={{ whiteSpace: 'nowrap' }}>
+          <div 
+            style={{ 
+              flexShrink: 0,
+              display: 'flex',
+              alignItems: 'center',
+              paddingLeft: 'clamp(0.5rem, 2vw, 1rem)',
+            }}
+          >
+            <Link href="/clients" className="ds-btn ds-btn-cyan ds-btn-sm" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}>
               All Clients
               <Icon name="chevronRight" size="xs" />
             </Link>
