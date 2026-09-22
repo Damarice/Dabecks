@@ -16,12 +16,12 @@ export default function SplitUnits() {
         { icon: '📱', title: 'Smart Controls', desc: 'Wi-Fi enabled models allow remote control via smartphone app for convenience and efficiency.' },
       ]}
       products={[
-        { model: 'SU-9K', desc: 'Split unit · 9,000 BTU / 0.75 ton', slug: 'su9k', placeholder: 'SU-9K' },
-        { model: 'SU-12K', desc: 'Split unit · 12,000 BTU / 1 ton', slug: 'su12k', placeholder: 'SU-12K' },
-        { model: 'SU-18K', desc: 'Split unit · 18,000 BTU / 1.5 ton', slug: 'su18k', placeholder: 'SU-18K' },
-        { model: 'SU-24K', desc: 'Split unit · 24,000 BTU / 2 ton', slug: 'su24k', placeholder: 'SU-24K' },
-        { model: 'SU-36K', desc: 'Split unit · 36,000 BTU / 3 ton', slug: 'su36k', placeholder: 'SU-36K' },
-        { model: 'Daikin FTXM35', desc: 'Premium inverter split · 12,000 BTU', slug: 'daikinFTXM35', placeholder: 'Daikin+FTXM35' },
+        { model: '12000 BTU Inverter Midwall Split Aircon + 3m Pipe Kit', desc: 'SIRAIR Sigma Series', slug: 'sirair-12000-inverter-sigma', placeholder: 'SIRAIR+12000+Sigma', image: '/products/ac/split-units/sirair-12000-inverter-sigma.webp' },
+        { model: '24000 BTU Inverter Midwall Split Aircon + 3m Pipe Kit', desc: 'SIRAIR Sigma Series', slug: 'sirair-24000-inverter-sigma', placeholder: 'SIRAIR+24000+Sigma', image: '/products/ac/split-units/sirair-24000-inverter-sigma.webp' },
+        { model: '12000 BTU Inverter Midwall Split Air Conditioner', desc: 'SIRAIR Alpha Series', slug: 'sirair-12000-inverter-alpha', placeholder: 'SIRAIR+12000+Alpha', image: '/products/ac/split-units/sirair-12000-inverter-alpha.webp' },
+        { model: '9000 BTU Non-Inverter Midwall Split Aircon + 3m Pipe Kit', desc: 'SIRAIR Calibre Series', slug: 'sirair-9000-noninverter-calibre', placeholder: 'SIRAIR+9000+Calibre', image: '/products/ac/split-units/sirair-9000-noninverter-calibre.webp' },
+        { model: '24000 BTU Inverter Midwall Split Air Conditioner', desc: 'SIRAIR Omega Series', slug: 'sirair-24000-inverter-omega', placeholder: 'SIRAIR+24000+Omega', image: '/products/ac/split-units/sirair-24000-inverter-omega.webp' },
+        { model: '18000 BTU Inverter Midwall Split Air Conditioner', desc: 'SIRAIR Omega Series', slug: 'sirair-18000-inverter-omega', placeholder: 'SIRAIR+18000+Omega', image: '/products/ac/split-units/sirair-18000-inverter-omega.webp' },
       ]}
       basePath="/solutions/air-conditioning/split-units"
     />
