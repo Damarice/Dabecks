@@ -407,12 +407,12 @@ export default function About() {
               <button onClick={() => setModal(false)} style={{ color: 'var(--color-text-muted)', fontSize: '1.5rem', lineHeight: 1, cursor: 'pointer', background: 'none', border: 'none' }}>✕</button>
             </div>
             <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              {[{ id: 'name', label: 'Your Name', type: 'text', ph: 'John Doe' }, { id: 'email', label: 'Email', type: 'email', ph: 'john@example.com' }, { id: 'phone', label: 'Phone', type: 'tel', ph: '+254 700 000 000' }].map(({ id, label, type, ph }) => (
-                <div key={id}><label className="ds-label-form">{label}</label><input type={type} className="ds-input" placeholder={ph} /></div>
+              {[{ id: 'name', label: 'Your Name *', type: 'text', ph: 'John Doe' }, { id: 'email', label: 'Email *', type: 'email', ph: 'john@example.com' }, { id: 'phone', label: 'Phone *', type: 'tel', ph: '+254 700 000 000' }].map(({ id, label, type, ph }) => (
+                <div key={id}><label className="ds-label-form">{label}</label><input type={type} className="ds-input" placeholder={ph} required /></div>
               ))}
               <div>
-                <label className="ds-label-form">Service</label>
-                <select className="ds-input">
+                <label className="ds-label-form">Service *</label>
+                <select className="ds-input" required>
                   <option>Select Service</option>
                   <option>Laundry Systems</option>
                   <option>Kitchen Systems</option>
@@ -420,8 +420,8 @@ export default function About() {
                   <option>Consultancy</option>
                 </select>
               </div>
-              <div><label className="ds-label-form">Project Details</label><textarea className="ds-input" rows={4} style={{ resize: 'none' }} placeholder="Describe your project…" /></div>
-              <button type="submit" className="ds-btn ds-btn-cyan ds-btn-lg" style={{ justifyContent: 'center' }}>Send Request</button>
+              <div><label className="ds-label-form">Project Details *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your project…" required /></div>
+              <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Request</button>
             </form>
           </div>
         </div>

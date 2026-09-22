@@ -16,12 +16,9 @@ export default function CassetteUnits() {
         { icon: '⚡', title: 'Inverter Efficient', desc: 'Inverter compressors reduce energy use significantly versus older fixed-speed systems.' },
       ]}
       products={[
-        { model: 'CU-12K', desc: 'Cassette unit · 12,000 BTU / 1 ton', slug: 'cu12k', placeholder: 'CU-12K' },
-        { model: 'CU-18K', desc: 'Cassette unit · 18,000 BTU / 1.5 ton', slug: 'cu18k', placeholder: 'CU-18K' },
-        { model: 'CU-24K', desc: 'Cassette unit · 24,000 BTU / 2 ton', slug: 'cu24k', placeholder: 'CU-24K' },
-        { model: 'CU-36K', desc: 'Cassette unit · 36,000 BTU / 3 ton', slug: 'cu36k', placeholder: 'CU-36K' },
-        { model: 'Daikin FCAG71', desc: 'Ceiling cassette · 2.5 ton', slug: 'daikinFCAG71', placeholder: 'Daikin+FCAG71' },
-        { model: 'Mitsubishi PLA-M', desc: 'Ceiling cassette · 2 ton', slug: 'mitsubishiPLAM', placeholder: 'Mitsubishi+PLA-M' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-1', placeholder: 'Coming+Soon' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-2', placeholder: 'Coming+Soon' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-3', placeholder: 'Coming+Soon' },
       ]}
       basePath="/solutions/air-conditioning/cassette-units"
     />

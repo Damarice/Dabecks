@@ -226,14 +226,14 @@ export default function LaundryPage() {
           </div>
           <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Full Name</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
-              <div><label className="ds-label-form">Email Address</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
+              <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required /></div>
+              <div><label className="ds-label-form">Email Address *</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required /></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Phone Number</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></div>
+              <div><label className="ds-label-form">Phone Number *</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></div>
               <div><label className="ds-label-form">Company / Organisation</label><input className="ds-input" type="text" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
             </div>
-            <div><label className="ds-label-form">Your Requirements</label><textarea className="ds-input" rows={4} style={{ resize: 'none' }} placeholder="Describe your laundry needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} /></div>
+            <div><label className="ds-label-form">Your Requirements *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your laundry needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
             <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Enquiry</button>
           </form>
         </div>

@@ -3,32 +3,8 @@
 import Link from 'next/link';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import CTASection from '@/app/components/CTASection';
-import Icon, { IconName } from '@/app/components/Icon';
-
-// Map emoji used in product featureStrip to Font Awesome icon names
-const emojiToIcon: Record<string, IconName> = {
-  '⚡': 'bolt',
-  '🛠️': 'tools',
-  '✅': 'check',
-  '♨️': 'bolt',
-  '🔌': 'bolt',
-  '🎯': 'certificate',
-  '⭐': 'star',
-  '🔥': 'bolt',
-  '👨‍🍳': 'kitchen',
-  '🏢': 'building',
-  '🔀': 'cogs',
-  '🖥️': 'cogs',
-  '💧': 'leaf',
-  '🌡️': 'bolt',
-  '🍕': 'kitchen',
-  '❄️': 'hvac',
-  '🌿': 'leaf',
-  '📊': 'chartLine',
-  '🔧': 'wrench',
-  '📦': 'box',
-  '🚚': 'truck',
-};
+import Icon from '@/app/components/Icon';
+import { emojiToIcon } from '@/app/utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Spec           { label: string; value: string; }
@@ -62,7 +38,7 @@ export default function ProductDetailPage({
       {/* ── PRODUCT HERO ──────────────────────────────────── */}
       <section style={{ background: '#ffffff', borderBottom: '1px solid var(--color-border)' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0" style={{ minHeight: '520px' }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-0" style={{ minHeight: 'clamp(520px, 100vw, 520px)' }}>
 
             {/* Image */}
             <div
@@ -71,8 +47,8 @@ export default function ProductDetailPage({
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                minHeight: '400px',
-                padding: '3rem',
+                minHeight: 'clamp(300px, 50vw, 400px)',
+                padding: 'clamp(1.5rem, 3vw, 3rem)',
               }}
             >
               <img
@@ -99,7 +75,7 @@ export default function ProductDetailPage({
               style={{
                 background: '#ffffff',
                 borderLeft: '1px solid var(--color-border)',
-                padding: '3rem 2.5rem',
+                padding: 'clamp(1.5rem, 3vw, 3rem) clamp(1rem, 2vw, 2.5rem)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -126,8 +102,8 @@ export default function ProductDetailPage({
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: `repeat(${keySpecs.length}, 1fr)`,
-                  gap: '1rem',
+                  gridTemplateColumns: `repeat(auto-fit, minmax(140px, 1fr))`,
+                  gap: 'clamp(0.75rem, 1.5vw, 1rem)',
                   marginBottom: '2.5rem',
                 }}
               >
@@ -139,9 +115,9 @@ export default function ProductDetailPage({
                 ))}
               </div>
 
-              <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-                <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg">Request a Quote</Link>
-                <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-lg">Download Specs</Link>
+              <div style={{ display: 'flex', gap: 'clamp(0.5rem, 1.5vw, 0.75rem)', flexWrap: 'wrap' }}>
+                <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '160px' }}>Request a Quote</Link>
+                <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '160px' }}>Download Specs</Link>
               </div>
             </div>
           </div>
@@ -151,7 +127,7 @@ export default function ProductDetailPage({
       {/* ── FEATURE STRIP ─────────────────────────────────── */}
       <section style={{ background: 'var(--color-brand-navy)', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
             {featureStrip.map((f, i) => (
               <div key={i}>
                 <div style={{ fontSize: '1.5rem', lineHeight: 1, marginBottom: '0.75rem', color: 'var(--color-brand-cyan)' }}>
@@ -166,9 +142,9 @@ export default function ProductDetailPage({
       </section>
 
       {/* ── DESCRIPTION + SIDEBAR ─────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
             <div className="lg:col-span-2">
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.625rem' }}>Product Overview</span>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '1rem', lineHeight: 1.12 }}>About this Product</h2>
@@ -180,7 +156,7 @@ export default function ProductDetailPage({
               </div>
             </div>
             {/* Sidebar */}
-            <div style={{ background: 'var(--color-surface)', padding: '1.75rem', border: '1px solid var(--color-border)', alignSelf: 'start' }}>
+            <div style={{ background: 'var(--color-surface)', padding: 'clamp(1rem, 2vw, 1.75rem)', border: '1px solid var(--color-border)', alignSelf: 'start' }}>
               <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '1.25rem', paddingBottom: '0.875rem', borderBottom: '1px solid var(--color-border)' }}>Product Info</h3>
               {[
                 { label: 'Model', value: model },
@@ -200,14 +176,14 @@ export default function ProductDetailPage({
       </section>
 
       {/* ── TECHNICAL SPECIFICATIONS ──────────────────────── */}
-      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2rem' }}>
             <span className="ds-eyebrow">Data Sheet</span>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', fontWeight: 700, color: 'var(--color-brand-navy)', marginTop: '0.5rem', lineHeight: 1.12 }}>Technical Specifications</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ border: '1px solid var(--color-border)', overflow: 'hidden' }}>
+          <div style={{ border: '1px solid var(--color-border)', overflow: 'auto' }}>
             {specs.map((spec, i) => (
               <div
                 key={i}
@@ -215,10 +191,11 @@ export default function ProductDetailPage({
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  padding: '0.875rem 1.25rem',
+                  padding: 'clamp(0.75rem, 1.5vw, 0.875rem) clamp(0.75rem, 1.5vw, 1.25rem)',
                   borderBottom: i < specs.length - 1 ? '1px solid var(--color-border)' : 'none',
                   background: i % 2 === 0 ? '#ffffff' : 'var(--color-surface)',
-                  gap: '1.5rem',
+                  gap: '1rem',
+                  minWidth: 'fit-content',
                 }}
               >
                 <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-muted)', flexShrink: 0 }}>{spec.label}</span>
@@ -230,14 +207,14 @@ export default function ProductDetailPage({
       </section>
 
       {/* ── KEY FEATURES ──────────────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2rem' }}>
             <span className="ds-eyebrow">What Makes It Great</span>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', fontWeight: 700, color: 'var(--color-brand-navy)', marginTop: '0.5rem', lineHeight: 1.12 }}>Key Features</h2>
             <span className="ds-accent-line" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {features.map((f, i) => (
               <div
                 key={i}

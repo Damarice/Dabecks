@@ -46,7 +46,6 @@ const solutions = {
 };
 
 const navLinks = [
-  { href: '/',                      label: 'Home' },
   { key: 'laundry',                 label: 'Laundry' },
   { key: 'kitchen',                 label: 'Kitchen' },
   { key: 'ac',                      label: 'HVAC' },
@@ -281,11 +280,10 @@ export default function Navbar() {
 
       {/* ── MOBILE DRAWER ────────────────────────────────────── */}
       {mobileOpen && (
-        <div
-          className="lg:hidden bg-white border-t border-[var(--color-border)]"
+        <div className="lg:hidden bg-white border-t border-[var(--color-border)]"
           style={{ boxShadow: 'var(--shadow-lg)' }}
         >
-          <div className="ds-container py-4 space-y-1">
+          <div className="ds-container py-2 space-y-0.5">
             {navLinks.map((link) => {
               if ('key' in link && link.key) {
                 const key = link.key;

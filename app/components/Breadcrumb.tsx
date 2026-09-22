@@ -14,7 +14,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav aria-label="Breadcrumb" className="ds-breadcrumb">
       <div className="ds-container">
-        <ol className="flex items-center gap-2 flex-wrap">
+        <ol className="flex items-center gap-1 flex-wrap">
           <li>
             <Link
               href="/"
@@ -24,7 +24,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             </Link>
           </li>
           {items.map((item, index) => (
-            <li key={index} className="flex items-center gap-2">
+            <li key={index} className="flex items-center gap-1">
               <Icon name="chevronRight" size="xs" style={{ color: 'var(--color-text-muted)' }} />
               {item.href ? (
                 <Link

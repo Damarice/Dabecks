@@ -3,19 +3,11 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
-import Icon, { IconName } from '@/app/components/Icon';
-
-const emojiToIcon: Record<string, IconName> = {
-  '⚡': 'bolt', '🛠️': 'tools', '✅': 'check', '🔒': 'shield', '💧': 'leaf',
-  '🏭': 'industry', '⚙️': 'cogs', '✨': 'star', '🛡️': 'shield', '🔧': 'wrench',
-  '♨️': 'bolt', '🎯': 'certificate', '⭐': 'star', '🔥': 'bolt', '🏥': 'hospital',
-  '🏨': 'building', '🤖': 'cogs', '📐': 'clipboard', '📦': 'box', '🔄': 'cogs',
-  '⭕': 'bolt', '⏱️': 'clock', '🚪': 'building', '🚚': 'truck', '🏆': 'award',
-  '👷': 'users', '🚧': 'shield', '🌿': 'leaf', '📊': 'chartLine',
-};
+import Icon from '@/app/components/Icon';
+import { emojiToIcon } from '@/app/utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
-interface Product { model: string; desc: string; slug: string; placeholder: string; image?: string; }
+interface Product { title?: string; model?: string; desc: string; href?: string; slug?: string; placeholder: string; image?: string; }
 interface Benefit { icon: string; title: string; desc: string; }
 
 interface SubpageListingPageProps {
@@ -40,7 +32,7 @@ export default function SubpageListingPage({
       <PageHero image={heroImage} eyebrow={category} heading={title} subtext={heroSubtitle} breadcrumbs={breadcrumbs} />
 
       {/* ── INTRO ────────────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
             {/* Text — 2 cols */}
@@ -72,7 +64,7 @@ export default function SubpageListingPage({
       </section>
 
       {/* ── PRODUCT GRID ─────────────────────────────────────── */}
-      <section id="products" style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section id="products" className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Browse the Range</span>
@@ -80,7 +72,70 @@ export default function SubpageListingPage({
             <span className="ds-accent-line" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Check if products are empty or all coming soon */}
+          {products.length === 0 || products.every(p => (p.title || p.model) === 'Coming Soon') ? (
+            <div
+              style={{
+                background: '#ffffff',
+                border: '1px solid var(--color-border)',
+                borderRadius: '8px',
+                padding: '5rem 3rem',
+                textAlign: 'center',
+                maxWidth: '480px',
+                margin: '0 auto',
+              }}
+            >
+              <div
+                style={{
+                  width: '72px',
+                  height: '72px',
+                  background: 'var(--color-brand-navy)',
+                  borderRadius: '50%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 2rem',
+                  fontSize: '1.5rem',
+                  fontWeight: 700,
+                  color: 'var(--color-brand-cyan)',
+                  fontFamily: 'var(--font-body)',
+                }}
+              >
+                Soon
+              </div>
+              <h3
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '1.875rem',
+                  fontWeight: 800,
+                  color: 'var(--color-brand-navy)',
+                  marginBottom: '1.25rem',
+                  letterSpacing: '-0.03em',
+                }}
+              >
+                Coming Soon
+              </h3>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.9375rem',
+                  color: 'var(--color-text-muted)',
+                  lineHeight: '1.65',
+                  marginBottom: '2rem',
+                }}
+              >
+                We are currently working on new {title.toLowerCase()} products. Our product range will be listed here soon. In the meantime, contact us to discuss your requirements.
+              </p>
+              <Link
+                href="/contact"
+                className="ds-btn ds-btn-primary"
+                style={{ display: 'inline-block' }}
+              >
+                Enquire Now
+              </Link>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product, i) => (
               <article
                 key={i}
@@ -141,11 +196,11 @@ export default function SubpageListingPage({
                       lineHeight: 1.15,
                     }}
                   >
-                    {product.model}
+                    {product.title || product.model}
                   </h3>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem' }}>
                     <Link
-                      href={`${basePath}/${product.slug}`}
+                      href={product.href || `${basePath}/${product.slug}`}
                       style={{
                         fontFamily: 'var(--font-body)',
                         fontSize: '0.875rem',
@@ -169,7 +224,8 @@ export default function SubpageListingPage({
                 </div>
               </article>
             ))}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 

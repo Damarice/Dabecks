@@ -61,7 +61,7 @@ export default function HomepageHeroSlider() {
         style={{
           position: 'relative',
           width: '100%',
-          minHeight: 'clamp(380px, 80vh, 650px)',
+          minHeight: 'clamp(300px, 80vh, 650px)',
           display: 'flex',
           alignItems: 'center',
           overflow: 'hidden',
@@ -98,7 +98,8 @@ export default function HomepageHeroSlider() {
           className="ds-container"
           style={{
             position: 'relative', zIndex: 10, width: '100%',
-            paddingTop: '6rem', paddingBottom: '8rem',
+            paddingTop: 'clamp(2rem, 5vw, 6rem)', 
+            paddingBottom: 'clamp(2rem, 5vw, 8rem)',
           }}
         >
           <div
@@ -149,12 +150,12 @@ export default function HomepageHeroSlider() {
             </p>
 
             {/* CTA */}
-            <div style={{ display: 'flex', gap: '0.875rem', flexWrap: 'wrap' }}>
-              <Link href={slide.btnHref} className="ds-btn ds-btn-cyan ds-btn-lg">
+            <div style={{ display: 'flex', gap: 'clamp(0.5rem, 2vw, 0.875rem)', flexWrap: 'wrap' }}>
+              <Link href={slide.btnHref} className="ds-btn ds-btn-cyan ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '160px' }}>
                 {slide.btnLabel}
                 <Icon name="arrowRight" size="sm" />
               </Link>
-              <Link href="/contact" className="ds-btn ds-btn-ghost-white ds-btn-lg">
+              <Link href="/contact" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '160px' }}>
                 Get a Quote
               </Link>
             </div>
@@ -170,8 +171,9 @@ export default function HomepageHeroSlider() {
             style={{
               position: 'absolute', zIndex: 20, top: '50%',
               transform: 'translateY(-50%)',
-              [dir === 'prev' ? 'left' : 'right']: '1.5rem',
-              width: '46px', height: '46px', borderRadius: '50%',
+              [dir === 'prev' ? 'left' : 'right']: 'clamp(0.75rem, 2vw, 1.5rem)',
+              width: 'clamp(36px, 8vw, 46px)', height: 'clamp(36px, 8vw, 46px)', 
+              borderRadius: '50%',
               background: 'rgba(255,255,255,0.10)',
               backdropFilter: 'blur(8px)',
               border: '1px solid rgba(255,255,255,0.18)',
@@ -219,9 +221,9 @@ export default function HomepageHeroSlider() {
           style={{ 
             display: 'flex', 
             alignItems: 'stretch', 
-            minHeight: '80px',
+            minHeight: 'clamp(70px, 15vw, 80px)',
             flexDirection: 'row',
-            gap: '1rem',
+            gap: 'clamp(0.5rem, 1.5vw, 1rem)',
           }}
         >
           {/* Label */}
@@ -230,19 +232,19 @@ export default function HomepageHeroSlider() {
               flexShrink: 0,
               display: 'flex',
               alignItems: 'center',
-              paddingRight: '1.5rem',
+              paddingRight: 'clamp(0.75rem, 2vw, 1.5rem)',
               borderRight: '1px solid rgba(0,0,0,0.1)',
             }}
           >
             <span
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: 'clamp(0.625rem, 1.5vw, 0.6875rem)',
+                fontSize: 'clamp(0.55rem, 1.2vw, 0.6875rem)',
                 fontWeight: 700,
                 letterSpacing: '0.12em',
                 textTransform: 'uppercase',
                 color: 'var(--color-brand-navy)',
-                lineHeight: 1.3,
+                lineHeight: 1.2,
               }}
             >
               Trusted<br />By
@@ -261,7 +263,7 @@ export default function HomepageHeroSlider() {
             <div
               style={{
                 display: 'flex',
-                gap: 'clamp(1.5rem, 3vw, 3rem)',
+                gap: 'clamp(0.75rem, 2vw, 3rem)',
                 animation: 'scroll-logos 40s linear infinite',
                 width: 'max-content',
               }}
@@ -360,7 +362,7 @@ export default function HomepageHeroSlider() {
               paddingLeft: 'clamp(0.5rem, 2vw, 1rem)',
             }}
           >
-            <Link href="/clients" className="ds-btn ds-btn-cyan ds-btn-sm" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(0.75rem, 1.5vw, 0.875rem)' }}>
+            <Link href="/clients" className="ds-btn ds-btn-cyan ds-btn-sm" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(0.65rem, 1.2vw, 0.875rem)', padding: 'clamp(0.5rem, 1vw, 0.625rem) clamp(0.75rem, 1.5vw, 1.25rem)' }}>
               All Clients
               <Icon name="chevronRight" size="xs" />
             </Link>

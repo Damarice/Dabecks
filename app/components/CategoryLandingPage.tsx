@@ -3,17 +3,9 @@
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
-import Icon, { IconName } from '@/app/components/Icon';
+import Icon from '@/app/components/Icon';
 import { useState } from 'react';
-
-const emojiToIcon: Record<string, IconName> = {
-  '⚡': 'bolt', '🛠️': 'tools', '✅': 'check', '🔒': 'shield', '💧': 'leaf',
-  '🏭': 'industry', '⚙️': 'cogs', '✨': 'star', '🛡️': 'shield', '🔧': 'wrench',
-  '♨️': 'bolt', '🎯': 'certificate', '⭐': 'star', '🔥': 'bolt', '🏥': 'hospital',
-  '🏨': 'building', '🤖': 'cogs', '📐': 'clipboard', '📦': 'box', '🔄': 'cogs',
-  '⭕': 'bolt', '⏱️': 'clock', '🚪': 'building', '🚚': 'truck', '🏆': 'award',
-  '👷': 'users', '🚧': 'shield', '🌿': 'leaf', '📊': 'chartLine',
-};
+import { emojiToIcon } from '@/app/utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface FeaturedProduct { title: string; desc: string; image: string; href: string; }
@@ -47,9 +39,9 @@ export default function CategoryLandingPage({
       <PageHero image={heroImage} heading={heroTitle} subtext={heroSubtitle} breadcrumbs={breadcrumbs} />
 
       {/* ── INTRO ────────────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 lg:gap-20 items-start">
             <div>
               <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.875rem' }}>Overview</span>
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '1rem' }}>{introTitle}</h2>
@@ -57,9 +49,9 @@ export default function CategoryLandingPage({
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', lineHeight: '1.65' }}>{introText}</p>
             </div>
             {/* Standards tiles */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
               {standards.map((s, i) => (
-                <div key={i} style={{ background: 'var(--color-surface)', padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}>
+                <div key={i} style={{ background: 'var(--color-surface)', padding: 'clamp(1rem, 2vw, 1.5rem)', borderTop: '3px solid var(--color-brand-cyan)' }}>
                   <div style={{ fontSize: '1.5rem', marginBottom: '0.625rem', lineHeight: 1, color: 'var(--color-brand-cyan)' }}>
                     <Icon name={emojiToIcon[s.icon] ?? 'bolt'} />
                   </div>
@@ -73,14 +65,14 @@ export default function CategoryLandingPage({
       </section>
 
       {/* ── FEATURED PRODUCTS ─────────────────────────────────── */}
-      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Featured</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Featured Products</h2>
             <span className="ds-accent-line" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5">
             {featured.map((p, i) => (
               <Link
                 key={i}
@@ -120,7 +112,7 @@ export default function CategoryLandingPage({
       </section>
 
       {/* ── CATEGORIES GRID ────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Browse by category</span>
@@ -128,7 +120,7 @@ export default function CategoryLandingPage({
             <span className="ds-accent-line" />
           </div>
           <div
-            className={categories.length <= 4 ? 'grid grid-cols-2 md:grid-cols-4 gap-4' : 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3'}
+            className={categories.length <= 4 ? 'grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4' : 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-3'}
           >
             {categories.map((cat, i) => (
               <Link key={i} href={cat.href} style={{ display: 'block', overflow: 'hidden', textDecoration: 'none', position: 'relative' }}>
@@ -155,14 +147,14 @@ export default function CategoryLandingPage({
       </section>
 
       {/* ── CUSTOMERS ──────────────────────────────────────────── */}
-      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Social Proof</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Real stories. Real results.</h2>
             <span className="ds-accent-line" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {customers.map((c, i) => (
               <div key={i} style={{ border: '1px solid var(--color-border)', overflow: 'hidden', background: '#ffffff' }}>
                 <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
@@ -185,14 +177,14 @@ export default function CategoryLandingPage({
       </section>
 
       {/* ── NEWS ────────────────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem' }}>
+      <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow">Stay Informed</span>
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Latest News</h2>
             <span className="ds-accent-line" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {news.map((n, i) => (
               <article key={i} style={{ background: 'var(--color-surface)', border: '1px solid var(--color-border)', overflow: 'hidden', transition: 'box-shadow 200ms ease', cursor: 'pointer' }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
@@ -216,7 +208,7 @@ export default function CategoryLandingPage({
       </section>
 
       {/* ── CONTACT FORM ────────────────────────────────────────── */}
-      <section style={{ background: 'var(--color-surface)', paddingTop: '5rem', paddingBottom: '5rem', borderTop: '1px solid var(--color-border)' }}>
+      <section className="py-section" style={{ background: 'var(--color-surface)', borderTop: '1px solid var(--color-border)' }}>
         <div className="ds-container" style={{ maxWidth: '680px' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
             <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Free Consultation</span>
@@ -224,16 +216,16 @@ export default function CategoryLandingPage({
             <span className="ds-accent-line-center" />
             <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginTop: '1rem' }}>We&apos;ll design the right solution for you.</p>
           </div>
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Full Name</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} /></div>
-              <div><label className="ds-label-form">Email Address</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div>
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+              <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required /></div>
+              <div><label className="ds-label-form">Email Address *</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required /></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Phone</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} /></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+              <div><label className="ds-label-form">Phone *</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></div>
               <div><label className="ds-label-form">Company</label><input className="ds-input" type="text" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
             </div>
-            <div><label className="ds-label-form">Requirements</label><textarea className="ds-input" rows={4} style={{ resize: 'none' }} placeholder="Describe your needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} /></div>
+            <div><label className="ds-label-form">Requirements *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
             <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Enquiry</button>
           </form>
         </div>

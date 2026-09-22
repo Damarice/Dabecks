@@ -33,14 +33,14 @@ export default function CTASection({
       style={{ paddingBlock: '4.5rem' }}
     >
       <div className="ds-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
 
           {/* Text */}
           <div>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.75rem, 3vw, 2.75rem)',
+                fontSize: 'clamp(1.5rem, 3vw, 2.75rem)',
                 fontWeight: 800,
                 letterSpacing: '-0.035em',
                 lineHeight: 1.08,
@@ -53,7 +53,7 @@ export default function CTASection({
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: 'var(--text-body-lg)',
+                fontSize: 'clamp(1rem, 1.3vw, 1.125rem)',
                 color: 'var(--color-brand-cyan)',
                 lineHeight: 1.55,
               }}
@@ -67,23 +67,23 @@ export default function CTASection({
             style={{
               display: 'flex',
               flexDirection: 'row',
-              gap: '0.875rem',
+              gap: 'clamp(0.5rem, 1vw, 0.875rem)',
               flexWrap: 'wrap',
               justifyContent: 'flex-start',
             }}
             className="lg:justify-end"
           >
-            <Link href={primaryHref} className="ds-btn ds-btn-cyan ds-btn-lg">
+            <Link href={primaryHref} className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
               {primaryLabel}
               <Icon name="arrowRight" size="sm" />
             </Link>
 
             {secondaryLabel && secondaryHref && (
-              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg">{secondaryLabel}</Link>
+              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>{secondaryLabel}</Link>
             )}
 
             {phone && (
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg">
+              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
                 <Icon name="phone" size="sm" />
                 +254 729 212 254
               </a>

@@ -38,7 +38,7 @@ const clientLogos = [
 
 export default function ClientLogosCarousel() {
   return (
-    <section style={{ background: '#ffffff', paddingTop: '5rem', paddingBottom: '5rem', overflow: 'hidden' }}>
+    <section className="py-section" style={{ background: '#ffffff', overflow: 'hidden' }}>
       <div className="ds-container">
         <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
           <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.5rem' }}>Trusted By</span>

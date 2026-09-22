@@ -16,12 +16,9 @@ export default function DuctedSystems() {
         { icon: '🔇', title: 'Quiet Operation', desc: 'Fan coil units located remotely from the occupied space for minimal noise.' },
       ]}
       products={[
-        { model: 'DS-3T', desc: 'Ducted system · 3 ton / 36,000 BTU', slug: 'ds3t', placeholder: 'DS-3T' },
-        { model: 'DS-5T', desc: 'Ducted system · 5 ton / 60,000 BTU', slug: 'ds5t', placeholder: 'DS-5T' },
-        { model: 'DS-8T', desc: 'Ducted system · 8 ton / 96,000 BTU', slug: 'ds8t', placeholder: 'DS-8T' },
-        { model: 'DS-10T', desc: 'Ducted system · 10 ton / 120,000 BTU', slug: 'ds10t', placeholder: 'DS-10T' },
-        { model: 'Daikin FDQ125', desc: 'Ceiling concealed ducted · 5 ton', slug: 'daikinFDQ125', placeholder: 'Daikin+FDQ125' },
-        { model: 'Carrier 40GK', desc: 'Fan coil ducted unit · 4 ton', slug: 'carrier40GK', placeholder: 'Carrier+40GK' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-1', placeholder: 'Coming+Soon' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-2', placeholder: 'Coming+Soon' },
+        { model: 'Coming Soon', desc: 'New products incoming', slug: 'coming-soon-3', placeholder: 'Coming+Soon' },
       ]}
       basePath="/solutions/air-conditioning/ducted-systems"
     />
