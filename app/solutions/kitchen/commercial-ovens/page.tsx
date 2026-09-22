@@ -20,12 +20,12 @@ export default function CommercialOvens() {
         { icon: '🍽️', title: 'Multiple Cooking Modes', desc: 'Convection, steam, and combination modes adapt to every menu requirement.' },
       ]}
       products={[
-        { model: 'Convect-6', desc: 'Convection oven · 6 trays', slug: 'convect6', placeholder: 'Convect-6' },
-        { model: 'Combi-10', desc: 'Combi oven · 10 trays', slug: 'combi10', placeholder: 'Combi-10' },
-        { model: 'Deck-3', desc: 'Deck oven · 3 decks', slug: 'deck3', placeholder: 'Deck-3' },
-        { model: 'Rational iCombi Pro', desc: 'Combi oven · 10 trays', slug: 'rationalICombi', placeholder: 'Rational+iCombi' },
-        { model: 'Unox CHEFTOP', desc: 'Convection oven · 10 trays', slug: 'unoxCHEFTOP', placeholder: 'Unox+CHEFTOP' },
-        { model: 'Hobart HEC', desc: 'Heavy-duty convection oven', slug: 'hobartHEC', placeholder: 'Hobart+HEC' },
+        { model: 'SkyLine Combi Ovens', desc: 'Commercial Ovens', slug: 'skyline-combi', placeholder: 'SkyLine+Combi+Ovens', image: '/products/kitchen/commercial-ovens/skyline-combi.webp' },
+        { model: 'Crosswise Convection Ovens', desc: 'Commercial Ovens', slug: 'crosswise-convection', placeholder: 'Crosswise+Convection+Ovens', image: '/products/kitchen/commercial-ovens/crosswise-convection.webp' },
+        { model: 'SkyLine Cook and Chill Solutions', desc: 'Commercial Ovens', slug: 'skyline-cook-chill', placeholder: 'SkyLine+Cook+Chill', image: '/products/kitchen/commercial-ovens/skyline-cook-chill.webp' },
+        { model: 'GourmeXpress High Speed Ovens', desc: 'Commercial Ovens', slug: 'gourmexpress-highspeed', placeholder: 'GourmeXpress+High+Speed', image: '/products/kitchen/commercial-ovens/gourmexpress-highspeed.webp' },
+        { model: 'MultiSlim Compact Ovens', desc: 'Commercial Ovens', slug: 'multislim-compact', placeholder: 'MultiSlim+Compact+Ovens', image: '/products/kitchen/commercial-ovens/multislim-compact.webp' },
+        { model: 'Accessories', desc: 'Commercial Ovens', slug: 'accessories', placeholder: 'Oven+Accessories', image: '/products/kitchen/commercial-ovens/accessories.webp' },
       ]}
       basePath="/solutions/kitchen/commercial-ovens"
     />

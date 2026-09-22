@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function RationalICombi() {
+export default function SkyLineCookChill() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Rational iCombi Pro' }]}
-      category="Commercial Ovens" model="Rational iCombi Pro" subtitle="Intelligent combi oven · 10 trays"
-      image="/products/ovens/rational-icombi.jpg" placeholder="Rational+iCombi"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'SkyLine Cook and Chill Solutions' }]}
+      category="Commercial Ovens" model="SkyLine Cook and Chill Solutions" subtitle="Integrated cook and chill systems for advanced production"
+      image="/products/kitchen/commercial-ovens/skyline-cook-chill.webp" placeholder="SkyLine+Cook+Chill"
       keySpecs={[{ label: 'Capacity', value: '10 trays' }, { label: 'Intelligence', value: 'iCookingSuite' }, { label: 'Energy', value: 'Up to 10% savings' }]}
       description={['The Rational iCombi Pro is an intelligent combi oven that automatically adjusts cooking parameters to achieve perfect results. Its iCookingSuite recognises food and adjusts temperature, humidity, and air speed in real time.', 'Trusted by professional chefs worldwide, it reduces energy consumption by up to 10%, food weight loss, and kitchen labour while delivering consistently outstanding results.']}
       featureStrip={[{ icon: '🧠', label: 'Intelligence', value: 'Auto-adjusting cooking' }, { icon: '📊', label: 'Monitoring', value: 'ConnectedCooking' }, { icon: '🧽', label: 'Cleaning', value: 'Automatic care' }, { icon: '⚡', label: 'Energy', value: 'Up to 10% savings' }]}

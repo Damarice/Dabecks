@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function UnoxCHEFTOP() {
+export default function OvenAccessories() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Unox CHEFTOP' }]}
-      category="Commercial Ovens" model="Unox CHEFTOP" subtitle="Convection oven · 10 trays"
-      image="/products/ovens/unox-cheftop.jpg" placeholder="Unox+CHEFTOP"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Accessories' }]}
+      category="Commercial Ovens" model="Accessories" subtitle="Professional oven accessories and parts"
+      image="/products/kitchen/commercial-ovens/accessories.webp" placeholder="Oven+Accessories"
       keySpecs={[{ label: 'Capacity', value: '10 trays' }, { label: 'Technology', value: 'STEAM.Maxi' }, { label: 'Power', value: '13 kW' }]}
       description={['The Unox CHEFTOP is a professional convection oven featuring STEAM.Maxi technology for precise humidity control. Its 10-tray capacity and AIR.Maxi fan system ensure perfect air circulation for consistent results across every tray.', 'Designed for reliability and ease of use, it is a trusted choice for professional kitchens across hospitality and institutional food service.']}
       featureStrip={[{ icon: '💨', label: 'Air System', value: 'AIR.Maxi' }, { icon: '💧', label: 'Steam', value: 'STEAM.Maxi' }, { icon: '📱', label: 'Control', value: 'CHEFTOP.NET' }, { icon: '⚡', label: 'Power', value: '13 kW' }]}

@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function Convect6() {
+export default function CrosswiseConvection() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Convect-6' }]}
-      category="Commercial Ovens" model="Convect-6" subtitle="Convection oven · 6 GN 1/1 trays"
-      image="/products/ovens/convect6.jpg" placeholder="Convect-6"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Crosswise Convection Ovens' }]}
+      category="Commercial Ovens" model="Crosswise Convection Ovens" subtitle="Professional convection ovens for consistent cooking"
+      image="/products/kitchen/commercial-ovens/crosswise-convection.webp" placeholder="Crosswise+Convection+Ovens"
       keySpecs={[{ label: 'Capacity', value: '6 trays' }, { label: 'Power', value: '6.5 kW' }, { label: 'Temp Range', value: '50–300 °C' }]}
       description={['The Convect-6 is a professional countertop convection oven ideal for à la carte cooking, pastry, and banqueting preparation. Its 6-tray capacity and precise temperature control deliver consistent results across all menu items.', 'Compact and energy-efficient, it is the ideal first oven for growing commercial kitchens or a secondary oven for large operations.']}
       featureStrip={[{ icon: '🌡️', label: 'Temp Range', value: '50–300 °C' }, { icon: '💨', label: 'Fan Speeds', value: '3 speed levels' }, { icon: '⚡', label: 'Power', value: '6.5 kW' }, { icon: '🧽', label: 'Cleaning', value: 'Manual / semi-auto' }]}

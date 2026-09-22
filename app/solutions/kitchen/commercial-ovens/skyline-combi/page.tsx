@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function Combi10() {
+export default function SkyLineCombi() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Combi-10' }]}
-      category="Commercial Ovens" model="Combi-10" subtitle="Combi oven · 10 GN 1/1 trays"
-      image="/products/ovens/combi10.jpg" placeholder="Combi-10"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'SkyLine Combi Ovens' }]}
+      category="Commercial Ovens" model="SkyLine Combi Ovens" subtitle="Professional combi ovens with advanced cooking technology"
+      image="/products/kitchen/commercial-ovens/skyline-combi.webp" placeholder="SkyLine+Combi+Ovens"
       keySpecs={[{ label: 'Capacity', value: '10 trays' }, { label: 'Modes', value: 'Steam/Convection/Combi' }, { label: 'Power', value: '15 kW' }]}
       description={['The Combi-10 is a full-size combination oven offering steam, convection, and combi cooking modes in a single unit. With 10-tray capacity, it handles everything from roasting and baking to steaming and regenerating.', 'Its programmable cooking system stores up to 99 recipes, making it the ultimate tool for consistent, high-volume professional cooking.']}
       featureStrip={[{ icon: '🌡️', label: 'Temp Range', value: '30–300 °C' }, { icon: '💧', label: 'Steam', value: 'Boiler or injection' }, { icon: '📱', label: 'Programs', value: '99 stored recipes' }, { icon: '🧽', label: 'Cleaning', value: 'Automatic self-clean' }]}

@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function Deck3() {
+export default function MultiSlimCompact() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Deck-3' }]}
-      category="Commercial Ovens" model="Deck-3" subtitle="Stone deck oven · 3 decks"
-      image="/products/ovens/deck3.jpg" placeholder="Deck-3"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'MultiSlim Compact Ovens' }]}
+      category="Commercial Ovens" model="MultiSlim Compact Ovens" subtitle="Space-saving compact professional ovens"
+      image="/products/kitchen/commercial-ovens/multislim-compact.webp" placeholder="MultiSlim+Compact+Ovens"
       keySpecs={[{ label: 'Decks', value: '3' }, { label: 'Baking Area', value: '1.8 m²' }, { label: 'Temp', value: 'Up to 350 °C' }]}
       description={['The Deck-3 is a professional 3-deck stone oven designed for artisan bread, pizza, and pastry baking. Its refractory stone deck surfaces deliver the authentic bottom heat needed for crispy crusts and perfectly baked breads.', 'Each deck is independently controlled, allowing simultaneous baking of different products at different temperatures.']}
       featureStrip={[{ icon: '🍕', label: 'Stone Deck', value: 'Refractory stone' }, { icon: '🌡️', label: 'Max Temp', value: '350 °C' }, { icon: '💧', label: 'Steam', value: 'Steam injection' }, { icon: '🎯', label: 'Control', value: 'Independent per deck' }]}

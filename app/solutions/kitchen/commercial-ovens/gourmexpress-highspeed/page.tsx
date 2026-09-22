@@ -1,10 +1,10 @@
 import ProductDetailPage from '@/app/components/ProductDetailPage';
-export default function HobartHEC() {
+export default function GourmeXpressHighSpeed() {
   return (
     <ProductDetailPage
-      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'Hobart HEC' }]}
-      category="Commercial Ovens" model="Hobart HEC" subtitle="Heavy-duty convection oven"
-      image="/products/ovens/hobart-hec.jpg" placeholder="Hobart+HEC"
+      breadcrumbs={[{ label: 'Solutions', href: '/solutions' }, { label: 'Kitchen Systems', href: '/solutions/kitchen' }, { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens' }, { label: 'GourmeXpress High Speed Ovens' }]}
+      category="Commercial Ovens" model="GourmeXpress High Speed Ovens" subtitle="Rapid cooking ovens for quick service"
+      image="/products/kitchen/commercial-ovens/gourmexpress-highspeed.webp" placeholder="GourmeXpress+High+Speed"
       keySpecs={[{ label: 'Capacity', value: '5 full-size pans' }, { label: 'Power', value: '11 kW' }, { label: 'Build', value: 'Heavy-duty' }]}
       description={['The Hobart HEC is a heavy-duty commercial convection oven built for the most demanding kitchen environments. Its robust construction and powerful heating system deliver consistent results for high-volume cooking operations.', 'Trusted by institutional kitchens, large hotels, and catering operations, the HEC combines reliability with straightforward operation and easy maintenance.']}
       featureStrip={[{ icon: '🏗️', label: 'Build', value: 'Heavy-duty steel' }, { icon: '🌡️', label: 'Temp', value: 'Up to 290 °C' }, { icon: '💨', label: 'Fan', value: 'Dual-speed' }, { icon: '🔧', label: 'Service', value: 'Easy access panels' }]}
