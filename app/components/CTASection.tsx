@@ -88,6 +88,12 @@ export default function CTASection({
                 +254 729 212 254
               </a>
             )}
+            {phone && (
+              <a href="tel:+254733788357" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
+                <Icon name="phone" size="sm" />
+                +254 733 788 357
+              </a>
+            )}
           </div>
         </div>
       </div>

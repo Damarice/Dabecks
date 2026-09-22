@@ -106,7 +106,7 @@ export default function Navbar() {
                 style={{ fontSize: '0.8125rem' }}
               >
                 <Icon name="phone" className="text-[var(--color-brand-cyan)]" size="sm" />
-                +254 729 212 254
+                +254 729 212 254 / +254 733 788 357
               </a>
               <a
                 href="mailto:info@dabeckslaundry.com"
@@ -120,7 +120,7 @@ export default function Navbar() {
             {/* Location */}
             <span className="flex items-center gap-1.5 text-white/60" style={{ fontSize: '0.8125rem' }}>
               <Icon name="location" className="text-[var(--color-brand-cyan)]" size="sm" />
-              Nairobi, Kenya — East Africa
+              Lunga Lunga Square, Industrial Area, Nairobi
             </span>
           </div>
         </div>

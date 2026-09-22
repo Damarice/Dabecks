@@ -159,7 +159,7 @@ export default function Contact() {
                   {
                     iconName: 'location' as const,
                     title: 'Location',
-                    content: 'Lunga Lunga Square, 1st Floor, A7\nNairobi, Kenya',
+                    content: 'Lunga Lunga Square, Lunga Lunga Road\nIndustrial Area, P.O. Box 103513-00100\nNairobi, Kenya',
                   },
                   {
                     iconName: 'phone' as const,

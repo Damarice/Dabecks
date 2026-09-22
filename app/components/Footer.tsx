@@ -112,8 +112,8 @@ export default function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {[
-                { icon: 'location' as const, text: 'Lunga Lunga Square, 1st Floor, A7\nNairobi, Kenya', href: undefined },
-                { icon: 'phone' as const, text: '+254 729 212 254', href: 'tel:+254729212254' },
+                { icon: 'location' as const, text: 'Lunga Lunga Square, Lunga Lunga Road\nIndustrial Area, P.O. Box 103513-00100\nNairobi, Kenya', href: undefined },
+                { icon: 'phone' as const, text: '+254 729 212 254\n+254 733 788 357', href: 'tel:+254729212254' },
                 { icon: 'email' as const, text: 'info@dabeckslaundry.com', href: 'mailto:info@dabeckslaundry.com' },
               ].map(({ icon, text, href }, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
