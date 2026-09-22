@@ -52,7 +52,7 @@ export default function Partners() {
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginTop: '0.5rem' }}>Equipment Partner Brands</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(160px, 80vw), 1fr))', gap: '1px', background: 'var(--color-border)' }}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-px" style={{ background: 'var(--color-border)' }}>
             {equipmentBrands.map((brand, i) => (
               <div
                 key={i}

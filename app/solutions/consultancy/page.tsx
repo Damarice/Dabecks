@@ -71,7 +71,7 @@ export default function ConsultancySolutions() {
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Consultancy Services</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(250px, 80vw), 1fr))', gap: '1px', background: 'var(--color-border)' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px" style={{ background: 'var(--color-border)' }}>
             {services.map(({ num, title, desc }) => (
               <div key={num} className="service-tile" style={{ background: '#ffffff', padding: '2rem' }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 3vw, 2.75rem)', fontWeight: 800, color: 'var(--color-brand-cyan)', lineHeight: 1, marginBottom: '1.25rem', opacity: 0.4 }}>{num}</div>
@@ -91,7 +91,7 @@ export default function ConsultancySolutions() {
             <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)' }}>Our Process</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(200px, 80vw), 1fr))', border: '1px solid var(--color-border)' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ border: '1px solid var(--color-border)' }}>
             {steps.map(({ title, desc }, i) => (
               <div
                 key={i}
