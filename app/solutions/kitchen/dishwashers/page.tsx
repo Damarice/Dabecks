@@ -20,12 +20,12 @@ export default function Dishwashers() {
         { icon: '⚡', title: 'Fast Cycles', desc: 'Cycle times from 60 seconds mean continuous throughput for busy operations.' },
       ]}
       products={[
-        { model: 'DW-Under', desc: 'Undercounter dishwasher', slug: 'dwUnder', placeholder: 'DW-Under' },
-        { model: 'DW-Hood', desc: 'Hood-type dishwasher', slug: 'dwHood', placeholder: 'DW-Hood' },
-        { model: 'DW-Rack', desc: 'Rack conveyor dishwasher', slug: 'dwRack', placeholder: 'DW-Rack' },
-        { model: 'Electrolux WT4', desc: 'Pass-through dishwasher', slug: 'electroluxWT4', placeholder: 'Electrolux+WT4' },
-        { model: 'Winterhalter UC-M', desc: 'Undercounter commercial', slug: 'winterhalterUCM', placeholder: 'Winterhalter+UC-M' },
-        { model: 'Hobart AM16', desc: 'High-temp door-type dishwasher', slug: 'hobartAM16', placeholder: 'Hobart+AM16' },
+        { model: 'NeoBlue Glasswashers', desc: 'Dishwashing', slug: 'neoblue-glasswashers', placeholder: 'NeoBlue+Glasswashers', image: '/products/kitchen/dishwashers/neoblue-glasswashers.webp' },
+        { model: 'NeoBlue Touch Undercounter', desc: 'Dishwashing', slug: 'neoblue-touch-undercounter', placeholder: 'NeoBlue+Touch+Undercounter', image: '/products/kitchen/dishwashers/neoblue-touch-undercounter.webp' },
+        { model: 'green&clean Glasswashers', desc: 'Dishwashing', slug: 'greenclean-glasswashers', placeholder: 'green+clean+Glasswashers', image: '/products/kitchen/dishwashers/greenclean-glasswashers.webp' },
+        { model: 'green&clean Undercounter', desc: 'Dishwashing', slug: 'greenclean-undercounter', placeholder: 'green+clean+Undercounter', image: '/products/kitchen/dishwashers/greenclean-undercounter.webp' },
+        { model: 'green&clean Hood Type', desc: 'Dishwashing', slug: 'greenclean-hood-type', placeholder: 'green+clean+Hood+Type', image: '/products/kitchen/dishwashers/greenclean-hood-type.webp' },
+        { model: 'HeroDry Free-standing blower', desc: 'Dishwashing', slug: 'herodry-freestanding-blower', placeholder: 'HeroDry+Freestanding+Blower', image: '/products/kitchen/dishwashers/herodry-freestanding-blower.webp' },
       ]}
       basePath="/solutions/kitchen/dishwashers"
     />
