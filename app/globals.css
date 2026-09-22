@@ -400,7 +400,7 @@ img, video {
   width: 100%;
   max-width: var(--container-xl);
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: clamp(1rem, 4vw, 2.5rem);
 }
 
 @media (min-width: 768px) {
@@ -1313,5 +1313,10 @@ img, video {
   .ds-btn-lg {
     font-size: 0.8125rem;
     padding: 0.875rem 1.5rem;
+  }
+  
+  /* Ensure buttons on mobile don't have excessive minWidth */
+  .ds-btn {
+    min-width: auto;
   }
 }

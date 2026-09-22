@@ -73,23 +73,23 @@ export default function CTASection({
             }}
             className="lg:justify-end"
           >
-            <Link href={primaryHref} className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
+            <Link href={primaryHref} className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(120px, 25vw, 140px)' }}>
               {primaryLabel}
               <Icon name="arrowRight" size="sm" />
             </Link>
 
             {secondaryLabel && secondaryHref && (
-              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>{secondaryLabel}</Link>
+              <Link href={secondaryHref} className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(120px, 25vw, 140px)' }}>{secondaryLabel}</Link>
             )}
 
             {phone && (
-              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
+              <a href="tel:+254729212254" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(120px, 25vw, 140px)' }}>
                 <Icon name="phone" size="sm" />
                 +254 729 212 254
               </a>
             )}
             {phone && (
-              <a href="tel:+254733788357" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: '140px' }}>
+              <a href="tel:+254733788357" className="ds-btn ds-btn-ghost-white ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(120px, 25vw, 140px)' }}>
                 <Icon name="phone" size="sm" />
                 +254 733 788 357
               </a>

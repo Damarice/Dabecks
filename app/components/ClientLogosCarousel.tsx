@@ -87,12 +87,12 @@ export default function ClientLogosCarousel() {
               <div
                 key={`logo-1-${i}`}
                 style={{
-                  minWidth: '200px',
+                  minWidth: 'clamp(140px, 22vw, 200px)',
                   height: '120px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '1.5rem',
+                  padding: 'clamp(1rem, 1.5vw, 1.5rem)',
                   flexShrink: 0,
                 }}
               >
@@ -125,12 +125,12 @@ export default function ClientLogosCarousel() {
               <div
                 key={`logo-2-${i}`}
                 style={{
-                  minWidth: '200px',
+                  minWidth: 'clamp(140px, 22vw, 200px)',
                   height: '120px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  padding: '1.5rem',
+                  padding: 'clamp(1rem, 1.5vw, 1.5rem)',
                   flexShrink: 0,
                 }}
               >
