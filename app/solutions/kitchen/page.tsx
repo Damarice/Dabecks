@@ -18,7 +18,6 @@ export default function KitchenPage() {
         { label: 'Commercial Ovens', href: '/solutions/kitchen/commercial-ovens', image: '/kitchen-categories/commercial-ovens.webp?v=2' },
         { label: 'Fryers', href: '/solutions/kitchen/fryers', image: '/kitchen-categories/fryers.webp?v=2' },
         { label: 'Dishwashers', href: '/solutions/kitchen/dishwashers', image: '/kitchen-categories/dishwashers.webp?v=2' },
-        { label: 'Steamers', href: '/solutions/kitchen/steamers', image: '/kitchen-categories/steamers.webp?v=2' },
         { label: 'Cooking Ranges', href: '/solutions/kitchen/cooking-ranges', image: '/kitchen-categories/cooking-ranges.webp?v=3' },
         { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles', image: '/kitchen-categories/grills-griddles.jpg?v=2' },
       ]}

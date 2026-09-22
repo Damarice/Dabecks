@@ -27,7 +27,6 @@ const solutions = {
       { label: 'Commercial Ovens',  href: '/solutions/kitchen/commercial-ovens' },
       { label: 'Fryers',            href: '/solutions/kitchen/fryers' },
       { label: 'Dishwashers',       href: '/solutions/kitchen/dishwashers' },
-      { label: 'Steamers',          href: '/solutions/kitchen/steamers' },
       { label: 'Cooking Ranges',    href: '/solutions/kitchen/cooking-ranges' },
       { label: 'Grills & Griddles', href: '/solutions/kitchen/grills-griddles' },
     ],
