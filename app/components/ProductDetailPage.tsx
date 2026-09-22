@@ -116,8 +116,8 @@ export default function ProductDetailPage({
               </div>
 
               <div style={{ display: 'flex', gap: 'clamp(0.5rem, 1.5vw, 0.75rem)', flexWrap: 'wrap' }}>
-                <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(130px, 30vw, 160px)' }}>Request a Quote</Link>
-                <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(130px, 30vw, 160px)' }}>Download Specs</Link>
+                <Link href="/contact" className="ds-btn ds-btn-primary ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(110px, 25vw, 160px)' }}>Request a Quote</Link>
+                <Link href="/contact" className="ds-btn ds-btn-outline ds-btn-lg" style={{ flex: '1 1 auto', minWidth: 'clamp(110px, 25vw, 160px)' }}>Download Specs</Link>
               </div>
             </div>
           </div>

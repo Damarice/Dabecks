@@ -375,7 +375,7 @@ export default function About() {
             </div>
             <Link href="/clients" className="text-link">View all clients →</Link>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(clamp(200px, 90vw, 220px), 1fr))', gap: '1px', background: 'var(--color-border)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(180px, 80vw), 1fr))', gap: '1px', background: 'var(--color-border)' }}>
             {clients.map((c, i) => (
               <div
                 key={i}
