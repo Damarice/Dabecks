@@ -97,10 +97,11 @@ export default function HeroSlider() {
         <div
           className="absolute z-20 flex flex-col"
           style={{
-            left: '6%',
-            top: '12%',
-            width: '58%',
-            bottom: '8%',
+            left: 'clamp(1rem, 4vw, 6%)',
+            top: 'clamp(1rem, 4vw, 12%)',
+            width: 'clamp(90%, 55vw, 58%)',
+            right: 'clamp(1rem, 4vw, 6%)',
+            bottom: 'clamp(0.5rem, 2vw, 8%)',
           }}
         >
           {/* Frosted white text area — diagonal top-right corner */}

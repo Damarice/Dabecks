@@ -129,7 +129,7 @@ export default function Navbar() {
       {/* ── MAIN HEADER ──────────────────────────────────────── */}
       <div className="bg-white border-b border-[var(--color-border)]">
         <div className="ds-container">
-          <div className="flex items-center justify-between" style={{ height: '100px' }}>
+          <div className="flex items-center justify-between" style={{ height: 'clamp(70px, 14vw, 100px)' }}>
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Dabecks home">
@@ -140,8 +140,9 @@ export default function Navbar() {
                 width={240}
                 className="object-contain"
                 style={{ 
-                  height: '95px', 
+                  height: 'clamp(70px, 12vw, 95px)',
                   width: 'auto',
+                  maxWidth: 'clamp(150px, 40vw, 240px)',
                   imageRendering: '-webkit-optimize-contrast',
                   WebkitFontSmoothing: 'subpixel-antialiased',
                   backfaceVisibility: 'hidden',

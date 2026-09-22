@@ -183,23 +183,24 @@ export default function ProductDetailPage({
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.25rem)', fontWeight: 700, color: 'var(--color-brand-navy)', marginTop: '0.5rem', lineHeight: 1.12 }}>Technical Specifications</h2>
             <span className="ds-accent-line" />
           </div>
-          <div style={{ border: '1px solid var(--color-border)', overflow: 'auto' }}>
+          <div style={{ border: '1px solid var(--color-border)', overflow: 'hidden' }}>
             {specs.map((spec, i) => (
               <div
                 key={i}
                 style={{
                   display: 'flex',
                   justifyContent: 'space-between',
-                  alignItems: 'center',
+                  alignItems: 'flex-start',
+                  flexWrap: 'wrap',
+                  gap: 'clamp(0.5rem, 2vw, 1rem)',
                   padding: 'clamp(0.75rem, 1.5vw, 0.875rem) clamp(0.75rem, 1.5vw, 1.25rem)',
                   borderBottom: i < specs.length - 1 ? '1px solid var(--color-border)' : 'none',
                   background: i % 2 === 0 ? '#ffffff' : 'var(--color-surface)',
-                  gap: '1rem',
-                  minWidth: 'fit-content',
+                  minWidth: 'auto',
                 }}
               >
-                <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-muted)', flexShrink: 0 }}>{spec.label}</span>
-                <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'right' }}>{spec.value}</span>
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-text-muted)', flex: '0 1 100%', minWidth: '0' }}>{spec.label}</span>
+                <span style={{ fontFamily: 'var(--font-display)', fontSize: '1rem', fontWeight: 700, color: 'var(--color-brand-navy)', textAlign: 'left', flex: '0 1 100%', minWidth: '0', wordBreak: 'break-word' }}>{spec.value}</span>
               </div>
             ))}
           </div>
