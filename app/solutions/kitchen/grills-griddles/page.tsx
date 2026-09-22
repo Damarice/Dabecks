@@ -20,12 +20,12 @@ export default function GrillsGriddles() {
         { icon: '🧽', title: 'Easy Cleaning', desc: 'Smooth cooking surfaces and removable drip trays make end-of-service cleaning fast and simple.' },
       ]}
       products={[
-        { model: 'Grill-24', desc: '24-inch gas char-grill', slug: 'grill24', placeholder: 'Grill-24' },
-        { model: 'Grill-36', desc: '36-inch gas char-grill', slug: 'grill36', placeholder: 'Grill-36' },
-        { model: 'Griddle-24', desc: '24-inch flat-top griddle', slug: 'griddle24', placeholder: 'Griddle-24' },
-        { model: 'Griddle-36', desc: '36-inch flat-top griddle', slug: 'griddle36', placeholder: 'Griddle-36' },
-        { model: 'Vulcan VGG24', desc: 'Gas griddle · 24 inch', slug: 'vulcanVGG24', placeholder: 'Vulcan+VGG24' },
-        { model: 'Star Ultra-Max 624HA', desc: 'Heavy-duty griddle', slug: 'starUltraMax', placeholder: 'Star+Ultra-Max' },
+        { model: '7.88 Inch Ribbed Griddle Grill Scraper Manual Tool Stainless Steel', desc: 'COD 206420', slug: 'ribbed-grill-scraper', placeholder: 'Ribbed+Grill+Scraper', image: '/products/kitchen/grills-griddles/ribbed-grill-scraper.webp' },
+        { model: '12 Inch Stainless Steel Scraper for Smooth Griddle', desc: 'COD 164255', slug: 'smooth-griddle-scraper', placeholder: 'Smooth+Griddle+Scraper', image: '/products/kitchen/grills-griddles/smooth-griddle-scraper.webp' },
+        { model: '12 Inch Ribbed and Smooth Double-face Griddle', desc: 'COD 925003', slug: 'double-face-griddle', placeholder: 'Double+Face+Griddle', image: '/products/kitchen/grills-griddles/double-face-griddle.webp' },
+        { model: '14 Inch Electric Sandwich Press with Adjustable Plate', desc: 'COD 603941', slug: 'electric-sandwich-press', placeholder: 'Electric+Sandwich+Press', image: '/products/kitchen/grills-griddles/electric-sandwich-press.webp' },
+        { model: '12 Inch Mesh Grilling Grid Compatible with Commercial Cooking', desc: 'COD 922713', slug: 'mesh-grilling-grid', placeholder: 'Mesh+Grilling+Grid', image: '/products/kitchen/grills-griddles/mesh-grilling-grid.webp' },
+        { model: '12 Inch Frying Pan for Eggs and Pancakes Stainless Steel', desc: 'COD 925005', slug: 'frying-pan-eggs-pancakes', placeholder: 'Frying+Pan+Eggs+Pancakes', image: '/products/kitchen/grills-griddles/frying-pan-eggs-pancakes.webp' },
       ]}
       basePath="/solutions/kitchen/grills-griddles"
     />
