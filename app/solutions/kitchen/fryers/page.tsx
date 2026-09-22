@@ -20,12 +20,12 @@ export default function Fryers() {
         { icon: '⚡', title: 'Energy Efficient', desc: 'Insulated tanks and efficient burners minimise energy use without compromising performance.' },
       ]}
       products={[
-        { model: 'FT-8L', desc: 'Single tank fryer · 8 L', slug: 'ft8l', placeholder: 'FT-8L' },
-        { model: 'FT-15L', desc: 'Twin tank fryer · 2×8 L', slug: 'ft15l', placeholder: 'FT-15L' },
-        { model: 'FT-25L', desc: 'High-volume fryer · 25 L', slug: 'ft25l', placeholder: 'FT-25L' },
-        { model: 'Pitco SG14', desc: 'Gas fryer · 14 L tank', slug: 'pitcoSG14', placeholder: 'Pitco+SG14' },
-        { model: 'Henny Penny F5', desc: 'Pressure fryer · 5 heads', slug: 'hennyF5', placeholder: 'Henny+Penny+F5' },
-        { model: 'Vulcan 1ER50DF', desc: 'Electric fryer · 50 lb oil capacity', slug: 'vulcan1ER50DF', placeholder: 'Vulcan+1ER50DF' },
+        { model: '700XP One Well Gas Fryer Top 7L', desc: 'Gas Fryer Tops · COD 371066', slug: 'fryer-700xp-gas-top-7l', placeholder: '700XP+Gas+Fryer+Top', image: '/products/kitchen/fryers/fryer-700xp-gas-top-7l.jpg' },
+        { model: '700XP One Well Freestanding Gas Fryer 7L', desc: 'Freestanding Gas Fryers · COD 371068', slug: 'fryer-700xp-gas-freestanding-7l', placeholder: '700XP+Gas+Freestanding+Fryer', image: '/products/kitchen/fryers/fryer-700xp-gas-freestanding-7l.jpg' },
+        { model: '700XP Two Wells Electric Fryer Top 5L', desc: 'Electric Fryer Tops · COD 371074', slug: 'fryer-700xp-electric-top-5l', placeholder: '700XP+Electric+Fryer+Top', image: '/products/kitchen/fryers/fryer-700xp-electric-top-5l.jpg' },
+        { model: '700XP One Well Freestanding Electric Fryer 7L', desc: 'Freestanding Electric Fryers · COD 371077', slug: 'fryer-700xp-electric-freestanding-7l', placeholder: '700XP+Electric+Freestanding+Fryer', image: '/products/kitchen/fryers/fryer-700xp-electric-freestanding-7l.jpg' },
+        { model: '900XP One Well Gas Fryer 15L', desc: 'Gas · COD 391077', slug: 'fryer-900xp-gas-15l', placeholder: '900XP+Gas+Fryer+15L', image: '/products/kitchen/fryers/fryer-900xp-gas-15l.jpg' },
+        { model: '900XP One Well Electric Fryer 15L', desc: 'Electric Fryers · COD 391087', slug: 'fryer-900xp-electric-15l', placeholder: '900XP+Electric+Fryer+15L', image: '/products/kitchen/fryers/fryer-900xp-electric-15l.jpg' },
       ]}
       basePath="/solutions/kitchen/fryers"
     />
