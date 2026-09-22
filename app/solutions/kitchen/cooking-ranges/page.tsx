@@ -20,12 +20,10 @@ export default function CookingRanges() {
         { icon: '🔧', title: 'Easy Maintenance', desc: 'Removable components and accessible design make daily cleaning and servicing straightforward.' },
       ]}
       products={[
-        { model: 'Range-4B', desc: '4-burner commercial range', slug: 'range4b', placeholder: 'Range-4B' },
-        { model: 'Range-6B', desc: '6-burner commercial range', slug: 'range6b', placeholder: 'Range-6B' },
-        { model: 'Range-8B', desc: '8-burner heavy-duty range', slug: 'range8b', placeholder: 'Range-8B' },
-        { model: 'Garland G60-6R', desc: 'Gas range · 6 burners', slug: 'garlandG60', placeholder: 'Garland+G60' },
-        { model: 'Vulcan SX36', desc: 'Commercial gas range', slug: 'vulcanSX36', placeholder: 'Vulcan+SX36' },
-        { model: 'Wolf C36S', desc: 'Pro series range', slug: 'wolfC36S', placeholder: 'Wolf+C36S' },
+        { model: 'thermaline Premium Modular 80, 85 & 90', desc: 'Cooking Ranges', slug: 'thermaline-premium', placeholder: 'thermaline+Premium', image: '/products/kitchen/cooking-ranges/thermaline-premium.webp' },
+        { model: 'e-XP 700 and 900 Modular Cooking', desc: 'Cooking Ranges', slug: 'exp-700-900-modular', placeholder: 'e-XP+700+900+Modular', image: '/products/kitchen/cooking-ranges/exp-700-900-modular.webp' },
+        { model: 'LiberoPro & LiberoLight Mobile Cooking', desc: 'Cooking Ranges', slug: 'liberopro-liberolight', placeholder: 'LiberoPro+LiberoLight', image: '/products/kitchen/cooking-ranges/liberopro-liberolight.webp' },
+        { model: 'Accessories and consumables', desc: 'Cooking Ranges', slug: 'accessories-consumables', placeholder: 'Accessories+Consumables', image: '/products/kitchen/cooking-ranges/accessories-consumables.webp' },
       ]}
       basePath="/solutions/kitchen/cooking-ranges"
     />
