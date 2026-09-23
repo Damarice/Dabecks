@@ -127,9 +127,9 @@ export default function Navbar() {
       </div>
 
       {/* ── MAIN HEADER ──────────────────────────────────────── */}
-      <div className="bg-white border-b border-[var(--color-border)]">
-        <div className="ds-container">
-          <div className="flex items-center justify-between" style={{ height: 'clamp(70px, 14vw, 100px)' }}>
+      <div className="bg-white border-b border-[var(--color-border)]" style={{ position: 'relative', zIndex: 40, overflow: 'visible' }}>
+        <div className="ds-container" style={{ overflow: 'visible' }}>
+          <div className="flex items-center justify-between" style={{ height: 'clamp(70px, 14vw, 100px)', overflow: 'visible' }}>
 
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Dabecks home">
@@ -156,7 +156,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation" style={{ overflow: 'visible', position: 'relative', zIndex: 50 }}>
               {navLinks.map((link) => {
                 if ('key' in link && link.key) {
                   const key = link.key;
@@ -165,6 +165,7 @@ export default function Navbar() {
                     <div
                       key={key}
                       className="relative"
+                      style={{ zIndex: 50 }}
                       onMouseEnter={() => openDropdown(key)}
                       onMouseLeave={closeDropdown}
                     >
@@ -194,7 +195,7 @@ export default function Navbar() {
                       {activeDropdown === key && (
                         <div
                           className="absolute top-full left-0 bg-white border border-[var(--color-border)] shadow-lg pt-3 pb-3 z-50"
-                          style={{ minWidth: 'clamp(180px, 90vw, 220px)' }}
+                          style={{ minWidth: 'clamp(180px, 90vw, 220px)', maxHeight: '80vh', overflowY: 'auto', overflow: 'visible' }}
                           onMouseEnter={keepOpen}
                           onMouseLeave={closeDropdown}
                         >

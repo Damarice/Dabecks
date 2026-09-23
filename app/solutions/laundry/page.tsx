@@ -101,6 +101,45 @@ export default function LaundryPage() {
         </div>
       </section>
 
+      {/* ══ PRICE LIST SECTION ════════════════════════════════ */}
+      <section style={{ background: 'var(--color-brand-navy)', paddingTop: '4rem', paddingBottom: '4rem' }}>
+        <div className="ds-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="ds-eyebrow" style={{ color: 'var(--color-brand-cyan)', display: 'block', marginBottom: '0.875rem' }}>Pricing & Specifications</span>
+              <h2 className="ds-h2" style={{ color: '#ffffff', marginBottom: '1rem' }}>
+                Electrolux Professional Laundry Price List
+              </h2>
+              <p className="ds-body" style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '2rem', lineHeight: '1.7' }}>
+                Download our complete Electrolux Professional laundry equipment price list including specifications, technical details, and current market pricing for all our commercial washers, dryers, and ironers.
+              </p>
+              <a 
+                href="/Copy of Electrolux-Professional-Laundry-Price-list (002).xlsx" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ds-btn ds-btn-cyan"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
+              >
+                <Icon name="download" />
+                View Price List
+              </a>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.1)', padding: '2rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9375rem', lineHeight: '1.7', marginBottom: '1.25rem' }}>
+                <strong style={{ color: '#ffffff' }}>What's Included:</strong>
+              </p>
+              <ul style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.9375rem', lineHeight: '1.8', paddingLeft: '1.5rem' }}>
+                <li>All commercial washer models and pricing</li>
+                <li>Industrial dryer specifications and costs</li>
+                <li>Flatwork ironer options and pricing</li>
+                <li>Technical specifications and dimensions</li>
+                <li>Current market availability by region</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ══ CATEGORIES NAV — full-bleed with image/nav split ═══ */}
       <section style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
         <div className="ds-container">
