@@ -153,7 +153,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-  overflow-x: hidden;
 }
 
 body {
@@ -165,13 +164,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
 }
 
-/* Prevent overflow on all major sections */
-main, section, header, footer, article, div[style*="display: grid"], div[class*="grid"] {
+/* Prevent overflow on specific sections (excluding header) */
+main, section, article {
   overflow-x: hidden;
 }
 

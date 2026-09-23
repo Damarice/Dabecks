@@ -195,7 +195,7 @@ export default function Navbar() {
                       {activeDropdown === key && (
                         <div
                           className="absolute top-full left-0 bg-white border border-[var(--color-border)] shadow-lg pt-3 pb-3 z-50"
-                          style={{ minWidth: 'clamp(180px, 90vw, 220px)', maxHeight: '80vh', overflowY: 'auto', overflow: 'visible' }}
+                          style={{ minWidth: 'clamp(180px, 90vw, 220px)', maxHeight: '80vh', overflowY: 'visible', overflow: 'visible', position: 'absolute' }}
                           onMouseEnter={keepOpen}
                           onMouseLeave={closeDropdown}
                         >
