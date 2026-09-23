@@ -92,16 +92,14 @@ export default function Footer() {
                 </li>
               ))}
               <li>
-                <a
-                  href="/Copy of Electrolux-Professional-Laundry-Price-list (002).xlsx"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/price-list"
                   className="footer-link"
                   style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.9375rem', fontFamily: 'var(--font-body)' }}
                 >
                   <Icon name="download" style={{ color: 'var(--color-brand-cyan)', fontSize: '0.875rem' }} />
                   Electrolux Price List
-                </a>
+                </Link>
               </li>
               <li>
                 <a

@@ -114,9 +114,7 @@ export default function LaundryPage() {
                 Download our complete Electrolux Professional laundry equipment price list including specifications, technical details, and current market pricing for all our commercial washers, dryers, and ironers.
               </p>
               <a 
-                href="/Copy of Electrolux-Professional-Laundry-Price-list (002).xlsx" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/price-list" 
                 className="ds-btn ds-btn-cyan"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
               >
