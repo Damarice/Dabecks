@@ -8,7 +8,9 @@ export default function PriceListPage() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const encodedUrl = encodeURIComponent(`${window.location.origin}/api/price-list`);
+      // Use direct public URL for Office Online Viewer
+      const fileUrl = `${window.location.origin}/api/price-list`;
+      const encodedUrl = encodeURIComponent(fileUrl);
       setViewerUrl(`https://view.officeapps.live.com/op/embed.aspx?src=${encodedUrl}`);
     }
   }, []);
