@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Washer Extractors | Industrial Laundry | Dabecks',
+  description:
+    'Heavy-duty washer extractor equipment in Kenya. Barrier washers for hospitals and institutions. Industrial laundry solutions from Dabecks.',
+  keywords: [
+    'washer extractor Kenya',
+    'barrier washer',
+    'hospital laundry',
+    'industrial washer',
+  ],
+  path: '/solutions/laundry/washer-extractors',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function WasherExtractors() {
   return (

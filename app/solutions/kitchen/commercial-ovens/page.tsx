@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Ovens | Professional Cooking Equipment | Dabecks',
+  description:
+    'High-performance commercial ovens in Kenya. Convection, combi, and deck ovens for professional kitchens. Supply, installation, and support.',
+  keywords: [
+    'commercial oven Kenya',
+    'convection oven',
+    'combi oven',
+    'kitchen equipment',
+  ],
+  path: '/solutions/kitchen/commercial-ovens',
+  ogImage: '/kitchen-categories/commercial-ovens.webp',
+});
 
 export default function CommercialOvens() {
   return (

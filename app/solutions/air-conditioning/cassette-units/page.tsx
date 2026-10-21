@@ -1,4 +1,21 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Cassette Air Conditioning Units Kenya | 360° Airflow | Dabecks',
+  description:
+    'Ceiling cassette AC units for commercial spaces in Kenya. 360-degree airflow, flush ceiling installation for offices, restaurants, and retail spaces.',
+  keywords: [
+    'cassette AC Kenya',
+    'ceiling cassette air conditioner',
+    'commercial AC',
+    '360 airflow',
+    'office AC',
+  ],
+  path: '/solutions/air-conditioning/cassette-units',
+  ogImage: '/hero-ac.jpg',
+});
 
 export default function CassetteUnits() {
   return (

@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Industrial Tumble Dryers | High-Capacity Laundry | Dabecks',
+  description:
+    'Commercial tumble dryers in Kenya. Energy-efficient, high-capacity equipment for hotels, hospitals, and laundry operations. Fast drying, low running costs.',
+  keywords: [
+    'industrial dryer Kenya',
+    'tumble dryer',
+    'commercial dryer',
+    'heat pump dryer',
+  ],
+  path: '/solutions/laundry/industrial-dryers',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function IndustrialDryers() {
   return (

@@ -1,7 +1,23 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 import Icon from '@/app/components/Icon';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'AC Maintenance & Repair Kenya | HVAC Service Contracts | Dabecks',
+  description:
+    'Air conditioning maintenance and repair services in Kenya. Preventive maintenance contracts, emergency repair, all major brands serviced.',
+  keywords: [
+    'AC maintenance Kenya',
+    'HVAC repair Nairobi',
+    'air conditioning service contract Kenya',
+    'maintenance services',
+  ],
+  path: '/solutions/air-conditioning/maintenance-repair',
+  ogImage: '/hero-ac.jpg',
+});
 
 const services = [
   { icon: 'clock' as const,     title: 'Planned Maintenance',      desc: 'Scheduled service visits ensure your systems are cleaned, checked, and optimised before problems arise.' },

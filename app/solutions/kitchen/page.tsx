@@ -1,4 +1,21 @@
+import type { Metadata } from 'next';
 import CategoryLandingPage from '@/app/components/CategoryLandingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Kitchen Equipment | Ovens, Ranges, Fryers | Dabecks',
+  description:
+    'Professional commercial kitchen equipment in Kenya. Ovens, fryers, dishwashers, cooking ranges. Supply, installation, and full support from Dabecks.',
+  keywords: [
+    'commercial kitchen equipment Kenya',
+    'commercial oven',
+    'dishwasher commercial',
+    'cooking ranges',
+    'kitchen equipment Nairobi',
+  ],
+  path: '/solutions/kitchen',
+  ogImage: '/kitchen-categories/commercial-ovens.webp',
+});
 
 export default function KitchenPage() {
   return (

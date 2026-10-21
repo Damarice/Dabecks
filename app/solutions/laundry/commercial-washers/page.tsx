@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Washers | Heavy-Duty Laundry Equipment | Dabecks',
+  description:
+    'Professional front-load commercial washers in Kenya. High-capacity equipment for hotels, hospitals, and commercial laundries. Supply, installation, and maintenance.',
+  keywords: [
+    'commercial washers Kenya',
+    'front-load washer',
+    'heavy-duty laundry',
+    'hotel washing equipment',
+  ],
+  path: '/solutions/laundry/commercial-washers',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function CommercialWashers() {
   return (

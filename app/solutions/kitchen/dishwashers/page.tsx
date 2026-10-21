@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Dishwashers | High-Capacity Washers | Dabecks',
+  description:
+    'Industrial dishwashers in Kenya. Undercounter and rack conveyor models for commercial kitchens. Fast, hygienic, low running costs.',
+  keywords: [
+    'commercial dishwasher Kenya',
+    'industrial dishwasher',
+    'rack conveyor',
+    'kitchen equipment',
+  ],
+  path: '/solutions/kitchen/dishwashers',
+  ogImage: '/kitchen-categories/dishwashers.webp',
+});
 
 export default function Dishwashers() {
   return (

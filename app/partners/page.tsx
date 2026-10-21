@@ -1,7 +1,23 @@
+import type { Metadata } from 'next';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Our Partners | Electrolux, Alliance, Milnor | Dabecks Kenya',
+  description:
+    'Dabecks is the authorized dealer for Electrolux Professional, Alliance Laundry Systems (Speed Queen, Primus, UniMac), and Pellerin Milnor Corporation in East Africa.',
+  keywords: [
+    'Electrolux Professional dealer',
+    'Alliance Laundry Systems Kenya',
+    'authorized dealer',
+    'commercial equipment partners',
+  ],
+  path: '/partners',
+  ogImage: '/logo.png',
+});
 
 const equipmentBrands = [
   { name: 'Electrolux Professional',    logo: '/logos/partners/electrolux.svg',    darkBg: false },

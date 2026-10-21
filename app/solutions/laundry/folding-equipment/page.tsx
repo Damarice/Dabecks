@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Folding Equipment | Laundry Automation | Dabecks',
+  description:
+    'Professional folding and finishing equipment for commercial laundries in Kenya. Presses, ironing tables, and finishing cabinets from top brands.',
+  keywords: [
+    'folding equipment Kenya',
+    'laundry press',
+    'finishing equipment',
+    'ironing table commercial',
+  ],
+  path: '/solutions/laundry/folding-equipment',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function FoldingEquipment() {
   return (

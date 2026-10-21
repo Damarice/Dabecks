@@ -1,4 +1,21 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Split AC Units Kenya | Inverter Air Conditioners | Dabecks',
+  description:
+    'Wall-mounted and ceiling split air conditioners in Kenya. Inverter technology, capacities from 9,000 to 36,000 BTU. Supply and installation across East Africa.',
+  keywords: [
+    'split AC Kenya',
+    'inverter air conditioner',
+    'wall mounted AC',
+    'split unit Nairobi',
+    'commercial AC',
+  ],
+  path: '/solutions/air-conditioning/split-units',
+  ogImage: '/hero-ac.jpg',
+});
 
 export default function SplitUnits() {
   return (

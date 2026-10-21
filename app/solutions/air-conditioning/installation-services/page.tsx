@@ -1,7 +1,23 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 import Icon from '@/app/components/Icon';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'AC Installation Services Kenya | Certified HVAC Engineers | Dabecks',
+  description:
+    'Professional air conditioning installation and commissioning across Kenya. Certified HVAC engineers, all brands, commercial and industrial projects.',
+  keywords: [
+    'AC installation Kenya',
+    'HVAC installation Nairobi',
+    'air conditioning commissioning',
+    'installation services East Africa',
+  ],
+  path: '/solutions/air-conditioning/installation-services',
+  ogImage: '/hero-ac.jpg',
+});
 
 const steps = [
   { icon: 'clipboard' as const, title: 'Site Survey & Design',        desc: 'Detailed site assessment and system design to ensure optimal performance and efficiency for your specific building.' },

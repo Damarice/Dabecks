@@ -1,4 +1,23 @@
+import type { Metadata } from 'next';
 import CategoryLandingPage from '@/app/components/CategoryLandingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Air Conditioning Systems Kenya | Commercial HVAC | Dabecks',
+  description:
+    'Commercial air conditioning solutions across Kenya and East Africa. Split units, VRF/VRV systems, ducted systems, and cassette units. Certified installation and maintenance.',
+  keywords: [
+    'air conditioning Kenya',
+    'commercial HVAC',
+    'split units',
+    'VRF systems',
+    'cassette units',
+    'ducted systems',
+    'AC installation Nairobi',
+  ],
+  path: '/solutions/air-conditioning',
+  ogImage: '/hero-ac.jpg',
+});
 
 export default function AirConditioningPage() {
   return (

@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Flatwork Ironers & Presses | Laundry Equipment | Dabecks',
+  description:
+    'Professional flatwork ironers and presses in Kenya. Hotel-quality results for commercial laundries, hospitals, and institutions. Supply and installation.',
+  keywords: [
+    'flatwork ironer Kenya',
+    'industrial press',
+    'laundry ironer',
+    'commercial pressing equipment',
+  ],
+  path: '/solutions/laundry/ironers-presses',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function IronersPresses() {
   return (

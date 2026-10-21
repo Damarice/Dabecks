@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Deep Fryers | Kitchen Equipment | Dabecks',
+  description:
+    'Commercial deep fryers in Kenya. Fast recovery, high-volume frying for restaurants and food service. Gas and electric options.',
+  keywords: [
+    'commercial fryer Kenya',
+    'deep fryer',
+    'pressure fryer',
+    'kitchen equipment',
+  ],
+  path: '/solutions/kitchen/fryers',
+  ogImage: '/kitchen-categories/fryers.webp',
+});
 
 export default function Fryers() {
   return (

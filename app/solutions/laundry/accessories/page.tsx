@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Laundry Accessories & Chemicals | Detergents & Supplies | Dabecks',
+  description:
+    'Professional laundry detergents, chemicals, and accessories in Kenya. Eco-certified Electrolux products for commercial washers. Supply and support.',
+  keywords: [
+    'laundry detergent Kenya',
+    'commercial laundry chemicals',
+    'eco detergent',
+    'laundry supplies',
+  ],
+  path: '/solutions/laundry/accessories',
+  ogImage: '/hero-laundry.jpg',
+});
 
 export default function LaundryAccessories() {
   return (

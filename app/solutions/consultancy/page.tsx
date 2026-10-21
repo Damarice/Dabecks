@@ -1,8 +1,25 @@
+import type { Metadata } from 'next';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Link from 'next/link';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
 import Icon from '@/app/components/Icon';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Equipment Consultancy Kenya | Facility Planning | Dabecks',
+  description:
+    'Expert consultancy for commercial facility design, equipment selection, and optimization across laundry, kitchen, and HVAC systems.',
+  keywords: [
+    'commercial consultancy Kenya',
+    'facility planning',
+    'equipment sizing',
+    'HVAC design',
+    'laundry consultancy',
+  ],
+  path: '/solutions/consultancy',
+  ogImage: '/hero-consultancy.jpg',
+});
 
 const services = [
   { num: '01', title: 'Equipment Sizing & Selection', desc: 'We assess your throughput, space, and utility constraints to recommend the right equipment capacity and specifications.' },

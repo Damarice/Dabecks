@@ -1,4 +1,21 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Ducted Air Conditioning Systems Kenya | Hidden HVAC | Dabecks',
+  description:
+    'Concealed ducted air conditioning systems for hotels, offices, and commercial buildings in Kenya. Uniform cooling, hidden installation, full-zone control.',
+  keywords: [
+    'ducted AC Kenya',
+    'ducted HVAC',
+    'concealed air conditioning',
+    'central air conditioning Kenya',
+    'hidden ductwork',
+  ],
+  path: '/solutions/air-conditioning/ducted-systems',
+  ogImage: '/hero-ac.jpg',
+});
 
 export default function DuctedSystems() {
   return (

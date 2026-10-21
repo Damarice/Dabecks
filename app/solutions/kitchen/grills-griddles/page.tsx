@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Grills & Griddles | Cooking Equipment | Dabecks',
+  description:
+    'Commercial grills and griddles in Kenya. High-volume cooking surfaces for restaurants and food service. Even heat, fast recovery.',
+  keywords: [
+    'commercial grill Kenya',
+    'griddle',
+    'cooking equipment',
+    'restaurant equipment',
+  ],
+  path: '/solutions/kitchen/grills-griddles',
+  ogImage: '/kitchen-categories/grills-griddles.jpg',
+});
 
 export default function GrillsGriddles() {
   return (

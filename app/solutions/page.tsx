@@ -1,7 +1,25 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import PageHero from '@/app/components/PageHero';
 import CTASection from '@/app/components/CTASection';
+import { buildMetadata, buildBreadcrumbSchema } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Solutions | Laundry, Kitchen & HVAC | Dabecks',
+  description:
+    'Browse our complete range of commercial laundry, kitchen equipment, and air conditioning solutions trusted across East Africa.',
+  keywords: [
+    'commercial solutions Kenya',
+    'laundry equipment',
+    'kitchen systems',
+    'HVAC solutions',
+    'commercial equipment East Africa',
+  ],
+  path: '/solutions',
+  ogImage: '/hero-laundry.jpg',
+});
 
 const solutions = [
   {

@@ -1,4 +1,20 @@
+import type { Metadata } from 'next';
 import SubpageListingPage from '@/app/components/SubpageListingPage';
+import { buildMetadata } from '@/lib/seo-utils';
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Commercial Cooking Ranges | Kitchen Equipment | Dabecks',
+  description:
+    'Professional cooking ranges and hobs in Kenya. High-output burners for commercial kitchens. Supply, installation, and maintenance.',
+  keywords: [
+    'commercial range Kenya',
+    'cooking range',
+    'commercial cooktop',
+    'kitchen equipment',
+  ],
+  path: '/solutions/kitchen/cooking-ranges',
+  ogImage: '/kitchen-categories/cooking-ranges.webp',
+});
 
 export default function CookingRanges() {
   return (
