@@ -1,11 +1,50 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
 import CTASection from '@/app/components/CTASection';
 import Icon from '@/app/components/Icon';
 
 export default function Home() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitStatus('loading');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          serviceType: form.service,
+          message: form.message,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(data.message);
+        setForm({ name: '', email: '', phone: '', company: '', service: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      setSubmitMessage('Network error. Please check your connection and try again.');
+    }
+  };
   return (
     <div>
       <HomepageHeroSlider />
@@ -270,32 +309,32 @@ export default function Home() {
               <h2 className="ds-h2" style={{ color: 'var(--color-brand-navy)', marginBottom: '0.5rem' }}>Request a Quote / Site Assessment</h2>
               <span className="ds-accent-line" style={{ marginBottom: '1.75rem' }} />
               <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>Tell us what you need and our team will prepare a tailored proposal.</p>
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }} onSubmit={handleFormSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="ds-label-form">Full Name *</label>
-                    <input className="ds-input" type="text" placeholder="John Doe" required />
+                    <input className="ds-input" type="text" name="name" placeholder="John Doe" value={form.name} onChange={handleFormChange} required />
                   </div>
                   <div>
                     <label className="ds-label-form">Company</label>
-                    <input className="ds-input" type="text" placeholder="Your Company" />
+                    <input className="ds-input" type="text" name="company" placeholder="Your Company" value={form.company} onChange={handleFormChange} />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="ds-label-form">Email *</label>
-                    <input className="ds-input" type="email" placeholder="you@email.com" required />
+                    <input className="ds-input" type="email" name="email" placeholder="you@email.com" value={form.email} onChange={handleFormChange} required />
                   </div>
                   <div>
                     <label className="ds-label-form">Phone *</label>
-                    <input className="ds-input" type="tel" placeholder="+254 700 000 000" required />
+                    <input className="ds-input" type="tel" name="phone" placeholder="+254 700 000 000" value={form.phone} onChange={handleFormChange} required />
                   </div>
                 </div>
                 
                 {/* What do you need? - Regular dropdown */}
                 <div>
                   <label className="ds-label-form">What do you need? *</label>
-                  <select required className="ds-input" style={{ cursor: 'pointer' }}>
+                  <select required name="service" className="ds-input" style={{ cursor: 'pointer' }} value={form.service} onChange={handleFormChange}>
                     <option value="">Select a service</option>
                     <option value="laundry">Laundry equipment</option>
                     <option value="kitchen">Kitchen equipment</option>
@@ -310,12 +349,27 @@ export default function Home() {
                 
                 <div>
                   <label className="ds-label-form">Tell us about your project *</label>
-                  <textarea className="ds-input" rows={6} placeholder="Describe your project requirements, facility type, timeline..." required style={{ resize: 'vertical' }} />
+                  <textarea className="ds-input" rows={6} name="message" placeholder="Describe your project requirements, facility type, timeline..." value={form.message} onChange={handleFormChange} required style={{ resize: 'vertical' }} />
                 </div>
                 
-                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>
-                  Submit Request
+                <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }} disabled={submitStatus === 'loading'}>
+                  {submitStatus === 'loading' ? 'Sending...' : 'Submit Request'}
                 </button>
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded text-green-800 text-sm">
+                    {submitMessage}
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded text-red-800 text-sm">
+                    {submitMessage}
+                  </div>
+                )}
+                {submitStatus === 'loading' && (
+                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-blue-800 text-sm">
+                    Sending your inquiry...
+                  </div>
+                )}
               </form>
             </div>
 

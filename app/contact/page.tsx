@@ -6,13 +6,41 @@ import Icon from '@/app/components/Icon';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Thank you for your message. We will get back to you soon!');
+    setSubmitStatus('loading');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          serviceType: form.service,
+          message: form.message,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(data.message);
+        setForm({ name: '', email: '', phone: '', company: '', service: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      setSubmitMessage('Network error. Please check your connection and try again.');
+    }
   };
 
   return (
@@ -132,9 +160,25 @@ export default function Contact() {
                   type="submit" 
                   className="ds-btn ds-btn-primary ds-btn-lg" 
                   style={{ justifyContent: 'center' }}
+                  disabled={submitStatus === 'loading'}
                 >
-                  Submit Request
+                  {submitStatus === 'loading' ? 'Sending...' : 'Submit Request'}
                 </button>
+                {submitStatus === 'success' && (
+                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded text-green-800 text-sm">
+                    {submitMessage}
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded text-red-800 text-sm">
+                    {submitMessage}
+                  </div>
+                )}
+                {submitStatus === 'loading' && (
+                  <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-blue-800 text-sm">
+                    Sending your inquiry...
+                  </div>
+                )}
               </form>
             </div>
 

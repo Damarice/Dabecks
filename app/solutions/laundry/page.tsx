@@ -36,6 +36,39 @@ const news = [
 
 export default function LaundryPage() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitStatus('loading');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          company: form.company,
+          serviceType: 'laundry',
+          message: form.message,
+        }),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setSubmitStatus('success');
+        setSubmitMessage(data.message);
+        setForm({ name: '', email: '', phone: '', company: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(data.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setSubmitStatus('error');
+      setSubmitMessage('Network error. Please check your connection and try again.');
+    }
+  };
 
   return (
     <div>
@@ -261,17 +294,34 @@ export default function LaundryPage() {
               We&apos;ll design the right laundry solution for your facility.
             </p>
           </div>
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} onSubmit={handleFormSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required /></div>
-              <div><label className="ds-label-form">Email Address *</label><input className="ds-input" type="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required /></div>
+              <div><label className="ds-label-form">Full Name *</label><input className="ds-input" type="text" name="name" placeholder="Your full name" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required /></div>
+              <div><label className="ds-label-form">Email Address *</label><input className="ds-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required /></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div><label className="ds-label-form">Phone Number *</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></div>
-              <div><label className="ds-label-form">Company / Organisation</label><input className="ds-input" type="text" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
+              <div><label className="ds-label-form">Phone Number *</label><input className="ds-input" type="tel" name="phone" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></div>
+              <div><label className="ds-label-form">Company / Organisation</label><input className="ds-input" type="text" name="company" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
             </div>
-            <div><label className="ds-label-form">Your Requirements *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your laundry needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
-            <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Enquiry</button>
+            <div><label className="ds-label-form">Your Requirements *</label><textarea className="ds-input" rows={4} name="message" style={{ resize: 'vertical' }} placeholder="Describe your laundry needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
+            <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }} disabled={submitStatus === 'loading'}>
+              {submitStatus === 'loading' ? 'Sending...' : 'Send Enquiry'}
+            </button>
+            {submitStatus === 'success' && (
+              <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded text-green-800 text-sm">
+                {submitMessage}
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded text-red-800 text-sm">
+                {submitMessage}
+              </div>
+            )}
+            {submitStatus === 'loading' && (
+              <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded text-blue-800 text-sm">
+                Sending your inquiry...
+              </div>
+            )}
           </form>
         </div>
       </section>
