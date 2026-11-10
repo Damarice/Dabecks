@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import PageHero from '@/app/components/PageHero';
-import Icon from '@/app/components/Icon';
+import PageHero from '../components/PageHero';
+import Icon from '../components/Icon';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });

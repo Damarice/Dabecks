@@ -1,10 +1,10 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { useState } from 'react';
-import HomepageHeroSlider from '@/app/components/HomepageHeroSlider';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
+import HomepageHeroSlider from './components/HomepageHeroSlider';
+import CTASection from './components/CTASection';
+import Icon from './components/Icon';
 
 export default function Home() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', service: '', message: '' });
@@ -49,7 +49,7 @@ export default function Home() {
     <div>
       <HomepageHeroSlider />
 
-      {/* ══ VALUE PROPOSITION ═══════════════════════════════════ */}
+      {/* â•â• VALUE PROPOSITION â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 lg:gap-20 items-end">
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
             <div>
               <p className="ds-lead" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
-                From equipment selection to installation, training and after-sales support — Dabecks has been the trusted mechanical partner for hotels, hospitals, universities, and government institutions across East Africa since 2011.
+                From equipment selection to installation, training and after-sales support â€” Dabecks has been the trusted mechanical partner for hotels, hospitals, universities, and government institutions across East Africa since 2011.
               </p>
               <Link href="/about" className="ds-btn ds-btn-outline">Learn About Dabecks</Link>
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ SOLUTIONS SHOWCASE ══════════════════════════════════ */}
+      {/* â•â• SOLUTIONS SHOWCASE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '0.75rem', flexWrap: 'wrap' }}>
@@ -85,9 +85,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
             {[
-              { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',    sub: 'Washers · Dryers · Ironers · Accessories',   href: '/solutions/laundry' },
-              { img: '/kitchen-categories/commercial-ovens.webp', title: 'Commercial\nKitchen',    sub: 'Ovens · Fryers · Dishwashers · Ranges',      href: '/solutions/kitchen' },
-              { img: '/hero-ac.jpg',      title: 'Air\nConditioning',      sub: 'Split Units · VRF/VRV · Ducted · Cassette',  href: '/solutions/air-conditioning' },
+              { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',    sub: 'Washers Â· Dryers Â· Ironers Â· Accessories',   href: '/solutions/laundry' },
+              { img: '/kitchen-categories/commercial-ovens.webp', title: 'Commercial\nKitchen',    sub: 'Ovens Â· Fryers Â· Dishwashers Â· Ranges',      href: '/solutions/kitchen' },
+              { img: '/hero-ac.jpg',      title: 'Air\nConditioning',      sub: 'Split Units Â· VRF/VRV Â· Ducted Â· Cassette',  href: '/solutions/air-conditioning' },
             ].map(({ img, title, sub, href }) => (
               <Link
                 key={href}
@@ -119,7 +119,7 @@ export default function Home() {
                 <div style={{ position: 'absolute', inset: 'auto 0 0 0', padding: '1.75rem' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 2.5vw, 2.5rem)', fontWeight: 800, lineHeight: 1.05, letterSpacing: '-0.03em', color: '#ffffff', whiteSpace: 'pre-line', marginBottom: '0.5rem' }}>{title}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.65)', letterSpacing: '0.04em', marginBottom: '1rem' }}>{sub}</p>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore range →</span>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore range â†’</span>
                 </div>
               </Link>
             ))}
@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ METRICS BAND ════════════════════════════════════════ */}
+      {/* â•â• METRICS BAND â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section style={{ background: 'var(--color-brand-navy)', paddingTop: 'clamp(2.5rem, 5vw, 4rem)', paddingBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
         <div className="ds-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-12">
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ AUTHORISED PARTNER — editorial split ════════════════ */}
+      {/* â•â• AUTHORISED PARTNER â€” editorial split â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section style={{ background: '#ffffff', overflow: 'hidden' }}>
         <div className="split-feature">
           {/* Image */}
@@ -172,7 +172,7 @@ export default function Home() {
             </h2>
             <span className="ds-accent-line" style={{ marginBottom: '1.5rem' }} />
             <p className="ds-body-lg" style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>
-              Authorised dealer for Alliance Laundry Systems, Electrolux Professional, and Pellerin Milnor — backed by certified technicians and a dedicated after-sales team across East Africa.
+              Authorised dealer for Alliance Laundry Systems, Electrolux Professional, and Pellerin Milnor â€” backed by certified technicians and a dedicated after-sales team across East Africa.
             </p>
             <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '2rem' }}>
               Every installation comes with expert commissioning, staff training, and ongoing maintenance support.
@@ -195,10 +195,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ WHY CHOOSE US ════════════════════════════════════════ */}
+      {/* â•â• WHY CHOOSE US â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section style={{ background: 'var(--color-surface)', overflow: 'hidden' }}>
         <div className="split-feature split-feature--wide-reverse">
-          {/* Content — left */}
+          {/* Content â€” left */}
           <div className="split-feature__content">
             <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '1rem' }}>Why Choose Dabecks</span>
             <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.875rem, 2.8vw, 2.75rem)', fontWeight: 800, letterSpacing: '-0.03em', lineHeight: 1.1, color: 'var(--color-brand-navy)', marginBottom: '1.25rem' }}>
@@ -230,14 +230,14 @@ export default function Home() {
               <Icon name="arrowRight" />
             </Link>
           </div>
-          {/* Image — right */}
+          {/* Image â€” right */}
           <div className="split-feature__media" style={{ minHeight: '400px', order: 2 }}>
             <img src="/home-chef.jpg" alt="Professional kitchen chef" />
           </div>
         </div>
       </section>
 
-      {/* ══ LATEST NEWS ══════════════════════════════════════════ */}
+      {/* â•â• LATEST NEWS â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '2.5rem', gap: '1rem', flexWrap: 'wrap' }}>
@@ -271,7 +271,7 @@ export default function Home() {
                 <p className="ds-body" style={{ color: 'var(--color-text-muted)', marginBottom: '1.25rem' }}>
                   With new certified technicians now based in Uganda and Tanzania, our service network covers a wider regional footprint.
                 </p>
-                <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textDecoration: 'none' }}>Read more →</Link>
+                <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-brand-navy)', textDecoration: 'none' }}>Read more â†’</Link>
               </div>
             </article>
 
@@ -299,7 +299,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ CONTACT ══════════════════════════════════════════════ */}
+      {/* â•â• CONTACT â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
@@ -383,7 +383,7 @@ export default function Home() {
                   { label: 'Phone', value: '+254 729 212 254\n+254 733 788 357' },
                   { label: 'Email', value: 'info@dabeckslaundry.com' },
                   { label: 'Location', value: 'Lunga Lunga Square, 1st Floor, A7\nNairobi, Kenya' },
-                  { label: 'Business Hours', value: 'Mon – Fri: 8:00 AM – 5:00 PM\nSaturday: 9:00 AM – 1:00 PM' },
+                  { label: 'Business Hours', value: 'Mon â€“ Fri: 8:00 AM â€“ 5:00 PM\nSaturday: 9:00 AM â€“ 1:00 PM' },
                 ].map(({ label, value }) => (
                   <div key={label} style={{ borderLeft: '4px solid var(--color-brand-cyan)', paddingLeft: '1.125rem' }}>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-brand-cyan)', marginBottom: '0.375rem' }}>{label}</p>
@@ -398,7 +398,7 @@ export default function Home() {
 
       <CTASection
         heading="Ready to upgrade your facility?"
-        subtext="Talk to our team — free consultation, genuine parts, certified installation."
+        subtext="Talk to our team â€” free consultation, genuine parts, certified installation."
         primaryLabel="Get in Touch"
         primaryHref="/contact"
         phone={true}

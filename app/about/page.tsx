@@ -1,9 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
+import PageHero from '../components/PageHero';
+import CTASection from '../components/CTASection';
+import Icon from '../components/Icon';
 import { useState, useEffect, useRef } from 'react';
 
 const timeline = [

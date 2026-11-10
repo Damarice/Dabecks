@@ -1,4 +1,4 @@
-import Breadcrumb from '@/app/components/Breadcrumb';
+import Breadcrumb from './Breadcrumb';
 
 interface BreadcrumbItem { label: string; href?: string; }
 

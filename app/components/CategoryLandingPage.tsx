@@ -1,11 +1,11 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
+import PageHero from './PageHero';
+import CTASection from './CTASection';
+import Icon from './Icon';
 import { useState } from 'react';
-import { emojiToIcon } from '@/app/utils/emojiToIcon';
+import { emojiToIcon } from '../utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface FeaturedProduct { title: string; desc: string; image: string; href: string; }
@@ -38,7 +38,7 @@ export default function CategoryLandingPage({
     <div>
       <PageHero image={heroImage} heading={heroTitle} subtext={heroSubtitle} breadcrumbs={breadcrumbs} />
 
-      {/* ── INTRO ────────────────────────────────────────────── */}
+      {/* â”€â”€ INTRO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 lg:gap-20 items-start">
@@ -64,7 +64,7 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── FEATURED PRODUCTS ─────────────────────────────────── */}
+      {/* â”€â”€ FEATURED PRODUCTS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
@@ -103,7 +103,7 @@ export default function CategoryLandingPage({
                 <div style={{ padding: '1.5rem', borderTop: '3px solid var(--color-brand-cyan)' }}>
                   <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.0625rem', fontWeight: 700, color: 'var(--color-brand-navy)', marginBottom: '0.5rem', lineHeight: 1.25 }}>{p.title}</h3>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1rem', lineHeight: '1.55' }}>{p.desc}</p>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore Range →</span>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 700, color: 'var(--color-brand-cyan)' }}>Explore Range â†’</span>
                 </div>
               </Link>
             ))}
@@ -111,7 +111,7 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── CATEGORIES GRID ────────────────────────────────────── */}
+      {/* â”€â”€ CATEGORIES GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
@@ -146,7 +146,7 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── CUSTOMERS ──────────────────────────────────────────── */}
+      {/* â”€â”€ CUSTOMERS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
@@ -176,7 +176,7 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── NEWS ────────────────────────────────────────────────── */}
+      {/* â”€â”€ NEWS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2.5rem' }}>
@@ -207,7 +207,7 @@ export default function CategoryLandingPage({
         </div>
       </section>
 
-      {/* ── CONTACT FORM ────────────────────────────────────────── */}
+      {/* â”€â”€ CONTACT FORM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: 'var(--color-surface)', borderTop: '1px solid var(--color-border)' }}>
         <div className="ds-container" style={{ maxWidth: '680px' }}>
           <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
@@ -225,7 +225,7 @@ export default function CategoryLandingPage({
               <div><label className="ds-label-form">Phone *</label><input className="ds-input" type="tel" placeholder="+254 000 000 000" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required /></div>
               <div><label className="ds-label-form">Company</label><input className="ds-input" type="text" placeholder="Your company name" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} /></div>
             </div>
-            <div><label className="ds-label-form">Requirements *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your needs…" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
+            <div><label className="ds-label-form">Requirements *</label><textarea className="ds-input" rows={4} style={{ resize: 'vertical' }} placeholder="Describe your needsâ€¦" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} required /></div>
             <button type="submit" className="ds-btn ds-btn-primary ds-btn-lg" style={{ justifyContent: 'center' }}>Send Enquiry</button>
           </form>
         </div>

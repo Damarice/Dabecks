@@ -1,8 +1,8 @@
 'use client';
 
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import PageHero from '../../../components/PageHero';
+import CTASection from '../../../components/CTASection';
+import Breadcrumb from '../../../components/Breadcrumb';
 import Link from 'next/link';
 
 export default function VRFVRVSystems() {
@@ -127,3 +127,4 @@ export default function VRFVRVSystems() {
     </div>
   );
 }
+

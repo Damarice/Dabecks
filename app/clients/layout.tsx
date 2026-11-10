@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo-utils";
+import { buildMetadata } from "../../lib/seo-utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Clients | Hotels, Hospitals & Institutions | Dabecks Kenya",
@@ -22,3 +22,4 @@ export default function ClientsLayout({
 }) {
   return <>{children}</>;
 }
+

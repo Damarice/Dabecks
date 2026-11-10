@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import * as fs from 'fs';
 import * as path from 'path';
-import { sendAdminNotification, sendInquiryConfirmation } from '@/lib/email-service';
+import { sendAdminNotification, sendInquiryConfirmation } from '../../../lib/email-service';
 
 // In-memory rate limiting
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
@@ -157,3 +157,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import SubpageListingPage from '@/app/components/SubpageListingPage';
-import { buildMetadata } from '@/lib/seo-utils';
+import SubpageListingPage from '../../../components/SubpageListingPage';
+import { buildMetadata } from '../../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Split AC Units Kenya | Inverter Air Conditioners | Dabecks',
@@ -44,3 +44,4 @@ export default function SplitUnits() {
     />
   );
 }
+

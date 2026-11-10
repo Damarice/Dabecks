@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
-import Icon from '@/app/components/Icon';
+import Icon from './Icon';
 
 /* ─── Nav data ─────────────────────────────────────────────── */
 

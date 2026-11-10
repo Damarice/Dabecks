@@ -1,6 +1,6 @@
 'use client';
 
-import PageHero from '@/app/components/PageHero';
+import PageHero from '../components/PageHero';
 import { useEffect, useState } from 'react';
 
 export default function PriceListPage() {
@@ -40,3 +40,4 @@ export default function PriceListPage() {
     </div>
   );
 }
+

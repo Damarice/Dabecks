@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 export default function SC70() {
   return (
@@ -49,3 +49,4 @@ export default function SC70() {
     />
   );
 }
+

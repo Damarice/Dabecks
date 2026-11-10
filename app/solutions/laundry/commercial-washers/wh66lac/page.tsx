@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 export default function WH66LAC() {
   return (
@@ -52,3 +52,4 @@ export default function WH66LAC() {
     />
   );
 }
+

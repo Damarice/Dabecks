@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
-import { emojiToIcon } from '@/app/utils/emojiToIcon';
+import PageHero from './PageHero';
+import CTASection from './CTASection';
+import Icon from './Icon';
+import { emojiToIcon } from '../utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Product { title?: string; model?: string; desc: string; href?: string; slug?: string; placeholder: string; image?: string; }

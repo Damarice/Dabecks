@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo-utils";
+import { buildMetadata } from "../../lib/seo-utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "Contact Dabecks | Get a Quote | Nairobi Kenya",
@@ -22,3 +22,4 @@ export default function ContactLayout({
 }) {
   return <>{children}</>;
 }
+

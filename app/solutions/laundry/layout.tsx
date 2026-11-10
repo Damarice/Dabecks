@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo-utils";
+import { buildMetadata } from "../../../lib/seo-utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "Commercial Laundry Equipment | Washers, Dryers, Ironers | Dabecks",
@@ -23,3 +23,4 @@ export default function LaundryLayout({
 }) {
   return <>{children}</>;
 }
+

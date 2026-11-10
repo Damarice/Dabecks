@@ -1,7 +1,7 @@
 'use client';
 
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
+import PageHero from '../components/PageHero';
+import CTASection from '../components/CTASection';
 import Link from 'next/link';
 
 // Featured projects with modern styling approach
@@ -410,3 +410,4 @@ export default function Projects() {
     </div>
   );
 }
+

@@ -1,9 +1,9 @@
 'use client';
 
-import Breadcrumb from '@/app/components/Breadcrumb';
+import Breadcrumb from '../components/Breadcrumb';
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
+import PageHero from '../components/PageHero';
+import CTASection from '../components/CTASection';
 
 // Client data organized by sector
 const clientsBySector: Record<string, { name: string; logo: string | null }[]> = {
@@ -178,3 +178,4 @@ export default function Clients() {
     </div>
   );
 }
+

@@ -1,7 +1,7 @@
 'use client';
 
 import { notFound } from 'next/navigation';
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 const products: Record<string, React.ComponentProps<typeof ProductDetailPage>> = {
   'wh67': {

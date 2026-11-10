@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo-utils";
+import { buildMetadata } from "../../lib/seo-utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "Price List | Commercial Equipment Kenya | Dabecks",
@@ -22,3 +22,4 @@ export default function PriceListLayout({
 }) {
   return <>{children}</>;
 }
+

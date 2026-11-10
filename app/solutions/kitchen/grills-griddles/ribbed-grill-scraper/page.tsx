@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 export default function RibbedGrillScraper() {
   return (
     <ProductDetailPage
@@ -14,3 +14,4 @@ export default function RibbedGrillScraper() {
     />
   );
 }
+

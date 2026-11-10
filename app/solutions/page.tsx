@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
-import Breadcrumb from '@/app/components/Breadcrumb';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import { buildMetadata, buildBreadcrumbSchema } from '@/lib/seo-utils';
+import Breadcrumb from '../components/Breadcrumb';
+import PageHero from '../components/PageHero';
+import CTASection from '../components/CTASection';
+import { buildMetadata, buildBreadcrumbSchema } from '../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Commercial Solutions | Laundry, Kitchen & HVAC | Dabecks',
@@ -114,3 +114,4 @@ export default function SolutionsPage() {
     </div>
   );
 }
+

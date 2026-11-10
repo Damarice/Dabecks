@@ -1,0 +1,967 @@
+﻿[
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\about\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\api\\contact\\route.ts",
+        "LineNumber":  4,
+        "Line":  "import { sendAdminNotification, sendInquiryConfirmation } from \u0027@/lib/email-service\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\clients\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\Breadcrumb.tsx",
+        "LineNumber":  2,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx",
+        "LineNumber":  8,
+        "Line":  "import { emojiToIcon } from \u0027@/app/utils/emojiToIcon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\CTASection.tsx",
+        "LineNumber":  2,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\Footer.tsx",
+        "LineNumber":  2,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\HeroSlider.tsx",
+        "LineNumber":  5,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\HeroSlider.tsx",
+        "LineNumber":  6,
+        "Line":  "import LogoMarquee from \u0027@/app/components/LogoMarquee\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\HomepageHeroSlider.tsx",
+        "LineNumber":  5,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\Navbar.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\PageHero.tsx",
+        "LineNumber":  1,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx",
+        "LineNumber":  4,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx",
+        "LineNumber":  7,
+        "Line":  "import { emojiToIcon } from \u0027@/app/utils/emojiToIcon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx",
+        "LineNumber":  7,
+        "Line":  "import { emojiToIcon } from \u0027@/app/utils/emojiToIcon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\components\\WhatsAppButton.tsx",
+        "LineNumber":  4,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\contact\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\contact\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\contact\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\price-list\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\price-list\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\projects\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\projects\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\projects\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu12k\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu18k\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu24k\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu36k\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\daikinFCAG71\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\mitsubishiPLAM\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\carrier40GK\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\daikinFDQ125\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds10t\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds3t\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds5t\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds8t\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-12000-inverter-alpha\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-12000-inverter-sigma\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-18000-inverter-omega\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-24000-inverter-omega\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-24000-inverter-sigma\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-9000-noninverter-calibre\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\daikinVRV4\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\mitsubishiCityMulti\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf12hp\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf16hp\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf20hp\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf8hp\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import CategoryLandingPage from \u0027@/app/components/CategoryLandingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx",
+        "LineNumber":  7,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\accessories\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\crosswise-convection\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\gourmexpress-highspeed\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\multislim-compact\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\skyline-combi\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\skyline-cook-chill\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\accessories-consumables\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\exp-700-900-modular\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\liberopro-liberolight\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\thermaline-premium\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-glasswashers\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-hood-type\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-undercounter\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\herodry-freestanding-blower\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\neoblue-glasswashers\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\neoblue-touch-undercounter\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-electric-freestanding-7l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-electric-top-5l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-gas-freestanding-7l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-gas-top-7l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-900xp-electric-15l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-900xp-gas-15l\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\double-face-griddle\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\electric-sandwich-press\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\frying-pan-eggs-pancakes\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\mesh-grilling-grid\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\ribbed-grill-scraper\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\smooth-griddle-scraper\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import CategoryLandingPage from \u0027@/app/components/CategoryLandingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l00-eco-degreaser\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l01-eco-powder\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l02-eco-wash\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l03-eco-booster\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l04-eco-bleach\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l05-eco-softener\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\cabinet-hardmount\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\sc70\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb66\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb67\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb68\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wh66lac\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\[slug]\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fit5a\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fit6a\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpa1-wc\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpm-wc\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpm1-d\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\frc1\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\pd9c\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\quickdry-condense\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-14lac\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-20lac\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-7\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-7lac\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ib5725\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ib5725-f\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819flf\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819lf\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819r\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\line6000-ffs\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-110\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-20\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-27\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-35\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-70\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-90\\page.tsx",
+        "LineNumber":  1,
+        "Line":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\page.tsx",
+        "LineNumber":  2,
+        "Line":  "import SubpageListingPage from \u0027@/app/components/SubpageListingPage\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\page.tsx",
+        "LineNumber":  3,
+        "Line":  "import { buildMetadata } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\layout.tsx",
+        "LineNumber":  2,
+        "Line":  "import { buildMetadata } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx",
+        "LineNumber":  4,
+        "Line":  "import Breadcrumb from \u0027@/app/components/Breadcrumb\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import PageHero from \u0027@/app/components/PageHero\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx",
+        "LineNumber":  7,
+        "Line":  "import { buildMetadata, buildBreadcrumbSchema } from \u0027@/lib/seo-utils\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\utils\\emojiToIcon.ts",
+        "LineNumber":  6,
+        "Line":  "import { IconName } from \u0027@/app/components/Icon\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\layout.tsx",
+        "LineNumber":  8,
+        "Line":  "import { buildOrganizationSchema } from \"@/lib/seo-utils\";"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\page.tsx",
+        "LineNumber":  5,
+        "Line":  "import HomepageHeroSlider from \u0027@/app/components/HomepageHeroSlider\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\page.tsx",
+        "LineNumber":  6,
+        "Line":  "import CTASection from \u0027@/app/components/CTASection\u0027;"
+    },
+    {
+        "File":  "C:\\Users\\Damarice\\dabecks\\app\\page.tsx",
+        "LineNumber":  7,
+        "Line":  "import Icon from \u0027@/app/components/Icon\u0027;"
+    }
+]

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import Breadcrumb from '../components/Breadcrumb';
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import { buildMetadata } from '@/lib/seo-utils';
+import PageHero from '../components/PageHero';
+import CTASection from '../components/CTASection';
+import { buildMetadata } from '../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Our Partners | Electrolux, Alliance, Milnor | Dabecks Kenya',
@@ -195,3 +195,4 @@ export default function Partners() {
     </div>
   );
 }
+

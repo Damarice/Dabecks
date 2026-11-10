@@ -3,7 +3,7 @@
  * Converts emoji characters to Font Awesome icon names for consistent usage across components
  */
 
-import { IconName } from '@/app/components/Icon';
+import { IconName } from '../components/Icon';
 
 export const emojiToIcon: Record<string, IconName> = {
   // General utilities
@@ -66,3 +66,4 @@ export const emojiToIcon: Record<string, IconName> = {
 export function getIconFromEmoji(emoji: string, fallback: IconName = 'bolt'): IconName {
   return emojiToIcon[emoji] ?? fallback;
 }
+

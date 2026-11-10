@@ -1,0 +1,1553 @@
+﻿{
+    "filesModified":  0,
+    "replacements":  [
+                         {
+                             "lineNumber":  8,
+                             "error":  "",
+                             "after":  "import ... from \u0027../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027components/HomepageHeroSlider.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/HomepageHeroSlider\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  7,
+                             "error":  "",
+                             "after":  "import ... from \u0027components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\about\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\about\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../lib/email-service.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/email-service\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\api\\contact\\route.ts"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\clients\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\clients\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\Breadcrumb.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  8,
+                             "error":  "",
+                             "after":  "import ... from \u0027../utils/emojiToIcon.ts\u0027",
+                             "before":  "import ... from \u0027@/app/utils/emojiToIcon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\CategoryLandingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\CTASection.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\Footer.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\HeroSlider.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027LogoMarquee.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/LogoMarquee\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\HeroSlider.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\HomepageHeroSlider.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\Navbar.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\PageHero.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx"
+                         },
+                         {
+                             "lineNumber":  7,
+                             "error":  "",
+                             "after":  "import ... from \u0027../utils/emojiToIcon.ts\u0027",
+                             "before":  "import ... from \u0027@/app/utils/emojiToIcon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\ProductDetailPage.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  7,
+                             "error":  "",
+                             "after":  "import ... from \u0027../utils/emojiToIcon.ts\u0027",
+                             "before":  "import ... from \u0027@/app/utils/emojiToIcon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\SubpageListingPage.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\components\\WhatsAppButton.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\contact\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\contact\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\contact\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\partners\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\price-list\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\price-list\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\projects\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\projects\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\projects\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  7,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/CategoryLandingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CategoryLandingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu12k\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu18k\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu24k\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\cu36k\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\daikinFCAG71\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\cassette-units\\mitsubishiPLAM\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\carrier40GK\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\daikinFDQ125\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds10t\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds3t\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds5t\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\ducted-systems\\ds8t\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\installation-services\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\maintenance-repair\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-12000-inverter-alpha\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-12000-inverter-sigma\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-18000-inverter-omega\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-24000-inverter-omega\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-24000-inverter-sigma\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\split-units\\sirair-9000-noninverter-calibre\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\daikinVRV4\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\mitsubishiCityMulti\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf12hp\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf16hp\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf20hp\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\air-conditioning\\vrf-vrv-systems\\vrf8hp\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/Breadcrumb.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Breadcrumb\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  7,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\consultancy\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/CategoryLandingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CategoryLandingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\accessories\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\crosswise-convection\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\gourmexpress-highspeed\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\multislim-compact\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\skyline-combi\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\commercial-ovens\\skyline-cook-chill\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\accessories-consumables\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\exp-700-900-modular\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\liberopro-liberolight\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\cooking-ranges\\thermaline-premium\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-glasswashers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-hood-type\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\greenclean-undercounter\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\herodry-freestanding-blower\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\neoblue-glasswashers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\dishwashers\\neoblue-touch-undercounter\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-electric-freestanding-7l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-electric-top-5l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-gas-freestanding-7l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-700xp-gas-top-7l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-900xp-electric-15l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\fryers\\fryer-900xp-gas-15l\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\double-face-griddle\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\electric-sandwich-press\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\frying-pan-eggs-pancakes\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\mesh-grilling-grid\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\ribbed-grill-scraper\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\kitchen\\grills-griddles\\smooth-griddle-scraper\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\layout.tsx"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/PageHero.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/PageHero\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  5,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/CTASection.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/CTASection\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l00-eco-degreaser\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l01-eco-powder\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l02-eco-wash\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l03-eco-booster\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l04-eco-bleach\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\accessories\\l05-eco-softener\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\cabinet-hardmount\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\sc70\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb66\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb67\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wb68\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\wh66lac\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fit5a\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fit6a\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpa1-wc\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpm-wc\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\fpm1-d\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\folding-equipment\\frc1\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\pd9c\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\quickdry-condense\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-14lac\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-20lac\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-7\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\industrial-dryers\\td6-7lac\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ib5725\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ib5725-f\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819flf\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819lf\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\ic64819r\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\ironers-presses\\line6000-ffs\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  2,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../components/SubpageListingPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/SubpageListingPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  3,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../lib/seo-utils.ts\u0027",
+                             "before":  "import ... from \u0027@/lib/seo-utils\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-110\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-20\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-27\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-35\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-70\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  1,
+                             "error":  "",
+                             "after":  "import ... from \u0027../../../../components/ProductDetailPage.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/ProductDetailPage\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\washer-extractors\\wb6-90\\page.tsx"
+                         },
+                         {
+                             "lineNumber":  6,
+                             "error":  "",
+                             "after":  "import ... from \u0027../components/Icon.tsx\u0027",
+                             "before":  "import ... from \u0027@/app/components/Icon\u0027",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\utils\\emojiToIcon.ts"
+                         },
+                         {
+                             "lineNumber":  4,
+                             "error":  "",
+                             "after":  "import ProductDetailPage from \u0027../../../../components/ProductDetailPage\u0027;",
+                             "before":  "import ProductDetailPage from \u0027@/app/components/ProductDetailPage\u0027;",
+                             "status":  "success",
+                             "file":  "c:\\Users\\Damarice\\dabecks\\app\\solutions\\laundry\\commercial-washers\\[slug]\\page.tsx"
+                         }
+                     ],
+    "failedReplacements":  [
+
+                           ],
+    "totalReplacements":  193
+}

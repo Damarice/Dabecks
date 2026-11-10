@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { buildMetadata } from "@/lib/seo-utils";
+import { buildMetadata } from "../../../../lib/seo-utils";
 
 export const metadata: Metadata = buildMetadata({
   title: "VRF VRV Systems Kenya | Multi-Zone HVAC | Dabecks",
@@ -23,3 +23,4 @@ export default function VRFVRVLayout({
 }) {
   return <>{children}</>;
 }
+

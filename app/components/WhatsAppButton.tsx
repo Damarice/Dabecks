@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Icon from '@/app/components/Icon';
+import Icon from './Icon';
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);

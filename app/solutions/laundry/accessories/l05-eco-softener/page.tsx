@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 export default function L05EcoSoftener() {
   return (
@@ -48,3 +48,4 @@ export default function L05EcoSoftener() {
     />
   );
 }
+

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import Breadcrumb from '@/app/components/Breadcrumb';
+import Breadcrumb from '../../components/Breadcrumb';
 import Link from 'next/link';
-import PageHero from '@/app/components/PageHero';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
-import { buildMetadata } from '@/lib/seo-utils';
+import PageHero from '../../components/PageHero';
+import CTASection from '../../components/CTASection';
+import Icon from '../../components/Icon';
+import { buildMetadata } from '../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Commercial Equipment Consultancy Kenya | Facility Planning | Dabecks',
@@ -137,3 +137,4 @@ export default function ConsultancySolutions() {
     </div>
   );
 }
+

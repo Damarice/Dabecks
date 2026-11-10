@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 export default function IC64819LF() {
   return (
@@ -47,3 +47,4 @@ export default function IC64819LF() {
     />
   );
 }
+

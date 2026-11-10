@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import CategoryLandingPage from '@/app/components/CategoryLandingPage';
-import { buildMetadata } from '@/lib/seo-utils';
+import CategoryLandingPage from '../../components/CategoryLandingPage';
+import { buildMetadata } from '../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Air Conditioning Systems Kenya | Commercial HVAC | Dabecks',
@@ -60,3 +60,4 @@ export default function AirConditioningPage() {
     />
   );
 }
+

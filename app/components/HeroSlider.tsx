@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import Icon from '@/app/components/Icon';
-import LogoMarquee from '@/app/components/LogoMarquee';
+import Icon from './Icon';
+import LogoMarquee from './LogoMarquee';
 
 const slides = [
   {

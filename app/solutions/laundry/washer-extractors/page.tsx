@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import SubpageListingPage from '@/app/components/SubpageListingPage';
-import { buildMetadata } from '@/lib/seo-utils';
+import SubpageListingPage from '../../../components/SubpageListingPage';
+import { buildMetadata } from '../../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Washer Extractors | Industrial Laundry | Dabecks',
@@ -47,3 +47,4 @@ export default function WasherExtractors() {
     />
   );
 }
+

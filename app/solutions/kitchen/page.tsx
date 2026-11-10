@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import CategoryLandingPage from '@/app/components/CategoryLandingPage';
-import { buildMetadata } from '@/lib/seo-utils';
+import CategoryLandingPage from '../../components/CategoryLandingPage';
+import { buildMetadata } from '../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Commercial Kitchen Equipment | Ovens, Ranges, Fryers | Dabecks',
@@ -58,3 +58,4 @@ export default function KitchenPage() {
     />
   );
 }
+

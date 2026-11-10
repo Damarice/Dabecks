@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import SubpageListingPage from '@/app/components/SubpageListingPage';
-import { buildMetadata } from '@/lib/seo-utils';
+import SubpageListingPage from '../../../components/SubpageListingPage';
+import { buildMetadata } from '../../../../lib/seo-utils';
 
 export const metadata: Metadata = buildMetadata({
   title: 'Cassette Air Conditioning Units Kenya | 360° Airflow | Dabecks',
@@ -41,3 +41,4 @@ export default function CassetteUnits() {
     />
   );
 }
+

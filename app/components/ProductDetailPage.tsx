@@ -1,10 +1,10 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
-import Breadcrumb from '@/app/components/Breadcrumb';
-import CTASection from '@/app/components/CTASection';
-import Icon from '@/app/components/Icon';
-import { emojiToIcon } from '@/app/utils/emojiToIcon';
+import Breadcrumb from './Breadcrumb';
+import CTASection from './CTASection';
+import Icon from './Icon';
+import { emojiToIcon } from '../utils/emojiToIcon';
 
 interface BreadcrumbItem { label: string; href?: string; }
 interface Spec           { label: string; value: string; }
@@ -35,7 +35,7 @@ export default function ProductDetailPage({
     <div>
       <Breadcrumb items={breadcrumbs} />
 
-      {/* ── PRODUCT HERO ──────────────────────────────────── */}
+      {/* â”€â”€ PRODUCT HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section style={{ background: '#ffffff', borderBottom: '1px solid var(--color-border)' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0" style={{ minHeight: 'clamp(520px, 100vw, 520px)' }}>
@@ -124,7 +124,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── FEATURE STRIP ─────────────────────────────────── */}
+      {/* â”€â”€ FEATURE STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section style={{ background: 'var(--color-brand-navy)', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
         <div className="ds-container">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8">
@@ -141,7 +141,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── DESCRIPTION + SIDEBAR ─────────────────────────── */}
+      {/* â”€â”€ DESCRIPTION + SIDEBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12">
@@ -175,7 +175,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── TECHNICAL SPECIFICATIONS ──────────────────────── */}
+      {/* â”€â”€ TECHNICAL SPECIFICATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: 'var(--color-surface)' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2rem' }}>
@@ -207,7 +207,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── KEY FEATURES ──────────────────────────────────── */}
+      {/* â”€â”€ KEY FEATURES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="py-section" style={{ background: '#ffffff' }}>
         <div className="ds-container">
           <div style={{ marginBottom: '2rem' }}>
@@ -234,7 +234,7 @@ export default function ProductDetailPage({
         </div>
       </section>
 
-      {/* ── BACK LINK ─────────────────────────────────────── */}
+      {/* â”€â”€ BACK LINK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div style={{ background: 'var(--color-surface)', borderTop: '1px solid var(--color-border)', paddingTop: '1.25rem', paddingBottom: '1.25rem' }}>
         <div className="ds-container">
           <Link

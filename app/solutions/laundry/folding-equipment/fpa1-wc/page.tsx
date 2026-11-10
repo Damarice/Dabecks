@@ -1,4 +1,4 @@
-import ProductDetailPage from '@/app/components/ProductDetailPage';
+import ProductDetailPage from '../../../../components/ProductDetailPage';
 
 export default function FPA1WC() {
   return (
@@ -46,3 +46,4 @@ export default function FPA1WC() {
     />
   );
 }
+
