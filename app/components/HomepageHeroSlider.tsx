@@ -272,7 +272,7 @@ export default function HomepageHeroSlider() {
                 width: 'max-content',
               }}
             >
-              {/* Single set with CSS-based duplication for animation */}
+              {/* Single set — CSS handles seamless looping via animation */}
               {[
                 { src: '/logos/clients/radisson-blu.png', alt: 'Radisson Blu' },
                 { src: '/logos/clients/holiday-inn.png', alt: 'Holiday Inn' },
@@ -305,49 +305,7 @@ export default function HomepageHeroSlider() {
                     alt={logo.alt}
                     width={160}
                     height={80}
-                    style={{
-                      maxWidth: '100%',
-                      maxHeight: '100%',
-                      width: 'auto',
-                      height: 'auto',
-                      objectFit: 'contain',
-                    }}
-                  />
-                </div>
-              ))}
-              {/* Duplicate set for seamless loop */}
-              {[
-                { src: '/logos/clients/radisson-blu.png', alt: 'Radisson Blu' },
-                { src: '/logos/clients/holiday-inn.png', alt: 'Holiday Inn' },
-                { src: '/logos/clients/hyatt.png', alt: 'Hyatt' },
-                { src: '/logos/clients/ihg.png', alt: 'IHG' },
-                { src: '/logos/clients/maersk.png', alt: 'Maersk' },
-                { src: '/logos/clients/marriott.png', alt: 'Marriott' },
-                { src: '/logos/clients/serena.jpg', alt: 'Serena' },
-                { src: '/logos/clients/safari-park-hotel.png', alt: 'Safari Park Hotel' },
-                { src: '/logos/clients/kenya-airways.png', alt: 'Kenya Airways' },
-                { src: '/logos/clients/knh.jpg', alt: 'Kenya National Hospital' },
-              ].map((logo, i) => (
-                <div
-                  key={`logo-dup-${i}`}
-                  style={{
-                    minWidth: 'clamp(140px, 18vw, 200px)',
-                    height: 'clamp(70px, 10vw, 100px)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    background: '#ffffff',
-                    padding: 'clamp(0.75rem, 1.5vw, 1.25rem)',
-                    borderRadius: '8px',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
-                  }}
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={160}
-                    height={80}
+                    loading="lazy"
                     style={{
                       maxWidth: '100%',
                       maxHeight: '100%',

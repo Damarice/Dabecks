@@ -1,3 +1,4 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPhone,
@@ -136,7 +137,7 @@ interface IconProps {
  * Standardized icon component using Font Awesome
  * Usage: <Icon name="phone" size="sm" className="text-cyan" />
  */
-export default function Icon({ name, className = '', size = '1x', style }: IconProps) {
+function Icon({ name, className = '', size = '1x', style }: IconProps) {
   const icon = iconMap[name];
   
   if (!icon) {
@@ -153,6 +154,8 @@ export default function Icon({ name, className = '', size = '1x', style }: IconP
     />
   );
 }
+
+export default React.memo(Icon);
 
 // Export icon names for autocomplete in IDEs
 export { iconMap };

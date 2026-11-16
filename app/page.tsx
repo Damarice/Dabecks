@@ -165,6 +165,7 @@ export default function Home() {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               quality={90}
+              loading="lazy"
               className="object-cover"
             />
           </div>
@@ -242,6 +243,7 @@ export default function Home() {
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               quality={90}
+              loading="lazy"
               className="object-cover"
             />
           </div>
@@ -274,6 +276,7 @@ export default function Home() {
                   alt="Dabecks expands service coverage across East Africa with new technicians"
                   width={600}
                   height={260}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform hover:scale-103 duration-350"
                 />
               </div>
@@ -300,13 +303,14 @@ export default function Home() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
                 >
                 <div style={{ width: '110px', height: '110px', flexShrink: 0, overflow: 'hidden', position: 'relative' }}>
-                    <Image
-                      src={img}
-                      alt={title}
-                      width={110}
-                      height={110}
-                      className="w-full h-full object-cover"
-                    />
+                <Image
+                  src={img}
+                  alt={title}
+                  width={110}
+                  height={110}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
                   </div>
                   <div style={{ padding: '0.875rem 1.125rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.375rem' }}>{month}</span>

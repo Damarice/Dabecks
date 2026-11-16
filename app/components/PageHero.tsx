@@ -1,3 +1,4 @@
+import React from 'react';
 import Breadcrumb from './Breadcrumb';
 
 interface BreadcrumbItem { label: string; href?: string; }
@@ -17,7 +18,7 @@ interface PageHeroProps {
    Typography: large but restrained — not competing with the homepage
    ───────────────────────────────────────────────────────────── */
 
-export default function PageHero({ image, eyebrow, heading, subtext, breadcrumbs }: PageHeroProps) {
+function PageHero({ image, eyebrow, heading, subtext, breadcrumbs }: PageHeroProps) {
   return (
     <>
       {breadcrumbs && <Breadcrumb items={breadcrumbs} />}
@@ -96,3 +97,5 @@ export default function PageHero({ image, eyebrow, heading, subtext, breadcrumbs
     </>
   );
 }
+
+export default React.memo(PageHero);

@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import Icon from './Icon';
 
@@ -17,7 +18,7 @@ interface CTASectionProps {
   phone?: boolean;
 }
 
-export default function CTASection({
+function CTASection({
   heading  = 'Ready to get started?',
   subtext  = 'Contact us for pricing, availability, and expert installation support.',
   primaryLabel = 'Get in Touch',
@@ -100,3 +101,5 @@ export default function CTASection({
     </section>
   );
 }
+
+export default React.memo(CTASection);
