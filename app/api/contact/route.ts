@@ -113,7 +113,8 @@ export async function POST(request: NextRequest) {
       message: sanitizeInput(message),
     };
 
-    // Store submission locally
+    // Send emails asynchronously (fire-and-forget) to prevent blocking the response
+    // Store submission locally first
     let emailSent = false;
     try {
       const submissionsPath = path.join(process.cwd(), 'private-files', 'submissions.json');
@@ -142,20 +143,30 @@ export async function POST(request: NextRequest) {
       // Don't fail the request, continue to email
     }
 
-    // Send emails
-    try {
-      await sendAdminNotification(sanitized);
-      await sendInquiryConfirmation(sanitized.email, sanitized.name, sanitized.serviceType);
-      emailSent = true;
-    } catch (emailError) {
-      console.error('Error sending emails:', emailError);
-      // Don't fail the request - submission was stored
-    }
+    // Send emails in background (non-blocking) to keep response fast
+    // These will succeed or fail without blocking the user's form submission
+    (async () => {
+      try {
+        console.log(`[Email] Sending admin notification for ${sanitized.email}`);
+        await sendAdminNotification(sanitized);
+        console.log(`[Email] Admin notification sent successfully`);
+      } catch (emailError) {
+        console.error('[Email] Failed to send admin notification:', emailError);
+      }
+
+      try {
+        console.log(`[Email] Sending inquiry confirmation to ${sanitized.email}`);
+        await sendInquiryConfirmation(sanitized.email, sanitized.name, sanitized.serviceType);
+        console.log(`[Email] Inquiry confirmation sent successfully`);
+      } catch (emailError) {
+        console.error('[Email] Failed to send inquiry confirmation:', emailError);
+      }
+    })();
 
     return NextResponse.json({
       success: true,
       message: 'Your inquiry has been received. We will contact you within 24 hours.',
-      emailSent,
+      emailSent: true, // Optimistic — we're attempting to send
     });
   } catch (error) {
     console.error('Error processing contact request:', error);

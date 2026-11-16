@@ -8,7 +8,8 @@ function initSmtpTransport(): Transporter {
 
   const host = process.env.SMTP_HOST;
   const port = process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) : 465;
-  const secure = process.env.SMTP_SECURE === 'true';
+  // For port 465, secure MUST be true (TLS/SSL). Default to true if not explicitly set to false.
+  const secure = process.env.SMTP_SECURE !== 'false';
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
 
@@ -16,11 +17,16 @@ function initSmtpTransport(): Transporter {
     throw new Error('SMTP_HOST, SMTP_USER, and SMTP_PASS are required in .env.local');
   }
 
+  console.log(`[Email] Initializing SMTP transport: host=${host}, port=${port}, secure=${secure}`);
+
   transporter = nodemailer.createTransport({
     host,
     port,
     secure,
     auth: { user, pass },
+    // Add timeout to prevent hanging connections
+    connectionTimeout: 10000,
+    socketTimeout: 10000,
   });
 
   return transporter;
@@ -37,6 +43,8 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
     const transport = initSmtpTransport();
     const from = process.env.SMTP_FROM || process.env.SMTP_USER;
 
+    console.log(`[Email] Sending email from=${from}, to=${options.to}, subject=${options.subject}`);
+
     const mailOptions: SendMailOptions = {
       from,
       to: options.to,
@@ -44,9 +52,10 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
       html: options.html,
     };
 
-    await transport.sendMail(mailOptions);
+    const result = await transport.sendMail(mailOptions);
+    console.log(`[Email] Email sent successfully. Response:`, result);
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('[Email] Error sending email:', error);
     throw error;
   }
 }
