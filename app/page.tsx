@@ -1,6 +1,7 @@
 ﻿'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import HomepageHeroSlider from './components/HomepageHeroSlider';
 import CTASection from './components/CTASection';
@@ -88,7 +89,7 @@ export default function Home() {
               { img: '/hero-laundry.jpg', title: 'Commercial\nLaundry',    sub: 'Washers Â· Dryers Â· Ironers Â· Accessories',   href: '/solutions/laundry' },
               { img: '/kitchen-categories/commercial-ovens.webp', title: 'Commercial\nKitchen',    sub: 'Ovens Â· Fryers Â· Dishwashers Â· Ranges',      href: '/solutions/kitchen' },
               { img: '/hero-ac.jpg',      title: 'Air\nConditioning',      sub: 'Split Units Â· VRF/VRV Â· Ducted Â· Cassette',  href: '/solutions/air-conditioning' },
-            ].map(({ img, title, sub, href }) => (
+            ].map(({ img, title, sub, href }, idx) => (
               <Link
                 key={href}
                 href={href}
@@ -100,15 +101,14 @@ export default function Home() {
                   textDecoration: 'none',
                 }}
               >
-                <img
+                <Image
                   src={img}
                   alt={title.replace('\n', ' ')}
-                  style={{
-                    position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover',
-                    transition: 'transform 600ms ease',
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.04)'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={90}
+                  className="object-cover hover:scale-104 transition-transform duration-600"
+                  priority={idx === 0}
                 />
                 <div
                   style={{
@@ -159,9 +159,13 @@ export default function Home() {
         <div className="split-feature">
           {/* Image */}
           <div className="split-feature__media" style={{ minHeight: '400px' }}>
-            <img
+            <Image
               src="/home-partner.jpg"
-              alt="Dabecks professional team"
+              alt="Dabecks professional team providing commercial equipment services"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={90}
+              className="object-cover"
             />
           </div>
           {/* Content */}
@@ -232,7 +236,14 @@ export default function Home() {
           </div>
           {/* Image â€” right */}
           <div className="split-feature__media" style={{ minHeight: '400px', order: 2 }}>
-            <img src="/home-chef.jpg" alt="Professional kitchen chef" />
+            <Image
+              src="/home-chef.jpg"
+              alt="Professional kitchen chef preparing food with commercial equipment"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={90}
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
@@ -258,9 +269,12 @@ export default function Home() {
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
             >
               <div style={{ height: '260px', overflow: 'hidden' }}>
-                <img src="/hero-about.jpg" alt="Dabecks expands service coverage" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'transform 350ms ease' }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.03)'; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; }}
+                <Image
+                  src="/hero-about.jpg"
+                  alt="Dabecks expands service coverage across East Africa with new technicians"
+                  width={600}
+                  height={260}
+                  className="w-full h-full object-cover transition-transform hover:scale-103 duration-350"
                 />
               </div>
               <div style={{ padding: '1.75rem' }}>
@@ -285,8 +299,14 @@ export default function Home() {
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)'; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}
                 >
-                  <div style={{ width: '110px', height: '110px', flexShrink: 0, overflow: 'hidden' }}>
-                    <img src={img} alt={title} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <div style={{ width: '110px', height: '110px', flexShrink: 0, overflow: 'hidden', position: 'relative' }}>
+                    <Image
+                      src={img}
+                      alt={title}
+                      width={110}
+                      height={110}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div style={{ padding: '0.875rem 1.125rem', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <span className="ds-eyebrow" style={{ display: 'block', marginBottom: '0.375rem' }}>{month}</span>

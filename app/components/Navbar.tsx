@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Icon from './Icon';
 
 /* ─── Nav data ─────────────────────────────────────────────── */
@@ -70,18 +70,18 @@ export default function Navbar() {
     setMobileExpanded(null);
   }, []);
 
-  const openDropdown = (key: string) => {
+  const openDropdown = useCallback((key: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
     setActiveDropdown(key);
-  };
+  }, []);
 
-  const closeDropdown = () => {
+  const closeDropdown = useCallback(() => {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 120);
-  };
+  }, []);
 
-  const keepOpen = () => {
+  const keepOpen = useCallback(() => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
-  };
+  }, []);
 
   const sol = solutions as Record<string, (typeof solutions)[keyof typeof solutions]>;
 

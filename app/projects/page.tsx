@@ -3,6 +3,7 @@
 import PageHero from '../components/PageHero';
 import CTASection from '../components/CTASection';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Featured projects with modern styling approach
 const projects = [
@@ -154,21 +155,12 @@ export default function Projects() {
               >
                 {/* Project Image */}
                 <div style={{ position: 'relative', height: '280px', overflow: 'hidden' }}>
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 300ms ease',
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLElement).style.transform = 'scale(1.05)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.transform = 'scale(1)';
-                    }}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                   
                   {/* Tags Overlay */}

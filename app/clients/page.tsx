@@ -1,5 +1,3 @@
-'use client';
-
 import Breadcrumb from '../components/Breadcrumb';
 import Link from 'next/link';
 import PageHero from '../components/PageHero';

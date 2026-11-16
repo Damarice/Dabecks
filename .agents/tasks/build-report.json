@@ -1,0 +1,38 @@
+{
+  "status": "success",
+  "attempts": 1,
+  "finalExitCode": 0,
+  "pageCount": 122,
+  "errors": [],
+  "warnings": [],
+  "finalStatus": "Production build succeeded successfully on first attempt",
+  "buildDetails": {
+    "duration": "18.8s compilation + 11.9s page collection + 32.4s page generation = ~63s total",
+    "framework": "Next.js 16.3.2 (Turbopack)",
+    "typescript": "✓ Completed successfully in 13.5s",
+    "pageGeneration": "✓ Generated 122 static pages using 3 workers in 32.4s",
+    "optimization": "✓ Finalized page optimization in 45ms",
+    "routeCount": {
+      "static": 120,
+      "dynamic": 2
+    },
+    "staticRoutes": [
+      "/",
+      "/_not-found",
+      "/about",
+      "/clients",
+      "/contact",
+      "/partners",
+      "/price-list",
+      "/projects",
+      "/sitemap.xml",
+      "/solutions",
+      "All solution pages and product pages"
+    ],
+    "dynamicRoutes": [
+      "/api/contact",
+      "/api/price-list",
+      "/solutions/laundry/commercial-washers/[slug]"
+    ]
+  }
+}

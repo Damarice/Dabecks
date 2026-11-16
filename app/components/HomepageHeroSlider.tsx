@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Icon from './Icon';
 
 const slides = [
@@ -69,14 +70,17 @@ export default function HomepageHeroSlider() {
       >
         {/* Slides — crossfade */}
         {slides.map((s, i) => (
-          <img
+          <Image
             key={i}
             src={s.image}
             alt=""
             aria-hidden="true"
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            quality={90}
+            className="object-cover"
             style={{
-              position: 'absolute', inset: 0, width: '100%', height: '100%',
-              objectFit: 'cover', objectPosition: 'center',
               opacity: i === current ? 1 : 0,
               transition: 'opacity 900ms ease',
               pointerEvents: 'none',
@@ -268,21 +272,21 @@ export default function HomepageHeroSlider() {
                 width: 'max-content',
               }}
             >
-              {/* First set */}
+              {/* Single set with CSS-based duplication for animation */}
               {[
-                '/logos/clients/radisson-blu.png',
-                '/logos/clients/holiday-inn.png',
-                '/logos/clients/hyatt.png',
-                '/logos/clients/ihg.png',
-                '/logos/clients/maersk.png',
-                '/logos/clients/marriott.png',
-                '/logos/clients/serena.jpg',
-                '/logos/clients/safari-park-hotel.png',
-                '/logos/clients/kenya-airways.png',
-                '/logos/clients/knh.jpg',
+                { src: '/logos/clients/radisson-blu.png', alt: 'Radisson Blu' },
+                { src: '/logos/clients/holiday-inn.png', alt: 'Holiday Inn' },
+                { src: '/logos/clients/hyatt.png', alt: 'Hyatt' },
+                { src: '/logos/clients/ihg.png', alt: 'IHG' },
+                { src: '/logos/clients/maersk.png', alt: 'Maersk' },
+                { src: '/logos/clients/marriott.png', alt: 'Marriott' },
+                { src: '/logos/clients/serena.jpg', alt: 'Serena' },
+                { src: '/logos/clients/safari-park-hotel.png', alt: 'Safari Park Hotel' },
+                { src: '/logos/clients/kenya-airways.png', alt: 'Kenya Airways' },
+                { src: '/logos/clients/knh.jpg', alt: 'Kenya National Hospital' },
               ].map((logo, i) => (
                 <div
-                  key={`logo-1-${i}`}
+                  key={`logo-${i}`}
                   style={{
                     minWidth: 'clamp(140px, 18vw, 200px)',
                     height: 'clamp(70px, 10vw, 100px)',
@@ -296,9 +300,11 @@ export default function HomepageHeroSlider() {
                     boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                   }}
                 >
-                  <img
-                    src={logo}
-                    alt="Client logo"
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={160}
+                    height={80}
                     style={{
                       maxWidth: '100%',
                       maxHeight: '100%',
@@ -311,19 +317,19 @@ export default function HomepageHeroSlider() {
               ))}
               {/* Duplicate set for seamless loop */}
               {[
-                '/logos/clients/radisson-blu.png',
-                '/logos/clients/holiday-inn.png',
-                '/logos/clients/hyatt.png',
-                '/logos/clients/ihg.png',
-                '/logos/clients/maersk.png',
-                '/logos/clients/marriott.png',
-                '/logos/clients/serena.jpg',
-                '/logos/clients/safari-park-hotel.png',
-                '/logos/clients/kenya-airways.png',
-                '/logos/clients/knh.jpg',
+                { src: '/logos/clients/radisson-blu.png', alt: 'Radisson Blu' },
+                { src: '/logos/clients/holiday-inn.png', alt: 'Holiday Inn' },
+                { src: '/logos/clients/hyatt.png', alt: 'Hyatt' },
+                { src: '/logos/clients/ihg.png', alt: 'IHG' },
+                { src: '/logos/clients/maersk.png', alt: 'Maersk' },
+                { src: '/logos/clients/marriott.png', alt: 'Marriott' },
+                { src: '/logos/clients/serena.jpg', alt: 'Serena' },
+                { src: '/logos/clients/safari-park-hotel.png', alt: 'Safari Park Hotel' },
+                { src: '/logos/clients/kenya-airways.png', alt: 'Kenya Airways' },
+                { src: '/logos/clients/knh.jpg', alt: 'Kenya National Hospital' },
               ].map((logo, i) => (
                 <div
-                  key={`logo-2-${i}`}
+                  key={`logo-dup-${i}`}
                   style={{
                     minWidth: 'clamp(140px, 18vw, 200px)',
                     height: 'clamp(70px, 10vw, 100px)',
@@ -337,9 +343,11 @@ export default function HomepageHeroSlider() {
                     boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
                   }}
                 >
-                  <img
-                    src={logo}
-                    alt="Client logo"
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={160}
+                    height={80}
                     style={{
                       maxWidth: '100%',
                       maxHeight: '100%',
