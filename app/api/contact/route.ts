@@ -75,6 +75,14 @@ export async function POST(request: NextRequest) {
       errors.email = 'Valid email address is required';
     }
 
+    if (!phone) {
+      errors.phone = 'Phone number is required';
+    }
+
+    if (!serviceType) {
+      errors.serviceType = 'Please select a service';
+    }
+
     if (!message || message.length < 10) {
       errors.message = 'Message is required and must be at least 10 characters';
     }
